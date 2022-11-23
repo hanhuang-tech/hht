@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>hht</title>
+  <!--links-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="img/habbit-a.png" />
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Noto+Sans:wght@400;700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <!-- logo -->
+    <div class="logowrap">
+      <div class="logo">
+        <div class="habbit-img">
+          <img src="img/habbit-a.png" class="habbit-a" alt="a pic of habbit" />
+          <img src="img/habbit-b.png" class="habbit-b" alt="a pic of habbit" />
+        </div>
+        <div id="habbit-partition"></div>
+        <a href="/">
+          <img src="img/hht-banner.png" class="banner" alt="picture of hht banner" />
+        </a>
+      </div>
+    </div>
+    <!-- nav -->
+    <nav class="bar">
+      <div id="burger">
+        <div class="ham"> </div>
+        <div class="ham"> </div>
+        <div class="ham"> </div>
+      </div>
+      <div id="hidden-burger-contents">
+        <a href="" class="topicanchor">
+          <h3>Resources</h3>
+          <img src="img/pyramid.png" alt="pyramid img" title="a picture of fundamentals" />
+        </a>
+        <div class="burger-content-flexwrapper">
+          <div>
+            <h4 class="burger-content-title">Fundamentals</h4>
+            <a href="#"><span> VPS & Cloud Computing</span></a>
+            <a><span>Client-Host network</span></a>
+            <a><span>Monolithic and Microservice</span></a>
+          </div>
+          <div>
+            <h4 class="burger-content-title">Frontend</h4>
+            <a><span> HyperText Markup Language </span></a>
+            <a><span> Cascading Style Sheets</span></a>
+            <a><span>JavaScript</span></a>
+          </div>
+          <div>
+            <h4 class="burger-content-title">Backend</h4>
+            <a><span> Docker </span></a>
+            <a><span> Nginx</span></a>
+          </div>
+          <div>
+            <h4 class="burger-content-title">AWS</h4>
+            <a><span>Elastic Cloud Compute</span></a>
+            <a><span> Simple Email Service</span></a>
+          </div>
+        </div>
+        <a href="" class="topicanchor">
+          <h3>Projects</h3>
+          <img src="img/static-code.png" alt="static code" title="some code in vs code" />
+        </a>
+        <a href="" class="topicanchor">
+          <h3>About Me</h3>
+          <img src="img/habbit-a.png" alt="habbit logo" title="a pic of habbit" />
+        </a>
+      </div>
+      <a href="#">
+        <div class="arrow-button">
+          <span></span>
+        </div>
+      </a>
+    </nav>
+    <!-- connected -->
+    <div id="connectedwrap">
+      <h5 id="rgbfilter">0 0 0</h5>
+      <div class="connectedto">
+        <h5 class="connectedto"> connected by lowest latency to $AZ on $IP4.</h5>
+        <h5 class="connectedto"> connected by lowest latency to $AZ on $IP4.</h5>
+      </div>
+    </div>
+    <!-- lantern -->
+    <a id="lantern" href="">
+      <div class="standpart">
+        <div class="dome"></div>
+        <div class="bulb">
+          <span class="bulb">tact</span>
+        </div>
+      </div>
+    </a>
+  </header>
+
+  <!-- top partition -->
+  <section class="body-partition">
+    <div class="leftbar"></div>
+    <div id="resource-flex-extender">
+      <div id="titlebar">
+        <h1 class="titlebar">Resources</h1>
+      </div>
+      <div class="resources">
+        <div id="res-frame">
+          <div class="subjectgroups">
+            <div class="subjectwrapper1">
+              <img src="img/pyramid.png" alt="pyramid img" title="a picture of fundamentals" />
+              <a class="subjectheading1" href="resources/fundamentals/">Fundamentals</a>
+              <p class="subjectblurb1">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt </p>
+              <div class="subjectdropdown1">
+                <a class="dropdowntopic" href="resources/fundamentals/#cloud">VPS & Cloud computing</a>
+                <a class="dropdowntopic" href="resources/fundamentals/#clienthost">Client-Host network</a>
+                <a class="dropdowntopic" href="resources/fundamentals/#architectures">Monolithic vs
+                  Microservice architectures</a>
+              </div>
+            </div>
+            <div class="subjectwrapper2">
+              <img src="img/static-code.png" alt="picture of code" />
+              <a class="subjectheading2" href="resources/frontend/">Frontend</a>
+              <p class="subjectblurb2">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt </p>
+              <div class="subjectdropdown2">
+                <a class="dropdowntopic" href="resources/frontend/#htmlwrapper">HyperText Markup Language</a>
+                <a class="dropdowntopic" href="resources/frontend/#csswrapper">Cascading Style Sheets</a>
+                <a class="dropdowntopic" href="resources/frontend/#jswrapper">JavaScript</a>
+              </div>
+            </div>
+            <div class="subjectwrapper3">
+              <img src="img/moby.png" alt="picture of moby" />
+              <a class="subjectheading3" href="resources/backend/">Backend</a>
+              <p class="subjectblurb3">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt </p>
+              <div class="subjectdropdown3">
+                <a class="dropdowntopic" href="#">Docker</a>
+                <a class="dropdowntopic" href="#">Nginx</a>
+              </div>
+            </div>
+            <div class="subjectwrapper4">
+              <img src="img/aws-s.jpg" alt="logo of aws services" />
+              <a class="subjectheading4" href="resources/aws/">AWS
+                <span class="awstip">Amazon Web Services</span></a>
+              <p class="subjectblurb4">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt </p>
+              <div class="subjectdropdown4">
+                <a class="dropdowntopic" href="#">Elastic Cloud Compute</a>
+                <a class="dropdowntopic" href="#">Simple Email Service</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- mid partition -->
+  <section class="body-partition">
+    <div class="leftbar" id="midleftbar"></div>
+    <div id="project-headings">
+      <h1 class="projects-title">Projects</h1>
+      <h3 class="projects-subtitle">Work In Progress</h3>
+    </div>
+    <div id="project-bg-img"></div>
+    <div id="habbit-spray"></div>
+    <div id="habbit-border"></div>
+    <div id="project-tiles">
+      <div class="project">
+        <h3 class="project-title">hanhuang.tech / clothingsite</h3>
+        <div class="imgwrapper1">
+          <a href="https://github.com/hanhuang-tech/hanhuang.tech">
+            <img src="img/html.png" alt="a picture of static site code" />
+            <h2 id="viewgithub" class="viewgithub1">view on github</h2>
+          </a>
+        </div>
+        <h4 class="project-subtitle">
+          Static site files for the named domain/subdomain
+        </h4>
+        <p class="project">
+          <strong>hanhuang.tech:</strong> Resources and portfolio website.<br>
+          <strong>clothingsite:</strong> Allow choosing of size, adding an item, and seeing the item in the cart.
+        </p>
+        <div class="projectfooter">
+          <h4 class="tech">Techologies: HTML/CSS, JavaScript</h4>
+          <a href="https://hanhuang.tech/justifications" class="justify">
+            <h4>justifications & limits</h4>
+          </a>
+        </div>
+      </div>
+      <div class="project">
+        <h3 class="project-title">certgen_docker</h3>
+        <div class="imgwrapper2">
+          <a href="https://github.com/hanhuang-tech/certgen_docker">
+            <img src="img/certbot-logo.svg" class="certbot-centeriser" alt="certbot logo image" />
+            <h2 class="viewgithub2">view on github</h2>
+          </a>
+        </div>
+        <a href="https://certbot.eff.org/" id="certbot-eff">certbot.eff.org</a>
+        <div>
+          <h4 class="project-subtitle">certgen_docker</h4>
+          <p class="project"> Creates a container for certbot and executes certbot commands on a mounted container.
+          </p>
+          <h4 class="tech">Techologies: Certbot, Docker, Shell script</h4>
+        </div>
+      </div>
+      <div class="project">
+        <h3 class="project-title">dotnet_console</h3>
+        <div class="imgwrapper3">
+          <a href="https://github.com/hanhuang-tech/dotnet_console">
+            <img src="img/dotnet.jpg" alt="image of dotnet" />
+            <h2 class="viewgithub3">view on github</h2>
+          </a>
+        </div>
+        <div>
+          <h4 class="project-subtitle">dotnet_console</h4>
+          <p class="project"> Command-line applications that can run on the .NET Framework. </p>
+          <h4 class="tech">Techologies: C#, .NET</h4>
+        </div>
+      </div>
+      <div class="project">
+        <h3 class="project-title">other projects</h3>
+        <div class="imgwrapper4">
+          <a href="https://github.com/hanhuang-tech/app_develop">
+            <img src="img/gmark.png" alt="image of github mark" />
+            <h2 class="viewgithub4">view on github</h2>
+          </a>
+        </div>
+        <div>
+          <h4 class="project-subtitle">other projects</h4>
+          <p class="project"> Other projects in production that I currently maintain or projects that are in
+            development. </p>
+          <h4 class="tech"> Techologies: Python </h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- bot partition -->
+  <section class="body-partition">
+    <div class="leftbar" id="botleftbar"></div>
+    <!-- han -->
+    <div id="han">
+      <h1 class="han">Han</h1>
+      <h4 class="han">A Dev based in Aotearoa (New Zealand) </h4>
+      <img class="han" src="img/faceshot.jpg" alt="a headshot of han huang" />
+      <p class="han">
+        Kia Ora (Hello), I am a developer based in Aotearoa (NZ) with a passion for learning and teaching
+        development.
+        On my Youtube channel, I provide education on frontend and backend development. I have linked below the
+        Github
+        repositories I maintain for the projects I am working on. There are also additional ways to contact me
+        below.
+      </p>
+    </div>
+    <div class="trees"></div>
+  </section>
+  <!-- contactbar -->
+  <section id="contactbar">
+    <div class="contactbar-flexwrapper">
+      <a href="mailto:han@hanhuang.tech" class="email">
+        <img src="img/emailicon.png" alt="email icon" title="email Han Huang" />
+        <h2>han@hanhuang.tech</h2>
+      </a>
+      <a href="https://github.com/hanhuang-tech/" class="github">
+        <img src="img/githubicon.png" alt="github icon" title="find me on Github" />
+      </a>
+      <a href="https://www.linkedin.com/in/han-huang-6808bb123" class="linkedin">
+        <img src="img/linkedinicon.png" alt="linkedin icon" title="find me on LinkedIn" />
+      </a>
+      <a href="https://www.youtube.com/channel/UCfbZ-JymS_WUZfyq-QU7UqQ" class="youtube">
+        <img src="img/youtubeicon.png" alt="youtube icon" title="find me on youtube" />
+      </a>
+    </div>
+  </section>
+  <!-- footer -->
+  <footer id="footer">
+    <h4 class="footer">hanhuang.tech 2023</h4>
+  </footer>
+  <script src="js/index.js"></script>
+
+</body>
+
+</html>

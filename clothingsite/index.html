@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>clothing store</title>
+    <!--links-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="./img/favicon.ico" />
+</head>
+
+<body>
+    <header>
+        <div id="cart">
+            <img src="./img/cart.png" class="cart" alt="picture of shopping cart" />
+            <span class="mycart">My Cart</span>
+            <span class="cart">( 0 )</span>
+        </div>
+        <div id="spoil" class="hide">
+            <div id="spoiler">
+                <img src="./img/classic-tee.jpg" class="spoiler" alt="picture of classic tee" />
+                <div id="description">
+                    <span class="spoiler">Classic Tee</span>
+                    <div id="price">
+                        <span id="noPrice" class="spoiler">0x</span>
+                        <h2 class="price">$75.00</h2>
+                    </div>
+                    <div id="cartSize">
+                        <span class="spoiler">Size: </span>
+                        <span id="spoilSize" class="spoiler">S</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- classic tee -->
+    <section id="tee">
+        <img src="./img/classic-tee.jpg" class="tee" alt="picture of classic tee" />
+        <div class="tee">
+            <h1>Classic Tee</h1>
+            <h2 class="tee">$75.00</h2>
+            <p class="tee">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur
+            </p>
+            <div class="size">
+                <h4 class="size">size</h4>
+                <h4 class="star">*</h4>
+                <h4 id="chosensize"></h4>
+            </div>
+            <div class="sizeOptions">
+                <h4 id="s" class="sizeOptions">s</h4>
+                <!-- <h4 id="m" class="sizeOptions">m</h4>
+                <h4 id="l" class="sizeOptions">l</h4> -->
+            </div>
+            <h2 id="addtocart">add to cart</h2>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer id="footer">
+        <a href="../hanhuang.tech/index.html">
+            <img src="./img/habbitnoborder.png" id="footericon" alt="favicon link to home" />
+        </a>
+        <h4 class="footer">hanhuang.tech 2022</h4>
+    </footer>
+    <script src="./js/index.js"></script>
+</body>
+
+
+</html>
