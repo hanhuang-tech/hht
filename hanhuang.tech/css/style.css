@@ -168,7 +168,7 @@ div.arrow-button.animate {
 /*#burger toggle animations*/
 #burger.toggle {
   background: var(--clr-dark);
-  padding: 10px 0px 10px 0px;
+  padding: 10px 2px 10px 2px;
 }
 
 #burger :nth-child(1).toggle {
@@ -311,22 +311,15 @@ nav.bar {
   row-gap: 5px;
   position: relative;
   cursor: pointer;
-  background: rgb(50, 50, 50, 0.8);
+  background: rgb(50, 50, 75, 0.8);
   padding: 10px 5px;
-  margin-bottom: 2px;
 
   border-width: 2px;
   border-style: solid;
-  border-color: gray var(--clr-dark) var(--clr-dark) gray;
+  border-color: slategray var(--clr-dark) var(--clr-dark) slategray;
   border-radius: 10px 0;
   box-shadow: var(--bs2);
   transition: 1s;
-}
-
-@media (min-width:64em) {
-  #burger {
-    margin-bottom: 5px;
-  }
 }
 
 #burger:hover {
@@ -356,14 +349,13 @@ div.ham {
   position: absolute;
   display: flex;
   flex-direction: column;
-  row-gap: 5px;
+  row-gap: 2px;
   z-index: 0;
   opacity: 0;
   top: -10px;
   right: 35px;
   background: rgba(0, 0, 0, 0.6);
   padding: 5px;
-  color: white;
   transform: translateX(650px);
   border-radius: 5px;
   box-shadow: var(--bs);
@@ -408,7 +400,7 @@ div.ham {
 }
 
 #hidden-burger-contents img {
-  height: 20px;
+  height: 15px;
   padding-left: 5px;
 }
 
@@ -422,7 +414,7 @@ div.ham {
 div.burger-content-flexwrapper {
   display: flex;
   justify-content: space-evenly;
-  column-gap: 5px;
+  column-gap: 2px;
   border-width: 1px;
   border-style: solid;
   border-color: var(--clr-light) transparent;
@@ -476,18 +468,17 @@ div.burger-content-flexwrapper div a span {
 /*arrow-button*/
 div.arrow-button {
   background-color: rgba(255, 255, 255, 0.8);
-  padding: 0px;
   border-width: 2px;
   border-style: solid;
   border-color: gray var(--clr-dark) var(--clr-dark) gray;
-  border-radius: 8px;
+  border-radius: 50%;
   box-shadow: var(--bs2);
   transition: 1s;
 }
 
 div.arrow-button:hover {
   background-color: skyblue;
-  border-radius: 50%;
+  border-radius: 0;
 }
 
 div.arrow-button span {
@@ -496,7 +487,7 @@ div.arrow-button span {
   border-style: solid;
   border-color: var(--clr-dark);
   transform: rotate(45deg);
-  margin: 5px;
+  margin: 7px;
   padding: 5px;
   transition: 2s;
 }
