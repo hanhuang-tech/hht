@@ -4,13 +4,14 @@
   * hanhuang.tech  
   * clothingsite.hanhuang.tech 
   
-***features***
-- Written in HTML, CSS, JS
-- Responsive design viewpoints: less than & more than 64em
-- Flexbox
-- Grid
+```
+# Written in HTML, CSS, JS
+# Responsive design viewpoints: less than & more than 64em
+# Flexbox
+# Grid
+```
 ---
 
-##### Deployment options
+#### Deployment options
 * Use [hht_deploy](https://github.com/hanhuang-tech/hht_deploy "hht_deploy") on machines with docker and bash shell
-* Cloud provider
+* Deployment using a cloud provider
