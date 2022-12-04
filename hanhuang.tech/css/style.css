@@ -1071,14 +1071,14 @@ span.awstip {
 }
 
 /*mid partition*/
-#project-headings {
+#proj-section-headings {
   text-align: center;
   padding: 15px;
   background-color: var(--clr-accent3);
   box-shadow: var(--bs);
 }
 
-h1.projects-title {
+h1.proj-section-title {
   display: inline-block;
   background-color: slategray;
   color: var(--clr-light);
@@ -1090,7 +1090,7 @@ h1.projects-title {
   border-color: var(--clr-light) var(--clr-dark2) var(--clr-dark2) var(--clr-light);
 }
 
-h3.projects-subtitle {
+h3.proj-section-subtitle {
   color: lightblue;
   font-family: var(--ff-secondary);
   margin-top: 2px;
@@ -1107,8 +1107,8 @@ div.project {
   z-index: 1;
   text-align: center;
   margin: 20px auto;
-  padding: 10px;
-  background-color: rgb(0, 0, 0, 0.2);
+  padding: 10px 20px;
+  background-color: rgb(100, 100, 100, 0.2);
   max-width: 500px;
   border-width: 2px;
   border-style: solid;
@@ -1144,10 +1144,6 @@ div.imgwrapper4 {
   box-shadow: var(--bs);
 }
 
-img.certbot-centeriser {
-  margin-top: 20px;
-}
-
 h2.viewgithub1,
 h2.viewgithub2,
 h2.viewgithub3,
@@ -1165,24 +1161,47 @@ h2.viewgithub4 {
   z-index: 0;
 }
 
-h4.project-subtitle {
-  color: lightblue;
+h3.project-subtitle {
+  color: greenyellow;
   font-weight: var(--fw-reg);
 }
 
 p.project {
   color: var(--clr-light);
-  margin: 5px;
+  margin: 5px auto;
+}
+
+a.web-link {
+  text-decoration: none;
+  color: skyblue;
+  transition: 0.5s;
+}
+
+a.web-link+a.web-link {
+  margin-left: 20px;
+}
+
+a.web-link:hover {
+  color: lightslategray;
 }
 
 div.projectfooter {
   display: flex;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  column-gap: 10px;
+  row-gap: 5px;
+  margin-bottom: 5px;
 }
 
-h4.tech {
-  color: orange;
-  font-family: var(--ff-secondary);
+/* hht */
+div.projectfooter h4 {
+  display: inline-block;
+  margin: auto 0;
+  padding: 0px 5px;
+  color: var(--clr-light);
+  font-weight: var(--fw-reg);
+  white-space: nowrap;
+  background-color: slategray;
 }
 
 a.justify {
@@ -1191,19 +1210,34 @@ a.justify {
   background-color: var(--clr-light);
   text-decoration: none;
   color: brown;
-  padding: 0 8px;
+  margin: 0 0 0 auto;
+  padding: 0px 8px;
   box-shadow: var(--bs);
   transition-duration: 1s;
+  border-width: 2px;
+  border-style: solid;
+  border-color: brown;
 }
 
-a.justify h4 {
-  font-weight: var(--fw-reg);
+a.justify h3 {
+  font-weight: var(--fw-bold);
   text-align: center;
 }
 
 a.justify:hover {
   background-color: brown;
   color: var(--clr-light);
+  border-color: var(--clr-light);
+}
+
+/* hht_deploy */
+h3.shebang {
+  display: inline-block;
+  margin: auto 0;
+  font-weight: var(--fw-reg);
+  color: cyan;
+  background-color: purple;
+  padding: 2px 5px;
 }
 
 #certbot-eff {
@@ -1211,7 +1245,6 @@ a.justify:hover {
   background: red;
   color: white;
   text-decoration: none;
-  margin: 0px auto 10px;
   padding: 0 10px;
   border-radius: 3px;
   box-shadow: var(--bs);
@@ -1223,15 +1256,8 @@ a.justify:hover {
 }
 
 @media (min-width: 64em) {
-  #project-headings {
-    opacity: 0;
-    position: absolute;
-    box-shadow: none;
-    top: 15px;
-    left: 105px;
-    border-radius: 20px 0;
-  }
 
+  /* project section rotating animation */
   #project-bg-img {
     position: absolute;
     z-index: 0;
@@ -1280,6 +1306,20 @@ a.justify:hover {
     background-size: cover;
   }
 
+  /* projects */
+  div.projectfooter {
+    margin: 5px 0;
+  }
+
+  #proj-section-headings {
+    opacity: 0;
+    position: absolute;
+    box-shadow: none;
+    top: 15px;
+    left: 105px;
+    border-radius: 20px 0;
+  }
+
   #project-tiles {
     flex: 1;
     justify-content: center;
@@ -1306,10 +1346,6 @@ a.justify:hover {
   div.imgwrapper5 {
     min-height: 130px;
     max-width: 220px;
-  }
-
-  img.certbot-centeriser {
-    margin-top: 25px;
   }
 }
 

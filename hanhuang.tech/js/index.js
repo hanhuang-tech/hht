@@ -312,7 +312,7 @@ function awsTipHide() {
 };
 
 // project tiles animations
-const projectHeadings = document.querySelector("#project-headings");
+const projectHeadings = document.querySelector("#proj-section-headings");
 const projectTiles = document.querySelector("#project-tiles");
 const projectBGImg = document.querySelector("#project-bg-img");
 const habbitSpray = document.querySelector("#habbit-spray");
