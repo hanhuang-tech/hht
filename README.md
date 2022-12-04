@@ -1,17 +1,18 @@
 # hht 
-- Frontend static files for domains as mentioned below. 
-- Domains/Subdomains:  
+![code](https://hanhuang.tech/img/codefrondend.png)
+- Frontend static website files for domains as listed:
   * hanhuang.tech  
   * clothingsite.hanhuang.tech 
-  
+
+### Deployment options:
+1. Use [hht_deploy](https://github.com/hanhuang-tech/hht_deploy "hht_deploy") on machines running docker and bash shell.
+2. Deployment using a cloud provider.
+3. Deploy it on your custom server.
+
+### Features:  
 ```
-# Written in HTML, CSS, JS
-# Responsive design viewpoints: less than & more than 64em
+# HTML, CSS, JS
+# Responsive design
 # Flexbox
 # Grid
 ```
----
-
-#### Deployment options
-* Use [hht_deploy](https://github.com/hanhuang-tech/hht_deploy "hht_deploy") on machines with docker and bash shell
-* Deployment using a cloud provider
