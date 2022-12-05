@@ -655,81 +655,65 @@ span.bulb:hover {
 @media (min-width: 64em) {}
 
 /* fourofour */
-body.fourofour {
-  background: lightcyan;
+section.fourofour {
   background-size: cover;
   background-image: linear-gradient(to top,
       var(--clr-dark2) 58%,
       rgba(255, 255, 255, 0.2)),
-    url(../img/sunset.jpg);
+    url(../../hanhuang.tech/img/sunset.jpg);
   background-position: 15% 0%;
   background-repeat: no-repeat;
+  min-height: 100vh;
 }
 
-#fourofour {
-  position: relative;
-  padding: 0px;
-}
-
-div.padding {
-  padding: 15px;
-}
-
-div.fourofour {
-  margin: 150px 0;
-}
-
-img.fourofour {
-  margin: 0 auto;
-  max-width: 150px;
-}
-
-h1.fourofour {
+section.fourofour div.wrapper {
+  position: absolute;
   text-align: center;
-  background: skyblue;
-  color: var(--clr-dark2);
-  font-size: 2.2rem;
-  line-height: 3rem;
-  margin: 20px auto 10px;
-  width: 100px;
+  top: 50%;
 }
 
-h3.fourofour {
-  text-align: center;
-  font-size: 1.4rem;
-  line-height: 1.6rem;
-  color: cadetblue;
+section.fourofour div.wrapper img {
+  margin: 50px auto;
+  filter: grayscale(1) blur(1px) drop-shadow(5px 5px 5px var(--clr-dark));
+  transform: scale(200%);
 }
 
-h4.fourofour {
-  text-align: center;
-  max-width: 350px;
-  font-size: 1.2rem;
-  line-height: 2rem;
-  margin: 0px auto 5px;
+section.fourofour h1 {
+  display: inline-block;
+  background: var(--clr-accent3);
   color: var(--clr-light);
+  letter-spacing: 2px;
+  margin: 0 auto;
+  padding: 8px;
+  border-width: 4px;
+  border-style: solid;
+  border-color: grey var(--clr-dark) var(--clr-dark) grey;
+  box-shadow: var(--bs);
 }
 
-div.fourreturn {
+section.fourofour h2 {
+  color: var(--clr-light);
+  margin: 10px auto;
+}
+
+section.fourofour h3 {
+  max-width: 350px;
+  color: skyblue;
+}
+
+a.fourreturn h2 {
+  display: inline-block;
+  text-decoration: none;
   background: red;
   text-align: center;
-  max-width: 230px;
-  padding: 2px 8px;
-  margin: 0px auto;
-  border: 2px solid red;
-  border-radius: 10px;
+  white-space: nowrap;
+  padding: 0px 5px;
+  margin: 20px auto 0px;
+  transition: 1s;
 }
 
-a.fourreturn {
-  color: var(--clr-light);
-  font-size: 1.4rem;
-  text-decoration: none;
-}
-
-div.fourreturn:hover {
+a.fourreturn h2:hover {
   background: green;
-  border: 2px solid var(--clr-light);
-  transition: background 1s;
 }
 
 @media (min-width: 64em) {
