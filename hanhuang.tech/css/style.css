@@ -666,53 +666,48 @@ section.fourofour {
   min-height: 100vh;
 }
 
-section.fourofour div.wrapper {
-  position: absolute;
+div.four-wrap {
   text-align: center;
-  top: 50%;
+  margin: 0 auto;
 }
 
-section.fourofour div.wrapper img {
+div.four-wrap img {
   margin: 50px auto;
   filter: grayscale(1) blur(1px) drop-shadow(5px 5px 5px var(--clr-dark));
   transform: scale(200%);
 }
 
-section.fourofour h1 {
+div.four-wrap h1 {
   display: inline-block;
   background: var(--clr-accent3);
   color: var(--clr-light);
   letter-spacing: 2px;
   margin: 0 auto;
-  padding: 8px;
+  padding: 5px;
   border-width: 4px;
   border-style: solid;
   border-color: grey var(--clr-dark) var(--clr-dark) grey;
   box-shadow: var(--bs);
 }
 
-section.fourofour h2 {
-  color: var(--clr-light);
-  margin: 10px auto;
-}
-
-section.fourofour h3 {
-  max-width: 350px;
+div.four-wrap h2 {
   color: skyblue;
+  margin-top: 15px;
 }
 
-a.fourreturn h2 {
+a.four-return h2 {
   display: inline-block;
   text-decoration: none;
   background: red;
+  color: var(--clr-light);
   text-align: center;
   white-space: nowrap;
   padding: 0px 5px;
-  margin: 20px auto 0px;
+  margin-top: 20px;
   transition: 1s;
 }
 
-a.fourreturn h2:hover {
+a.four-return h2:hover {
   background: green;
 }
 
