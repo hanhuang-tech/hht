@@ -323,7 +323,7 @@ function projectTilesMoveMobile() {
   for (let i = 0; i < tilesChild.length; i++) {
     if (window.pageYOffset > (1000 + (i * 300))) {
       tilesChild[i].style.opacity = "1";
-      tilesChild[i].style.transition = "1s";
+      tilesChild[i].style.transition = "0.2s";
       if (i > 0) { tilesChild[i - 1].style.opacity = "0.2"; }
       if (i < 3) { tilesChild[i + 1].style.opacity = "0.2"; }
     }
