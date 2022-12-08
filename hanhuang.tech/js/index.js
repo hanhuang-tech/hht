@@ -324,8 +324,8 @@ function projectTilesMoveMobile() {
     if (window.pageYOffset > (1000 + (i * 300))) {
       tilesChild[i].style.opacity = "1";
       tilesChild[i].style.transition = "0.2s";
-      if (i > 0) { tilesChild[i - 1].style.opacity = "0.2"; }
-      if (i < 3) { tilesChild[i + 1].style.opacity = "0.2"; }
+      if (i > 0) { tilesChild[i - 1].style.opacity = "0.5"; }
+      if (i < 3) { tilesChild[i + 1].style.opacity = "0.5"; }
     }
   }
   if (window.pageYOffset > 2300) tilesChild[3].style.opacity = "0";

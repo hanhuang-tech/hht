@@ -782,7 +782,7 @@ div.logo {
   position: fixed;
   padding: 0;
   margin: 0;
-  border-radius: 0 20px 20px 10px;
+  border-radius: 0 20px 20px 0;
   box-shadow: var(--bs);
   transition-duration: 1s;
 }
@@ -1366,19 +1366,19 @@ h3.shebang {
 
 /*bot partition*/
 #han {
-  padding: 30px;
+  padding: 20px;
   color: var(--clr-dark);
-  border-width: 0 100px;
+  border-width: 0 85px;
   border-style: solid;
   border-color: rgb(0, 0, 0, 0.2);
 }
 
-h1.han {
+#han h1 {
   text-align: center;
   font-weight: var(--fw-bold);
 }
 
-h4.han {
+#han h4 {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -1386,16 +1386,14 @@ h4.han {
   margin: 10px 0;
 }
 
-img.han {
-  max-width: 200px;
+#han img {
   margin: 20px auto;
   box-shadow: var(--bs);
 }
 
-p.han {
+#han p {
   text-align: center;
   margin: auto;
-  max-width: 450px;
 }
 
 div.trees {
@@ -1416,11 +1414,12 @@ div.trees {
     border-width: 0px 300px;
   }
 
-  img.han {
+  #han img {
+    max-width: 250px;
     margin: 30px auto;
   }
 
-  p.han {
+  #han p {
     max-width: 600px;
     text-align: center;
   }
@@ -1435,7 +1434,23 @@ div.trees {
 div.contactbar-flexwrapper {
   display: flex;
   justify-content: center;
-  column-gap: 30px;
+  column-gap: 20px;
+}
+
+div.contactbar-flexwrapper h2 {
+  display: none;
+}
+
+@media (min-width: 64em) {
+  div.contactbar-flexwrapper {
+    display: flex;
+    justify-content: center;
+    column-gap: 30px;
+  }
+
+  div.contactbar-flexwrapper h2 {
+    display: block;
+  }
 }
 
 div.contactbar-flexwrapper a {
@@ -1446,9 +1461,15 @@ a.email {
   display: flex;
   column-gap: 10px;
   text-decoration: none;
-  padding: 3px 10px;
+  padding: 3px 0px;
   border-radius: 5px;
   transition: 0.5s;
+}
+
+@media (min-width: 64em) {
+  a.email {
+    padding: 3px 10px;
+  }
 }
 
 a.email h2 {
