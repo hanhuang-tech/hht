@@ -1,5 +1,5 @@
 # hht 
-![code](https://hanhuang.tech/img/codefrondend.png)
+![code](https://hanhuang.tech/img/codefrontend.png)
 - Frontend static website files for domains as listed:
   * hanhuang.tech  
   * clothingsite.hanhuang.tech 
