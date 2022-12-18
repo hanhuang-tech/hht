@@ -198,13 +198,13 @@ function extendResTagMobile() {
         resTag1.style.transform = "translate(-75px)";
         resTag1.style.opacity = "0";
         resTag1.style.zIndex = "-1";
-        resTag1.style.transitionDuration = "0.2s";
+        resTag1.style.transitionDuration = "1s";
     }
     else if (Math.abs(document.documentElement.scrollTop) > 150) {
         resTag1.style.transform = "translate(0px)";
         resTag1.style.opacity = "1";
         resTag1.style.zIndex = "1";
-        resTag1.style.transitionDuration = "0.2s";
+        resTag1.style.transitionDuration = "1s";
     }
 }
 
@@ -214,13 +214,13 @@ function extendResTagDesktop() {
         resTag1.style.transform = "translateX(75px)";
         resTag1.style.opacity = "0";
         resTag1.style.zIndex = "-1";
-        resTag1.style.transitionDuration = "0.2s";
+        resTag1.style.transitionDuration = "1s";
     }
     else if (Math.abs(document.documentElement.scrollTop) > 150) {
         resTag1.style.transform = "translate(0px)";
         resTag1.style.opacity = "1";
         resTag1.style.zIndex = "1";
-        resTag1.style.transitionDuration = "0.2s";
+        resTag1.style.transitionDuration = "1s";
     }
 }
 
