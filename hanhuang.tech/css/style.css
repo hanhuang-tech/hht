@@ -676,25 +676,26 @@ span.bulb:hover {
 
 /* fourofour */
 section.fourofour {
-  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   background-image: linear-gradient(to top,
-      var(--clr-dark2) 58%,
+      var(--clr-dark2) 90%,
       rgba(255, 255, 255, 0.2)),
     url(../../hanhuang.tech/img/sunset.jpg);
   background-position: 15% 0%;
   background-repeat: no-repeat;
-  min-height: 100vh;
 }
 
 div.four-wrap {
-  text-align: center;
-  margin: 0 auto;
+  background: var(--clr-light);
 }
 
 div.four-wrap img {
-  margin: 50px auto;
-  filter: grayscale(1) blur(1px) drop-shadow(5px 5px 5px var(--clr-dark));
-  transform: scale(200%);
+  margin-left: auto;
+  filter: grayscale(0.5) blur(0px) drop-shadow(10px 10px 10px var(--clr-dark));
+  transform: scale(175%);
 }
 
 div.four-wrap h1 {
@@ -702,7 +703,8 @@ div.four-wrap h1 {
   background: var(--clr-accent3);
   color: var(--clr-light);
   letter-spacing: 2px;
-  margin: 0 auto;
+  font-family: var(--ff-secondary);
+  margin: 0 20px;
   padding: 5px;
   border-width: 4px;
   border-style: solid;
@@ -711,24 +713,28 @@ div.four-wrap h1 {
 }
 
 div.four-wrap h2 {
-  color: skyblue;
-  margin-top: 15px;
+  font-family: var(--ff-secondary);
+  color: var(--clr-dark2);
+  margin: 20px 20px;
 }
 
 a.four-return h2 {
   display: inline-block;
   text-decoration: none;
-  background: red;
+  background: darkred;
   color: var(--clr-light);
-  text-align: center;
   white-space: nowrap;
   padding: 0px 5px;
-  margin-top: 20px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent;
   transition: 1s;
 }
 
 a.four-return h2:hover {
-  background: green;
+  color: var(--clr-dark2);
+  border-color: var(--clr-dark2);
+  background: lightgreen;
 }
 
 @media (min-width: 64em) {
@@ -793,7 +799,7 @@ div.logowrap {
 div.logo {
   display: flex;
   flex-direction: column;
-  background-color: rgb(112, 128, 144, 0.5);
+  background-color: rgb(100, 100, 100, 0.5);
   position: fixed;
   padding: 0;
   margin: 0;
@@ -804,7 +810,6 @@ div.logo {
 
 @media (min-width: 64em) {
   div.logo {
-    background-color: rgb(100, 100, 100, 0.5);
     flex-direction: row;
     max-width: 175px;
     padding: 5px;
@@ -1513,14 +1518,11 @@ a.youtube img {
   transition: 0.5s;
 }
 
-a.email:hover {
-  background-color: var(--clr-accent3);
-}
-
 a.github img:hover {
   filter: invert(1%);
 }
 
+a.email img:hover,
 a.linkedin img:hover,
 a.youtube img:hover {
   filter: invert(10%);
@@ -1531,6 +1533,9 @@ a.youtube img:hover {
     column-gap: 50px;
   }
 
+  a.email:hover {
+    background-color: var(--clr-accent3);
+  }
 }
 
 /* footer */
@@ -1561,7 +1566,7 @@ h4.footer {
   border-width: 0 0 3px 3px;
   border-style: solid;
   border-color: var(--clr-light);
-  border-radius: 5px 15px 5px 5px;
+  border-radius: 2px 10px 2px 2px;
 }
 
 /***************************************************/

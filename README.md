@@ -16,3 +16,9 @@
 # Flexbox
 # Grid
 ```
+  
+### Other:
+```
+# error page 404.html
+# contact page
+```
