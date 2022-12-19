@@ -257,7 +257,7 @@ a.subjectheading4.toggle {
   }
 
   60% {
-    background: darkgoldenrod;
+    background: rgb(100, 100, 100);
     border-color: rgb(25, 25, 25) rgb(25, 25, 25);
   }
 
@@ -274,7 +274,7 @@ a.subjectheading4.toggle {
 
 @keyframes animateLtnBG {
   50% {
-    background-color: rgba(200, 200, 100, 0.8);
+    background-color: rgba(200, 200, 200, 0.5);
   }
 }
 
@@ -285,7 +285,7 @@ a.subjectheading4.toggle {
   }
 
   60% {
-    border-color: transparent rgba(160, 142, 43, 0.2) transparent rgba(160, 142, 43, 0.2);
+    border-color: transparent rgba(100, 100, 100, 0.5) transparent rgba(100, 100, 100, 0.5);
   }
 
   80% {
@@ -293,7 +293,7 @@ a.subjectheading4.toggle {
   }
 
   to {
-    border-color: transparent rgba(160, 142, 43, 0.5) transparent rgba(160, 142, 43, 0.5);
+    border-color: transparent rgba(150, 150, 150, 0.5) transparent rgba(150, 150, 150, 0.5);
   }
 }
 
@@ -535,7 +535,6 @@ div.standpart {
   right: 15px;
   padding: 3px;
   border: 2px inset var(--clr-dark);
-  border-radius: 5px;
 }
 
 /*horizontal lantern column*/
@@ -560,10 +559,10 @@ div.standpart::after {
 
   content: "";
   display: block;
-  background: rgb(73, 73, 73);
+  background: rgb(80, 80, 80);
   padding: 35px 4px;
   border-color: var(--clr-dark);
-  border-style: inset;
+  border-style: solid;
   border-width: 6px 2px 12px;
   border-radius: 2px 2px 0 0;
 }
@@ -577,7 +576,7 @@ div.dome {
   right: -13px;
   border: 16px inset;
   border-color: transparent transparent var(--clr-dark) transparent;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 /*2nd dome*/
@@ -588,7 +587,7 @@ div.dome::after {
   right: -20px;
   border: 20px inset;
   border-color: transparent transparent var(--clr-dark) transparent;
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
 /*bulb*/
@@ -599,15 +598,16 @@ div.bulb {
   left: -11px;
   display: flex;
   background: var(--clr-light);
-  border-width: 8px 1px 5px;
+  border-width: 5px 1px 1px;
   border-style: solid;
   border-color: var(--clr-dark) gray;
+  border-radius: 0 0 50% 50%;
 }
 
 /*con text*/
 span.bulb::before {
   position: absolute;
-  bottom: 30px;
+  bottom: 32px;
   right: 0px;
 
   content: "con";
@@ -620,9 +620,10 @@ span.bulb {
   z-index: 4;
   display: inline-block;
   writing-mode: vertical-lr;
-  padding: 0 0 0 2px;
+  padding: 0 0 0px 2px;
 
   text-decoration: none;
+  font-family: var(--ff-secondary);
   color: var(--clr-dark2);
   font-size: 1rem;
   line-height: 1.5rem;
@@ -633,7 +634,7 @@ div.bulb::before {
   content: "";
   position: absolute;
   z-index: 4;
-  bottom: -15px;
+  bottom: -10px;
   right: -16px;
   border: 15px;
   border-style: solid;
@@ -644,7 +645,7 @@ div.bulb::before {
 
 div.bulb:hover {
   transition-delay: 1s;
-  background-color: rgb(180, 180, 0);
+  background-color: rgb(150, 150, 150);
   border-color: rgb(25, 25, 25);
 
   animation-name: animateLtn;
@@ -655,7 +656,7 @@ div.bulb:hover {
 /*lantern light hover*/
 div.bulb:hover::before {
   transition-delay: 1s;
-  border-color: transparent rgba(150, 150, 0, 0.4) transparent rgba(150, 150, 0, 0.4);
+  border-color: transparent rgba(100, 100, 100, 0.5) transparent rgba(100, 100, 100, 0.5);
 
   animation-name: animateLtn-lt;
   animation-delay: .8s;
@@ -1535,16 +1536,23 @@ h4.footer {
   right: -15px;
 
   display: inline-block;
-  background-color: lightslategray;
+  background-color: rgb(100, 100, 100);
 
   font-weight: var(--fw-reg);
-  color: var(--clr-dark);
-  padding: 3px 10px 3px 5px;
+  color: var(--clr-light);
+  padding: 2px 8px 2px 4px;
   margin: auto 0;
-  border-width: 2px;
+  border-width: 3px;
   border-style: solid;
   border-color: var(--clr-dark2);
   border-radius: 2px 10px 2px 2px;
+}
+
+@media (min-width: 64em) {
+  h4.footer {
+    padding: 3px 10px 3px 5px;
+    border-width: 4px;
+  }
 }
 
 /***************************************************/
