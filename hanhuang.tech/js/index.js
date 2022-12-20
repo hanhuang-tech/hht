@@ -364,7 +364,7 @@ function projectTilesMoveExpand() {
   for (let i = 0; i < tilesChild.length; i++) {
     tilesChild[i].style.zIndex = "1";
     tilesChild[i].style.margin = "15px";
-    tilesChild[i].style.borderColor = "var(--clr-light) gray gray var(--clr-light)";
+    tilesChild[i].style.borderColor = "gray var(--clr-dark2) var(--clr-dark2) gray";
     tilesChild[i].style.borderRadius = "10px";
     tilesChild[i].style.transition = "1s";
   }
@@ -451,7 +451,7 @@ const scrollheightc = document.querySelector("#scrollheightc");
 
 function notEndBGMobile() {
   projectTiles.style.backgroundImage =
-    "radial-gradient(slategray, var(--clr-dark))";
+    "radial-gradient(var(--clr-accent3), var(--clr-dark))";
 }
 
 function endBGMobile() {
@@ -467,7 +467,7 @@ function notEndBGDesktop() {
   botLeftBar.style.background = "var(--clr-dark)";
   if (Math.abs(document.documentElement.scrollTop) > 350) {
     projectTiles.style.background =
-      "radial-gradient(slategray, var(--clr-dark))"
+      "radial-gradient(var(--clr-accent3), var(--clr-dark))"
     projectDivAll.forEach(tile => { tile.style.opacity = "1"; })
   } else {
     projectTiles.style.background = "radial-gradient(var(--clr-dark2), black)";

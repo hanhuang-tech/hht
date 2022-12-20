@@ -67,7 +67,6 @@ window.onscroll = function () {
     }
     else {
         scrollRGB();
-        logoFixed();
         retractBurgerOnScroll();
         extendResTagMobile();
     }
@@ -160,7 +159,7 @@ function logoFixed() {
         logo.style.flexDirection = "column";
         logo.style.padding = "0";
         logo.style.margin = "0";
-        logo.style.backgroundColor = "rgba(100, 100, 100, 0.2)";
+        logo.style.backgroundColor = "rgba(100, 100, 100, 0.5)";
         logo.style.borderRadius = "0 0 20px 0";
         logo.style.boxShadow = "var(--bs)";
         logo.style.transitionDuration = "1s";
@@ -168,7 +167,7 @@ function logoFixed() {
         habbitPartition.style.top = "40px";
         habbitPartition.style.right = "3px";
     } else {
-        logoWrap.style.backgroundColor = "rgba(50, 50, 50, 0.2)";
+        logoWrap.style.backgroundColor = "transparent";
         logo.style.flexDirection = "row";
         logo.style.position = "static";
         logo.style.padding = "5px";
@@ -208,7 +207,6 @@ function extendResTagMobile() {
     }
 }
 
-
 function extendResTagDesktop() {
     if (Math.abs(document.documentElement.scrollTop) < 150) {
         resTag1.style.transform = "translateX(75px)";
@@ -223,8 +221,6 @@ function extendResTagDesktop() {
         resTag1.style.transitionDuration = "1s";
     }
 }
-
-
 
 //toggle = switch between nontoggle class and toggle class
 burger.addEventListener("click", function () {
