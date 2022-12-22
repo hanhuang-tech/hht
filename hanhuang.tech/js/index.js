@@ -225,39 +225,35 @@ function subjectHeadingHide() {
 
 // resources
 const subjectWrapper = [
-  document.querySelector("div.subjectwrapper1"),
-  document.querySelector("div.subjectwrapper2"),
-  document.querySelector("div.subjectwrapper3"),
-  document.querySelector("div.subjectwrapper4"),
+  document.querySelector("div.subjectwrapper1")
+]
+
+const subjectWrapperImg = [
+  document.querySelector("div.subjectwrapper1 img")
 ]
 
 const subjectHeading = [
-  document.querySelector("a.subjectheading1"),
-  document.querySelector("a.subjectheading2"),
-  document.querySelector("a.subjectheading3"),
-  document.querySelector("a.subjectheading4"),
+  document.querySelector("a.subjectheading1")
 ]
 const subjectDropdown = [
-  document.querySelector("div.subjectdropdown1"),
-  document.querySelector("div.subjectdropdown2"),
-  document.querySelector("div.subjectdropdown3"),
-  document.querySelector("div.subjectdropdown4"),
+  document.querySelector("div.subjectdropdown1")
 ]
 const subjectBlurb = [
-  document.querySelector(".subjectblurb1"),
-  document.querySelector(".subjectblurb2"),
-  document.querySelector(".subjectblurb3"),
-  document.querySelector(".subjectblurb4"),
+  document.querySelector("p.subjectblurb1")
 ]
 const awsTip = document.querySelector(".awstip");
 
 for (let i = 0; i < subjectHeading.length; i++) {
-  subjectHeading[i].addEventListener("mouseenter", function () { downList(i); });
-  subjectWrapper[i].addEventListener("mouseleave", function () { upList(i); });
-  if (i == 3) {
-    subjectHeading[i].addEventListener("mouseenter", function () { awsTipReveal(); });
-    subjectWrapper[i].addEventListener("mouseleave", function () { awsTipHide(); });
-  }
+  subjectHeading[i].addEventListener("mouseenter", function () {
+    downList(i);
+    subjectWrapperImg[i].style.transitionDuration = "1s";
+    subjectWrapperImg[i].style.borderRadius = "20px";
+  });
+  subjectWrapper[i].addEventListener("mouseleave", function () {
+    upList(i);
+    subjectWrapperImg[i].style.transitionDuration = "1s";
+    subjectWrapperImg[i].style.borderRadius = "40px";
+  });
 }
 
 function delayedMouseOver(n) {
@@ -269,10 +265,10 @@ function delayedMouseOver(n) {
 }
 
 function delayedMouseLeave(n) {
-  subjectHeading[n].style.color = "green";
-  subjectHeading[n].style.backgroundColor = "lightgreen";
+  subjectHeading[n].style.color = "var(--clr-dark)";
+  subjectHeading[n].style.backgroundColor = "rgb(100, 200, 100)";
   subjectHeading[n].style.padding = "0px 8px";
-  subjectHeading[n].style.borderColor = "green";
+  subjectHeading[n].style.borderColor = "var(--clr-accent)";
   subjectHeading[n].style.borderRadius = "0px";
 }
 
@@ -317,11 +313,13 @@ const projectBGImg = document.querySelector("#project-bg-img");
 const habbitSpray = document.querySelector("#habbit-spray");
 const habbitBorder = document.querySelector("#habbit-border");
 const projectDivAll = document.querySelectorAll("div.project");
+const subjectGroups = document.querySelector("div.subjectgroups");
+const subjectsNoOfChild = subjectGroups.children;
 const tilesChild = projectTiles.children;
 
 function projectTilesMoveMobile() {
   for (let i = 0; i < tilesChild.length; i++) {
-    if (window.pageYOffset > (1000 + (i * 300))) {
+    if (window.pageYOffset > (subjectsNoOfChild.length * 200 + (i * 300))) {
       tilesChild[i].style.opacity = "1";
       tilesChild[i].style.transition = "0.2s";
       if (i > 0) { tilesChild[i - 1].style.opacity = "0.5"; }
@@ -405,7 +403,7 @@ const imgWrapper = [
   document.querySelector("div.imgwrapper2"),
   document.querySelector("div.imgwrapper3"),
   document.querySelector("div.imgwrapper4")
-];
+]
 const progressImg = [
   document.querySelector("div.imgwrapper1 img"),
   document.querySelector("div.imgwrapper2 img"),
@@ -495,11 +493,15 @@ function scrollToEndBGDesktop() {
 }
 
 //tests
-function testRestrictRandomRGB() {
+function test() {
   console.log(
     "rgb:" + r + "," + g + "," + b +
     " rR:" + rR + "/" + sumRestrictRGB(r, rR) + "/" + diffRestrictRGB(b, rB) +
     " rG:" + rG + "/" + sumRestrictRGB(g, rG) + "/" + diffRestrictRGB(b, rB) +
     " rB:" + rB + "/" + sumRestrictRGB(b, rB) + "/" + diffRestrictRGB(b, rB)
   )
+  console.log(subjectHeading.length)
+  console.log(tilesChild.length)
+  console.log(subjectsNoOfChild.length)
 }
+test()

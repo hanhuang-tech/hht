@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "file": "${workspaceFolder}/html/index.html",
+            "file": "${workspaceFolder}/hanhuang.tech/index.html",
             "webRoot": "${workspaceFolder}"
         }
     ]
