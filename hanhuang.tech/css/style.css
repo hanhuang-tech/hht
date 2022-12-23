@@ -976,20 +976,19 @@ div.subjectwrapper1 {
   max-width: 200px;
   padding: 15px;
   margin: 50px auto;
-
-  box-shadow: var(--bs3);
+  border: 3px solid var(--clr-accent);
   border-radius: 40px 0px;
+  box-shadow: var(--bs);
 }
 
 div.subjectwrapper1 img {
   max-width: 120px;
-  border-radius: 40px;
-  box-shadow: var(--bs2);
+  border-radius: 10px;
 }
 
 a.subjectheading1 {
   z-index: 1;
-  background-color: rgb(100, 200, 100);
+  background-color: rgb(50, 200, 50);
   margin: 10px 0 5px;
 
   text-decoration: none;
@@ -1033,7 +1032,7 @@ a.dropdowntopic:hover {
   transition-duration: 0.5s;
 }
 
-p.subjectblurb {
+p.subjectblurb1 {
   margin: auto 0;
 }
 
@@ -1222,7 +1221,7 @@ div.projectfooter {
   margin-bottom: 5px;
 }
 
-/* hht */
+/* projects */
 div.projectfooter h4 {
   display: inline-block;
   margin: auto 0;
@@ -1257,31 +1256,6 @@ a.justify:hover {
   background-color: brown;
   color: var(--clr-light);
   border-color: var(--clr-light);
-}
-
-/* hht_deploy */
-h3.shebang {
-  display: inline-block;
-  margin: auto 0;
-  font-weight: var(--fw-reg);
-  color: cyan;
-  background-color: purple;
-  padding: 2px 5px;
-}
-
-#certbot-eff {
-  display: inline-block;
-  background: red;
-  color: white;
-  text-decoration: none;
-  padding: 0 10px;
-  border-radius: 3px;
-  box-shadow: var(--bs);
-}
-
-#certbot-eff:hover {
-  background: var(--clr-dark);
-  transition: 0.5s;
 }
 
 @media (min-width: 64em) {

@@ -231,7 +231,6 @@ const subjectWrapper = [
 const subjectWrapperImg = [
   document.querySelector("div.subjectwrapper1 img")
 ]
-
 const subjectHeading = [
   document.querySelector("a.subjectheading1")
 ]
@@ -246,13 +245,13 @@ const awsTip = document.querySelector(".awstip");
 for (let i = 0; i < subjectHeading.length; i++) {
   subjectHeading[i].addEventListener("mouseenter", function () {
     downList(i);
+    subjectWrapperImg[i].style.filter = "grayscale(1) blur(1px)"
     subjectWrapperImg[i].style.transitionDuration = "1s";
-    subjectWrapperImg[i].style.borderRadius = "20px";
   });
   subjectWrapper[i].addEventListener("mouseleave", function () {
     upList(i);
+    subjectWrapperImg[i].style.filter = "grayscale(0) blur(0px)"
     subjectWrapperImg[i].style.transitionDuration = "1s";
-    subjectWrapperImg[i].style.borderRadius = "40px";
   });
 }
 
