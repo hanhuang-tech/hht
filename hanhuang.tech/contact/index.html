@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <!--links-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="../img/habbit-a.png" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Noto+Sans:wght@400;700&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <!-- logo -->
+        <div class="logowrap">
+            <div class="logo">
+                <div class="habbit-img">
+                    <img src="../img/habbit-a.png" class="habbit-a" alt="a pic of habbit" />
+                    <img src="../img/habbit-b.png" class="habbit-b" alt="a pic of habbit" />
+                </div>
+                <a href="../index.html">
+                    <img src="../img/hht-banner.png" class="banner" alt="picture of hht banner" />
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- connected -->
+    <div id="connectedwrap">
+        <div class="connectedto">
+            <h5 class="connectedto"> connected by lowest latency to $AZ on $IP4.</h5>
+            <h5 class="connectedto"> connected by lowest latency to $AZ on $IP4.</h5>
+        </div>
+    </div>
+    <!-- contact -->
+    <section class="contact">
+        <div class="container">
+            <form method="post" action="contact.php">
+                <div id="namewrap">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                </div>
+                <label for="pokemon">Team</label>
+                <select id="pokemon" name="pokemon">
+                    <option value="not_sure">Not sure</option>
+                    <option value="charmander">Charmander</option>
+                    <option value="blastoise">Blastoise</option>
+                    <option value="bulbasaur">Bulbasaur</option>
+                </select>
+
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Your message" style="height:200px"></textarea>
+
+                <input type="submit" value="Submit">
+
+            </form>
+        </div>
+    </section>
+
+    <!-- contactbar -->
+    <section id="contactbar">
+        <div class="contactbar-flexwrapper">
+            <a href="mailto:han@hanhuang.tech" class="email">
+                <img src="../img/emailicon.png" alt="email icon" title="email Han Huang" />
+                <h2>han@hanhuang.tech</h2>
+            </a>
+            <a href="https://github.com/hanhuang-tech/" class="github">
+                <img src="../img/githubicon.png" alt="github icon" title="find me on Github" />
+            </a>
+            <a href="https://www.linkedin.com/in/han-huang-6808bb123" class="linkedin">
+                <img src="../img/linkedinicon.png" alt="linkedin icon" title="find me on LinkedIn" />
+            </a>
+            <a href="https://www.youtube.com/channel/UCfbZ-JymS_WUZfyq-QU7UqQ" class="youtube">
+                <img src="../img/youtubeicon.png" alt="youtube icon" title="find me on youtube" />
+            </a>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer id="footer">
+        <h4 class="footer">hanhuang.tech 2023</h4>
+    </footer>
+    <script src="../js/contact.js"></script>
+
+</body>
+
+</html>
