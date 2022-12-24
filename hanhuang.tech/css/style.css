@@ -761,14 +761,13 @@ section.contact {
 input[type=text],
 select,
 textarea {
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid lightgray;
+  border-radius: 4px;
   width: 100%;
   box-sizing: border-box;
   resize: vertical;
-  padding: 10px;
-  margin-top: 5px;
-  margin-bottom: 15px;
-  border: 1px solid lightgray;
-  border-radius: 4px;
 }
 
 input[type=text] {
@@ -781,12 +780,12 @@ textarea {
 }
 
 input[type=submit] {
+  cursor: pointer;
   background-color: var(--clr-accent);
-  color: white;
+  color: var(--clr-light);
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
-  cursor: pointer;
   transition: 0.5s;
 }
 

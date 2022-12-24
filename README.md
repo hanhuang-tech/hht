@@ -12,6 +12,7 @@
 ### Features:  
 ```
 # HTML, CSS, JS
+# PHP
 # Responsive design
 # Flexbox
 # Grid
