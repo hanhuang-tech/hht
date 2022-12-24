@@ -43,22 +43,18 @@
     <section class="contact">
         <div class="container">
             <form method="post" action="contact.php">
-                <div id="namewrap">
-                    <label for="fname">First Name</label>
-                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
-                    <label for="lname">Last Name</label>
-                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-                </div>
-                <label for="pokemon">Team</label>
-                <select id="pokemon" name="pokemon">
-                    <option value="not_sure">Not sure</option>
-                    <option value="charmander">Charmander</option>
-                    <option value="blastoise">Blastoise</option>
-                    <option value="bulbasaur">Bulbasaur</option>
+                <label for="name">Name</label>
+                <input id="name" type="text" name="name" placeholder="Your name">
+                <label for="email">Email</label>
+                <input id="email" type="text" name="email" placeholder="Your email address">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Your message"></textarea>
+                <select id="team" name="team">
+                    <option>Your team</option>
+                    <option>Team Pokémon</option>
+                    <option>Team Dragonball Z</option>
+                    <option>Team Avatar</option>
                 </select>
-
-                <label for="subject">Subject</label>
-                <textarea id="subject" name="subject" placeholder="Your message" style="height:200px"></textarea>
 
                 <input type="submit" value="Submit">
 
