@@ -1,3 +1,7 @@
+var onloadCallback = function () {
+  alert("grecaptcha is ready!");
+};
+
 const logoWrap = document.querySelector("div.logowrap");
 const logo = document.querySelector("div.logo");
 const habbitImg = document.querySelector("div.habbit-img");
