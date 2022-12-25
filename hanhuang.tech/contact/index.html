@@ -41,12 +41,14 @@
     </div>
     <!-- contact -->
     <section class="contact">
-        <div class="container">
+        <div id="form">
             <form method="post" action="contact.php">
-                <label for="name">Name</label>
-                <input id="name" type="text" name="name" placeholder="Your name">
-                <label for="email">Email</label>
-                <input id="email" type="text" name="email" placeholder="Your email address">
+                <div class="contactwrap">
+                    <label for="name">Name</label>
+                    <input id="name" type="text" name="name" placeholder="Your name">
+                    <label for="email">Email</label>
+                    <input id="email" type="text" name="email" placeholder="Your email address">
+                </div>
                 <label for="message">Message</label>
                 <textarea id="message" name="message" placeholder="Your message"></textarea>
                 <select id="team" name="team">
@@ -55,6 +57,7 @@
                     <option>Team Dragonball Z</option>
                     <option>Team Avatar</option>
                 </select>
+                <div class="g-recaptcha" data-sitekey="your_site_key"></div>
                 <input type="submit" value="Submit">
             </form>
         </div>
@@ -83,6 +86,7 @@
         <h4 class="footer">hanhuang.tech 2023</h4>
     </footer>
     <script src="../js/contact.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 </body>
 

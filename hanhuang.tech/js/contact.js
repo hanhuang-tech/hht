@@ -36,4 +36,33 @@ function habbitChange(e) {
   else { habbitB.style.opacity = "0"; }
 }
 
+window.onscroll = function () {
+  logoFixed();
+}
+
+// change of position on scroll
+function logoFixed() {
+  if (Math.abs(document.documentElement.scrollTop) > 1) {
+    logoWrap.style.backgroundColor = "transparent";
+    logo.style.flexDirection = "row";
+    logo.style.position = "fixed";
+    logo.style.padding = "5px";
+    logo.style.margin = "5px";
+    logo.style.borderRadius = "0px 0px 30px 0px";
+    logo.style.boxShadow = "var(--bs4)";
+    logo.style.transitionDuration = "1s";
+    if (window.matchMedia("(min-width: 64em)").matches) { bannerImg.style.padding = "0px"; }
+    else { bannerImg.style.paddingTop = "5px"; }
+  } else {
+    logo.style.position = "fixed";
+    logo.style.flexDirection = "column";
+    logo.style.padding = "0";
+    logo.style.margin = "0";
+    logo.style.backgroundColor = "rgba(100, 100, 100, 0.5)";
+    logo.style.borderRadius = "0 0 20px 0";
+    logo.style.boxShadow = "var(--bs)";
+    logo.style.transitionDuration = "1s";
+    bannerImg.style.paddingTop = "0px";
+  }
+}
 
