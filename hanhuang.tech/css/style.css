@@ -371,12 +371,12 @@ div.ham {
 }
 
 #hidden-burger-contents.resfrontend {
-  min-width: 70px;
+  min-width: 50px;
 }
 
 @media(min-width:64em) {
   #hidden-burger-contents.resfrontend {
-    min-width: 90px;
+    min-width: 60px;
   }
 }
 
