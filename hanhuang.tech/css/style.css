@@ -357,6 +357,7 @@ div.ham {
   right: 30px;
   background: rgba(0, 0, 0, 0.6);
   padding: 5px;
+  font-family: var(--ff-secondary);
   transform: translateX(650px);
   border-radius: 5px;
   box-shadow: var(--bs);
@@ -660,7 +661,7 @@ section.fourofour {
   min-height: 100vh;
   background-size: cover;
   background-image: linear-gradient(to top,
-      var(--clr-dark2) 50%,
+      var(--clr-dark) 50%,
       rgba(200, 100, 100, 0.6)),
     url(../../hanhuang.tech/img/sunset.jpg);
   background-repeat: no-repeat;
@@ -727,15 +728,15 @@ a.four-return h2 {
   color: var(--clr-light);
   white-space: nowrap;
   padding: 0px 5px;
-  border-width: 4px;
+  border-width: 3px;
   border-style: solid;
   border-color: transparent;
   transition: 1s;
 }
 
 a.four-return h2:hover {
-  color: var(--clr-dark2);
-  border-color: var(--clr-dark2);
+  color: var(--clr-accent);
+  border-color: var(--clr-accent);
   background: lightgreen;
 }
 
@@ -1513,7 +1514,7 @@ a.youtube img:hover {
   }
 
   a.email:hover {
-    background-color: var(--clr-accent3);
+    background-color: rgb(40, 40, 40);
   }
 }
 
