@@ -1,28 +1,20 @@
 <?php
 $response = [];
 // body
-$name = $_POST['name'];
-$email = $_POST['email'];
-$message = $_POST['message'];
-$team = $_POST['team'];
-$body ="From: $name \n Team: $team \n Message: $message";
+$to = $_POST['email'];
+$subject = $_POST['subject'];
+$message ="From: $_POST['name'] \n Team: $_POST['team'] \n Message: $_POST['message']";
 
-// header
+// headers
 $recipient = "noreply@hanhuang.tech";
-$header = "Recipient: $recipient \r\n From: $email \r\n";
+$headers = "Recipient: $recipient \r\n From: $to \r\n";
 
-// conditions
-if (isset($email, $name, $message)) {
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $response[] = 'Please enter a valid email address';
-    }
-    if (empty($name) || empty($email) || empty($message)) {
-		$response[] = 'Please complete all fields';
-	} 
-    if (mail($header, $body)) {
-        $response[] = 'Message sent!';		
-    } else {
-        $response[] = 'Message could not be sent! Something seems to be wrong :-(';
-    }
+// send email
+if(mail($to, $subject, $message, $headers)){
+    echo "successfully  mailed";
 }
+else{
+    echo "Failure";
+}
+
 ?>

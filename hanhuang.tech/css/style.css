@@ -759,6 +759,16 @@ section.contact {
   border-radius: 5px;
 }
 
+.flexrowwrap {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 15px;
+}
+
+.flexcolumnwrap {
+  flex-direction: stretch;
+}
+
 input[type=text],
 select,
 textarea {
@@ -773,7 +783,6 @@ textarea {
 
 input[type=text] {
   display: block;
-  width: 200px;
 }
 
 textarea {
@@ -1669,7 +1678,7 @@ div.res-tag3 {
   z-index: -1;
   left: 0;
   top: 50%;
-  background-color: gray;
+  background-color: rgba(100, 100, 100, 0.8);
   border-radius: 0 10px 10px 0;
   transform: translate(-75px);
   box-shadow: var(--bs);

@@ -35,20 +35,26 @@
     <!-- connected -->
     <div id="connectedwrap">
         <div class="connectedto">
-            <h5 class="connectedto"> connected by lowest latency to $AZ on $IP4.</h5>
-            <h5 class="connectedto"> connected by lowest latency to $AZ on $IP4.</h5>
+            <h5 class="connectedto"> connected to $AZ on $IP4.</h5>
+            <h5 class="connectedto"> connected to $AZ on $IP4.</h5>
         </div>
     </div>
     <!-- contact -->
     <section class="contact">
         <div id="form">
             <form method="post" action="contact/index.php">
-                <div class="contactwrap">
-                    <label for="name">Name</label>
-                    <input id="name" type="text" name="name" placeholder="Your name">
-                    <label for="email">Email</label>
-                    <input id="email" type="text" name="email" placeholder="Your email address">
+                <div class="flexrowwrap">
+                    <div class="flexcolumnwrap">
+                        <label for="name">Name</label>
+                        <input id="name" type="text" name="name" placeholder="Your name">
+                    </div>
+                    <div class="flexcolumnwrap">
+                        <label for="email">Email</label>
+                        <input id="email" type="text" name="email" placeholder="Your email address">
+                    </div>
                 </div>
+                <label for="subject">Subject</label>
+                <input id="subject" type="text" name="subject" placeholder="Your subject">
                 <label for="message">Message</label>
                 <textarea id="message" name="message" placeholder="Your message"></textarea>
                 <select id="team" name="team">
