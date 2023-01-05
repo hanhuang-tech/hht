@@ -21,10 +21,6 @@ habbitImg.addEventListener("click", function () {
     void habbitB.offsetWidth;
     habbitB.classList.add("animate");
 
-    bannerImg.classList.remove("animate");
-    void bannerImg.offsetWidth;
-    bannerImg.classList.add("animate");
-
     arrowButton.classList.remove("animate");
     void arrowButton.offsetWidth;
     arrowButton.classList.add("animate");
@@ -61,12 +57,13 @@ function habbitChangeDesktop(e) {
 window.onscroll = function () {
     if (window.matchMedia("(min-width: 64em)").matches) {
         scrollRGB();
-        logoFixed();
+        logoRetractDesktop();
         retractBurgerOnScroll();
         extendResTagDesktop();
     }
     else {
         scrollRGB();
+        logoRetractMb();
         retractBurgerOnScroll();
         extendResTagMobile();
     }
@@ -123,12 +120,6 @@ function scrollRGB() {
         b = sumRestrictRGB(b, rB);
         getRGB = "rgb(" + r + "," + g + "," + b + ")";
         filterRGB = r + " " + g + " " + b;
-
-        habbitPartition.style.background = getRGB;
-        habbitPartition.style.borderColor = rgbInverseColor(r, g, b);
-        habbitPartition.style.transitionDuration = "1s";
-        bannerImg.style.borderColor = getRGB;
-        bannerImg.style.transitionDuration = "1s";
         rgbFilter.style.background = getRGB
         rgbFilter.innerHTML = filterRGB
         rgbFilter.style.color = rgbInverseColor(r, g, b);
@@ -139,12 +130,6 @@ function scrollRGB() {
         b = diffRestrictRGB(b, rB);
         getRGB = "rgb(" + r + "," + g + "," + b + ")";
         filterRGB = r + " " + g + " " + b;
-
-        habbitPartition.style.background = getRGB;
-        habbitPartition.style.borderColor = rgbInverseColor(r, g, b);
-        habbitPartition.style.transitionDuration = "1s";
-        bannerImg.style.borderColor = getRGB;
-        bannerImg.style.transitionDuration = "1s";
         rgbFilter.style.background = getRGB;
         rgbFilter.innerHTML = filterRGB;
         rgbFilter.style.color = rgbInverseColor(r, g, b);
@@ -152,8 +137,8 @@ function scrollRGB() {
     lastScroll = currentScroll;
 }
 
-// change of position on scroll
-function logoFixed() {
+// change logo on scroll
+function logoRetractDesktop() {
     if (Math.abs(document.documentElement.scrollTop) > 1) {
         logo.style.position = "fixed";
         logo.style.flexDirection = "column";
@@ -176,6 +161,42 @@ function logoFixed() {
         logo.style.boxShadow = "var(--bs4)";
         logo.style.transitionDuration = "1s";
         habbitPartition.style.position = "static";
+    }
+}
+
+function logoRetractMb() {
+    if (Math.abs(document.documentElement.scrollTop) > 1) {
+        logo.style.position = "fixed";
+        logo.style.flexDirection = "column";
+        logo.style.padding = "0px";
+        logo.style.margin = "0px";
+        logo.style.backgroundColor = "transparent";
+        logo.style.borderRadius = "20px";
+        logo.style.boxShadow = "none";
+        logo.style.transitionDuration = "1s";
+        habbitB.style.maxWidth = "40px";
+        habbitB.style.transitionDuration = "1s";
+        habbitImg.style.maxWidth = "50px";
+        habbitImg.style.paddingRight = "10px";
+        habbitImg.style.background = "var(--clr-light)";
+        habbitImg.style.boxShadow = "inset 0px 0px 5px 2px rgb(0, 0, 0)";
+        habbitImg.style.borderRadius = "0 5px 5px 0";
+        bannerImg.style.visibility = "hidden";
+        habbitImg.style.transitionDuration = "1s";
+    } else {
+        logo.style.position = "fixed";
+        logo.style.flexDirection = "column";
+        logo.style.padding = "0";
+        logo.style.margin = "0";
+        logo.style.backgroundColor = "rgba(100, 100, 100, 0.5)";
+        logo.style.borderRadius = "0 0 20px 0";
+        logo.style.boxShadow = "var(--bs)";
+        logo.style.transitionDuration = "1s";
+        habbitB.style.maxWidth = "50px";
+        habbitImg.style.paddingRight = "0px";
+        habbitImg.style.backgroundColor = "transparent";
+        habbitImg.style.boxShadow = "none";
+        bannerImg.style.visibility = "visible";
     }
 }
 
