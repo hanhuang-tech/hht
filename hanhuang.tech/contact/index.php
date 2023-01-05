@@ -3,7 +3,7 @@ $response = [];
 // body
 $to = $_POST['email'];
 $subject = $_POST['subject'];
-$message ="From: $_POST['name'] \n Team: $_POST['team'] \n Message: $_POST['message']";
+$message ="From: $_POST['name'] \r\n Team: $_POST['team'] \r\n Message: $_POST['message']";
 
 // headers
 $recipient = "noreply@hanhuang.tech";
