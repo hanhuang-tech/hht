@@ -59,13 +59,13 @@ window.onscroll = function () {
         scrollRGB();
         logoRetractDesktop();
         retractBurgerOnScroll();
-        extendResTagDesktop();
+        extendTagDesktop();
     }
     else {
         scrollRGB();
         logoRetractMb();
         retractBurgerOnScroll();
-        extendResTagMobile();
+        extendTagMobile();
     }
 }
 
@@ -213,14 +213,14 @@ habbitA.style.transitionDuration = "0.5s";
 // restag
 const resTag1 = document.querySelector("div.res-tag1");
 
-function extendResTagMobile() {
-    if (Math.abs(document.documentElement.scrollTop) < 150) {
+function extendTagMobile() {
+    if (Math.abs(document.documentElement.scrollTop) < 150 || Math.abs(document.documentElement.scrollTop) > 2500) {
         resTag1.style.transform = "translate(-75px)";
         resTag1.style.opacity = "0";
         resTag1.style.zIndex = "-1";
         resTag1.style.transitionDuration = "1s";
     }
-    else if (Math.abs(document.documentElement.scrollTop) > 150) {
+    else {
         resTag1.style.transform = "translate(0px)";
         resTag1.style.opacity = "1";
         resTag1.style.zIndex = "1";
@@ -228,14 +228,14 @@ function extendResTagMobile() {
     }
 }
 
-function extendResTagDesktop() {
-    if (Math.abs(document.documentElement.scrollTop) < 150) {
+function extendTagDesktop() {
+    if (Math.abs(document.documentElement.scrollTop) < 150 || Math.abs(document.documentElement.scrollTop) > 1750) {
         resTag1.style.transform = "translateX(75px)";
         resTag1.style.opacity = "0";
         resTag1.style.zIndex = "-1";
         resTag1.style.transitionDuration = "1s";
     }
-    else if (Math.abs(document.documentElement.scrollTop) > 150) {
+    else {
         resTag1.style.transform = "translate(0px)";
         resTag1.style.opacity = "1";
         resTag1.style.zIndex = "1";

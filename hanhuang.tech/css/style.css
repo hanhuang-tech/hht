@@ -375,12 +375,6 @@ div.ham {
   min-width: 90px;
 }
 
-@media(min-width:64em) {
-  #hidden-burger-contents.resfrontend {
-    min-width: 60px;
-  }
-}
-
 #hidden-burger-contents .topicanchor {
   display: flex;
   align-items: center;
@@ -893,24 +887,21 @@ img.banner {
 }
 
 #habbit-partition {
-  background: rgb(125, 125, 125);
-  padding: 3px;
-  margin: 5px;
-  border-width: 2px;
-  border-style: solid;
-  border-color: var(--clr-light);
-  border-radius: 2px;
-  position: absolute;
-  top: 40px;
-  right: -3px;
-  filter: blur(1px);
+  display: none;
 }
 
 @media (min-width: 64em) {
   #habbit-partition {
+    display: block;
+    background: rgb(125, 125, 125);
+    padding: 3px;
+    margin: 5px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--clr-light);
+    border-radius: 2px;
     position: static;
-    top: 0;
-    right: 0px;
+    filter: blur(1px);
   }
 }
 
