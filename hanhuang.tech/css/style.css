@@ -404,11 +404,12 @@ div.ham {
 #hidden-burger-contents img.habbit-a {
   position: absolute;
   bottom: -15px;
-  width: 40px;
   left: -15px;
+  width: 30px;
   box-sizing: border-box;
-  padding: 5px;
   background-color: var(--clr-dark);
+  border: 3px solid black;
+  filter: drop-shadow(0px 0px 1rem var(--clr-dark2));
   border-radius: 50%;
 }
 
@@ -858,6 +859,7 @@ img.habbit-b {
   width: 50px;
   margin: 5px;
   cursor: pointer;
+  box-shadow: var(--bs);
 }
 
 img.habbit-a {
@@ -878,6 +880,7 @@ img.banner {
   border-style: solid;
   border-color: transparent;
   border-radius: 5px 5px 20px 5px;
+  box-shadow: var(--bs);
 }
 
 @media (min-width: 64em) {

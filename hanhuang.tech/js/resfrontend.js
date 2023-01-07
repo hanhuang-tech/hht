@@ -178,8 +178,7 @@ function logoRetractMb() {
         habbitB.style.transitionDuration = "1s";
         habbitImg.style.maxWidth = "50px";
         habbitImg.style.paddingRight = "10px";
-        habbitImg.style.background = "var(--clr-light)";
-        habbitImg.style.boxShadow = "inset 0px 0px 5px 2px rgb(0, 0, 0)";
+        habbitImg.style.background = "var(--clr-accent)";
         habbitImg.style.borderRadius = "0 5px 5px 0";
         bannerImg.style.visibility = "hidden";
         habbitImg.style.transitionDuration = "1s";
@@ -195,7 +194,6 @@ function logoRetractMb() {
         habbitB.style.maxWidth = "50px";
         habbitImg.style.paddingRight = "0px";
         habbitImg.style.backgroundColor = "transparent";
-        habbitImg.style.boxShadow = "none";
         bannerImg.style.visibility = "visible";
     }
 }
