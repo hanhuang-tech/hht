@@ -6,11 +6,15 @@ $subject = $_POST['subject'];
 $name = $_POST['name'];
 $team = $_POST['team'];
 $message = $_POST['message']
-$message ="From: $name \r\n Team: $team \r\n Message: $message \r\n";
+$message ="From: " . $name . "\r\n" . "Team: " $team . "\r\n" . "Message: " . $message . "\r\n";
 
 // headers
 $recipient = "noreply@hanhuang.tech";
-$headers = "Recipient: $recipient \r\n From: $to \r\n";
+$headers = "Recipient: " . $recipient . "\r\n" . "From: " . $to . "\r\n";
+
+if (empty($email) || empty($subject) || empty($name) || empty($message)) {
+    $responses[] = 'Please complete all fields';
+}
 
 // send email
 if(mail($to, $subject, $message, $headers)){
