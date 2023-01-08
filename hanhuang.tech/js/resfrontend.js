@@ -59,13 +59,13 @@ window.onscroll = function () {
         scrollRGB();
         logoRetractDesktop();
         retractBurgerOnScroll();
-        extendTagDesktop();
+        changeTagDesktop();
     }
     else {
         scrollRGB();
         logoRetractMb();
         retractBurgerOnScroll();
-        extendTagMobile();
+        changeTagMobile();
     }
 }
 
@@ -209,35 +209,56 @@ habbitB.style.transitionDuration = "0.5s";
 habbitA.style.transitionDuration = "0.5s";
 
 // restag
-const resTag1 = document.querySelector("div.res-tag1");
+const resTag = document.querySelector("div.res-tag");
+const resTaghtml = document.querySelector(".res-tag-img[type=html]");
+const resTagcss = document.querySelector(".res-tag-img[type=css]");
+const resTagjs = document.querySelector(".res-tag-img[type=js]");
+resTag.style.transitionDuration = "1s";
+resTaghtml.style.transitionDuration = "1s";
+resTagcss.style.transitionDuration = "1s";
+resTagjs.style.transitionDuration = "1s";
 
-function extendTagMobile() {
-    if (Math.abs(document.documentElement.scrollTop) < 150 || Math.abs(document.documentElement.scrollTop) > 2500) {
-        resTag1.style.transform = "translate(-75px)";
-        resTag1.style.opacity = "0";
-        resTag1.style.zIndex = "-1";
-        resTag1.style.transitionDuration = "1s";
+function changeTagMobile() {
+    if (Math.abs(document.documentElement.scrollTop) < 100) {
+        resTag.style.transform = "translate(-75px)";
+        resTag.style.opacity = "0";
+        resTag.style.zIndex = "-1";
     }
-    else {
-        resTag1.style.transform = "translate(0px)";
-        resTag1.style.opacity = "1";
-        resTag1.style.zIndex = "1";
-        resTag1.style.transitionDuration = "1s";
+    else if (Math.abs(document.documentElement.scrollTop) > 100 && (Math.abs(document.documentElement.scrollTop) < 3000)) {
+        resTag.style.transform = "translate(0px)";
+        resTag.style.opacity = "1";
+        resTag.style.zIndex = "1";
+        resTaghtml.style.display = "block";
+        resTagcss.style.display = "none";
+        resTagjs.style.display = "none";
+        resTag.style.borderColor = "chocolate";
+    }
+
+    else if (Math.abs(document.documentElement.scrollTop) > 3000) {
+        resTag.style.transform = "translate(0px)";
+        resTag.style.opacity = "1";
+        resTag.style.zIndex = "1";
+        resTaghtml.style.display = "none";
+        resTagcss.style.display = "block";
+        resTagjs.style.display = "none";
+        resTag.style.borderColor = "blue";
     }
 }
 
-function extendTagDesktop() {
+function changeTagDesktop() {
     if (Math.abs(document.documentElement.scrollTop) < 150 || Math.abs(document.documentElement.scrollTop) > 1750) {
-        resTag1.style.transform = "translateX(75px)";
-        resTag1.style.opacity = "0";
-        resTag1.style.zIndex = "-1";
-        resTag1.style.transitionDuration = "1s";
+        resTag.style.transform = "translateX(75px)";
+        resTag.style.opacity = "0";
+        resTag.style.zIndex = "-1";
+        resTag.style.transitionDuration = "1s";
     }
     else {
-        resTag1.style.transform = "translate(0px)";
-        resTag1.style.opacity = "1";
-        resTag1.style.zIndex = "1";
-        resTag1.style.transitionDuration = "1s";
+        resTag.style.transform = "translate(0px)";
+        resTag.style.opacity = "1";
+        resTag.style.zIndex = "1";
+        resTag.style.transitionDuration = "1s";
+        resTaghtml.style.display = "block";
+        resTag.style.borderColor = "chocolate"
     }
 }
 

@@ -242,25 +242,13 @@ div.arrow-button.animate {
 }
 
 @keyframes animateLtn {
-  from {
-    background: whitesmoke;
-    border-color: var(--clr-dark) gray;
-    color: gray;
-  }
-
   60% {
     background: rgb(100, 100, 100);
-    border-color: rgb(25, 25, 25) rgb(25, 25, 25);
   }
 
   80% {
     background: whitesmoke;
     border-color: var(--clr-dark) gray;
-    color: gray;
-  }
-
-  to {
-    border-color: rgb(25, 25, 25) rgb(25, 25, 25);
   }
 }
 
@@ -272,20 +260,12 @@ div.arrow-button.animate {
 
 
 @keyframes animateLtn-lt {
-  from {
-    visibility: transparent transparent transparent transparent;
-  }
-
   60% {
     border-color: transparent rgba(100, 100, 100, 0.5) transparent rgba(100, 100, 100, 0.5);
   }
 
   80% {
     visibility: transparent transparent transparent transparent;
-  }
-
-  to {
-    border-color: transparent rgba(150, 150, 150, 0.5) transparent rgba(150, 150, 150, 0.5);
   }
 }
 
@@ -508,7 +488,7 @@ div.arrow-button span {
   bottom: 0px;
   z-index: 4;
   text-decoration: none;
-  background-color: rgba(100, 100, 100, 0.5);
+  background-color: rgba(50, 50, 50, 0.5);
   height: 90px;
   width: 50px;
   border-radius: 30px 0 0;
@@ -584,11 +564,21 @@ div.bulb {
   top: 30px;
   left: -11px;
   display: flex;
-  background: var(--clr-light);
+  background: rgba(150, 150, 150, 1);
   border-width: 5px 1px 1px;
   border-style: solid;
   border-color: var(--clr-dark) gray;
   border-radius: 0 0 50% 50%;
+}
+
+div.bulb:hover {
+  transition-delay: 1s;
+  background-color: rgb(200, 200, 200);
+  border-color: rgb(25, 25, 25);
+
+  animation-name: animateLtn;
+  animation-delay: 1s;
+  animation-duration: 1s;
 }
 
 /*con text*/
@@ -596,7 +586,6 @@ span.bulb::before {
   position: absolute;
   bottom: 32px;
   right: 0px;
-
   content: "con";
   color: var(--clr-light);
 }
@@ -608,7 +597,6 @@ span.bulb {
   display: inline-block;
   writing-mode: vertical-lr;
   padding: 0 0 0px 2px;
-
   text-decoration: none;
   font-family: var(--ff-secondary);
   color: var(--clr-dark2);
@@ -621,7 +609,7 @@ div.bulb::before {
   content: "";
   position: absolute;
   z-index: 4;
-  bottom: -8px;
+  bottom: -6px;
   right: -16px;
   border: 15px;
   border-style: solid;
@@ -630,23 +618,13 @@ div.bulb::before {
   padding: 14px;
 }
 
-div.bulb:hover {
-  transition-delay: 1s;
-  background-color: rgb(150, 150, 150);
-  border-color: rgb(25, 25, 25);
-
-  animation-name: animateLtn;
-  animation-delay: .8s;
-  animation-duration: 1s;
-}
-
 /*lantern light hover*/
 div.bulb:hover::before {
   transition-delay: 1s;
-  border-color: transparent rgba(150, 150, 150, 0.5) transparent rgba(150, 150, 150, 0.5);
+  border-color: transparent rgba(200, 200, 200, 0.75) transparent rgba(200, 200, 200, 0.75);
 
   animation-name: animateLtn-lt;
-  animation-delay: .8s;
+  animation-delay: 1s;
   animation-duration: 1s;
 }
 
@@ -1675,15 +1653,14 @@ a.smallyoutube:hover {
 }
 
 /* res tag */
-div.res-tag1,
-div.res-tag2,
-div.res-tag3 {
+div.res-tag {
   position: fixed;
   opacity: 0;
   z-index: -1;
   left: 0;
   top: 50%;
-  background-color: rgba(250, 250, 250, 0.2);
+  padding: 2px;
+  background-color: rgba(200, 200, 200, 0.75);
   border-width: 0 0 5px 0;
   border-style: solid;
   border-color: transparent;
@@ -1692,19 +1669,10 @@ div.res-tag3 {
   box-shadow: var(--bs);
 }
 
-div.res-tag1 {
-  border-color: chocolate;
-}
-
-div.res-tag2 {
-  border-color: blue;
-}
-
-div.res-tag3 {
-  border-color: yellow;
-}
-
-.res-tag-img {
+.res-tag-img[type=html],
+.res-tag-img[type=css],
+.res-tag-img[type=js] {
+  display: none;
   height: 40px;
   margin: 5px auto;
 }
@@ -1712,22 +1680,21 @@ div.res-tag3 {
 div.res-tag-social {
   display: flex;
   flex-direction: column;
-  padding: 5px;
-  background-color: var(--clr-brown);
+  padding: 0px;
+  background-color: rgba(100, 50, 0, 0.75);
   border-radius: 0 0 10px 0;
 }
 
 @media (min-width: 64em) {
 
-  div.res-tag1,
-  div.res-tag2,
-  div.res-tag3 {
+  div.res-tag {
     left: 47px;
     border-radius: 10px 0 0 10px;
     transform: translateX(75px);
   }
 
   div.res-tag-social {
+    padding: 5px;
     border-radius: 0 0 0 10px;
   }
 }
