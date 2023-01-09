@@ -6,14 +6,14 @@ $subject = $_POST['subject'];
 $name = $_POST['name'];
 $team = $_POST['team'];
 $msg = $_POST['message']
-$message ="From: " . $name . "\r\n" . "Team: " $team . "\r\n" . "Message: " . $msg . "\r\n";
+$message = "From: " . $name . "\r\n" . "Team: " . $team . "\r\n" . "Message: " . $msg . "\r\n";
 
 // headers
 $recipient = "noreply@hanhuang.tech";
 $headers = "Recipient: " . $recipient . "\r\n" . "From: " . $to . "\r\n";
 
 if (empty($email) || empty($subject) || empty($name) || empty($message)) {
-    $responses[] = 'Please complete all fields';
+    $response[] = 'Please complete all fields';
 }
 
 // send email
