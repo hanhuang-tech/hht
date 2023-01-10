@@ -209,7 +209,7 @@ habbitB.style.transitionDuration = "0.5s";
 habbitA.style.transitionDuration = "0.5s";
 
 // restag
-const resTag = document.querySelector("div.res-tag");
+const resTag = document.querySelector("#res-tag");
 const resTaghtml = document.querySelector(".res-tag-img[type=html]");
 const resTagcss = document.querySelector(".res-tag-img[type=css]");
 const resTagjs = document.querySelector(".res-tag-img[type=js]");
@@ -231,7 +231,7 @@ function changeTagMobile() {
         resTaghtml.style.display = "block";
         resTagcss.style.display = "none";
         resTagjs.style.display = "none";
-        resTag.style.borderColor = "chocolate";
+        resTag.style.borderColor = "var(--clr-html)";
     }
 
     else if (Math.abs(document.documentElement.scrollTop) > 3000) {
@@ -241,7 +241,7 @@ function changeTagMobile() {
         resTaghtml.style.display = "none";
         resTagcss.style.display = "block";
         resTagjs.style.display = "none";
-        resTag.style.borderColor = "blue";
+        resTag.style.borderColor = "var(--clr-css)";
     }
 }
 
@@ -258,7 +258,7 @@ function changeTagDesktop() {
         resTag.style.zIndex = "1";
         resTag.style.transitionDuration = "1s";
         resTaghtml.style.display = "block";
-        resTag.style.borderColor = "chocolate"
+        resTag.style.borderColor = "var(--clr-html)"
     }
 }
 
