@@ -747,6 +747,11 @@ section.contact {
   border-radius: 5px;
 }
 
+.contactform .responses {
+  padding: 15px;
+  margin: 0;
+}
+
 .flexrowwrap {
   display: flex;
   justify-content: space-between;

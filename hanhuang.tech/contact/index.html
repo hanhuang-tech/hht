@@ -40,14 +40,10 @@
         </div>
     </div>
 
-    <!-- Status message -->
-    <?php if(!empty($statusMsg)){ ?>
-        <div class="status-msg <?php echo $status; ?>"><?php echo $statusMsg; ?></div>
-    <?php } ?>
     <!-- contact -->
     <section class="contact">
         <div id="form">
-            <form method="post" action="contact/index.php">
+            <form class="contactform" method="post" action="contact/index.php">
                 <div class="flexrowwrap">
                     <div class="flexcolumnwrap">
                         <label for="name">Name</label>
