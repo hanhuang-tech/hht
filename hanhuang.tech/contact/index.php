@@ -1,36 +1,50 @@
 <?php
-// Output messages
-$responses = [];
-// Check if the form was submitted
-if (isset($_POST['email'], $_POST['subject'], $_POST['name'], $_POST['message'])) {
-	// Validate email adress
-	if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-		$responses[] = 'Email is not valid!';
-	}
-	// Make sure the form fields are not empty
-	if (empty($_POST['email']) || empty($_POST['subject']) || empty($_POST['name']) || empty($_POST['message'])) {
-		$responses[] = 'Please complete all fields!';
-	} 
-	// If there are no errors
-	if (!$responses) {
-		// Where to send the mail? It should be your email address
-		$to      = 'han@hanhuang.tech';
-		// Send mail from which email address?
-		$from = 'noreply@hanhuang.tech';
-		// Mail subject
-		$subject = $_POST['subject'];
-		// Mail message
-		$message = $_POST['message'];
-		// Mail headers
-		$headers = 'From: ' . $from . "\r\n" . 'Reply-To: ' . $_POST['email'] . "\r\n" . 'X-Mailer: PHP/' . phpversion();
-		// Try to send the mail
-		if (mail($to, $subject, $message, $headers)) {
-			// Success
-			$responses[] = 'Message sent!';		
-		} else {
-			// Fail
-			$responses[] = 'Message could not be sent! Please check your mail server settings!';
-		}
-	}
+
+$errors = '';
+$recipient = 'han@hanhuang.tech';
+if(empty($_POST['name'])  || 
+   empty($_POST['email']) || 
+   empty($_POST['message']))
+{
+    $errors .= "\n Error: all fields are required";
 }
+
+$name = $_POST['name']; 
+$email = $_POST['email']; 
+$message = $_POST['message']; 
+
+if (!preg_match(
+"/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i", 
+$email))
+{
+    $errors .= "\n Error: Invalid email address";
+}
+if( empty($errors))
+
+{
+
+$to = $recipient;
+
+$subject = "Contact form submission: $name";
+
+$email_body = "You have received a new message. ".
+
+" Here are the details:\n Name: $name \n ".
+
+"Email: $email\n Message \n $message";
+
+$headers = "From: $recipient\n";
+
+$headers .= "Reply-To: $email";
+
+mail($to,$subject,$email_body,$headers);
+
+//redirect to the 'thank you' page
+
+header('Location: thankyou.html');
+
+}
+
+
+
 ?>
