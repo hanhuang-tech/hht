@@ -1,3 +1,11 @@
+// form validation
+var frmvalidator = new frmvalidator("contactform");
+frmvalidator.addValidation("name", "req", "Please provide your name");
+frmvalidator.addValidation("email", "req", "Please provide your email");
+frmvalidator.addValidation("email", "email",
+  "Please enter a valid email address");
+
+// habbit click
 const logoWrap = document.querySelector("div.logowrap");
 const logo = document.querySelector("div.logo");
 const habbitImg = document.querySelector("div.habbit-img");
@@ -6,7 +14,6 @@ const habbitB = document.querySelector("img.habbit-b");
 const bannerImg = document.querySelector("img.banner");
 const habbitCry = new Audio("../habbit-cry.mp3");
 
-// habbit click
 habbitImg.addEventListener("click", function () {
   habbitCry.play();
 
