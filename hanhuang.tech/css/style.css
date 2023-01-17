@@ -1554,12 +1554,13 @@ h4.footer {
   }
 }
 
-/***************************************************/
 /* resfrontend */
 
 #resabout-wrapper {
-  background-image: linear-gradient(to bottom, black, chocolate);
-  background-size: cover;
+  background-color: burlywood;
+  background-image: url(../../hanhuang.tech/img/codefrontend.png);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
   background-attachment: fixed;
   padding: 20px 10px 10px;
   border-width: 5px 0 10px 0;
@@ -1567,45 +1568,45 @@ h4.footer {
   border-color: var(--clr-dark);
 }
 
+@media (min-width: 64em) {
+  #resabout-wrapper {
+    background-image: linear-gradient(to bottom, black, chocolate);
+  }
+}
+
 div.resabout {
+  display: flex;
+  align-items: center;
   max-width: 260px;
   padding: 5px;
   margin: 0 auto;
-  background: rgba(150, 150, 150, 0.5);
-  box-shadow: var(--bs);
-  border: 1px inset gray;
+  background: rgba(100, 100, 100, 0.75);
 }
 
-#resabout-top {
-  display: flex;
-  justify-content: space-evenly;
-  column-gap: 5px;
-  margin: 0 auto;
-}
-
-#resabout-top img {
-  max-height: 140px;
-  box-shadow: var(--bs);
+@media (min-width: 64em) {
+  div.resabout {
+    max-width: 400px;
+    padding: 8px;
+  }
 }
 
 #resabout-topics {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  row-gap: 2px;
 }
 
 #resabout-topics img {
-  max-width: 35px;
-  padding: 5px;
-  background-color: rgba(100, 100, 100, 0.9);
-  border-width: 2px;
-  border-style: solid;
-  border-color: gray var(--clr-dark2) var(--clr-dark2) gray;
+  max-width: 30px;
+  padding: 2px;
+  background-color: gray;
+  border-radius: 5px;
+  box-shadow: var(--bs);
   transition: 1s;
 }
 
 #resabout-topics img:hover {
-  border-color: var(--clr-dark2) gray gray var(--clr-dark2);
+  background-color: rgb(100, 100, 100);
 }
 
 div.resabout h2 {
@@ -1613,24 +1614,13 @@ div.resabout h2 {
   font-family: var(--ff-secondary);
   color: var(--clr-light);
   padding: 5px 5px 0;
+  max-width: 300px;
 }
 
 @media (min-width: 64em) {
-  div.resabout {
-    max-width: 500px;
-    padding: 20px;
-  }
-
-  #resabout-top img {
-    max-height: 180px;
-  }
-
-  #resabout-topics img {
-    max-width: 40px;
-  }
-
   div.resabout h2 {
-    padding: 15px 15px 0;
+    padding: 10px 10px 0;
+    max-width: 400px;
   }
 }
 
@@ -1639,7 +1629,7 @@ div.resabout h2 {
 div.ressocial {
   display: flex;
   margin-top: 5px;
-  column-gap: 5px;
+  column-gap: 2px;
 }
 
 a.smallgithub,
@@ -1652,12 +1642,20 @@ a.smallyoutube {
 
 a.smallgithub img,
 a.smallyoutube img {
-  max-width: 25px;
+  max-width: 20px;
+}
+
+@media (min-width: 64em) {
+
+  a.smallgithub img,
+  a.smallyoutube img {
+    max-width: 25px;
+  }
 }
 
 a.smallgithub:hover,
 a.smallyoutube:hover {
-  background-color: var(--clr-light);
+  background-color: lightgray;
 }
 
 /* res tag */
