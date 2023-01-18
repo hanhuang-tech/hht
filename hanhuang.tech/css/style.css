@@ -1600,13 +1600,15 @@ div.resabout {
   max-width: 30px;
   padding: 2px;
   background-color: gray;
+  border: 2px solid rgb(75, 75, 75);
   border-radius: 5px;
   box-shadow: var(--bs);
   transition: 1s;
 }
 
 #resabout-topics img:hover {
-  background-color: rgb(100, 100, 100);
+  background-color: rgb(75, 75, 75);
+  border-color: var(--clr-dark2);
 }
 
 div.resabout h2 {
