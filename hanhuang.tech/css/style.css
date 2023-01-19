@@ -1572,6 +1572,7 @@ h4.footer {
 @media (min-width: 64em) {
   #resabout-wrapper {
     background-image: linear-gradient(to bottom, black, burlywood);
+    z-index: 0;
   }
 }
 
@@ -1586,25 +1587,18 @@ div.resabout {
 
 @media (min-width: 64em) {
   div.resabout {
-    max-width: 400px;
-    padding: 8px;
-    z-index: 1;
+    max-width: 450px;
   }
 }
 
-#resabout-wrapper img[type=vscodepic] {
+div.resabout img[type=vscodepic] {
   display: none;
 }
 
 @media (min-width: 64em) {
-  #resabout-wrapper img[type=vscodepic] {
+  div.resabout img[type=vscodepic] {
     display: block;
-    position: absolute;
-    left: 40%;
-    top: 100px;
-    z-index: 0;
-    margin: 0 auto;
-    width: 400px;
+    max-width: 200px;
   }
 }
 
