@@ -210,9 +210,9 @@ habbitA.style.transitionDuration = "0.5s";
 
 // restag
 const resTag = document.querySelector("#res-tag");
-const resTaghtml = document.querySelector(".res-tag-img[type=html]");
-const resTagcss = document.querySelector(".res-tag-img[type=css]");
-const resTagjs = document.querySelector(".res-tag-img[type=js]");
+const resTaghtml = document.querySelector(".res-tag-img-html");
+const resTagcss = document.querySelector(".res-tag-img-css");
+const resTagjs = document.querySelector(".res-tag-img-js");
 resTag.style.transitionDuration = "1s";
 resTaghtml.style.transitionDuration = "1s";
 resTagcss.style.transitionDuration = "1s";
@@ -246,19 +246,29 @@ function changeTagMobile() {
 }
 
 function changeTagDesktop() {
-    if (Math.abs(document.documentElement.scrollTop) < 150 || Math.abs(document.documentElement.scrollTop) > 1750) {
-        resTag.style.transform = "translateX(75px)";
+    if (Math.abs(document.documentElement.scrollTop) < 100) {
+        resTag.style.transform = "translate(75px)";
         resTag.style.opacity = "0";
         resTag.style.zIndex = "-1";
-        resTag.style.transitionDuration = "1s";
     }
-    else {
+    else if (Math.abs(document.documentElement.scrollTop) > 100 && (Math.abs(document.documentElement.scrollTop) < 3000)) {
         resTag.style.transform = "translate(0px)";
         resTag.style.opacity = "1";
         resTag.style.zIndex = "1";
-        resTag.style.transitionDuration = "1s";
         resTaghtml.style.display = "block";
-        resTag.style.borderColor = "var(--clr-html)"
+        resTagcss.style.display = "none";
+        resTagjs.style.display = "none";
+        resTag.style.borderColor = "var(--clr-html)";
+    }
+
+    else if (Math.abs(document.documentElement.scrollTop) > 3000) {
+        resTag.style.transform = "translate(0px)";
+        resTag.style.opacity = "1";
+        resTag.style.zIndex = "1";
+        resTaghtml.style.display = "none";
+        resTagcss.style.display = "block";
+        resTagjs.style.display = "none";
+        resTag.style.borderColor = "var(--clr-css)";
     }
 }
 

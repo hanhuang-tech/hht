@@ -1592,12 +1592,12 @@ div.resabout {
   }
 }
 
-div.resabout img[type=vscodepic] {
+.resabout-img {
   display: none;
 }
 
 @media (min-width: 64em) {
-  div.resabout img[type=vscodepic] {
+  .resabout-img {
     display: block;
     padding-right: 10px;
     max-width: 150px;
@@ -1629,7 +1629,6 @@ div.ressocial {
   div.ressocial {
     column-gap: 5px;
   }
-
 }
 
 a.smallgithub,
@@ -1645,7 +1644,11 @@ a.smallyoutube {
   a.smallgithub,
   a.smallyoutube {
     background-color: var(--clr-light);
-    ;
+  }
+
+  a.smallgithub[type=social],
+  a.smallyoutube[type=social] {
+    background-color: transparent;
   }
 }
 
@@ -1667,14 +1670,21 @@ a.smallyoutube:hover {
   background-color: lightgray;
 }
 
+@media (min-width: 64em) {
+
+  a.smallgithub:hover,
+  a.smallyoutube:hover {
+    box-shadow: var(--bs4);
+  }
+}
+
 /* res tag */
 #res-tag {
   position: fixed;
   opacity: 0;
-  z-index: -1;
   left: 0;
   top: 50%;
-  padding: 2px 2px 2px;
+  padding: 2px;
   background-color: rgba(200, 200, 200, 0.75);
   border-width: 0 0 5px 0;
   border-style: solid;
@@ -1682,11 +1692,12 @@ a.smallyoutube:hover {
   border-radius: 0 10px 10px 0;
   transform: translate(-75px);
   box-shadow: var(--bs);
+  z-index: 0;
 }
 
-.res-tag-img[type=html],
-.res-tag-img[type=css],
-.res-tag-img[type=js] {
+.res-tag-img-html,
+.res-tag-img-css,
+.res-tag-img-js {
   display: none;
   height: 40px;
   margin: 5px auto;
@@ -1702,14 +1713,14 @@ div.res-tag-social {
 
 @media (min-width: 64em) {
 
-  div.res-tag {
-    left: 47px;
+  #res-tag {
+    left: 52px;
     border-radius: 10px 0 0 10px;
     transform: translateX(75px);
   }
 
   div.res-tag-social {
-    padding: 5px;
+    margin: 2px;
     border-radius: 0 0 0 10px;
   }
 }
@@ -1718,6 +1729,7 @@ div.res-tag-social {
 #htmlwrapper,
 #csswrapper,
 #jswrapper {
+  position: relative;
   z-index: 1;
   flex: 1;
   background-color: var(--clr-light);
