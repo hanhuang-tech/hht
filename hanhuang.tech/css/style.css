@@ -1558,12 +1558,12 @@ h4.footer {
 
 #resabout-wrapper {
   background-color: burlywood;
-  background-image: url(../../hanhuang.tech/img/codefrontend.png);
+  background-image: url(../img/codefrontend.png);
   background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-position: top;
   background-attachment: fixed;
-  padding: 20px 10px 10px;
+  padding: 35px 5px 2px;
   border-width: 5px 0 10px 0;
   border-style: solid;
   border-color: var(--clr-dark);
@@ -1571,7 +1571,7 @@ h4.footer {
 
 @media (min-width: 64em) {
   #resabout-wrapper {
-    background-image: linear-gradient(to bottom, black, burlywood);
+    background-image: linear-gradient(to bottom, var(--clr-dark), chocolate);
     z-index: 0;
   }
 }
@@ -1587,7 +1587,8 @@ div.resabout {
 
 @media (min-width: 64em) {
   div.resabout {
-    max-width: 450px;
+    justify-content: space-around;
+    max-width: 500px;
   }
 }
 
@@ -1598,29 +1599,9 @@ div.resabout img[type=vscodepic] {
 @media (min-width: 64em) {
   div.resabout img[type=vscodepic] {
     display: block;
-    max-width: 200px;
+    padding-right: 10px;
+    max-width: 150px;
   }
-}
-
-#resabout-topics {
-  display: flex;
-  flex-direction: column;
-  row-gap: 2px;
-}
-
-#resabout-topics img {
-  max-width: 30px;
-  padding: 2px;
-  background-color: gray;
-  border: 2px solid rgb(75, 75, 75);
-  border-radius: 5px;
-  box-shadow: var(--bs);
-  transition: 1s;
-}
-
-#resabout-topics img:hover {
-  background-color: rgb(75, 75, 75);
-  border-color: var(--clr-dark2);
 }
 
 div.resabout h2 {
@@ -1628,22 +1609,27 @@ div.resabout h2 {
   font-family: var(--ff-secondary);
   color: var(--clr-light);
   padding: 10px;
-  max-width: 300px;
 }
 
 @media (min-width: 64em) {
   div.resabout h2 {
     padding: 15px;
-    max-width: 400px;
   }
 }
 
 /* ressocial */
 
 div.ressocial {
-  display: flex;
+  display: inline-flex;
   margin-top: 5px;
-  column-gap: 2px;
+  column-gap: 3px;
+}
+
+@media (min-width: 64em) {
+  div.ressocial {
+    column-gap: 5px;
+  }
+
 }
 
 a.smallgithub,
@@ -1652,6 +1638,15 @@ a.smallyoutube {
   filter: invert(100%);
   border-radius: 5px;
   transition: 1s;
+}
+
+@media (min-width: 64em) {
+
+  a.smallgithub,
+  a.smallyoutube {
+    background-color: var(--clr-light);
+    ;
+  }
 }
 
 a.smallgithub img,
@@ -1663,7 +1658,7 @@ a.smallyoutube img {
 
   a.smallgithub img,
   a.smallyoutube img {
-    max-width: 25px;
+    max-width: 22px;
   }
 }
 
