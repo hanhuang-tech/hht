@@ -1645,11 +1645,6 @@ a.smallyoutube {
   a.smallyoutube {
     background-color: var(--clr-light);
   }
-
-  a.smallgithub[type=social],
-  a.smallyoutube[type=social] {
-    background-color: transparent;
-  }
 }
 
 a.smallgithub img,
