@@ -1632,7 +1632,9 @@ div.ressocial {
 }
 
 a.smallgithub,
-a.smallyoutube {
+a.smallyoutube,
+a.smallgithub-tag,
+a.smallyoutube-tag {
   padding: 5px;
   filter: invert(100%);
   border-radius: 5px;
@@ -1645,17 +1647,26 @@ a.smallyoutube {
   a.smallyoutube {
     background-color: var(--clr-light);
   }
+
+  a.smallgithub-tag,
+  a.smallyoutube-tag {
+    background-color: transparent;
+  }
 }
 
 a.smallgithub img,
-a.smallyoutube img {
+a.smallyoutube img,
+a.smallgithub-tag img,
+a.smallyoutube-tag img {
   max-width: 20px;
 }
 
 @media (min-width: 64em) {
 
   a.smallgithub img,
-  a.smallyoutube img {
+  a.smallyoutube img,
+  a.smallgithub-tag img,
+  a.smallyoutube-tag img {
     max-width: 22px;
   }
 }
