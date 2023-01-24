@@ -1676,12 +1676,9 @@ a.smallyoutube:hover {
   background-color: lightgray;
 }
 
-@media (min-width: 64em) {
-
-  a.smallgithub:hover,
-  a.smallyoutube:hover {
-    box-shadow: var(--bs4);
-  }
+a.smallgithub-tag:hover,
+a.smallyoutube-tag:hover {
+  background-color: lightblue;
 }
 
 /* res tag */
