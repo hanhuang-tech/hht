@@ -1695,7 +1695,7 @@ a.smallyoutube-tag:hover {
   border-radius: 0 10px 10px 0;
   transform: translate(-75px);
   box-shadow: var(--bs);
-  z-index: 0;
+  z-index: -1;
 }
 
 .res-tag-img-html,
@@ -1706,7 +1706,7 @@ a.smallyoutube-tag:hover {
   margin: 5px auto;
 }
 
-div.res-tag-social {
+div.res-tag-socialicons {
   display: flex;
   flex-direction: column;
   padding: 0px;
@@ -1722,7 +1722,7 @@ div.res-tag-social {
     transform: translateX(75px);
   }
 
-  div.res-tag-social {
+  div.res-tag-socialicons {
     margin: 2px;
     border-radius: 0 0 0 10px;
   }

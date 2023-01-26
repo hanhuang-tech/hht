@@ -221,7 +221,7 @@ resTagjs.style.transitionDuration = "1s";
 function changeTagMobile() {
     if (Math.abs(document.documentElement.scrollTop) < 100) {
         resTag.style.transform = "translate(-75px)";
-        resTag.style.opacity = "0";
+        resTag.style.opacity = "1";
         resTag.style.zIndex = "-1";
     }
     else if (Math.abs(document.documentElement.scrollTop) > 100 && (Math.abs(document.documentElement.scrollTop) < 3000)) {
