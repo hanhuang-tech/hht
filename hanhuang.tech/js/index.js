@@ -75,7 +75,7 @@ window.onscroll = function () {
   }
 }
 
-// change color on scroll
+// change rgb color on scroll
 function getRandomInt() {
   if (window.matchMedia("(min-width: 64em)").matches) {
     min = Math.ceil(2);
@@ -220,6 +220,16 @@ function subjectHeadingHide() {
     subjectHeading[i].classList.toggle("toggle");
   }
 }
+
+//connectedto
+//console.log(process.env.IP4);
+// connected to $AZ on $IP4.
+
+window.varEnv = {
+  myEnv: 'nice'
+}
+
+console.log(myEnv)
 
 //^ header ^
 
