@@ -221,15 +221,6 @@ function subjectHeadingHide() {
   }
 }
 
-//connectedto
-//console.log(process.env.IP4);
-// connected to $AZ on $IP4.
-
-window.varEnv = {
-  myEnv: 'nice'
-}
-
-console.log(myEnv)
 
 //^ header ^
 
