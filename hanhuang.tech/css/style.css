@@ -938,7 +938,6 @@ h5.connectedto {
 /*partitioning*/
 section.body-partition {
   position: relative;
-  z-index: 0;
   padding: 0;
 }
 
@@ -1684,6 +1683,7 @@ a.smallyoutube-tag:hover {
 /* res tag */
 #res-tag {
   position: fixed;
+  z-index: 0;
   opacity: 0;
   left: 0;
   top: 50%;
@@ -1695,7 +1695,16 @@ a.smallyoutube-tag:hover {
   border-radius: 0 10px 10px 0;
   transform: translate(-75px);
   box-shadow: var(--bs);
-  z-index: -1;
+}
+
+@media (min-width: 64em) {
+
+  #res-tag {
+    z-index: -1;
+    left: 52px;
+    border-radius: 10px 0 0 10px;
+    transform: translateX(75px);
+  }
 }
 
 .res-tag-img-html,
@@ -1715,13 +1724,6 @@ div.res-tag-socialicons {
 }
 
 @media (min-width: 64em) {
-
-  #res-tag {
-    left: 52px;
-    border-radius: 10px 0 0 10px;
-    transform: translateX(75px);
-  }
-
   div.res-tag-socialicons {
     margin: 2px;
     border-radius: 0 0 0 10px;
@@ -1733,7 +1735,7 @@ div.res-tag-socialicons {
 #csswrapper,
 #jswrapper {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   flex: 1;
   background-color: var(--clr-light);
   border-width: 0 0 0 10px;
