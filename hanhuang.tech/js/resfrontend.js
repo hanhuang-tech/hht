@@ -221,23 +221,16 @@ resTagjs.style.transitionDuration = "1s";
 function changeTagMobile() {
     if (Math.abs(document.documentElement.scrollTop) < 100) {
         resTag.style.transform = "translate(-75px)";
-        resTag.style.opacity = "1";
-        resTag.style.zIndex = "-1";
     }
     else if (Math.abs(document.documentElement.scrollTop) > 100 && (Math.abs(document.documentElement.scrollTop) < 3000)) {
         resTag.style.transform = "translate(0px)";
-        resTag.style.opacity = "1";
-        resTag.style.zIndex = "1";
         resTaghtml.style.display = "block";
         resTagcss.style.display = "none";
         resTagjs.style.display = "none";
         resTag.style.borderColor = "var(--clr-html)";
     }
-
     else if (Math.abs(document.documentElement.scrollTop) > 3000) {
         resTag.style.transform = "translate(0px)";
-        resTag.style.opacity = "1";
-        resTag.style.zIndex = "1";
         resTaghtml.style.display = "none";
         resTagcss.style.display = "block";
         resTagjs.style.display = "none";
@@ -248,13 +241,12 @@ function changeTagMobile() {
 function changeTagDesktop() {
     if (Math.abs(document.documentElement.scrollTop) < 100) {
         resTag.style.transform = "translate(75px)";
-        resTag.style.opacity = "0";
-        resTag.style.zIndex = "0";
+        resTag.style.zIndex = "-1";
     }
     else if (Math.abs(document.documentElement.scrollTop) > 100 && (Math.abs(document.documentElement.scrollTop) < 3000)) {
         resTag.style.transform = "translate(0px)";
-        resTag.style.opacity = "1";
-        resTag.style.zIndex = "1";
+        resTag.style.zIndex = "-1";
+        setTimeout(setTagZindex(), 4000);
         resTaghtml.style.display = "block";
         resTagcss.style.display = "none";
         resTagjs.style.display = "none";
@@ -263,13 +255,15 @@ function changeTagDesktop() {
 
     else if (Math.abs(document.documentElement.scrollTop) > 3000) {
         resTag.style.transform = "translate(0px)";
-        resTag.style.opacity = "1";
-        resTag.style.zIndex = "1";
         resTaghtml.style.display = "none";
         resTagcss.style.display = "block";
         resTagjs.style.display = "none";
         resTag.style.borderColor = "var(--clr-css)";
     }
+}
+
+function setTagZindex() {
+    resTag.style.zIndex = "-1";
 }
 
 //toggle = switch between nontoggle class and toggle class
