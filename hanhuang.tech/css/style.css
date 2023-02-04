@@ -1700,7 +1700,7 @@ a.smallyoutube-tag:hover {
 
   #res-tag {
     z-index: -1;
-    left: 52px;
+    left: 56px;
     border-radius: 10px 0 0 10px;
     box-shadow: none;
     transform: translateX(75px);
@@ -1715,7 +1715,7 @@ a.smallyoutube-tag:hover {
   margin: 5px auto;
 }
 
-div.res-tag-socialicons {
+div.res-tag-social-a {
   display: flex;
   flex-direction: column;
   padding: 0px;
@@ -1723,8 +1723,23 @@ div.res-tag-socialicons {
   border-radius: 3px;
 }
 
+div.res-tag-social-b {
+  display: none;
+  position: absolute;
+  top: 51px;
+  flex-direction: column;
+  padding: 0px;
+  background-color: rgba(100, 50, 0, 0.75);
+  border-radius: 3px;
+}
+
 @media (min-width: 64em) {
-  div.res-tag-socialicons {
+  div.res-tag-socialicons-a {
+    margin: 2px;
+    border-radius: 0 0 0 10px;
+  }
+
+  div.res-tag-socialicons-b {
     margin: 2px;
     border-radius: 0 0 0 10px;
   }

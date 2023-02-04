@@ -246,7 +246,6 @@ function changeTagDesktop() {
     else if (Math.abs(document.documentElement.scrollTop) > 100 && (Math.abs(document.documentElement.scrollTop) < 3000)) {
         resTag.style.transform = "translate(0px)";
         resTag.style.zIndex = "-1";
-        setTimeout(setTagZindex(), 4000);
         resTaghtml.style.display = "block";
         resTagcss.style.display = "none";
         resTagjs.style.display = "none";
@@ -262,9 +261,13 @@ function changeTagDesktop() {
     }
 }
 
-function setTagZindex() {
-    resTag.style.zIndex = "-1";
-}
+// function setTag(t, z) {
+//     setTimeout(tagZindex, t, z);
+// };
+
+// function tagZindex(z) {
+//     resTag.style.zIndex = z;
+// }
 
 //toggle = switch between nontoggle class and toggle class
 burger.addEventListener("click", function () {
