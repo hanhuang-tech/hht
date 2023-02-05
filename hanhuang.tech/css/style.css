@@ -937,7 +937,6 @@ h5.connectedto {
 
 /*partitioning*/
 section.body-partition {
-  position: relative;
   padding: 0;
 }
 
@@ -951,7 +950,6 @@ div.leftbar {
   }
 
   div.leftbar {
-    z-index: -1;
     visibility: visible;
     background: var(--clr-dark);
     padding: 0 46px;
@@ -1632,12 +1630,19 @@ div.ressocial {
 }
 
 a.smallgithub,
-a.smallyoutube,
+a.smallyoutube {
+  padding: 5px;
+  filter: invert(100%);
+  border-radius: 5px;
+  transition: 1s;
+}
+
 a.smallgithub-tag,
 a.smallyoutube-tag {
   padding: 5px;
   filter: invert(100%);
   border-radius: 5px;
+  background-color: lightgray;
   transition: 1s;
 }
 
@@ -1646,11 +1651,6 @@ a.smallyoutube-tag {
   a.smallgithub,
   a.smallyoutube {
     background-color: var(--clr-light);
-  }
-
-  a.smallgithub-tag,
-  a.smallyoutube-tag {
-    background-color: transparent;
   }
 }
 
@@ -1673,7 +1673,7 @@ a.smallyoutube-tag img {
 
 a.smallgithub:hover,
 a.smallyoutube:hover {
-  background-color: lightgray;
+  background-color: rgb(185, 185, 185);
 }
 
 a.smallgithub-tag:hover,
@@ -1685,7 +1685,7 @@ a.smallyoutube-tag:hover {
 #res-tag {
   position: fixed;
   left: 0;
-  top: 50%;
+  top: 20rem;
   padding: 2px;
   background-color: rgba(200, 200, 200, 0.75);
   border-width: 0 0 5px 0;
@@ -1699,49 +1699,52 @@ a.smallyoutube-tag:hover {
 @media (min-width: 64em) {
 
   #res-tag {
-    z-index: -1;
-    left: 56px;
-    border-radius: 10px 0 0 10px;
-    box-shadow: none;
+    top: 19rem;
+    left: -1rem;
+    border-radius: 10px 0 0 0px;
     transform: translateX(75px);
+    border-color: var(--clr-html);
   }
 }
 
 .res-tag-img-html,
 .res-tag-img-css,
 .res-tag-img-js {
-  display: none;
-  height: 40px;
+  height: 35px;
   margin: 5px auto;
 }
 
-div.res-tag-social-a {
-  display: flex;
-  flex-direction: column;
-  padding: 0px;
-  background-color: rgba(100, 50, 0, 0.75);
-  border-radius: 3px;
+.res-tag-img-html {
+  display: block;
 }
 
-div.res-tag-social-b {
+.res-tag-img-css,
+.res-tag-img-js {
   display: none;
-  position: absolute;
-  top: 51px;
+}
+
+@media (min-width: 64em) {
+
+  .res-tag-img-html,
+  .res-tag-img-css,
+  .res-tag-img-js {
+    height: 37px;
+  }
+}
+
+div.res-tag-social {
+  display: flex;
   flex-direction: column;
+  row-gap: 2px;
   padding: 0px;
-  background-color: rgba(100, 50, 0, 0.75);
   border-radius: 3px;
 }
 
 @media (min-width: 64em) {
-  div.res-tag-socialicons-a {
-    margin: 2px;
-    border-radius: 0 0 0 10px;
-  }
-
-  div.res-tag-socialicons-b {
-    margin: 2px;
-    border-radius: 0 0 0 10px;
+  div.res-tag-social {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
   }
 }
 
@@ -1749,7 +1752,6 @@ div.res-tag-social-b {
 #htmlwrapper,
 #csswrapper,
 #jswrapper {
-  position: relative;
   flex: 1;
   background-color: var(--clr-light);
   border-width: 0 0 0 10px;

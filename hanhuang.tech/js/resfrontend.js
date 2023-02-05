@@ -213,10 +213,12 @@ const resTag = document.querySelector("#res-tag");
 const resTaghtml = document.querySelector(".res-tag-img-html");
 const resTagcss = document.querySelector(".res-tag-img-css");
 const resTagjs = document.querySelector(".res-tag-img-js");
-resTag.style.transitionDuration = "1s";
-resTaghtml.style.transitionDuration = "1s";
-resTagcss.style.transitionDuration = "1s";
-resTagjs.style.transitionDuration = "1s";
+const resTagSocial = document.querySelector(".res-tag-social");
+resTag.style.transitionDuration = "0.5s";
+resTaghtml.style.transitionDuration = "0.5s";
+resTagcss.style.transitionDuration = "0.5s";
+resTagjs.style.transitionDuration = "0.5s";
+resTagSocial.style.transitionDuration = "0.5s";
 
 function changeTagMobile() {
     if (Math.abs(document.documentElement.scrollTop) < 100) {
@@ -240,34 +242,26 @@ function changeTagMobile() {
 
 function changeTagDesktop() {
     if (Math.abs(document.documentElement.scrollTop) < 100) {
-        resTag.style.transform = "translate(75px)";
-        resTag.style.zIndex = "-1";
+        resTagSocial.style.visibility = "hidden";
+        resTagSocial.style.opacity = "0";
+        resTagSocial.style.height = "0px";
     }
     else if (Math.abs(document.documentElement.scrollTop) > 100 && (Math.abs(document.documentElement.scrollTop) < 3000)) {
-        resTag.style.transform = "translate(0px)";
-        resTag.style.zIndex = "-1";
+        resTagSocial.style.visibility = "visible";
+        resTagSocial.style.opacity = "1";
+        resTagSocial.style.height = "65px";
         resTaghtml.style.display = "block";
         resTagcss.style.display = "none";
         resTagjs.style.display = "none";
         resTag.style.borderColor = "var(--clr-html)";
     }
-
     else if (Math.abs(document.documentElement.scrollTop) > 3000) {
-        resTag.style.transform = "translate(0px)";
         resTaghtml.style.display = "none";
         resTagcss.style.display = "block";
         resTagjs.style.display = "none";
         resTag.style.borderColor = "var(--clr-css)";
     }
 }
-
-// function setTag(t, z) {
-//     setTimeout(tagZindex, t, z);
-// };
-
-// function tagZindex(z) {
-//     resTag.style.zIndex = z;
-// }
 
 //toggle = switch between nontoggle class and toggle class
 burger.addEventListener("click", function () {
