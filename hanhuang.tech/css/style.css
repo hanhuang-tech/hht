@@ -937,6 +937,7 @@ h5.connectedto {
 
 /*partitioning*/
 section.body-partition {
+  position: relative;
   padding: 0;
 }
 
@@ -1639,10 +1640,10 @@ a.smallyoutube {
 
 a.smallgithub-tag,
 a.smallyoutube-tag {
-  padding: 5px;
+  padding: 4px;
   filter: invert(100%);
   border-radius: 5px;
-  background-color: lightgray;
+  background-color: transparent;
   transition: 1s;
 }
 
@@ -1678,7 +1679,7 @@ a.smallyoutube:hover {
 
 a.smallgithub-tag:hover,
 a.smallyoutube-tag:hover {
-  background-color: lightcyan;
+  background-color: var(--clr-light);
 }
 
 /* res tag */
@@ -1686,8 +1687,8 @@ a.smallyoutube-tag:hover {
   position: fixed;
   left: 0;
   top: 20rem;
-  padding: 2px;
-  background-color: var(--clr-brown);
+  padding: 3px;
+  background-color: var(--clr-dark2);
   border-width: 0 0 5px 0;
   border-style: solid;
   border-color: var(--clr-html);
@@ -1738,9 +1739,8 @@ a.smallyoutube-tag:hover {
 div.res-tag-social {
   display: flex;
   flex-direction: column;
-  row-gap: 2px;
+  row-gap: 4px;
   border-radius: 3px;
-  margin: 0 0 2px;
 }
 
 @media (min-width: 64em) {
