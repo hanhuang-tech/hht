@@ -1687,9 +1687,9 @@ a.smallyoutube-tag:hover {
   position: fixed;
   left: 0;
   top: 20rem;
-  padding: 5px;
+  padding: 3px;
   background-color: rgba(50, 50, 50, 0.8);
-  border-width: 1px 1px 5px 1px;
+  border-width: 1px 1px 5px 0px;
   border-style: solid;
   border-color: var(--clr-html);
   border-radius: 0 15px 0px 0;
@@ -1702,8 +1702,8 @@ a.smallyoutube-tag:hover {
   #res-tag {
     top: 19rem;
     left: -1rem;
-    border-width: 2px 2px 6px 2px;
-    border-radius: 10px 0 0 0px;
+    border-width: 2px 0 6px 2px;
+    border-radius: 15px 0 0 0px;
     transform: translateX(75px);
   }
 }
@@ -1713,8 +1713,9 @@ a.smallyoutube-tag:hover {
 .res-tag-img-js {
   background-color: lightgray;
   max-height: 35px;
-  padding: 2px;
-  margin: 3px auto 4px;
+  padding: 3px;
+  margin: 2px auto 4px;
+  border-radius: 0 8px 0 0;
 }
 
 .res-tag-img-html {
@@ -1733,7 +1734,8 @@ a.smallyoutube-tag:hover {
   .res-tag-img-js {
     max-height: 37px;
     padding: 3px;
-    margin: 3px auto 0px;
+    margin: 2px auto 0px;
+    border-radius: 8px 0 0 0;
   }
 }
 
