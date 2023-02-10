@@ -1688,10 +1688,10 @@ a.smallyoutube-tag:hover {
   left: 0;
   top: 20rem;
   padding: 3px;
-  background-color: rgba(50, 50, 50, 0.8);
-  border-width: 1px 1px 5px 0px;
+  background-color: rgba(50, 50, 50, 0.9);
+  border-width: 2px 2px 5px 0px;
   border-style: solid;
-  border-color: var(--clr-html);
+  border-color: transparent;
   border-radius: 0 15px 0px 0;
   transform: translate(-75px);
   box-shadow: var(--bs);
@@ -1703,6 +1703,7 @@ a.smallyoutube-tag:hover {
     top: 19rem;
     left: -1rem;
     border-width: 2px 0 6px 2px;
+    border-color: var(--clr-dark2) transparent var(--clr-html) var(--clr-dark2);
     border-radius: 15px 0 0 0px;
     transform: translateX(75px);
   }

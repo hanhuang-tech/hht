@@ -179,7 +179,7 @@ function logoRetractMb() {
         habbitImg.style.maxWidth = "50px";
         habbitImg.style.paddingRight = "10px";
         habbitImg.style.background = "rgba(150, 150, 150, 0.5)";
-        habbitImg.style.outline = "4px solid var(--clr-accent)";
+        habbitImg.style.outline = "4px dashed var(--clr-dark2)";
         habbitImg.style.borderRadius = "0 5px 5px 0";
         bannerImg.style.visibility = "hidden";
         habbitImg.style.transitionDuration = "1s";
@@ -231,7 +231,7 @@ function changeTagMobile() {
         resTaghtml.style.display = "block";
         resTagcss.style.display = "none";
         resTagjs.style.display = "none";
-        resTag.style.borderColor = "var(--clr-html)";
+        resTag.style.borderColor = "var(--clr-dark2) var(--clr-dark2) var(--clr-html) transparent";
     }
     else if (Math.abs(document.documentElement.scrollTop) > 3000) {
         resTag.style.transform = "translate(0px)";
@@ -255,7 +255,7 @@ function changeTagDesktop() {
         resTaghtml.style.display = "block";
         resTagcss.style.display = "none";
         resTagjs.style.display = "none";
-        resTag.style.borderColor = "var(--clr-html)";
+        resTag.style.borderColor = "var(--clr-dark2) transparent var(--clr-html) var(--clr-dark2)";
     }
     else if (Math.abs(document.documentElement.scrollTop) > 3000) {
         resTaghtml.style.display = "none";
