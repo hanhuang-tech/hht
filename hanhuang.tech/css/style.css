@@ -602,7 +602,7 @@ span.bulb {
   padding: 0 0 0px 2px;
   text-decoration: none;
   font-family: var(--ff-secondary);
-  color: var(--clr-dark2);
+  color: var(--clr-dark);
   font-size: 1rem;
   line-height: 1.5rem;
 }
@@ -1641,7 +1641,8 @@ a.smallyoutube {
 a.smallgithub-tag,
 a.smallyoutube-tag {
   padding: 4px;
-  filter: invert(100%);
+  margin: auto;
+  filter: invert(10%);
   border-radius: 5px;
   background-color: transparent;
   transition: 1s;
@@ -1673,13 +1674,10 @@ a.smallyoutube-tag img {
 }
 
 a.smallgithub:hover,
-a.smallyoutube:hover {
-  background-color: rgb(185, 185, 185);
-}
-
+a.smallyoutube:hover,
 a.smallgithub-tag:hover,
 a.smallyoutube-tag:hover {
-  background-color: var(--clr-light);
+  background-color: white;
 }
 
 /* res tag */
@@ -1688,8 +1686,8 @@ a.smallyoutube-tag:hover {
   left: 0;
   top: 20rem;
   padding: 3px;
-  background-color: rgba(50, 50, 50, 0.9);
-  border-width: 2px 2px 5px 0px;
+  background-color: rgba(50, 50, 50, 0.2);
+  border-width: 2px 2px 6px 2px;
   border-style: solid;
   border-color: transparent;
   border-radius: 0 15px 0px 0;
@@ -1701,9 +1699,10 @@ a.smallyoutube-tag:hover {
 
   #res-tag {
     top: 19rem;
-    left: -1rem;
-    border-width: 2px 0 6px 2px;
-    border-color: var(--clr-dark2) transparent var(--clr-html) var(--clr-dark2);
+    left: -1.5rem;
+    background-color: gray;
+    border-width: 3px 0 6px 3px;
+    border-color: var(--clr-brown) transparent var(--clr-html) var(--clr-brown);
     border-radius: 15px 0 0 0px;
     transform: translateX(75px);
   }
@@ -1735,7 +1734,7 @@ a.smallyoutube-tag:hover {
   .res-tag-img-js {
     max-height: 37px;
     padding: 3px;
-    margin: 2px auto 0px;
+    margin: 2px;
     border-radius: 8px 0 0 0;
   }
 }
@@ -1752,7 +1751,6 @@ div.res-tag-social {
     visibility: hidden;
     opacity: 0;
     height: 0;
-    margin: 2px 0;
   }
 }
 
@@ -1762,7 +1760,7 @@ div.res-tag-social {
 #jswrapper {
   flex: 1;
   background-color: var(--clr-light);
-  border-width: 0 0 0 10px;
+  border-width: 0 0 0 5px;
   border-style: solid;
   border-color: var(--clr-brown);
   padding-bottom: 15px;

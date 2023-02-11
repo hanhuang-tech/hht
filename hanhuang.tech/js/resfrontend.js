@@ -231,7 +231,7 @@ function changeTagMobile() {
         resTaghtml.style.display = "block";
         resTagcss.style.display = "none";
         resTagjs.style.display = "none";
-        resTag.style.borderColor = "var(--clr-dark2) var(--clr-dark2) var(--clr-html) transparent";
+        resTag.style.borderColor = "var(--clr-brown) var(--clr-brown) var(--clr-html) transparent";
     }
     else if (Math.abs(document.documentElement.scrollTop) > 3000) {
         resTag.style.transform = "translate(0px)";
@@ -246,16 +246,18 @@ function changeTagDesktop() {
     if (Math.abs(document.documentElement.scrollTop) < 100) {
         resTagSocial.style.visibility = "hidden";
         resTagSocial.style.opacity = "0";
+        resTagSocial.style.padding = "0"
         resTagSocial.style.height = "0px";
     }
     else if (Math.abs(document.documentElement.scrollTop) > 100 && (Math.abs(document.documentElement.scrollTop) < 3000)) {
         resTagSocial.style.visibility = "visible";
         resTagSocial.style.opacity = "1";
-        resTagSocial.style.height = "65px";
+        resTagSocial.style.padding = "2px 0"
+        resTagSocial.style.height = "70px";
         resTaghtml.style.display = "block";
         resTagcss.style.display = "none";
         resTagjs.style.display = "none";
-        resTag.style.borderColor = "var(--clr-dark2) transparent var(--clr-html) var(--clr-dark2)";
+        resTag.style.borderColor = "var(--clr-brown) transparent var(--clr-html) var(--clr-brown)";
     }
     else if (Math.abs(document.documentElement.scrollTop) > 3000) {
         resTaghtml.style.display = "none";
