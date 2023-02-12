@@ -1677,7 +1677,7 @@ a.smallgithub:hover,
 a.smallyoutube:hover,
 a.smallgithub-tag:hover,
 a.smallyoutube-tag:hover {
-  background-color: white;
+  background-color: rgba(100, 100, 100, 0.5);
 }
 
 /* res tag */
@@ -1687,7 +1687,7 @@ a.smallyoutube-tag:hover {
   top: 20rem;
   padding: 3px;
   background-color: rgba(50, 50, 50, 0.2);
-  border-width: 2px 2px 6px 2px;
+  border-width: 3px 3px 6px 3px;
   border-style: solid;
   border-color: transparent;
   border-radius: 0 15px 0px 0;
@@ -1700,7 +1700,7 @@ a.smallyoutube-tag:hover {
   #res-tag {
     top: 19rem;
     left: -1.5rem;
-    background-color: gray;
+    background-color: rgba(200, 200, 200, 0.9);
     border-width: 3px 0 6px 3px;
     border-color: var(--clr-brown) transparent var(--clr-html) var(--clr-brown);
     border-radius: 15px 0 0 0px;
@@ -1732,6 +1732,7 @@ a.smallyoutube-tag:hover {
   .res-tag-img-html,
   .res-tag-img-css,
   .res-tag-img-js {
+    background-color: gray;
     max-height: 37px;
     padding: 3px;
     margin: 2px;
