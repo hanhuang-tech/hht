@@ -248,12 +248,14 @@ function changeTagDesktop() {
         resTagSocial.style.opacity = "0";
         resTagSocial.style.padding = "0"
         resTagSocial.style.height = "0px";
+        resTag.style.backgroundColor = "rgba(150, 100, 50, 0.2)";
     }
     else if (Math.abs(document.documentElement.scrollTop) > 100 && (Math.abs(document.documentElement.scrollTop) < 3000)) {
         resTagSocial.style.visibility = "visible";
         resTagSocial.style.opacity = "1";
         resTagSocial.style.padding = "2px 0"
-        resTagSocial.style.height = "70px";
+        resTagSocial.style.height = "69px";
+        resTag.style.backgroundColor = "rgba(150, 100, 50, 0.8)";
         resTaghtml.style.display = "block";
         resTagcss.style.display = "none";
         resTagjs.style.display = "none";

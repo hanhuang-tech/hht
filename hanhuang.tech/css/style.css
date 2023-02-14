@@ -1702,10 +1702,10 @@ a.smallyoutube-tag:hover {
 @media (min-width: 64em) {
 
   #res-tag {
-    top: 19rem;
-    left: -1.5rem;
-    background-color: rgba(150, 100, 50, 0.8);
-    border-width: 3px 0 6px 3px;
+    top: 18.8rem;
+    left: -1.8rem;
+    background-color: rgba(150, 100, 50, 0.2);
+    border-width: 4px 0 6px 4px;
     border-color: var(--clr-brown) transparent var(--clr-html) var(--clr-brown);
     border-radius: 15px 0 0 0px;
     transform: translateX(75px);
@@ -1736,9 +1736,9 @@ a.smallyoutube-tag:hover {
   .res-tag-img-html,
   .res-tag-img-css,
   .res-tag-img-js {
-    max-height: 37px;
+    max-height: 40px;
     padding: 3px;
-    margin: 2px;
+    margin: 3px;
     border-radius: 8px 0 0 0;
   }
 }
