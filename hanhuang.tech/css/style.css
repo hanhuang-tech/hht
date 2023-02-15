@@ -937,7 +937,6 @@ h5.connectedto {
 
 /*partitioning*/
 section.body-partition {
-  position: relative;
   padding: 0;
 }
 
@@ -948,6 +947,11 @@ div.leftbar {
 @media (min-width: 64em) {
   section.body-partition {
     display: flex;
+  }
+
+  section.body-partition.centerpos {
+    position: relative;
+    padding: 0;
   }
 
   div.leftbar {
