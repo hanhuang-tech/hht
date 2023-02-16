@@ -246,7 +246,7 @@ const awsTip = document.querySelector(".awstip");
 for (let i = 0; i < subjectHeading.length; i++) {
   subjectHeading[i].addEventListener("mouseenter", function () {
     downList(i);
-    subjectWrapperImg[i].style.filter = "grayscale(1) blur(1px)"
+    subjectWrapperImg[i].style.filter = "grayscale(1) blur(2px)"
     subjectWrapperImg[i].style.transitionDuration = "1s";
   });
   subjectWrapper[i].addEventListener("mouseleave", function () {
@@ -266,9 +266,9 @@ function delayedMouseOver(n) {
 
 function delayedMouseLeave(n) {
   subjectHeading[n].style.color = "var(--clr-dark)";
-  subjectHeading[n].style.backgroundColor = "rgb(100, 200, 100)";
+  subjectHeading[n].style.backgroundColor = "gray";
   subjectHeading[n].style.padding = "0px 8px";
-  subjectHeading[n].style.borderColor = "var(--clr-accent)";
+  subjectHeading[n].style.borderColor = "var(--clr-dark)";
   subjectHeading[n].style.borderRadius = "0px";
 }
 

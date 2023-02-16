@@ -1021,29 +1021,35 @@ div.subjectwrapper1 {
   max-width: 200px;
   padding: 15px;
   margin: 50px auto;
-  border: 3px solid var(--clr-accent);
+  border: 3px solid var(--clr-dark2);
   border-radius: 40px 0px;
   box-shadow: var(--bs);
 }
 
 div.subjectwrapper1 img {
   max-width: 120px;
-  border-radius: 10px;
+  border-radius: 6px;
 }
 
 a.subjectheading1 {
   z-index: 1;
-  background-color: rgb(50, 200, 50);
+  background-color: gray;
   margin: 10px 0 5px;
-
   text-decoration: none;
-  color: var(--clr-accent);
-  font-size: 1rem;
+  color: var(--clr-dark);
+  font-size: 0.9rem;
+  font-weight: var(--fw-bold);
   padding: 0px 8px;
   border-width: 2px;
   border-style: solid;
-  border-color: var(--clr-accent);
-  box-shadow: var(--bs2);
+  border-color: var(--clr-dark);
+  box-shadow: var(--bs);
+}
+
+@media (min-width: 64em) {
+  a.subjectheading1 {
+    font-size: 1rem;
+  }
 }
 
 div.subjectdropdown1 {
@@ -1066,6 +1072,7 @@ a.dropdowntopic {
   border-width: 1px;
   border-style: solid;
   border-color: transparent;
+  box-shadow: var(--bs);
 }
 
 a.dropdowntopic:hover {
