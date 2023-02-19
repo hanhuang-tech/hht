@@ -266,7 +266,7 @@ function delayedMouseOver(n) {
 
 function delayedMouseLeave(n) {
   subjectHeading[n].style.color = "var(--clr-dark)";
-  subjectHeading[n].style.backgroundColor = "gray";
+  subjectHeading[n].style.backgroundColor = "rgb(175,175,175)";
   subjectHeading[n].style.padding = "0px 8px";
   subjectHeading[n].style.borderColor = "var(--clr-dark)";
   subjectHeading[n].style.borderRadius = "0px";
@@ -277,7 +277,7 @@ function downList(n) {
   subjectHeading[n].style.transitionDuration = "0.2s";
   setTimeout(delayedMouseOver, 200, n);
   subjectDropdown[n].style.opacity = "1";
-  subjectDropdown[n].style.zIndex = "1";
+  subjectDropdown[n].style.zIndex = "0";
   subjectDropdown[n].style.transitionDuration = "0.75s";
   subjectBlurb[n].style.opacity = "0.3";
   subjectBlurb[n].style.transitionDuration = "0.75s";
