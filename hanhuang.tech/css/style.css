@@ -375,8 +375,10 @@ div.ham {
   box-shadow: var(--bs);
 }
 
-#hidden-burger-contents h3 {
-  white-space: nowrap;
+@media (min-width: 64em) {
+  #hidden-burger-contents h2 {
+    font-size: 1.4em;
+  }
 }
 
 #hidden-burger-contents .topicanchor:hover {
@@ -1476,7 +1478,7 @@ a.email {
 
 @media (min-width: 64em) {
   a.email {
-    padding: 3px 10px;
+    padding: 5px 8px;
   }
 }
 
