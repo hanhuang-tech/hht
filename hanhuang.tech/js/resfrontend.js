@@ -238,7 +238,7 @@ function changeTagMobile() {
         resTaghtml.style.display = "none";
         resTagcss.style.display = "block";
         resTagjs.style.display = "none";
-        resTag.style.borderColor = "var(--clr-css)";
+        resTag.style.borderColor = "darkblue darkblue var(--clr-css)  transparent";
     }
 }
 
