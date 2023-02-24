@@ -226,19 +226,25 @@ function changeTagMobile() {
     if (Math.abs(document.documentElement.scrollTop) < 100) {
         resTag.style.transform = "translate(-75px)";
     }
-    else if (Math.abs(document.documentElement.scrollTop) > 100 && (Math.abs(document.documentElement.scrollTop) < 3000)) {
+    else if (Math.abs(document.documentElement.scrollTop) > 100 && (Math.abs(document.documentElement.scrollTop) < 3800)) {
         resTag.style.transform = "translate(0px)";
         resTaghtml.style.display = "block";
         resTagcss.style.display = "none";
         resTagjs.style.display = "none";
         resTag.style.borderColor = "var(--clr-brown) var(--clr-brown) var(--clr-html) transparent";
     }
-    else if (Math.abs(document.documentElement.scrollTop) > 3000) {
-        resTag.style.transform = "translate(0px)";
+    else if (Math.abs(document.documentElement.scrollTop) > 3800 && (Math.abs(document.documentElement.scrollTop) < 3900)) {
         resTaghtml.style.display = "none";
         resTagcss.style.display = "block";
         resTagjs.style.display = "none";
         resTag.style.borderColor = "darkblue darkblue var(--clr-css)  transparent";
+    }
+    else {
+        resTag.style.transform = "translate(0px)";
+        resTaghtml.style.display = "none";
+        resTagcss.style.display = "none";
+        resTagjs.style.display = "block";
+        resTag.style.borderColor = "yellow yellow var(--clr-js)  transparent";
     }
 }
 
