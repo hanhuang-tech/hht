@@ -239,8 +239,7 @@ function changeTagMobile() {
         resTagjs.style.display = "none";
         resTag.style.borderColor = "darkblue darkblue var(--clr-css)  transparent";
     }
-    else {
-        resTag.style.transform = "translate(0px)";
+    else if (Math.abs(document.documentElement.scrollTop) > 3900) {
         resTaghtml.style.display = "none";
         resTagcss.style.display = "none";
         resTagjs.style.display = "block";
@@ -256,7 +255,7 @@ function changeTagDesktop() {
         resTagSocial.style.height = "0px";
         resTag.style.backgroundColor = "rgba(150, 100, 50, 0.2)";
     }
-    else if (Math.abs(document.documentElement.scrollTop) > 100 && (Math.abs(document.documentElement.scrollTop) < 3000)) {
+    else if (Math.abs(document.documentElement.scrollTop) > 100 && (Math.abs(document.documentElement.scrollTop) < 2000)) {
         resTagSocial.style.visibility = "visible";
         resTagSocial.style.opacity = "1";
         resTagSocial.style.padding = "2px 0"
@@ -267,11 +266,17 @@ function changeTagDesktop() {
         resTagjs.style.display = "none";
         resTag.style.borderColor = "var(--clr-brown) transparent var(--clr-html) var(--clr-brown)";
     }
-    else if (Math.abs(document.documentElement.scrollTop) > 3000) {
+    else if (Math.abs(document.documentElement.scrollTop) > 2100 && (Math.abs(document.documentElement.scrollTop) < 2200)) {
         resTaghtml.style.display = "none";
         resTagcss.style.display = "block";
         resTagjs.style.display = "none";
-        resTag.style.borderColor = "var(--clr-css)";
+        resTag.style.borderColor = "darkblue transparent var(--clr-css) darkblue";
+    }
+    else if (Math.abs(document.documentElement.scrollTop) > 2200) {
+        resTaghtml.style.display = "none";
+        resTagcss.style.display = "none";
+        resTagjs.style.display = "block";
+        resTag.style.borderColor = "yellow transparent var(--clr-js) yellow";
     }
 }
 
