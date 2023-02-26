@@ -59,13 +59,13 @@ window.onscroll = function () {
         scrollRGB();
         logoRetractDesktop();
         retractBurgerOnScroll();
-        changeTagDesktop();
+        changeTabDesktop();
     }
     else {
         scrollRGB();
         logoRetractMb();
         retractBurgerOnScroll();
-        changeTagMobile();
+        changeTabMobile();
     }
 }
 
@@ -210,73 +210,77 @@ const hiddenBurgerContents = document.querySelector("#hidden-burger-contents");
 habbitB.style.transitionDuration = "0.5s";
 habbitA.style.transitionDuration = "0.5s";
 
-// restag
-const resTag = document.querySelector("#res-tag");
-const resTaghtml = document.querySelector(".res-tag-img-html");
-const resTagcss = document.querySelector(".res-tag-img-css");
-const resTagjs = document.querySelector(".res-tag-img-js");
-const resTagSocial = document.querySelector(".res-tag-social");
-resTag.style.transitionDuration = "0.5s";
-resTaghtml.style.transitionDuration = "0.5s";
-resTagcss.style.transitionDuration = "0.5s";
-resTagjs.style.transitionDuration = "0.5s";
-resTagSocial.style.transitionDuration = "0.5s";
+// tab
+const tab = document.querySelector("#tab");
+const tabhtml = document.querySelector(".tab-img-html");
+const tabcss = document.querySelector(".tab-img-css");
+const tabjs = document.querySelector(".tab-img-js");
+const tabSocial = document.querySelector(".tab-social");
+tab.style.transitionDuration = "0.5s";
+tabhtml.style.transitionDuration = "0.5s";
+tabcss.style.transitionDuration = "0.5s";
+tabjs.style.transitionDuration = "0.5s";
+tabSocial.style.transitionDuration = "0.5s";
 
-function changeTagMobile() {
+function changeTabMobile() {
     if (Math.abs(document.documentElement.scrollTop) < 100) {
-        resTag.style.transform = "translate(-75px)";
+        tab.style.transform = "translate(-75px)";
     }
     else if (Math.abs(document.documentElement.scrollTop) > 100 && (Math.abs(document.documentElement.scrollTop) < 3800)) {
-        resTag.style.transform = "translate(0px)";
-        resTaghtml.style.display = "block";
-        resTagcss.style.display = "none";
-        resTagjs.style.display = "none";
-        resTag.style.borderColor = "var(--clr-brown) var(--clr-brown) var(--clr-html) transparent";
+        tab.style.transform = "translate(0px)";
+        tabhtml.style.display = "block";
+        tabcss.style.display = "none";
+        tabjs.style.display = "none";
+        tab.style.borderColor = "var(--clr-brown) var(--clr-brown) var(--clr-html) transparent";
     }
     else if (Math.abs(document.documentElement.scrollTop) > 3800 && (Math.abs(document.documentElement.scrollTop) < 3900)) {
-        resTaghtml.style.display = "none";
-        resTagcss.style.display = "block";
-        resTagjs.style.display = "none";
-        resTag.style.borderColor = "darkblue darkblue var(--clr-css)  transparent";
+        tabhtml.style.display = "none";
+        tabcss.style.display = "block";
+        tabjs.style.display = "none";
+        tab.style.borderColor = "var(--clr-brown) var(--clr-brown) var(--clr-css)  transparent";
+        tab.style.padding = "3px";
     }
     else if (Math.abs(document.documentElement.scrollTop) > 3900) {
-        resTaghtml.style.display = "none";
-        resTagcss.style.display = "none";
-        resTagjs.style.display = "block";
-        resTag.style.borderColor = "yellow yellow var(--clr-js)  transparent";
+        tabhtml.style.display = "none";
+        tabcss.style.display = "none";
+        tabjs.style.display = "block";
+        tab.style.borderColor = "var(--clr-brown) var(--clr-brown) var(--clr-js)  transparent";
+        tab.style.padding = "3px 0px";
     }
 }
 
-function changeTagDesktop() {
+function changeTabDesktop() {
     if (Math.abs(document.documentElement.scrollTop) < 100) {
-        resTagSocial.style.visibility = "hidden";
-        resTagSocial.style.opacity = "0";
-        resTagSocial.style.padding = "0"
-        resTagSocial.style.height = "0px";
-        resTag.style.backgroundColor = "rgba(150, 100, 50, 0.2)";
+        tabSocial.style.visibility = "hidden";
+        tabSocial.style.opacity = "0";
+        tabSocial.style.padding = "0"
+        tabSocial.style.height = "0px";
+        tab.style.backgroundColor = "rgba(150, 100, 50, 0.2)";
     }
     else if (Math.abs(document.documentElement.scrollTop) > 100 && (Math.abs(document.documentElement.scrollTop) < 2000)) {
-        resTagSocial.style.visibility = "visible";
-        resTagSocial.style.opacity = "1";
-        resTagSocial.style.padding = "2px 0"
-        resTagSocial.style.height = "69px";
-        resTag.style.backgroundColor = "rgba(150, 100, 50, 0.8)";
-        resTaghtml.style.display = "block";
-        resTagcss.style.display = "none";
-        resTagjs.style.display = "none";
-        resTag.style.borderColor = "var(--clr-brown) transparent var(--clr-html) var(--clr-brown)";
+        tabSocial.style.visibility = "visible";
+        tabSocial.style.opacity = "1";
+        tabSocial.style.padding = "2px 0"
+        tabSocial.style.height = "69px";
+        tab.style.backgroundColor = "rgba(150, 100, 50, 0.8)";
+        tabhtml.style.display = "block";
+        tabcss.style.display = "none";
+        tabjs.style.display = "none";
+        tab.style.borderColor = "var(--clr-brown) transparent var(--clr-html) var(--clr-brown)";
     }
     else if (Math.abs(document.documentElement.scrollTop) > 2100 && (Math.abs(document.documentElement.scrollTop) < 2200)) {
-        resTaghtml.style.display = "none";
-        resTagcss.style.display = "block";
-        resTagjs.style.display = "none";
-        resTag.style.borderColor = "darkblue transparent var(--clr-css) darkblue";
+        tabhtml.style.display = "none";
+        tabcss.style.display = "block";
+        tabjs.style.display = "none";
+        tab.style.borderColor = "var(--clr-brown) transparent var(--clr-css) var(--clr-brown)";
+        tab.style.padding = "3px";
     }
     else if (Math.abs(document.documentElement.scrollTop) > 2200) {
-        resTaghtml.style.display = "none";
-        resTagcss.style.display = "none";
-        resTagjs.style.display = "block";
-        resTag.style.borderColor = "yellow transparent var(--clr-js) yellow";
+        tabhtml.style.display = "none";
+        tabcss.style.display = "none";
+        tabjs.style.display = "block";
+        tab.style.borderColor = "var(--clr-brown) transparent var(--clr-js) var(--clr-brown)";
+        tab.style.padding = "3px 0px";
     }
 }
 
