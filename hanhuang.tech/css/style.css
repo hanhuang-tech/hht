@@ -356,7 +356,7 @@ div.ham {
 }
 
 #hidden-burger-contents.resfrontend {
-  min-width: 90px;
+  min-width: 60px;
 }
 
 #hidden-burger-contents .topicanchor {
@@ -900,6 +900,10 @@ img.banner:hover {
   overflow: hidden;
   outline: 1px solid white;
   background-color: rgb(0, 0, 0, 0.5);
+}
+
+#connectedwrap {
+  max-width: 82px;
 }
 
 #rgbfilter {
@@ -1704,7 +1708,7 @@ a.smallyoutube-tab:hover {
 @media (min-width: 64em) {
 
   #tab {
-    top: 18.8rem;
+    top: 50%;
     left: -1.8rem;
     background-color: rgba(150, 100, 50, 0.2);
     border-width: 4px 0 6px 4px;
