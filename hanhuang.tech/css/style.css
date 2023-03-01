@@ -902,8 +902,10 @@ img.banner:hover {
   background-color: rgb(0, 0, 0, 0.5);
 }
 
-#connectedwrap {
-  max-width: 82px;
+@media (min-width: 64em) {
+  #connectedwrap {
+    max-width: 82px;
+  }
 }
 
 #rgbfilter {
@@ -1557,29 +1559,29 @@ h4.footer {
   }
 }
 
-/* resfrontend */
+/* frontend tech */
 
-#resabout-wrapper {
+#descbox-wrapper {
   background-color: burlywood;
   background-image: url(../img/codefrontend.png);
   background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-position: top;
   background-attachment: fixed;
-  padding: 35px 5px 2px;
-  border-width: 5px 0 10px 0;
+  padding: 40px 5px 0px;
+  border-width: 0 5px;
   border-style: solid;
-  border-color: var(--clr-dark);
+  border-color: transparent transparent transparent var(--clr-brown);
 }
 
 @media (min-width: 64em) {
-  #resabout-wrapper {
+  #descbox-wrapper {
     background-image: linear-gradient(to bottom, var(--clr-dark), chocolate);
     z-index: 0;
   }
 }
 
-div.resabout {
+div.descbox {
   display: flex;
   align-items: center;
   max-width: 260px;
@@ -1590,18 +1592,18 @@ div.resabout {
 }
 
 @media (min-width: 64em) {
-  div.resabout {
+  div.descbox {
     justify-content: space-around;
     max-width: 500px;
   }
 }
 
-.resabout-img {
+.descbox-img {
   display: none;
 }
 
 @media (min-width: 64em) {
-  .resabout-img {
+  .descbox-img {
     display: block;
     padding-right: 0px;
     max-width: 150px;
@@ -1609,7 +1611,7 @@ div.resabout {
   }
 }
 
-div.resabout h2 {
+div.descbox h2 {
   text-align: center;
   font-family: var(--ff-secondary);
   color: var(--clr-light);
@@ -1617,7 +1619,7 @@ div.resabout h2 {
 }
 
 @media (min-width: 64em) {
-  div.resabout h2 {
+  div.descbox h2 {
     padding: 15px;
   }
 }
@@ -1708,7 +1710,7 @@ a.smallyoutube-tab:hover {
 @media (min-width: 64em) {
 
   #tab {
-    top: 50%;
+    top: 20%;
     left: -1.8rem;
     background-color: rgba(150, 100, 50, 0.2);
     border-width: 4px 0 6px 4px;
@@ -1780,7 +1782,7 @@ div.tab-social {
   padding-bottom: 15px;
 }
 
-div.res-subject-banner {
+div.subject-banner {
   display: flex;
   justify-content: center;
   column-gap: 25px;
@@ -1792,6 +1794,9 @@ div.res-subject-banner {
   background-blend-mode: multiply;
   background-size: cover;
   background-attachment: fixed;
+  border-width: 10px 0 5px 0;
+  border-style: solid;
+  border-color: var(--clr-dark) transparent var(--clr-dark2) transparent;
 }
 
 .shorttitle[type=html],
@@ -1819,7 +1824,7 @@ div.res-subject-banner {
 }
 
 @media(min-width: 64em) {
-  div.res-subject-banner {
+  div.subject-banner {
     padding: 20px;
   }
 }
@@ -1842,11 +1847,11 @@ div.side-heading h4 {
   margin-right: auto;
 }
 
-div.res-body-wrapper {
+div.body-wrapper {
   padding: 0 60px;
 }
 
-div.res-body-wrapper h3 {
+div.body-wrapper h3 {
   margin: 2px 0;
 }
 
@@ -1859,12 +1864,12 @@ div.res-body-wrapper h3 {
     padding: 2px 7px;
   }
 
-  div.res-body-wrapper {
+  div.body-wrapper {
     max-width: 1000px;
     margin: 0 auto;
   }
 
-  div.res-body-wrapper h3 {
+  div.body-wrapper h3 {
     margin: 5px 0;
   }
 }
