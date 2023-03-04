@@ -178,9 +178,9 @@ function logoRetractMb() {
         habbitB.style.transitionDuration = "1s";
         habbitImg.style.maxWidth = "50px";
         habbitImg.style.paddingRight = "10px";
-        habbitImg.style.background = "rgba(50, 150, 50, 0.5)";
-        habbitImg.style.outline = "4px dashed var(--clr-accent)";
-        habbitImg.style.borderRadius = "0 5px 5px 0";
+        habbitImg.style.background = "rgba(50, 150, 150, 0.5)";
+        habbitImg.style.outline = "3px dashed var(--clr-dark)";
+        habbitImg.style.borderRadius = "0 10px 10px 10px";
         bannerImg.style.visibility = "hidden";
         habbitImg.style.transitionDuration = "1s";
     } else {
