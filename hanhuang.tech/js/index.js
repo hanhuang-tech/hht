@@ -5,7 +5,7 @@ const habbitA = document.querySelector("img.habbit-a");
 const habbitB = document.querySelector("img.habbit-b");
 const habbitPartition = document.querySelector("#habbit-partition");
 const bannerImg = document.querySelector("img.banner");
-const arrowButton = document.querySelector("div.arrow-button");
+const arrowButton = document.querySelector("#arrow-button");
 const lantern = document.querySelector("#lantern");
 const habbitCry = new Audio("habbit-cry.mp3");
 
@@ -196,11 +196,13 @@ habbitA.style.transitionDuration = "0.5s";
 
 //toggle = switch between nontoggle class and toggle class
 burger.addEventListener("click", function () {
-  burger.classList.toggle("toggle")
-  firstham.classList.toggle("toggle");
-  secondham.classList.toggle("toggle");
-  thirdham.classList.toggle("toggle");
+  // burger.classList.toggle("toggle")
+  // firstham.classList.toggle("toggle");
+  // secondham.classList.toggle("toggle");
+  // thirdham.classList.toggle("toggle");
+  burger.classList.toggle("toggle");
   hiddenBurgerContents.classList.toggle("toggle");
+  arrowButton.classList.toggle("toggle");
   subjectHeadingHide();
 });
 
