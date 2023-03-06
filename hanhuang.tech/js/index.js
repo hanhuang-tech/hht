@@ -196,10 +196,6 @@ habbitA.style.transitionDuration = "0.5s";
 
 //toggle = switch between nontoggle class and toggle class
 burger.addEventListener("click", function () {
-  // burger.classList.toggle("toggle")
-  // firstham.classList.toggle("toggle");
-  // secondham.classList.toggle("toggle");
-  // thirdham.classList.toggle("toggle");
   burger.classList.toggle("toggle");
   hiddenBurgerContents.classList.toggle("toggle");
   arrowButton.classList.toggle("toggle");
@@ -209,10 +205,8 @@ burger.addEventListener("click", function () {
 function retractBurgerOnScroll() {
   if (hiddenBurgerContents.classList.contains("toggle")) {
     burger.classList.toggle("toggle")
-    firstham.classList.toggle("toggle");
-    secondham.classList.toggle("toggle");
-    thirdham.classList.toggle("toggle");
     hiddenBurgerContents.classList.toggle("toggle");
+    arrowButton.classList.toggle("toggle");
     subjectHeadingHide();
   }
 }

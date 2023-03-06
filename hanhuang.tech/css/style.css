@@ -190,8 +190,8 @@ img.banner.animate {
 }
 
 #arrow-button.toggle {
-  transform: translateY(50px);
-  transition: 2px;
+  transform: translate(-86px, 30px);
+  transition: 1s;
 }
 
 #hidden-burger-contents.toggle {
@@ -280,7 +280,7 @@ img.banner.animate {
 /* nav */
 nav.bar {
   position: fixed;
-  top: 5px;
+  top: 0px;
   right: 0px;
   z-index: 1;
 }
@@ -302,6 +302,7 @@ nav.bar {
   cursor: pointer;
   background: rgb(50, 50, 75, 0.8);
   padding: 10px 5px;
+  min-width: 30px;
 
   border-width: 2px;
   border-style: solid;
@@ -340,7 +341,6 @@ div.ham {
   flex-direction: column;
   min-width: 100px;
   row-gap: 2px;
-  z-index: 1;
   opacity: 0;
   top: 0px;
   right: 0px;
@@ -510,7 +510,6 @@ div.standpart::before {
   content: "";
   display: block;
   background: var(--clr-dark);
-
   width: 30px;
   height: 4px;
 }
@@ -520,7 +519,6 @@ div.standpart::after {
   position: absolute;
   top: -10px;
   left: 10px;
-
   content: "";
   display: block;
   background: rgb(80, 80, 80);
