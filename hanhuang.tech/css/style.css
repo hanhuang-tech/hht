@@ -189,15 +189,16 @@ img.banner.animate {
   transition: 1s;
 }
 
-#arrow-button.toggle {
-  transform: translate(-86px, 30px);
-  transition: 1s;
-}
-
 #hidden-burger-contents.toggle {
   z-index: 2;
   opacity: 1;
   transform: translateX(0px);
+  transition: 1s;
+}
+
+#arrow-button.toggle {
+  visibility: hidden;
+  opacity: 0;
   transition: 1s;
 }
 
@@ -352,6 +353,7 @@ div.ham {
   border-radius: 3px;
   box-shadow: var(--bs);
   transition-duration: 1s;
+  z-index: 1;
 }
 
 @media(min-width:64em) {
