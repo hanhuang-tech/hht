@@ -198,6 +198,8 @@ img.banner.animate {
 
 #arrow-button.toggle {
   visibility: hidden;
+  background-color: var(--clr-accent3);
+  scale: 1.5;
   opacity: 0;
   transition: 1s;
 }
@@ -289,8 +291,8 @@ nav.bar {
 @media(min-width:64em) {
   nav.bar {
     position: fixed;
-    top: 10px;
-    right: 10px;
+    top: 5px;
+    right: 5px;
     z-index: 1;
   }
 }
@@ -1523,7 +1525,7 @@ a.largeyoutube img:hover {
     column-gap: 50px;
   }
 
-  a.email:hover {
+  a.largeemail:hover {
     background-color: rgb(40, 40, 40);
   }
 }
