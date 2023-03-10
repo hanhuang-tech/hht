@@ -1706,12 +1706,12 @@ a.smallyoutube:hover {
   top: 20rem;
   padding: 3px;
   background-color: rgba(150, 100, 50, 0.5);
-  border-width: 3px 3px 6px 3px;
+  border-width: 2px 2px 6px 2px;
   border-style: solid;
   border-color: transparent;
   border-radius: 0 15px 0px 0;
   transform: translate(-75px);
-  box-shadow: var(--bs3);
+  box-shadow: var(--bs);
 }
 
 @media (min-width: 64em) {
@@ -1719,12 +1719,11 @@ a.smallyoutube:hover {
   #tab {
     top: 20%;
     left: -1.8rem;
-    background-color: rgba(200, 100, 50, 0.2);
-    border-width: 4px 0 6px 4px;
-    border-color: var(--clr-brown) transparent var(--clr-html) var(--clr-brown);
+    background-color: rgba(150, 150, 150, 0.5);
+    border-width: 3px 0 6px 3px;
+    border-color: var(--clr-dark2);
     border-radius: 15px 0 0 0px;
     transform: translateX(80px);
-    box-shadow: var(--bs4);
   }
 }
 

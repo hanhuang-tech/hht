@@ -255,7 +255,8 @@ function changeTabDesktop() {
         tabSocial.style.opacity = "0";
         tabSocial.style.padding = "0"
         tabSocial.style.height = "0px";
-        tab.style.backgroundColor = "rgba(150, 100, 50, 0.2)";
+        tab.style.backgroundColor = "rgba(150, 150, 150, 0.5)";
+        tab.style.borderColor = "var(--clr-dark2)";
     }
     else if (Math.abs(document.documentElement.scrollTop) > 100 && (Math.abs(document.documentElement.scrollTop) < 2000)) {
         tabSocial.style.visibility = "visible";
