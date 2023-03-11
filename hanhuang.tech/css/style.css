@@ -1622,7 +1622,7 @@ div.descbox h2 {
   text-align: center;
   font-family: var(--ff-secondary);
   color: var(--clr-light);
-  padding: 10px;
+  padding: 5px;
 }
 
 @media (min-width: 64em) {
@@ -1706,7 +1706,7 @@ a.smallyoutube:hover {
   top: 20rem;
   padding: 3px;
   background-color: rgba(150, 100, 50, 0.5);
-  border-width: 2px 2px 6px 2px;
+  border-width: 2px 2px 4px 2px;
   border-style: solid;
   border-color: transparent;
   border-radius: 0 15px 0px 0;
@@ -1718,9 +1718,9 @@ a.smallyoutube:hover {
 
   #tab {
     top: 20%;
-    left: -1.8rem;
+    left: -1.75rem;
     background-color: rgba(150, 150, 150, 0.5);
-    border-width: 3px 0 6px 3px;
+    border-width: 3px 0 5px 3px;
     border-color: var(--clr-dark2);
     border-radius: 15px 0 0 0px;
     transform: translateX(80px);
@@ -1743,22 +1743,27 @@ a.smallyoutube:hover {
 
 .tab-img-css,
 .tab-img-js {
-  display: none;
+  display: block;
 }
 
 @media (min-width: 64em) {
 
-  .tab-img-html,
-  .tab-img-css {
+  .tab-img-html {
     max-height: 40px;
     padding: 4px;
     border-radius: 8px 0 0 0;
   }
 
-  .tab-img-js {
-    max-height: 37px;
+  .tab-img-css {
+    max-height: 40px;
     padding: 4px;
-    border-radius: 8px 0 0 0;
+    border-radius: 0;
+  }
+
+  .tab-img-js {
+    max-height: 31px;
+    padding: 4px;
+    border-radius: 0;
   }
 }
 
