@@ -1700,30 +1700,40 @@ a.smallyoutube:hover {
 }
 
 /* tab */
-#tab {
+#tabwrapper {
   position: fixed;
   left: 0;
-  top: 20rem;
+  top: 40%;
+  transform: translate(-50px);
+  margin: 0;
+  padding: 0;
+}
+
+#tab {
   padding: 3px;
   background-color: rgba(150, 100, 50, 0.5);
   border-width: 2px 2px 4px 2px;
   border-style: solid;
   border-color: transparent;
   border-radius: 0 15px 0px 0;
-  transform: translate(-75px);
   box-shadow: var(--bs);
 }
 
 @media (min-width: 64em) {
+  #tabwrapper {
+    position: fixed;
+    left: 0;
+    top: 40%;
+    transform: translate(52px);
+    margin: 0;
+    padding: 0;
+  }
 
   #tab {
-    top: 20%;
-    left: -1.75rem;
     background-color: rgba(150, 150, 150, 0.5);
     border-width: 3px 0 5px 3px;
     border-color: var(--clr-dark2);
     border-radius: 15px 0 0 0px;
-    transform: translateX(80px);
   }
 }
 
@@ -1737,10 +1747,7 @@ a.smallyoutube:hover {
   border-radius: 0 8px 0 0;
 }
 
-.tab-img-html {
-  display: block;
-}
-
+.tab-img-html,
 .tab-img-css,
 .tab-img-js {
   display: block;

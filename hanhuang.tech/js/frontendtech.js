@@ -211,11 +211,13 @@ habbitB.style.transitionDuration = "0.5s";
 habbitA.style.transitionDuration = "0.5s";
 
 // tab
+const tabWrap = document.querySelector("#tabwrapper");
 const tab = document.querySelector("#tab");
 const tabhtml = document.querySelector(".tab-img-html");
 const tabcss = document.querySelector(".tab-img-css");
 const tabjs = document.querySelector(".tab-img-js");
 const tabSocial = document.querySelector(".tab-social");
+tabWrap.style.transitionDuration = "0.5s";
 tab.style.transitionDuration = "0.5s";
 tabhtml.style.transitionDuration = "0.5s";
 tabcss.style.transitionDuration = "0.5s";
@@ -224,10 +226,10 @@ tabSocial.style.transitionDuration = "0.5s";
 
 function changeTabMobile() {
     if (Math.abs(document.documentElement.scrollTop) < 100) {
-        tab.style.transform = "translate(-75px)";
+        tabWrap.style.transform = "translate(-50px)";
     }
     else if (Math.abs(document.documentElement.scrollTop) > 100 && (Math.abs(document.documentElement.scrollTop) < 3800)) {
-        tab.style.transform = "translate(0px)";
+        tabWrap.style.transform = "translate(0px)";
         tabhtml.style.display = "block";
         tabcss.style.display = "none";
         tabjs.style.display = "none";
@@ -274,14 +276,12 @@ function changeTabDesktop() {
         tabcss.style.display = "block";
         tabjs.style.display = "none";
         tab.style.borderColor = "var(--clr-brown) transparent var(--clr-css) var(--clr-brown)";
-        tab.style.padding = "3px";
     }
     else if (Math.abs(document.documentElement.scrollTop) > 2200) {
         tabhtml.style.display = "none";
         tabcss.style.display = "none";
         tabjs.style.display = "block";
         tab.style.borderColor = "var(--clr-brown) transparent var(--clr-js) var(--clr-brown)";
-        tab.style.padding = "3px 0px";
     }
 }
 
