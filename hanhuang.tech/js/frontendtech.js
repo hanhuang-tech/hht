@@ -213,9 +213,9 @@ habbitA.style.transitionDuration = "0.5s";
 // tab
 const tabWrap = document.querySelector("#tabwrapper");
 const tab = document.querySelector("#tab");
-const tabhtml = document.querySelector(".tab-img-html");
-const tabcss = document.querySelector(".tab-img-css");
-const tabjs = document.querySelector(".tab-img-js");
+const tabhtml = document.querySelector(".tab-html");
+const tabcss = document.querySelector(".tab-css");
+const tabjs = document.querySelector(".tab-js");
 const tabSocial = document.querySelector(".tab-social");
 tabWrap.style.transitionDuration = "0.5s";
 tab.style.transitionDuration = "0.5s";
@@ -230,24 +230,22 @@ function changeTabMobile() {
     }
     else if (Math.abs(document.documentElement.scrollTop) > 100 && (Math.abs(document.documentElement.scrollTop) < 3800)) {
         tabWrap.style.transform = "translate(0px)";
-        tabhtml.style.display = "block";
-        tabcss.style.display = "none";
-        tabjs.style.display = "none";
+        tabhtml.style.filter = "grayscale(0%)";
+        tabcss.style.filter = "grayscale(100%)";
+        tabjs.style.filter = "grayscale(100%)";
         tab.style.borderColor = "var(--clr-brown) var(--clr-brown) var(--clr-html) transparent";
     }
     else if (Math.abs(document.documentElement.scrollTop) > 3800 && (Math.abs(document.documentElement.scrollTop) < 3900)) {
-        tabhtml.style.display = "none";
-        tabcss.style.display = "block";
-        tabjs.style.display = "none";
+        tabhtml.style.filter = "grayscale(100%)";
+        tabcss.style.filter = "grayscale(0%)";
+        tabjs.style.filter = "grayscale(100%)";
         tab.style.borderColor = "var(--clr-brown) var(--clr-brown) var(--clr-css)  transparent";
-        tab.style.padding = "3px";
     }
     else if (Math.abs(document.documentElement.scrollTop) > 3900) {
-        tabhtml.style.display = "none";
-        tabcss.style.display = "none";
-        tabjs.style.display = "block";
+        tabhtml.style.filter = "grayscale(100%)";
+        tabcss.style.filter = "grayscale(100%)";
+        tabjs.style.filter = "grayscale(0%)";
         tab.style.borderColor = "var(--clr-brown) var(--clr-brown) var(--clr-js)  transparent";
-        tab.style.padding = "3px 0px";
     }
 }
 
