@@ -216,13 +216,11 @@ const tab = document.querySelector("#tab");
 const tabhtml = document.querySelector(".tab-html");
 const tabcss = document.querySelector(".tab-css");
 const tabjs = document.querySelector(".tab-js");
-const tabSocial = document.querySelector(".tab-social");
 tabWrap.style.transitionDuration = "0.5s";
 tab.style.transitionDuration = "0.5s";
 tabhtml.style.transitionDuration = "0.5s";
 tabcss.style.transitionDuration = "0.5s";
 tabjs.style.transitionDuration = "0.5s";
-tabSocial.style.transitionDuration = "0.5s";
 
 function changeTabMobile() {
     if (Math.abs(document.documentElement.scrollTop) < 100) {
@@ -233,7 +231,7 @@ function changeTabMobile() {
         tabhtml.style.filter = "grayscale(0%)";
         tabcss.style.filter = "grayscale(100%)";
         tabjs.style.filter = "grayscale(100%)";
-        tab.style.borderColor = "var(--clr-brown) var(--clr-brown) var(--clr-html) transparent";
+        tab.style.borderColor = "transparent transparent var(--clr-html) transparent";
     }
     else if (Math.abs(document.documentElement.scrollTop) > 3800 && (Math.abs(document.documentElement.scrollTop) < 3900)) {
         tabhtml.style.filter = "grayscale(100%)";
