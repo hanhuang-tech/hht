@@ -186,9 +186,6 @@ function logoFixed() {
 
 // toggle burger
 const burger = document.querySelector("#burger");
-const firstham = document.querySelector("#burger :nth-child(1)");
-const secondham = document.querySelector("#burger :nth-child(2)");
-const thirdham = document.querySelector("#burger :nth-child(3)");
 const burgerTriangle = document.querySelector("#burger-triangle");
 const hiddenBurgerContents = document.querySelector("#hidden-burger-contents");
 habbitB.style.transitionDuration = "0.5s";

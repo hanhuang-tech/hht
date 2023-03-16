@@ -248,36 +248,23 @@ function changeTabMobile() {
 }
 
 function changeTabDesktop() {
-    if (Math.abs(document.documentElement.scrollTop) < 100) {
-        tabSocial.style.visibility = "hidden";
-        tabSocial.style.opacity = "0";
-        tabSocial.style.padding = "0"
-        tabSocial.style.height = "0px";
-        tab.style.backgroundColor = "rgba(150, 150, 150, 0.5)";
-        tab.style.borderColor = "var(--clr-dark2)";
-    }
-    else if (Math.abs(document.documentElement.scrollTop) > 100 && (Math.abs(document.documentElement.scrollTop) < 2000)) {
-        tabSocial.style.visibility = "visible";
-        tabSocial.style.opacity = "1";
-        tabSocial.style.padding = "2px 0"
-        tabSocial.style.height = "69px";
-        tab.style.backgroundColor = "rgba(150, 100, 50, 0.8)";
-        tabhtml.style.display = "block";
-        tabcss.style.display = "none";
-        tabjs.style.display = "none";
-        tab.style.borderColor = "var(--clr-brown) transparent var(--clr-html) var(--clr-brown)";
+    if ((Math.abs(document.documentElement.scrollTop) < 2000)) {
+        tabhtml.style.filter = "grayscale(0%)";
+        tabcss.style.filter = "grayscale(100%)";
+        tabjs.style.filter = "grayscale(100%)";
+        tab.style.borderColor = "transparent transparent var(--clr-html) transparent";
     }
     else if (Math.abs(document.documentElement.scrollTop) > 2100 && (Math.abs(document.documentElement.scrollTop) < 2200)) {
-        tabhtml.style.display = "none";
-        tabcss.style.display = "block";
-        tabjs.style.display = "none";
-        tab.style.borderColor = "var(--clr-brown) transparent var(--clr-css) var(--clr-brown)";
+        tabhtml.style.filter = "grayscale(100%)";
+        tabcss.style.filter = "grayscale(0%)";
+        tabjs.style.filter = "grayscale(100%)";
+        tab.style.borderColor = "var(--clr-brown) var(--clr-brown) var(--clr-css)  transparent";
     }
     else if (Math.abs(document.documentElement.scrollTop) > 2200) {
-        tabhtml.style.display = "none";
-        tabcss.style.display = "none";
-        tabjs.style.display = "block";
-        tab.style.borderColor = "var(--clr-brown) transparent var(--clr-js) var(--clr-brown)";
+        tabhtml.style.filter = "grayscale(100%)";
+        tabcss.style.filter = "grayscale(100%)";
+        tabjs.style.filter = "grayscale(0%)";
+        tab.style.borderColor = "var(--clr-brown) var(--clr-brown) var(--clr-js)  transparent";
     }
 }
 
