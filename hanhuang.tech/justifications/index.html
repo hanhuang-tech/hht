@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>justifications and limitations</title>
+    <title>Frontend tech</title>
     <!--links-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
     <link rel="stylesheet" href="../css/style.css" />
     <!-- favicon -->
-    <link rel="icon" type="image/png" href="../img/favicon.ico" />
+    <link rel="icon" href="../img/habbit-a.png" />
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,28 +19,59 @@
 
 <body>
     <header>
+        <!-- logo -->
+        <div class="logowrap">
+            <div class="logo">
+                <div class="habbit-img">
+                    <img src="../img/habbit-a.png" class="habbit-a" alt="a pic of habbit" />
+                    <img src="../img/habbit-b.png" class="habbit-b" alt="a pic of habbit" />
+                </div>
+                <div id="habbit-partition"></div>
+                <a href="../index.html">
+                    <img src="../img/hht-banner.png" class="banner" alt="picture of hht banner" />
+                </a>
+            </div>
+        </div>
         <!-- nav -->
         <nav class="bar">
-            <ul class="nav">
-                <li class="nav">
-                    <a href="#htmlwrapper">html</a>
-                </li>
-                <li class="nav tooltip">
-                    <a href="#csswrapper">css</a>
-                </li>
-                <li class="nav">
-                    <a href="#jswrapper">js</a>
-                </li>
-                <li class="nav-arrow">
-                    <a href="#"><span class="arrow"></span></a>
-                </li>
-            </ul>
+            <div id="burger">
+                <div class="ham"> </div>
+                <div class="ham"> </div>
+                <div class="ham"> </div>
+            </div>
+            <div id="hidden-burger-contents" class="frontend">
+                <a href="#htmlwrapper" class=" topicanchor">
+                    <h3>HTML</h3>
+                </a>
+                <a href="#csswrapper" class="topicanchor">
+                    <h3>CSS</h3>
+                </a>
+                <a href="#jswrapper" class="topicanchor">
+                    <h3>JS</h3>
+                </a>
+                <img src="../img/habbit-a.png" class="habbit-a" alt="a pic of habbit" />
+            </div>
+            <div id="arrow-button" title="Up">
+                <a href="#">
+                    <span class="arrow"></span>
+                </a>
+            </div>
         </nav>
-        <a id="feedback" href="mailto:feedback@hanhuang.tech">
-            <div class="lantern"></div>
-            <div class="feedback">
-                <span class="feedback">back</span>
-                <span class="feedback">feed</span>
+        <!-- connected -->
+        <div id="connectedwrap">
+            <h5 id="rgbfilter">0 0 0</h5>
+            <div class="connectedto">
+                <h5 class="connectedto"> Connected to Sydney on 3.25.196.119.</h5>
+                <h5 class="connectedto"> Connected to Sydney on 3.25.196.119.</h5>
+            </div>
+        </div>
+        <!-- lantern -->
+        <a id="lantern" href="mailto:han@hanhuang.tech">
+            <div class="standpart">
+                <div class="dome"></div>
+                <div class="bulb">
+                    <span class="bulb">tact</span>
+                </div>
             </div>
         </a>
     </header>
@@ -60,7 +91,8 @@
         </div>
         <div class="mb">.</div>
         <!-- index -->
-        <div id="codepage">This page is best viewed on a desktop, due to the code contained in the codeboxes on this
+        <div id="codepage">This page is best viewed on a desktop, due to the code contained in the codeboxes on
+            this
             webpage </div>
         <div style="text-align: center;">
             <h1 class="justindex">Justifications and Limitations</h1>
@@ -89,7 +121,8 @@
                 </div>
             </div>
         </div>
-        <p class="justindex">Critiques of markup, styling and script decisions made during building hanhuang.tech
+        <p class="justindex">Critiques of markup, styling and script decisions made during building
+            hanhuang.tech
             reactive static webpages</p>
     </section>
 
@@ -126,7 +159,8 @@
                 <p class="codebox__margin0">&lt;section class="find-me__section"&gt;&lt;/section&gt;</p>
             </div>
             <p class="html-body">
-                In terms of design, the Find me section emphasizes finding the owner's work and relevant business
+                In terms of design, the Find me section emphasizes finding the owner's work and relevant
+                business
                 contacts. This &lt;html&gt; section features bold social icons that stand out and link to their
                 respective websites.
             </p>
@@ -139,7 +173,8 @@
                 <p class="codebox__margin0">&lt;/section&gt;</p>
             </div>
             <p class="html-body">
-                A footer under the 'find me' section provides spacing to adjust the viewer to the correct eye level
+                A footer under the 'find me' section provides spacing to adjust the viewer to the correct eye
+                level
                 to consider the former mentioned section. This footer uses added white space to achieve this.
             </p>
         </div>
@@ -153,7 +188,8 @@
                 <p class="codebox__margin0">&lt;/div&gt;</p>
             </div>
             <p class="html-body">
-                To emulate the gap of 1 tab or 4 normal spaces inside the codebox, an &lt;html&gt; element class of
+                To emulate the gap of 1 tab or 4 normal spaces inside the codebox, an &lt;html&gt; element class
+                of
                 &lt;sfe-codebox__marginp&gt; was created to denote a spacing that appears to be like 4 normal
                 keyboard typed spaces.
             </p>
@@ -168,11 +204,13 @@
                 <p class="codebox__margin0">}</p>
             </div>
             <p class="html-body">
-                The &lt;style&gt; denotion of .sfe-codebox__marginp contains 40px of margin-left that is added to
+                The &lt;style&gt; denotion of .sfe-codebox__marginp contains 40px of margin-left that is added
+                to
                 the inline spacing for the chosen line of code inside the codebox.
             </p>
             <p class="html-body">
-                To implement this gap within the codebox, the html &lt;span&gt; tag is used. This is to conform to
+                To implement this gap within the codebox, the html &lt;span&gt; tag is used. This is to conform
+                to
                 the inline spacing rules that other elements are sharing in this codebox, as opposed to using a
                 block-level element such as &lt;div&gt;.
             </p>
@@ -186,9 +224,12 @@
         <div class="sidewrapper">
             <div class="title"><b>Improvements on formatting</b></div>
             <p class="html-body">
-                Improvements could be made to the nomenclature of html elements to streamline site-building. New names
-                of html elements could be created as a substitute for the amalgamation of similar categorized html
-                element names. Moreover, implementing more defined html rules around formatting elements could enhance
+                Improvements could be made to the nomenclature of html elements to streamline site-building. New
+                names
+                of html elements could be created as a substitute for the amalgamation of similar categorized
+                html
+                element names. Moreover, implementing more defined html rules around formatting elements could
+                enhance
                 general html document structure.
             </p>
         </div>
@@ -227,8 +268,10 @@
                 <p class="codebox__margin0">@media (max-width: 900px) {}</p>
             </div>
             <p class="html-body">
-                The contents of the webpage could be displayed clearly in an internet browser on a desktop computer. In
-                contrast, the majority or all of the contents could be displayed just as clearly on a mobile device,
+                The contents of the webpage could be displayed clearly in an internet browser on a desktop
+                computer. In
+                contrast, the majority or all of the contents could be displayed just as clearly on a mobile
+                device,
                 which has a fraction of the pixel width of its counterpart.
             </p>
             <div class="title"><b>Custom Properties</b></div>
@@ -241,8 +284,10 @@
                 <p class="codebox__margin0">}</p>
             </div>
             <p class="html-body">
-                Custom properties allow standardised modifications to &lt;html&gt;. &lt;html&gt; can be stylised using
-                custom properties so that texts inside &lt;body&gt; and pages can be displayed correctly and uniformly.
+                Custom properties allow standardised modifications to &lt;html&gt;. &lt;html&gt; can be stylised
+                using
+                custom properties so that texts inside &lt;body&gt; and pages can be displayed correctly and
+                uniformly.
                 Alternatively, it provides a system to bring customized colours to html elements.
             </p>
             <div class="title"><b>Pseudo-classes</b></div>
@@ -251,7 +296,8 @@
                 <p class="codebox__margin0">:focus{}</p>
             </div>
             <p class="html-body">
-                Pseudo-classes like the ones above transform how a particular &lt;html&gt; element is displayed when it
+                Pseudo-classes like the ones above transform how a particular &lt;html&gt; element is displayed
+                when it
                 is selected as the centre of attention. The highlighting is done by styled classes inside the
                 &lt;html&gt; element.
             </p>
@@ -260,16 +306,21 @@
                 <p class="codebox__margin0">.logo__div {display: flex;}</p>
             </div>
             <p class="html-body">
-                Flex maintains a relative distance between the site logo and the home page logo even as the window
-                resizes. The default function of the &lt;css&gt; property display flex is to align elements in a row.
+                Flex maintains a relative distance between the site logo and the home page logo even as the
+                window
+                resizes. The default function of the &lt;css&gt; property display flex is to align elements in a
+                row.
             </p>
             <div class="codebox">
                 <p class="codebox__margin0">.find-me__list {display: flex;}</p>
             </div>
             <p class="html-body">
-                When the viewer resizes their browser window, the above use of the flex display property keeps the
-                relative distance between social icons. The distance between each social icon is not a user-defined
-                metric value, but equivalent to a fraction of the space horizontally shared between icons across the
+                When the viewer resizes their browser window, the above use of the flex display property keeps
+                the
+                relative distance between social icons. The distance between each social icon is not a
+                user-defined
+                metric value, but equivalent to a fraction of the space horizontally shared between icons across
+                the
                 width of the window.
             </p>
             <div class="title"><b>Grid</b></div>
@@ -285,10 +336,14 @@
                 <p class="codebox__margin0">}</p>
             </div>
             <p class="html-body">
-                In the About me section, the grid property grid-template-columns is used to divide up the left-field
-                into 1 fractional unit, and the right-field into 200px width for the profile picture. Using the grid
-                property grid-template-areas, four distinct areas can be defined to specify the location of each content
-                element. While the left partition can feature a top title area and bottom text area, a profile pic
+                In the About me section, the grid property grid-template-columns is used to divide up the
+                left-field
+                into 1 fractional unit, and the right-field into 200px width for the profile picture. Using the
+                grid
+                property grid-template-areas, four distinct areas can be defined to specify the location of each
+                content
+                element. While the left partition can feature a top title area and bottom text area, a profile
+                pic
                 section on the right can span the height of the title and the text.
             </p>
         </div>
@@ -302,13 +357,16 @@
         <div class="sidewrapper">
             <div class="title"><b>Avoiding confusing names in classList</b></div>
             <p class="html-body">
-                Too many names used for different classes can confuse site-building. Using clear naming conventions in
+                Too many names used for different classes can confuse site-building. Using clear naming
+                conventions in
                 classes will assist html elements to indicate their intended action or function.
             </p>
             <div class="title"><b>Succinct use of classes</b></div>
             <p class="html-body">
-                Efficient naming conventions in the classList will assist in categorizing and creating a clear structure
-                in &lt;css&gt;. Having a succinct classList will also emphasize usefulness in certain groups classes
+                Efficient naming conventions in the classList will assist in categorizing and creating a clear
+                structure
+                in &lt;css&gt;. Having a succinct classList will also emphasize usefulness in certain groups
+                classes
                 used by html elements or javascript.
         </div>
     </section>
@@ -353,7 +411,8 @@
                 <p class="codebox__margin0">});</p>
             </div>
             <ul>
-                <li>The interactive portion of the querySelector("#habbit-toggle") dedicates a small form factor in
+                <li>The interactive portion of the querySelector("#habbit-toggle") dedicates a small form factor
+                    in
                     the form of a button around the logo to allow the viewer to interact with a novel set of
                     animations.
                 </li>
@@ -384,7 +443,8 @@
                 <li>This function looks through the whole html via document.body properties to interact with all
                     class attributes called "habbit-move" in the &lt;style&gt; page through the toggle() method.
                 </li>
-                <li>As the .habbit-move class is bound to other classes, it interacts with elements in the entire
+                <li>As the .habbit-move class is bound to other classes, it interacts with elements in the
+                    entire
                     document body using the toggle() method, resulting in
                     simultaneous animations that use keyframes.</li>
             </ul>
@@ -468,7 +528,8 @@
                 <p class="codebox__margin0">spoilBtn[].addEventListener("click", function () { ...)</p>
             </div>
             <ul>
-                <li>This spoiler button is declared and called via spoilBtn constant in &lt;script&gt;, where method
+                <li>This spoiler button is declared and called via spoilBtn constant in &lt;script&gt;, where
+                    method
                     addEventListener() will listen for a click to register.</li>
             </ul>
             <button id="spoil-btnb">&lt;script&gt;</button>
@@ -492,7 +553,8 @@
                 <li>When the method addEventListener() registers a click, a function will be processed.</li>
                 <li>The above function in &lt;script&gt; is called upon by the method addEventListener(), and it
                     references an html element with the id "spoil-move", with the class "hide".</li>
-                <li>Contents enclosed by the &lt;div&gt; tag will be intially hidden, and through &lt;script&gt;,
+                <li>Contents enclosed by the &lt;div&gt; tag will be intially hidden, and through
+                    &lt;script&gt;,
                     will be revealed.</li>
             </ul>
             <h3 class="side-page">&lt;style&gt;</h3>
@@ -501,10 +563,12 @@
                 <p class="codebox__margin0">: spoilMov[].classList.replace(revealres[], hideres[])</p>
             </div>
             <ul>
-                <li>Next, in the function called by method addEventListener(), spoilMov[] provides two interactive
+                <li>Next, in the function called by method addEventListener(), spoilMov[] provides two
+                    interactive
                     states, hideres[] and revealres[].</li>
                 <li>One state reveals the hidden content and the other hides the revealing content.</li>
-                <li>spoilMov[] triggers the hidden content previously mentioned and processes interactions between
+                <li>spoilMov[] triggers the hidden content previously mentioned and processes interactions
+                    between
                     classes in &lt;css&gt; creating the proceeding animations.</li>
             </ul>
             <h3 class="side-page">&lt;css&gt;</h3>
@@ -516,7 +580,8 @@
             <h3 class="side-page">&lt;css&gt;</h3>
             <div class="codebox">height: 0; opacity: 0;</div>
             <ul>
-                <li>Hiding the content using &lt;css&gt;, .hide-res class makes the content invisible with "opacity
+                <li>Hiding the content using &lt;css&gt;, .hide-res class makes the content invisible with
+                    "opacity
                     0" on the website using these attributes.</li>
             </ul>
             <h3 class="side-page">&lt;css&gt;</h3>
@@ -535,8 +600,10 @@
         <div class="sidewrapper">
             <div class="title"><b>Emphasis on effective js</b></div>
             <p class="html-body">
-                As more javascript is added to the site in the future, emphasis made on formatting and structure will
-                help efficiency in interations with the DOM. Concise and clear use of variables and keys will help guide
+                As more javascript is added to the site in the future, emphasis made on formatting and structure
+                will
+                help efficiency in interations with the DOM. Concise and clear use of variables and keys will
+                help guide
                 &lt;script&gt; interactions with the DOM.
             </p>
         </div>
