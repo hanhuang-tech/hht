@@ -326,29 +326,38 @@ const revealres = [
 ]
 
 spoilBtn[0].addEventListener("click", function () {
-    spoilMov[0].classList.contains(hideres[0]) ? spoilMov[0].classList.replace(hideres[0], revealres[0]) : spoilMov[0].classList.replace(revealres[0], hideres[0])
+    spoilMov[0].classList.contains(hideres[0])
+        ? spoilMov[0].classList.replace(hideres[0], revealres[0])
+        : spoilMov[0].classList.replace(revealres[0], hideres[0])
 })
 
 spoilBtn[1].addEventListener("click", function () {
-    spoilMov[1].classList.contains(hideres[1]) ? spoilMov[1].classList.replace(hideres[1], revealres[1]) : spoilMov[1].classList.replace(revealres[1], hideres[1])
+    spoilMov[1].classList.contains(hideres[1])
+        ? spoilMov[1].classList.replace(hideres[1], revealres[1])
+        : spoilMov[1].classList.replace(revealres[1], hideres[1])
 })
 
 spoilBtn[2].addEventListener("click", function () {
-    spoilMov[2].classList.contains(hideres[2]) ? spoilMov[2].classList.replace(hideres[2], revealres[2]) : spoilMov[2].classList.replace(revealres[2], hideres[2])
+    spoilMov[2].classList.contains(hideres[2])
+        ? spoilMov[2].classList.replace(hideres[2], revealres[2])
+        : spoilMov[2].classList.replace(revealres[2], hideres[2])
 })
 
 spoilBtn[3].addEventListener("click", function () {
-    spoilMov[3].classList.contains(hideres[3]) ? spoilMov[3].classList.replace(hideres[3], revealres[3]) : spoilMov[3].classList.replace(revealres[3], hideres[3])
+    spoilMov[3].classList.contains(hideres[3])
+        ? spoilMov[3].classList.replace(hideres[3], revealres[3])
+        : spoilMov[3].classList.replace(revealres[3], hideres[3])
 })
 
 spoilBtn[4].addEventListener("click", function () {
-    spoilMov[4].classList.contains(hideres[4]) ? spoilMov[4].classList.replace(hideres[4], revealres[4]) : spoilMov[4].classList.replace(revealres[4], hideres[4])
+    spoilMov[4].classList.contains(hideres[4])
+        ? spoilMov[4].classList.replace(hideres[4], revealres[4])
+        : spoilMov[4].classList.replace(revealres[4], hideres[4])
 })
 
 // codebox
 
 const codeBox = document.body.querySelector(".codebox");
-
 const span = "</span>";
 const spanBlue = "<span class='codeblue'>";
 const spanGreen = "<span class='codegreen'>";

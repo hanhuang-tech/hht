@@ -250,7 +250,7 @@ img.banner.animate {
 
 @keyframes animateLtnBG {
   50% {
-    background-color: rgba(200, 200, 200, 0.5);
+    background-color: yellow;
   }
 }
 
@@ -513,7 +513,7 @@ div.dome {
   z-index: 2;
   top: -12px;
   right: -13px;
-  border: 16px inset;
+  border: 16px solid;
   border-color: transparent transparent var(--clr-dark) transparent;
   border-radius: 15px;
 }
@@ -524,7 +524,7 @@ div.dome::after {
   position: absolute;
   bottom: -28px;
   right: -20px;
-  border: 20px inset;
+  border: 20px solid;
   border-color: transparent transparent var(--clr-dark) transparent;
   border-radius: 12px;
 }
@@ -1850,16 +1850,26 @@ div.body-wrapper h3 {
 }
 
 /* codebox */
-div.codebox {
+div.codebox,
+div.codebox .green,
+div.codebox .brown {
   background: rgba(0, 0, 0, 0.2);
   font-family: var(--ff-secondary);
-  padding: 5px 10px;
   margin: 0;
+  padding: 5px 10px;
   line-height: 1rem;
   overflow-wrap: break-word;
   border-width: 2px 2px 2px 5px;
   border-style: solid;
   border-color: var(--clr-dark);
+}
+
+div.codebox.green {
+  border-color: var(--clr-accent);
+}
+
+div.codebox.brown {
+  border-color: var(--clr-brown);
 }
 
 p.margin0 {
@@ -1895,7 +1905,6 @@ p.code-description {
     margin: 5px 0 20px;
   }
 }
-
 
 #jslogo {
   height: 70px;
@@ -2078,15 +2087,15 @@ p.html-body {
 }
 
 /* codebox coloured text */
-.codeblue {
+.codebluetext {
   color: darkblue;
 }
 
-.codebrown {
+.codebrowntext {
   color: var(--clr-brown);
 }
 
-.codegreen {
+.codegreentext {
   color: darkgreen;
 }
 
@@ -2165,13 +2174,13 @@ p.html-body {
   font-family: var(--ff-secondary);
 
   position: relative;
+  margin-bottom: 5px;
   border-color: darkgreen;
   border-style: solid;
 
-  font-size: 1.1rem;
-  margin: 5px 0;
+  font-size: 0.8rem;
   border-width: 2px;
-  border-radius: 10px;
+  border-radius: 6px;
 }
 
 #spoil-btna:hover {
@@ -2181,24 +2190,32 @@ p.html-body {
 }
 
 #spoil-btnb {
-  color: chocolate;
+  color: var(--clr-brown);
   background: var(--clr-light);
   font-family: var(--ff-secondary);
 
   position: relative;
-  border-color: chocolate;
+  margin-bottom: 5px;
+  border-color: var(--clr-brown);
   border-style: solid;
 
-  font-size: 1.1rem;
-  margin: 5px 0;
+  font-size: 0.8rem;
   border-width: 2px;
-  border-radius: 10px;
+  border-radius: 6px;
 }
 
 #spoil-btnb:hover {
-  background: chocolate;
+  background: var(--clr-brown);
   color: var(--clr-light);
   cursor: pointer;
+}
+
+@media (min-width: 64em) {
+
+  #spoil-btna,
+  #spoil-btnb {
+    font-size: 1rem;
+  }
 }
 
 #spoil-move1,
@@ -2225,15 +2242,4 @@ p.html-body {
 .reveal-sfeb {
   height: 100%;
   opacity: 1;
-}
-
-@media (min-width: 64em) {
-
-  #spoil-btna,
-  #spoil-btnb {
-    font-size: 1.5rem;
-    margin: 5px 0;
-    border-width: 2px;
-    border-radius: 12px;
-  }
 }
