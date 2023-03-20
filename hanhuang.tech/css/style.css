@@ -2150,24 +2150,6 @@ p.html-body {
   background: lightpink;
 }
 
-@media (min-width: 64em) {
-
-  /* #spoil-btn1,
-  #spoil-btn2,
-  #spoil-btn3 {
-    padding: 10px;
-    font-size: 1.25rem;
-    margin: 3px 0;
-  } */
-
-  #buttondiv {
-    display: block;
-    background: var(--clr-light);
-    padding: 10px 15px;
-    border: 2px solid var(--clr-dark);
-  }
-}
-
 #spoil-btna {
   color: darkgreen;
   background: var(--clr-light);
@@ -2223,23 +2205,23 @@ p.html-body {
 #spoil-move3,
 #spoil-movea,
 #spoil-moveb {
-  transition: opacity 0.5 ease-in-out;
+  transition: opacity 0.2s ease-in-out;
 }
 
-.hide-res1,
-.hide-res2,
-.hide-res3,
-.hide-sfea,
-.hide-sfeb {
+.hide-text1,
+.hide-text2,
+.hide-text3,
+.hide-texta,
+.hide-textb {
   height: 0;
   opacity: 0;
 }
 
-.reveal-res1,
-.reveal-res2,
-.reveal-res3,
-.reveal-sfea,
-.reveal-sfeb {
+.reveal-text1,
+.reveal-text2,
+.reveal-text3,
+.reveal-texta,
+.reveal-textb {
   height: 100%;
   opacity: 1;
 }

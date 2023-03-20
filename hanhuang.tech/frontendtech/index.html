@@ -454,14 +454,14 @@
                     <div class="codebox green">
                         <p class="margin0">const spoilBtn = []</p>
                         <p class="margin0">const spoilMov = []</p>
-                        <p class="margin0">const hideres = []</p>
-                        <p class="margin0">const revealres = []</p>
+                        <p class="margin0">const hide-text = []</p>
+                        <p class="margin0">const reveal-text = []</p>
                         <p class="margin0">spoilBtn[].addEventListener("click", function () {</p>
-                        <p class="margin0"><span class="smargin1">spoilMov[].classList.contains(hideres[])
+                        <p class="margin0"><span class="smargin1">spoilMov[].classList.contains(hide-text[])
                                 ?
-                                spoilMov[].classList.replace(hideres[],</span></p>
-                        <p class="margin0"><span class="margin1">revealres[]) :
-                                spoilMov[].classList.replace(revealres[], hideres[])</span></p>
+                                spoilMov[].classList.replace(hide-text[],</span></p>
+                        <p class="margin0"><span class="margin1">reveal-text[]) :
+                                spoilMov[].classList.replace(reveal-text[], hide-text[])</span></p>
                         <p class="margin0"><span class="margin1">})</span></p>
                     </div>
                 </div>
@@ -492,11 +492,11 @@
                 <div id="spoil-moveb" class="hide-sfeb">
                     <div class="codebox brown">
                         <p class="margin0">function () {</p>
-                        <p class="margin1">spoilMov[].classList.contains(hideres[])
+                        <p class="margin1">spoilMov[].classList.contains(hide-text[])
                             ?
-                            spoilMov[].classList.replace(hideres[],</p>
-                        <p class="margin1">revealres[]) :
-                            spoilMov[].classList.replace(revealres[], hideres[])</p>
+                            spoilMov[].classList.replace(hide-text[],</p>
+                        <p class="margin1">reveal-text[]) :
+                            spoilMov[].classList.replace(reveal-text[], hide-text[])</p>
                         <p class="margin0">})</p>
                     </div>
                 </div>
@@ -524,13 +524,13 @@
             </div>
             <div class="body-wrapper">
                 <div class="codebox">
-                    <p class="margin0">? spoilMov[].classList.replace(hideres[],revealres[])</p>
-                    <p class="margin0">: spoilMov[].classList.replace(revealres[], hideres[])</p>
+                    <p class="margin0">? spoilMov[].classList.replace(hide-text[],reveal-text[])</p>
+                    <p class="margin0">: spoilMov[].classList.replace(reveal-text[], hide-text[])</p>
                 </div>
                 <ul>
                     <li>Next, in the function called by method addEventListener(), spoilMov[] provides two
                         interactive
-                        states, hideres[] and revealres[].</li>
+                        states, hide-text[] and reveal-text[].</li>
                     <li>One state reveals the hidden content and the other hides the revealing content.</li>
                     <li>spoilMov[] triggers the hidden content previously mentioned and processes interactions
                         between
@@ -544,7 +544,7 @@
                 <div class="codebox">transition: opacity 0.5 ease-in-out;</div>
                 <ul>
                     <li>Creating the interactions between the classes in &lt;css&gt;, .spoil-move creates the
-                        transition. This is the interim animation between hideres[] and revealres[].</li>
+                        transition. This is the interim animation between hide-text[] and reveal-text[].</li>
                 </ul>
             </div>
             <div class="side-heading">
