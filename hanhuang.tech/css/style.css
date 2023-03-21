@@ -2215,6 +2215,7 @@ p.html-body {
 .hide-textb {
   height: 0;
   opacity: 0;
+  visibility: hidden;
 }
 
 .reveal-text1,
