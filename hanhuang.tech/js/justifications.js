@@ -226,14 +226,14 @@ function changeTabMobile() {
   if (Math.abs(document.documentElement.scrollTop) < 100) {
     tabWrap.style.transform = "translate(-50px)";
   }
-  else if (Math.abs(document.documentElement.scrollTop) > 100 && (Math.abs(document.documentElement.scrollTop) < 3800)) {
+  else if (Math.abs(document.documentElement.scrollTop) > 100 && (Math.abs(document.documentElement.scrollTop) < 3500)) {
     tabWrap.style.transform = "translate(0px)";
     tabhtml.style.filter = "grayscale(0%)";
     tabcss.style.filter = "grayscale(100%)";
     tabjs.style.filter = "grayscale(100%)";
     tab.style.borderColor = "transparent transparent var(--clr-html) transparent";
   }
-  else if (Math.abs(document.documentElement.scrollTop) > 3800 && (Math.abs(document.documentElement.scrollTop) < 3900)) {
+  else if (Math.abs(document.documentElement.scrollTop) > 3500 && (Math.abs(document.documentElement.scrollTop) < 3600)) {
     tabhtml.style.filter = "grayscale(100%)";
     tabcss.style.filter = "grayscale(0%)";
     tabjs.style.filter = "grayscale(100%)";
@@ -273,7 +273,6 @@ burger.addEventListener("click", function () {
   burger.classList.toggle("toggle");
   hiddenBurgerContents.classList.toggle("toggle");
   arrowButton.classList.toggle("toggle");
-  subjectHeadingHide();
 });
 
 function retractBurgerOnScroll() {
@@ -281,13 +280,6 @@ function retractBurgerOnScroll() {
     burger.classList.toggle("toggle")
     hiddenBurgerContents.classList.toggle("toggle");
     arrowButton.classList.toggle("toggle");
-    subjectHeadingHide();
-  }
-}
-
-function subjectHeadingHide() {
-  for (var i = 0; i < subjectHeading.length; i++) {
-    subjectHeading[i].classList.toggle("toggle");
   }
 }
 

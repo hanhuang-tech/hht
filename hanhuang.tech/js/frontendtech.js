@@ -273,7 +273,6 @@ burger.addEventListener("click", function () {
     burger.classList.toggle("toggle");
     hiddenBurgerContents.classList.toggle("toggle");
     arrowButton.classList.toggle("toggle");
-    subjectHeadingHide();
 });
 
 function retractBurgerOnScroll() {
@@ -281,13 +280,6 @@ function retractBurgerOnScroll() {
         burger.classList.toggle("toggle")
         hiddenBurgerContents.classList.toggle("toggle");
         arrowButton.classList.toggle("toggle");
-        subjectHeadingHide();
-    }
-}
-
-function subjectHeadingHide() {
-    for (var i = 0; i < subjectHeading.length; i++) {
-        subjectHeading[i].classList.toggle("toggle");
     }
 }
 
