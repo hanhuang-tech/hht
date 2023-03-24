@@ -1541,7 +1541,7 @@ h4.footer {
 
 /* frontend tech */
 
-#descbox-wrapper {
+.descbox-wrapper.frontend {
   background-color: burlywood;
   background-image: url(../img/codefrontend.png);
   background-blend-mode: multiply;
@@ -1555,8 +1555,31 @@ h4.footer {
 }
 
 @media (min-width: 64em) {
-  #descbox-wrapper {
+  .descbox-wrapper.frontend {
     background-image: linear-gradient(to bottom, black, burlywood);
+    padding: 40px 5px 0px;
+    z-index: 0;
+  }
+}
+
+/* justifications */
+.descbox-wrapper.justifications {
+  background-color: gray;
+  background-image: url(../img/codefrontend.png);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-attachment: fixed;
+  padding: 40px;
+  border-width: 0 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent var(--clr-brown);
+  filter: grayscale(50%);
+}
+
+@media (min-width: 64em) {
+  .descbox-wrapper.justifications {
+    background-image: linear-gradient(to bottom, black, gray);
     padding: 40px 5px 0px;
     z-index: 0;
   }
