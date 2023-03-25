@@ -1574,12 +1574,12 @@ h4.footer {
   border-width: 0 5px;
   border-style: solid;
   border-color: transparent transparent transparent var(--clr-brown);
-  filter: grayscale(50%);
+  filter: grayscale(100%);
 }
 
 @media (min-width: 64em) {
   .descbox-wrapper.justifications {
-    background-image: linear-gradient(to bottom, black, gray);
+    background-image: linear-gradient(to bottom, black, white);
     padding: 40px 5px 0px;
     z-index: 0;
   }
@@ -1591,12 +1591,13 @@ div.descbox {
   max-width: 260px;
   padding: 10px;
   margin: 0 auto;
-  background: rgb(75, 75, 75);
+  background: var(--clr-dark);
   box-shadow: var(--bs);
 }
 
 @media (min-width: 64em) {
   div.descbox {
+    background: var(--clr-dark2);
     justify-content: space-around;
     max-width: 500px;
   }
