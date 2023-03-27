@@ -1934,11 +1934,20 @@ p.code-description {
 h3.pros {
   display: inline-block;
   padding: 3px 10px;
-  margin: 5px;
+  margin: 7px;
   background-color: lightgreen;
   color: green;
   box-shadow: var(--bs);
-  border: green solid 3px;
+  border-color: green;
+  border-style: solid;
+  border-width: 2px;
+}
+
+@media(min-width:64em) {
+  h3.pros {
+    margin: 10px;
+    border-width: 3px;
+  }
 }
 
 /* codebox coloured text */
