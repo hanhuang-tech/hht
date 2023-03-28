@@ -1950,6 +1950,25 @@ h3.pros {
   }
 }
 
+h3.cons {
+  display: inline-block;
+  padding: 3px 10px;
+  margin: 7px;
+  background-color: lightcoral;
+  color: darkred;
+  box-shadow: var(--bs);
+  border-color: darkred;
+  border-style: solid;
+  border-width: 2px;
+}
+
+@media(min-width:64em) {
+  h3.cons {
+    margin: 10px;
+    border-width: 3px;
+  }
+}
+
 /* codebox coloured text */
 .codebluetext {
   color: darkblue;
