@@ -1932,9 +1932,10 @@ p.code-description {
 
 /* justifications */
 h3.pros {
-  display: inline-block;
+  display: block;
   padding: 3px 10px;
-  margin: 7px;
+  margin: 20px auto;
+  max-width: 205px;
   background-color: lightgreen;
   color: green;
   box-shadow: var(--bs);
@@ -1945,7 +1946,7 @@ h3.pros {
 
 @media(min-width:64em) {
   h3.pros {
-    margin: 10px;
+    max-width: 280px;
     border-width: 3px;
   }
 }
