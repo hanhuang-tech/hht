@@ -1952,9 +1952,10 @@ h3.pros {
 }
 
 h3.cons {
-  display: inline-block;
+  display: block;
   padding: 3px 10px;
-  margin: 7px;
+  margin: 20px auto;
+  max-width: 210px;
   background-color: lightcoral;
   color: darkred;
   box-shadow: var(--bs);
@@ -1965,7 +1966,7 @@ h3.cons {
 
 @media(min-width:64em) {
   h3.cons {
-    margin: 10px;
+    max-width: 280px;
     border-width: 3px;
   }
 }
