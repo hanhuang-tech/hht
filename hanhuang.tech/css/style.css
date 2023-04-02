@@ -1798,22 +1798,22 @@ div.subject-banner {
   border-color: var(--clr-dark) transparent var(--clr-dark2) transparent;
 }
 
-.shorttitle[type=html],
-.shorttitle[type=css],
-.shorttitle[type=js] {
+.shorttitle-html,
+.shorttitle-css,
+.shorttitle-js {
   color: var(--clr-light);
   padding: 0 5px;
 }
 
-.shorttitle[type=html] {
+.shorttitle-html {
   background-color: var(--clr-html);
 }
 
-.shorttitle[type=css] {
+.shorttitle-css {
   background-color: var(--clr-css);
 }
 
-.shorttitle[type=js] {
+.shorttitle-js {
   background-color: var(--clr-js);
 }
 
@@ -2054,6 +2054,7 @@ h3.cons {
   background: darkgreen;
   color: var(--clr-light);
   cursor: pointer;
+  transition: 0.5s;
 }
 
 #spoil-btnb {
@@ -2075,6 +2076,7 @@ h3.cons {
   background: var(--clr-brown);
   color: var(--clr-light);
   cursor: pointer;
+  transition: 0.5s;
 }
 
 @media (min-width: 64em) {
