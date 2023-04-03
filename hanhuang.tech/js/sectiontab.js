@@ -231,19 +231,19 @@ function changeTabMobile() {
         tabhtml.style.filter = "grayscale(0%)";
         tabcss.style.filter = "grayscale(100%)";
         tabjs.style.filter = "grayscale(100%)";
-        tab.style.borderColor = "transparent transparent var(--clr-html) transparent";
+        tabWrap.style.backgroundColor = "var(--clr-html)";
     }
     else if (Math.abs(document.documentElement.scrollTop) > 3500 && (Math.abs(document.documentElement.scrollTop) < 3600)) {
         tabhtml.style.filter = "grayscale(100%)";
         tabcss.style.filter = "grayscale(0%)";
         tabjs.style.filter = "grayscale(100%)";
-        tab.style.borderColor = "var(--clr-brown) var(--clr-brown) var(--clr-css)  transparent";
+        tabWrap.style.backgroundColor = "var(--clr-css)";
     }
     else if (Math.abs(document.documentElement.scrollTop) > 3900) {
         tabhtml.style.filter = "grayscale(100%)";
         tabcss.style.filter = "grayscale(100%)";
         tabjs.style.filter = "grayscale(0%)";
-        tab.style.borderColor = "var(--clr-brown) var(--clr-brown) var(--clr-js)  transparent";
+        tabWrap.style.backgroundColor = "var(--clr-js)";
     }
 }
 
@@ -252,19 +252,19 @@ function changeTabDesktop() {
         tabhtml.style.filter = "grayscale(0%)";
         tabcss.style.filter = "grayscale(100%)";
         tabjs.style.filter = "grayscale(100%)";
-        tab.style.borderColor = "transparent transparent var(--clr-html) transparent";
+        tabWrap.style.backgroundColor = "var(--clr-html)";
     }
     else if (Math.abs(document.documentElement.scrollTop) > 2100 && (Math.abs(document.documentElement.scrollTop) < 2200)) {
         tabhtml.style.filter = "grayscale(100%)";
         tabcss.style.filter = "grayscale(0%)";
         tabjs.style.filter = "grayscale(100%)";
-        tab.style.borderColor = "var(--clr-brown) var(--clr-brown) var(--clr-css)  transparent";
+        tabWrap.style.backgroundColor = "var(--clr-css)";
     }
     else if (Math.abs(document.documentElement.scrollTop) > 2200) {
         tabhtml.style.filter = "grayscale(100%)";
         tabcss.style.filter = "grayscale(100%)";
         tabjs.style.filter = "grayscale(0%)";
-        tab.style.borderColor = "var(--clr-brown) var(--clr-brown) var(--clr-js)  transparent";
+        tabWrap.style.backgroundColor = "var(--clr-js)";
     }
 }
 
