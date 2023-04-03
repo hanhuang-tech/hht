@@ -1562,8 +1562,8 @@ h4.footer {
   }
 }
 
-/* justifications */
-.descbox-wrapper.justifications {
+/* critiques */
+.descbox-wrapper.critiques {
   background-color: gray;
   background-image: url(../img/codefrontend.png);
   background-blend-mode: multiply;
@@ -1573,12 +1573,12 @@ h4.footer {
   padding: 40px;
   border-width: 0 5px;
   border-style: solid;
-  border-color: transparent transparent transparent var(--clr-brown);
+  border-color: transparent transparent transparent var(--clr-dark2);
   filter: grayscale(100%);
 }
 
 @media (min-width: 64em) {
-  .descbox-wrapper.justifications {
+  .descbox-wrapper.critiques {
     background-image: linear-gradient(to bottom, black, white);
     padding: 40px 5px 0px;
     z-index: 0;
@@ -1781,6 +1781,17 @@ a.smallyoutube:hover {
   padding-bottom: 15px;
 }
 
+#htmlwrapper-critiques,
+#csswrapper-critiques,
+#jswrapper-critiques {
+  flex: 1;
+  background-color: var(--clr-light);
+  border-width: 0 0 0 5px;
+  border-style: solid;
+  border-color: var(--clr-dark2);
+  padding-bottom: 15px;
+}
+
 div.subject-banner {
   display: flex;
   justify-content: center;
@@ -1796,6 +1807,29 @@ div.subject-banner {
   border-width: 10px 0 5px 0;
   border-style: solid;
   border-color: var(--clr-dark) transparent var(--clr-dark2) transparent;
+}
+
+div.subject-banner.grey {
+  display: flex;
+  justify-content: center;
+  column-gap: 25px;
+  padding: 15px;
+  text-transform: uppercase;
+  font-family: var(--ff-secondary);
+  background-image: url(../img/codefrontend.png);
+  background-color: rgb(80, 80, 80);
+  background-blend-mode: multiply;
+  background-size: 100%;
+  background-attachment: fixed;
+  border-width: 10px 0 5px 0;
+  border-style: solid;
+  border-color: var(--clr-dark) transparent var(--clr-dark2) transparent;
+}
+
+@media(min-width: 64em) {
+  div.subject-banner.grey {
+    background-size: 50%;
+  }
 }
 
 .shorttitle-html,
@@ -1946,7 +1980,7 @@ h3.pros {
 
 @media(min-width:64em) {
   h3.pros {
-    max-width: 280px;
+    max-width: 265px;
     border-width: 3px;
   }
 }
