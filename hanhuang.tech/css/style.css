@@ -1703,6 +1703,7 @@ a.smallyoutube:hover {
   left: 0;
   top: 40%;
   transform: translate(-50px);
+  background-color: var(--clr-dark2);
   margin: 0;
   padding: 0;
   border-radius: 0px 5px 5px 0px;
