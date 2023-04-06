@@ -1141,6 +1141,34 @@ h3.proj-section-subtitle {
   }
 }
 
+#critiques {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+#critique-tri-down {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #f00;
+}
+
+#critique-tri-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 20px solid #f00;
+}
+
 div.project {
   opacity: 0.2;
   z-index: 1;
