@@ -306,6 +306,7 @@ const projectBGImg = document.querySelector("#project-bg-img");
 const habbitSpray = document.querySelector("#habbit-spray");
 const habbitBorder = document.querySelector("#habbit-border");
 const projectDivAll = document.querySelectorAll("div.project");
+const critiques = document.querySelector("#critiques");
 const subjectGroups = document.querySelector("div.subjectgroups");
 const subjectsNoOfChild = subjectGroups.children;
 const tilesChild = projectTiles.children;
@@ -334,6 +335,7 @@ function projectTilesMoveDesktop() {
     habbitSpray.style.transition = "1s";
     habbitBorder.style.opacity = "0";
     habbitBorder.style.transition = "1s";
+    critiques.style.opacity = "1";
     projectTilesMoveExpand();
   }
   else {
@@ -347,6 +349,7 @@ function projectTilesMoveDesktop() {
     habbitBorder.style.transition = "1s";
     habbitSpray.style.opacity = "1";
     habbitSpray.style.transition = "1s";
+    critiques.style.opacity = "0";
     projectTilesMoveRetract();
   }
 }
