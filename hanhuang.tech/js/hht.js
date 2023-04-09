@@ -309,18 +309,18 @@ const projectDivAll = document.querySelectorAll("div.project");
 const critiques = document.querySelector("#critiques");
 const subjectGroups = document.querySelector("div.subjectgroups");
 const subjectsNoOfChild = subjectGroups.children;
-const tilesChild = projectTiles.children;
+const projectTilesChild = projectTiles.children;
 
 function projectTilesMoveMobile() {
-  for (let i = 0; i < tilesChild.length; i++) {
+  for (let i = 0; i < projectTilesChild.length; i++) {
     if (window.pageYOffset > (subjectsNoOfChild.length * 200 + (i * 300))) {
-      tilesChild[i].style.opacity = "1";
-      tilesChild[i].style.transition = "0.2s";
-      if (i > 0) { tilesChild[i - 1].style.opacity = "0.5"; }
-      if (i < 3) { tilesChild[i + 1].style.opacity = "0.5"; }
+      projectTilesChild[i].style.opacity = "1";
+      projectTilesChild[i].style.transition = "0.2s";
+      if (i > 0) { projectTilesChild[i - 1].style.opacity = "0.5"; }
+      if (i < 3) { projectTilesChild[i + 1].style.opacity = "0.5"; }
     }
   }
-  if (window.pageYOffset > 2300) tilesChild[3].style.opacity = "0";
+  if (window.pageYOffset > 2300) projectTilesChild[3].style.opacity = "0";
 }
 
 function projectTilesMoveDesktop() {
@@ -335,7 +335,6 @@ function projectTilesMoveDesktop() {
     habbitSpray.style.transition = "1s";
     habbitBorder.style.opacity = "0";
     habbitBorder.style.transition = "1s";
-    critiques.style.opacity = "1";
     projectTilesMoveExpand();
   }
   else {
@@ -349,29 +348,28 @@ function projectTilesMoveDesktop() {
     habbitBorder.style.transition = "1s";
     habbitSpray.style.opacity = "1";
     habbitSpray.style.transition = "1s";
-    critiques.style.opacity = "0";
     projectTilesMoveRetract();
   }
 }
 
 function projectTilesMoveExpand() {
-  for (let i = 0; i < tilesChild.length; i++) {
-    tilesChild[i].style.zIndex = "1";
-    tilesChild[i].style.margin = "15px";
-    tilesChild[i].style.borderColor = "gray var(--clr-dark2) var(--clr-dark2) gray";
-    tilesChild[i].style.borderRadius = "10px";
-    tilesChild[i].style.transition = "1s";
+  for (let i = 0; i < projectTilesChild.length; i++) {
+    projectTilesChild[i].style.zIndex = "1";
+    projectTilesChild[i].style.margin = "15px";
+    projectTilesChild[i].style.borderColor = "gray var(--clr-dark2) var(--clr-dark2) gray";
+    projectTilesChild[i].style.borderRadius = "10px";
+    projectTilesChild[i].style.transition = "1s";
   }
 }
 
 function projectTilesMoveRetract() {
-  for (let i = 0; i < tilesChild.length; i++) {
-    tilesChild[i].style.opacity = "0"
-    tilesChild[i].style.zIndex = "-1";
-    tilesChild[i].style.margin = "0px";
-    tilesChild[i].style.borderColor = "transparent";
-    tilesChild[i].style.borderRadius = "0px";
-    tilesChild[i].style.transition = "1s";
+  for (let i = 0; i < projectTilesChild.length; i++) {
+    projectTilesChild[i].style.opacity = "0"
+    projectTilesChild[i].style.zIndex = "-1";
+    projectTilesChild[i].style.margin = "0px";
+    projectTilesChild[i].style.borderColor = "transparent";
+    projectTilesChild[i].style.borderRadius = "0px";
+    projectTilesChild[i].style.transition = "1s";
   }
 }
 
@@ -453,7 +451,7 @@ function endBGMobile() {
   logo.style.boxShadow = "var(--bs)";
   logo.style.backgroundColor = "rgb(200,200,200,0.2)";
   projectTiles.style.background = getRGB;
-  //opacity = 0 for tilesChild[3] on project tiles animations 
+  //opacity = 0 for projectTilesChild[3] on project tiles animations 
 }
 
 function notEndBGDesktop() {
@@ -497,7 +495,7 @@ function test() {
     " rB:" + rB + "/" + sumRestrictRGB(b, rB) + "/" + diffRestrictRGB(b, rB)
   )
   console.log(subjectHeading.length)
-  console.log(tilesChild.length)
+  console.log(projectTilesChild.length)
   console.log(subjectsNoOfChild.length)
 }
 //test()

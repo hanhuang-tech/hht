@@ -1162,20 +1162,20 @@ div.project {
   text-align: center;
   margin: 20px auto;
   max-width: 500px;
-  text-decoration: none;
   padding: 5px 0 0;
-  background-color: rgb(70, 70, 50, 1);
-  border-width: 2px;
+  background-color: var(--clr-dark2);
+  border-width: 3px;
   border-style: solid;
-  border-color: gray var(--clr-dark2) var(--clr-dark2) gray;
-  filter: invert(95%);
+  border-color: gray;
   box-shadow: var(--bs);
-  transition: 1s;
+}
+
+#critiques a {
+  text-decoration: none;
 }
 
 #critiques:hover {
-  border-width: 2px 15px;
-  filter: invert(10%);
+  background-color: var(--clr-accent3);
 }
 
 @media (min-width: 64em) {
@@ -1191,13 +1191,15 @@ div.project {
   #critiques {
     position: absolute;
     z-index: -1;
-    top: 50%;
-    right: 0;
+    top: 20px;
+    right: 30px;
     margin: 0;
     opacity: 0;
-    background-size: cover;
-    border-color: transparent;
-    border-radius: 0;
+    max-width: 100px;
+  }
+
+  #critiques:hover {
+    scale: 105%;
   }
 }
 
