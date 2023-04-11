@@ -9,7 +9,7 @@ const arrowButton = document.querySelector("#arrow-button");
 const lantern = document.querySelector("#lantern");
 const habbitCry = new Audio("../../habbit-cry.mp3");
 
-// habbit click
+// habbit click animate
 habbitImg.addEventListener("click", function () {
     habbitCry.play();
 
@@ -30,14 +30,14 @@ habbitImg.addEventListener("click", function () {
     lantern.classList.add("animate");
 }, false);
 
-// habbit change
+// habbit change a/b on horizontal plane
+// clientX property returns the horizontal coordinate of the current window
 window.onmousemove = function (e) {
     if (window.matchMedia("(min-width: 64em)").matches) { habbitChangeDesktop(e); }
     else { habbitChangeMobile(e); }
 }
 
 function habbitChangeMobile(e) {
-    // clientX property returns the horizontal coordinate of the current window
     let x = e.clientX;
     let w = Math.floor(document.documentElement.clientWidth / 2);
     if (x > w) { habbitB.style.opacity = "1"; }
@@ -45,7 +45,6 @@ function habbitChangeMobile(e) {
 }
 
 function habbitChangeDesktop(e) {
-    // clientX property returns the horizontal coordinate of the current window
     let x = e.clientX;
     let w = Math.floor(document.documentElement.clientWidth / 2);
     if (x > w) { habbitB.style.opacity = "1"; }
@@ -58,13 +57,13 @@ window.onscroll = function () {
     if (window.matchMedia("(min-width: 64em)").matches) {
         scrollRGB();
         logoRetractDesktop();
-        retractBurgerOnScroll();
+        revealNavForTabSection();
         changeTabDesktop();
     }
     else {
         scrollRGB();
         logoRetractMb();
-        retractBurgerOnScroll();
+        revealNavForTabSection();
         changeTabMobile();
     }
 }
@@ -101,6 +100,7 @@ function rgbInverseColor(r, g, b) {
 
 const rgbFilter = document.querySelector("#rgbfilter");
 const hanSection = document.querySelector("#han");
+const navForTabSection = document.querySelector("nav.bar.sectioned-with-tab");
 let lastScroll = 0;
 let r = 0;
 let g = 0;
@@ -200,15 +200,14 @@ function logoRetractMb() {
     }
 }
 
-// toggle burger
-const burger = document.querySelector("#burger");
-const firstham = document.querySelector("#burger :nth-child(1)");
-const secondham = document.querySelector("#burger :nth-child(2)");
-const thirdham = document.querySelector("#burger :nth-child(3)");
-const burgerTriangle = document.querySelector("#burger-triangle");
-const hiddenBurgerContents = document.querySelector("#hidden-burger-contents");
-habbitB.style.transitionDuration = "0.5s";
-habbitA.style.transitionDuration = "0.5s";
+function revealNavForTabSection() {
+    if (Math.abs(document.documentElement.scrollTop) > 500) {
+        navForTabSection.style.transform = "translateX(0px)";
+    }
+    else {
+        navForTabSection.style.transform = "translateX(50px)";
+    }
+}
 
 // tab
 const tabWrap = document.querySelector("#tabwrapper");

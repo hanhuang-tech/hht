@@ -273,6 +273,13 @@ nav.bar {
   z-index: 1;
 }
 
+nav.bar.sectioned-with-tab {
+  scale: 120%;
+  top: 40%;
+  transform: translateX(50px);
+  transition: 1s;
+}
+
 @media(min-width:64em) {
   nav.bar {
     position: fixed;
@@ -438,8 +445,18 @@ div.burger-content-flexwrapper div a span {
 }
 
 #arrow-button:hover {
+  opacity: 1;
   background-color: skyblue;
   border-radius: 0;
+}
+
+#arrow-button.sectioned-with-tab {
+  opacity: 0.5;
+  border-width: 3px;
+}
+
+#arrow-button.sectioned-with-tab:hover {
+  opacity: 1;
 }
 
 #arrow-button span {
@@ -1170,12 +1187,12 @@ div.project {
   box-shadow: var(--bs);
 }
 
-#critiques a {
-  text-decoration: none;
-}
-
 #critiques:hover {
   background-color: var(--clr-accent3);
+}
+
+#critiques a {
+  text-decoration: none;
 }
 
 @media (min-width: 64em) {
