@@ -1141,7 +1141,7 @@ h3.proj-section-subtitle {
 }
 
 #project-tiles {
-  background-image: radial-gradient(var(--clr-accent3), black);
+  background-image: linear-gradient(to bottom, var(--clr-accent3), black, var(--clr-accent3));
   background-attachment: fixed;
   padding: 20px 68px;
 }
@@ -1159,7 +1159,6 @@ h3.proj-section-subtitle {
 }
 
 div.project {
-  opacity: 0.2;
   z-index: 1;
   text-align: center;
   margin: 20px auto;

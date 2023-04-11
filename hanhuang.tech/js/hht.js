@@ -299,7 +299,7 @@ function awsTipHide() {
   awsTip.style.transitionDuration = "0.75s";
 };
 
-// project tiles animations
+// project
 const projectHeadings = document.querySelector("#proj-section-headings");
 const projectTiles = document.querySelector("#project-tiles");
 const projectBGImg = document.querySelector("#project-bg-img");
@@ -311,16 +311,39 @@ const subjectGroups = document.querySelector("div.subjectgroups");
 const subjectsNoOfChild = subjectGroups.children;
 const projectTilesChild = projectTiles.children;
 
+// habbit animate and reveal
+function projectHabbitAnimate() {
+  if (window.pageYOffset > 100) {
+    habbitSpray.style.transform = "rotate(360deg)";
+    habbitSpray.style.transition = "2s";
+    habbitBorder.style.transform = "rotate(360deg)";
+    habbitBorder.style.transition = "2s";
+    habbitBorder.style.borderRadius = "50%";
+    habbitBorder.style.transition = "2s";
+  } else {
+    habbitSpray.style.transform = "rotate(0deg)";
+    habbitSpray.style.transition = "2s";
+    habbitBorder.style.transform = "rotate(0deg)";
+    habbitBorder.style.transition = "2s";
+    habbitBorder.style.borderRadius = "0px";
+    habbitBorder.style.transition = "2s";
+  }
+}
+
+// project tiles transitions
 function projectTilesMoveMobile() {
-  for (let i = 0; i < projectTilesChild.length; i++) {
-    if (window.pageYOffset > (subjectsNoOfChild.length * 200 + (i * 300))) {
-      projectTilesChild[i].style.opacity = "1";
-      projectTilesChild[i].style.transition = "0.2s";
-      if (i > 0) { projectTilesChild[i - 1].style.opacity = "0.5"; }
-      if (i < 3) { projectTilesChild[i + 1].style.opacity = "0.5"; }
+  if (window.pageYOffset > 1800) {
+    for (let i = 0; i < projectTilesChild.length; i++) {
+      projectTilesChild[i].style.opacity = "0";
+      projectTilesChild[i].style.transition = "0.5s";
     }
   }
-  if (window.pageYOffset > 2300) projectTilesChild[3].style.opacity = "0";
+  else {
+    for (let i = 0; i < projectTilesChild.length; i++) {
+      projectTilesChild[i].style.opacity = "1";
+      projectTilesChild[i].style.transition = "0.5s";
+    }
+  }
 }
 
 function projectTilesMoveDesktop() {
@@ -370,24 +393,6 @@ function projectTilesMoveRetract() {
     projectTilesChild[i].style.borderColor = "transparent";
     projectTilesChild[i].style.borderRadius = "0px";
     projectTilesChild[i].style.transition = "1s";
-  }
-}
-
-function projectHabbitAnimate() {
-  if (window.pageYOffset > 100) {
-    habbitSpray.style.transform = "rotate(360deg)";
-    habbitSpray.style.transition = "2s";
-    habbitBorder.style.transform = "rotate(360deg)";
-    habbitBorder.style.transition = "2s";
-    habbitBorder.style.borderRadius = "50%";
-    habbitBorder.style.transition = "2s";
-  } else {
-    habbitSpray.style.transform = "rotate(0deg)";
-    habbitSpray.style.transition = "2s";
-    habbitBorder.style.transform = "rotate(0deg)";
-    habbitBorder.style.transition = "2s";
-    habbitBorder.style.borderRadius = "0px";
-    habbitBorder.style.transition = "2s";
   }
 }
 
@@ -441,9 +446,17 @@ const scrollheighta = document.querySelector("#scrollheighta");
 const scrollheightb = document.querySelector("#scrollheightb");
 const scrollheightc = document.querySelector("#scrollheightc");
 
+// change BG of project when scrolled to end mobile
+function scrollToEndBGMobile() {
+  if (Math.abs(document.documentElement.scrollTop) + window.innerHeight > scrollEnd) {
+    setTimeout(endBGMobile, 200);
+  } else { setTimeout(notEndBGMobile, 200); }
+}
+
 function notEndBGMobile() {
   projectTiles.style.backgroundImage =
-    "radial-gradient(var(--clr-accent3), var(--clr-dark))";
+    "linear-gradient(to bottom, var(--clr-accent3), black, var(--clr-accent3)";
+  projectTiles.style.backgroundAttachment = "fixed";
 }
 
 function endBGMobile() {
@@ -451,7 +464,13 @@ function endBGMobile() {
   logo.style.boxShadow = "var(--bs)";
   logo.style.backgroundColor = "rgb(200,200,200,0.2)";
   projectTiles.style.background = getRGB;
-  //opacity = 0 for projectTilesChild[3] on project tiles animations 
+}
+
+// change BG of project when scrolled to end desktop
+function scrollToEndBGDesktop() {
+  if (Math.abs(document.documentElement.scrollTop) + window.innerHeight > scrollEnd) {
+    setTimeout(endBGDesktop, 200);
+  } else { setTimeout(notEndBGDesktop, 200); }
 }
 
 function notEndBGDesktop() {
@@ -472,18 +491,6 @@ function endBGDesktop() {
   logoWrap.style.background = getRGB;
   projectTiles.style.background = getRGB;
   projectDivAll.forEach(tile => { tile.style.opacity = "0"; })
-}
-
-function scrollToEndBGMobile() {
-  if (Math.abs(document.documentElement.scrollTop) + window.innerHeight > scrollEnd) {
-    setTimeout(endBGMobile, 200);
-  } else { setTimeout(notEndBGMobile, 200); }
-}
-
-function scrollToEndBGDesktop() {
-  if (Math.abs(document.documentElement.scrollTop) + window.innerHeight > scrollEnd) {
-    setTimeout(endBGDesktop, 200);
-  } else { setTimeout(notEndBGDesktop, 200); }
 }
 
 //tests
