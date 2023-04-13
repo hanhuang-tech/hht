@@ -172,6 +172,7 @@ img.banner.animate {
 #burger.toggle {
   visibility: hidden;
   opacity: 0;
+  border-color: gray var(--clr-accent3) var(--clr-accent3) gray;
 }
 
 #hidden-burger-contents.toggle {
@@ -269,12 +270,11 @@ img.banner.animate {
 nav.bar {
   position: fixed;
   top: 40%;
-  right: 5px;
+  right: 0px;
   z-index: 1;
 }
 
 nav.bar.sectioned-with-tab {
-  scale: 120%;
   top: 40%;
   transform: translateX(50px);
   transition: 1s;
@@ -283,14 +283,14 @@ nav.bar.sectioned-with-tab {
 #burger {
   display: flex;
   flex-direction: column;
-  row-gap: 5px;
+  row-gap: 4px;
   position: relative;
   cursor: pointer;
-  padding: 8px;
-  background: var(--clr-dark2);
-  border-width: 4px;
+  padding: 6px;
+  background: rgba(0, 0, 0, 0.75);
+  border-width: 3px;
   border-style: solid;
-  border-color: lightgray var(--clr-accent3) var(--clr-accent3) lightgray;
+  border-color: gray var(--clr-accent3) var(--clr-accent3) gray;
   border-radius: 50%;
   box-shadow: var(--bs);
   transition: 0.5s;
@@ -303,14 +303,14 @@ nav.bar.sectioned-with-tab {
 div.ham {
   display: block;
   background: lightgray;
-  min-width: 15px;
+  min-width: 12px;
   padding: 1px;
 }
 
 @media(min-width:64em) {
   div.ham {
     display: block;
-    min-width: 18px;
+    min-width: 15px;
     padding: 1.5px;
   }
 }
@@ -1169,12 +1169,8 @@ div.project {
   z-index: 1;
   text-align: center;
   margin: 20px auto;
-  max-width: 500px;
   padding: 5px 0 0;
-  background-color: var(--clr-dark2);
-  border-width: 3px;
-  border-style: solid;
-  border-color: gray;
+  background-color: var(--clr-accent2);
   box-shadow: var(--bs);
 }
 
