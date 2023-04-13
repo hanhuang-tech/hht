@@ -186,7 +186,6 @@ function logoFixed() {
 
 // toggle burger
 const burger = document.querySelector("#burger");
-const burgerTriangle = document.querySelector("#burger-triangle");
 const hiddenBurgerContents = document.querySelector("#hidden-burger-contents");
 habbitB.style.transitionDuration = "0.5s";
 habbitA.style.transitionDuration = "0.5s";
@@ -213,9 +212,6 @@ function subjectHeadingHide() {
     subjectHeading[i].classList.toggle("toggle");
   }
 }
-
-
-//^ header ^
 
 // resources
 const subjectWrapper = [

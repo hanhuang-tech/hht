@@ -178,7 +178,7 @@ img.banner.animate {
   z-index: 2;
   opacity: 1;
   transform: translateX(0px);
-  transition: 1s;
+  transition: 0.5s;
 }
 
 #arrow-button.toggle {
@@ -268,8 +268,8 @@ img.banner.animate {
 /* nav */
 nav.bar {
   position: fixed;
-  top: 0px;
-  right: 0px;
+  top: 40%;
+  right: 5px;
   z-index: 1;
 }
 
@@ -280,31 +280,20 @@ nav.bar.sectioned-with-tab {
   transition: 1s;
 }
 
-@media(min-width:64em) {
-  nav.bar {
-    position: fixed;
-    top: 5px;
-    right: 5px;
-    z-index: 1;
-  }
-}
-
 #burger {
   display: flex;
   flex-direction: column;
   row-gap: 5px;
   position: relative;
   cursor: pointer;
-  background: rgb(50, 50, 75, 0.8);
-  padding: 10px 5px;
-  min-width: 30px;
-
-  border-width: 2px;
+  padding: 8px;
+  background: var(--clr-dark2);
+  border-width: 4px;
   border-style: solid;
-  border-color: slategray var(--clr-dark) var(--clr-dark) slategray;
-  border-radius: 10px 0;
-  box-shadow: var(--bs2);
-  transition: 1s;
+  border-color: lightgray var(--clr-accent3) var(--clr-accent3) lightgray;
+  border-radius: 50%;
+  box-shadow: var(--bs);
+  transition: 0.5s;
 }
 
 #burger:hover {
@@ -314,8 +303,16 @@ nav.bar.sectioned-with-tab {
 div.ham {
   display: block;
   background: lightgray;
-  height: 2px;
-  transition: 1s;
+  min-width: 15px;
+  padding: 1px;
+}
+
+@media(min-width:64em) {
+  div.ham {
+    display: block;
+    min-width: 18px;
+    padding: 1.5px;
+  }
 }
 
 #hidden-burger-contents {
@@ -434,40 +431,35 @@ div.burger-content-flexwrapper div a span {
 }
 
 /*arrow-button*/
-#arrow-button {
-  background-color: rgb(220, 220, 220);
-  border-width: 2px;
-  border-style: solid;
-  border-color: gray var(--clr-dark) var(--clr-dark) gray;
-  border-radius: 50%;
-  box-shadow: var(--bs2);
-  transition: 1s;
-}
 
-#arrow-button:hover {
-  opacity: 1;
-  background-color: skyblue;
-  border-radius: 0;
-}
+@media (min-width: 64em) {
+  #arrow-button {
+    opacity: 0.5;
+    background-color: slategray;
+    border-width: 4px;
+    border-style: solid;
+    border-color: gray var(--clr-dark) var(--clr-dark) gray;
+    border-radius: 50%;
+    box-shadow: var(--bs);
+    transition: 1s;
+  }
 
-#arrow-button.sectioned-with-tab {
-  opacity: 0.5;
-  border-width: 3px;
-}
+  #arrow-button span {
+    display: block;
+    border-width: 2px 0 0 2px;
+    border-style: solid;
+    border-color: var(--clr-light);
+    transform: rotate(45deg);
+    margin: 7px;
+    padding: 5px;
+  }
 
-#arrow-button.sectioned-with-tab:hover {
-  opacity: 1;
-}
-
-#arrow-button span {
-  display: block;
-  border-width: 2px 0 0 2px;
-  border-style: solid;
-  border-color: var(--clr-dark);
-  transform: rotate(45deg);
-  margin: 7px;
-  padding: 5px;
-  transition: 2s;
+  #arrow-button:hover {
+    opacity: 1;
+    background-color: var(--clr-accent3);
+    border-color: lightgray var(--clr-dark) var(--clr-dark) lightgray;
+    border-radius: 0;
+  }
 }
 
 /*lantern*/
