@@ -292,7 +292,7 @@ nav.bar.sectioned-with-tab {
   border-style: solid;
   border-color: gray var(--clr-accent3) var(--clr-accent3) gray;
   border-radius: 50%;
-  box-shadow: var(--bs);
+  box-shadow: 0 0 5px var(--clr-light);
   transition: 0.5s;
 }
 
@@ -440,7 +440,7 @@ div.burger-content-flexwrapper div a span {
     border-style: solid;
     border-color: gray var(--clr-dark) var(--clr-dark) gray;
     border-radius: 50%;
-    box-shadow: var(--bs);
+    box-shadow: 5px 5px 5px black;
     transition: 1s;
   }
 
