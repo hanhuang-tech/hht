@@ -319,16 +319,18 @@ div.ham {
   position: absolute;
   display: flex;
   flex-direction: column;
-  min-width: 100px;
+  min-width: 96px;
   row-gap: 2px;
   opacity: 0;
   top: 0px;
   right: 0px;
   background: rgba(0, 0, 0, 0.75);
-  padding: 0px;
+  padding: 5px 0;
   font-family: var(--ff-secondary);
   transform: translateX(650px);
-  border: 3px solid black;
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--clr-accent);
   border-radius: 3px;
   box-shadow: var(--bs);
   transition-duration: 1s;
@@ -337,7 +339,8 @@ div.ham {
 
 @media(min-width:64em) {
   #hidden-burger-contents {
-    padding: 3px 8px;
+    min-width: 120px;
+    padding: 8px 0;
   }
 }
 
@@ -361,27 +364,26 @@ div.ham {
   box-shadow: var(--bs);
 }
 
-@media (min-width: 64em) {
-  #hidden-burger-contents h2 {
-    font-size: 1.4em;
-  }
-}
-
 #hidden-burger-contents .topicanchor:hover {
   border-color: var(--clr-dark2) gray gray var(--clr-dark2);
   background-color: var(--clr-dark);
   filter: grayscale(0%);
 }
 
+@media(min-width:64em) {
+  #hidden-burger-contents .topicanchor {
+    padding: 2px 6px;
+  }
+}
+
 #hidden-burger-contents img.habbit-a {
   position: absolute;
   bottom: -8px;
-  left: -25px;
-  width: 30px;
+  left: -20px;
+  width: 25px;
   box-sizing: border-box;
   background-color: var(--clr-dark);
-  border: 3px solid black;
-  filter: drop-shadow(0px 0px 1rem var(--clr-dark2));
+  border: 2px solid var(--clr-accent);
   border-radius: 50%;
 }
 
@@ -402,11 +404,10 @@ div.burger-content-flexwrapper div {
 
 h4.burger-content-title {
   display: inline-block;
-  font-size: 0.8rem;
   color: lightgreen;
   list-style: none;
   margin: 5px auto 0;
-  padding: 2px 4px;
+  padding: 0 5px;
   transition: 0.5s;
 }
 
