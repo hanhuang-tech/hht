@@ -908,7 +908,7 @@ div.connectedto {
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
-  animation: marquee 5s linear infinite;
+  animation: marquee 8s linear infinite;
 }
 
 h5.connectedto {
