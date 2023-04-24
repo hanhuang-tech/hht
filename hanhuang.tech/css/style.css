@@ -1504,7 +1504,7 @@ a.largeemail {
 
 @media (min-width: 64em) {
   a.largeemail {
-    padding: 5px 8px;
+    padding: 4px 8px;
   }
 }
 
@@ -1524,13 +1524,13 @@ a.largeyoutube img {
 }
 
 a.largegithub img:hover {
-  filter: invert(1%);
+  filter: invert(1%) drop-shadow(0px 0px 4px lightgray);
 }
 
 a.largeemail img:hover,
 a.largelinkedin img:hover,
 a.largeyoutube img:hover {
-  filter: invert(10%);
+  filter: invert(10%) drop-shadow(0px 0px 4px lightgray);
 }
 
 @media (min-width: 64em) {
@@ -1538,8 +1538,13 @@ a.largeyoutube img:hover {
     column-gap: 50px;
   }
 
+  a.largeemail img:hover {
+    filter: invert(100%)
+  }
+
   a.largeemail:hover {
     background-color: rgb(40, 40, 40);
+    filter: drop-shadow(0px 0px 4px gray);
   }
 }
 
@@ -1560,22 +1565,24 @@ h4.footer {
   right: -15px;
 
   display: inline-block;
-  background-color: rgb(100, 100, 100);
+  background-color: rgb(75, 140, 75);
 
   font-weight: var(--fw-reg);
   color: var(--clr-light);
-  padding: 2px 8px 2px 4px;
+  letter-spacing: 1px;
+  padding: 2px 5px;
   margin: auto 0;
-  border-width: 3px;
+  border-width: 2px 5px;
   border-style: solid;
   border-color: var(--clr-dark2);
-  border-radius: 2px 10px 2px 2px;
+  border-radius: 8px;
 }
 
 @media (min-width: 64em) {
   h4.footer {
-    padding: 3px 10px 3px 5px;
-    border-width: 4px;
+    padding: 2px 8px;
+    border-width: 2px 8px;
+    border-radius: 10px;
   }
 }
 
