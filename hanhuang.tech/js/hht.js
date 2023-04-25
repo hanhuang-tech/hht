@@ -169,7 +169,7 @@ function logoFixed() {
     logo.style.boxShadow = "var(--bs)";
     logo.style.transitionDuration = "1s";
     habbitPartition.style.position = "absolute";
-    habbitPartition.style.top = "40px";
+    habbitPartition.style.top = "42px";
     habbitPartition.style.right = "3px";
   } else {
     logoWrap.style.backgroundColor = "transparent";

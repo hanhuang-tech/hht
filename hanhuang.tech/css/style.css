@@ -287,7 +287,7 @@ nav.bar.sectioned-with-tab {
   position: relative;
   cursor: pointer;
   padding: 6px;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.8);
   border-width: 3px;
   border-style: solid;
   border-color: gray var(--clr-accent3) var(--clr-accent3) gray;
@@ -297,7 +297,9 @@ nav.bar.sectioned-with-tab {
 }
 
 #burger:hover {
+  background: rgba(25, 25, 25, 0.8);
   border-color: var(--clr-dark) gray gray var(--clr-dark);
+  filter: drop-shadow(0px 0px 8px var(--clr-light));
 }
 
 div.ham {
@@ -861,15 +863,14 @@ img.banner {
 @media (min-width: 64em) {
   #habbit-partition {
     display: block;
-    background: rgb(125, 125, 125);
-    padding: 3px;
+    background: var(--clr-dark2);
+    padding: 2px;
     margin: 5px;
     border-width: 2px;
     border-style: solid;
     border-color: var(--clr-light);
     border-radius: 2px;
     position: static;
-    filter: blur(1px);
   }
 }
 
@@ -885,30 +886,30 @@ img.banner:hover {
   display: inline-block;
   z-index: 1;
   bottom: 0px;
-  left: 5px;
-  max-width: 60px;
+  left: 0px;
+  max-width: 65px;
   overflow: hidden;
   background-color: rgb(0, 0, 0, 0.5);
 }
 
 @media (min-width: 64em) {
   #connectedwrap {
-    max-width: 82px;
+    max-width: 92px;
   }
 }
 
 #rgbfilter {
-  margin: auto;
+  margin: 2px 6px;
   text-align: center;
   color: var(--clr-light);
-  background: rgb(125, 125, 125);
+  background: black;
 }
 
 div.connectedto {
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
-  animation: marquee 8s linear infinite;
+  animation: marquee 5s linear infinite;
 }
 
 h5.connectedto {
@@ -1280,7 +1281,7 @@ a.web-link:hover {
   color: lightslategray;
 }
 
-div.projectfooter {
+div.project-list-subjects {
   display: flex;
   flex-wrap: wrap;
   column-gap: 10px;
@@ -1289,7 +1290,7 @@ div.projectfooter {
 }
 
 /* projects */
-div.projectfooter h4 {
+div.project-list-subjects h4 {
   display: inline-block;
   margin: auto 0;
   padding: 0px 5px;
@@ -1377,7 +1378,7 @@ a.justify:hover {
   }
 
   /* projects */
-  div.projectfooter {
+  div.project-list-subjects {
     margin: 5px 0;
   }
 
