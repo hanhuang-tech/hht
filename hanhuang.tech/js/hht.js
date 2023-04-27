@@ -12,8 +12,6 @@ const logo = document.querySelector("div.logo");
 const habbitImg = document.querySelector("div.habbit-img");
 const habbitA = document.querySelector("img.habbit-a");
 const habbitB = document.querySelector("img.habbit-b");
-const habbitPartition = document.querySelector("#habbit-partition");
-const bannerImg = document.querySelector("img.banner");
 const arrowButton = document.querySelector("#arrow-button");
 const lantern = document.querySelector("#lantern");
 const habbitCry = new Audio("habbit-cry.mp3");
@@ -70,7 +68,6 @@ function habbitChangeDesktop(e) {
 window.onscroll = function () {
   if (window.matchMedia("(min-width: 64em)").matches) {
     scrollRGB();
-    logoFixed();
     retractBurgerOnScroll();
     projectHabbitAnimate();
     projectTilesMoveDesktop();
@@ -114,7 +111,7 @@ function rgbInverseColor(r, g, b) {
   return str;
 }
 
-const rgbFilter = document.querySelector("#rgbfilter");
+const dynamicRGB = document.querySelector("#dynamic-rgb");
 const hanSection = document.querySelector("#han");
 let lastScroll = 0;
 let r = 0;
@@ -126,6 +123,7 @@ const rB = getRandomInt();
 let getRGB = "";
 let filterRGB = "";
 
+/* change dynamic rgb upon scrolling */
 function scrollRGB() {
   let currentScroll = window.pageYOffset;
 
@@ -135,15 +133,9 @@ function scrollRGB() {
     b = sumRestrictRGB(b, rB);
     getRGB = "rgb(" + r + "," + g + "," + b + ")";
     filterRGB = r + " " + g + " " + b;
-
-    habbitPartition.style.background = getRGB;
-    habbitPartition.style.borderColor = rgbInverseColor(r, g, b);
-    habbitPartition.style.transitionDuration = "1s";
-    bannerImg.style.borderColor = getRGB;
-    bannerImg.style.transitionDuration = "1s";
-    rgbFilter.style.background = getRGB
-    rgbFilter.innerHTML = filterRGB
-    rgbFilter.style.color = rgbInverseColor(r, g, b);
+    dynamicRGB.style.background = getRGB
+    dynamicRGB.innerHTML = filterRGB
+    dynamicRGB.style.color = rgbInverseColor(r, g, b);
     hanSection.style.outlineColor = getRGB;
 
   } else if (lastScroll - currentScroll > 0) {
@@ -152,21 +144,16 @@ function scrollRGB() {
     b = diffRestrictRGB(b, rB);
     getRGB = "rgb(" + r + "," + g + "," + b + ")";
     filterRGB = r + " " + g + " " + b;
-
-    habbitPartition.style.background = getRGB;
-    habbitPartition.style.borderColor = rgbInverseColor(r, g, b);
-    habbitPartition.style.transitionDuration = "1s";
-    bannerImg.style.borderColor = getRGB;
-    bannerImg.style.transitionDuration = "1s";
-    rgbFilter.style.background = getRGB;
-    rgbFilter.innerHTML = filterRGB;
-    rgbFilter.style.color = rgbInverseColor(r, g, b);
+    dynamicRGB.style.background = getRGB;
+    dynamicRGB.innerHTML = filterRGB;
+    dynamicRGB.style.color = rgbInverseColor(r, g, b);
     hanSection.style.outlineColor = getRGB;
   }
   lastScroll = currentScroll;
 }
 
 // change of position on scroll
+// NOT USED
 function logoFixed() {
   if (Math.abs(document.documentElement.scrollTop) > 1) {
     logo.style.position = "fixed";

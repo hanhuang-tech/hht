@@ -142,8 +142,9 @@ html {
 #hhtsplash {
   position: fixed;
   z-index: 10;
-  top: 0;
-  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
   background: var(--clr-light);
@@ -152,18 +153,20 @@ html {
 }
 
 #hhtsplash div {
-  position: inherit;
-  top: 40%;
-  left: 45%;
+  display: flex;
+  flex-direction: column;
   row-gap: 10px;
 }
 
 #hhtsplash img {
-  width: 75%;
+  width: 60%;
 }
 
 #hhtsplash h1 {
   font-family: var(--ff-secondary);
+  background-color: lightgray;
+  padding: 2px 5px;
+  border: 1px solid gray;
 }
 
 @media (min-width: 64em) {
@@ -293,7 +296,7 @@ img.banner.animate {
 /* nav */
 nav.bar {
   position: fixed;
-  top: 40%;
+  top: 45%;
   right: 0px;
   z-index: 1;
 }
@@ -807,38 +810,18 @@ div.logowrap {
   z-index: 1;
   top: 0;
   left: 0;
-  padding: 0px;
   background-color: transparent;
   border-radius: 0 0 30px 0;
 }
 
-@media (min-width: 64em) {
-  div.logowrap {
-    padding: 5px;
-  }
-}
-
 div.logo {
-  display: flex;
-  flex-direction: column;
   background-color: rgb(100, 100, 100, 0.5);
   position: fixed;
-  padding: 0;
-  margin: 0;
-  border-radius: 0 20px 20px 0;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 0 0 15px 0;
   box-shadow: var(--bs);
   transition-duration: 1s;
-}
-
-@media (min-width: 64em) {
-  div.logo {
-    flex-direction: row;
-    max-width: 175px;
-    padding: 5px;
-    margin: 5px;
-    border-radius: 0px 0px 30px 0px;
-    box-shadow: var(--bs4);
-  }
 }
 
 div.habbit-img {
@@ -848,9 +831,7 @@ div.habbit-img {
 img.habbit-a,
 img.habbit-b {
   width: 50px;
-  margin: 5px;
   cursor: pointer;
-  box-shadow: var(--bs);
 }
 
 img.habbit-a {
@@ -860,48 +841,8 @@ img.habbit-a {
 img.habbit-b {
   position: absolute;
   opacity: 0;
-  top: 0px;
-  left: 0px;
-}
-
-img.banner {
-  max-width: 72px;
-  margin: 0px;
-  border-width: 3px;
-  border-style: solid;
-  border-color: transparent;
-  border-radius: 5px 5px 20px 5px;
-  box-shadow: var(--bs);
-}
-
-@media (min-width: 64em) {
-  img.banner {
-    margin: 5px;
-  }
-}
-
-#habbit-partition {
-  display: none;
-}
-
-@media (min-width: 64em) {
-  #habbit-partition {
-    display: block;
-    background: var(--clr-dark2);
-    padding: 2px;
-    margin: 5px;
-    border-width: 2px;
-    border-style: solid;
-    border-color: var(--clr-light);
-    border-radius: 2px;
-    position: static;
-  }
-}
-
-div.habbit-img:hover,
-img.banner:hover {
-  transform: scale(1.1);
-  transition: 0.5s;
+  top: 0;
+  left: 0;
 }
 
 /* connectedto */
@@ -922,7 +863,7 @@ img.banner:hover {
   }
 }
 
-#rgbfilter {
+#dynamic-rgb {
   margin: 2px 6px;
   text-align: center;
   color: var(--clr-light);
