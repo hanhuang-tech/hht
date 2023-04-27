@@ -153,8 +153,8 @@ html {
 
 #hhtsplash div {
   position: inherit;
-  top: 50%;
-  left: 40%;
+  top: 40%;
+  left: 45%;
   row-gap: 10px;
 }
 
