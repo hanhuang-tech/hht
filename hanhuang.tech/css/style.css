@@ -815,22 +815,21 @@ div.logowrap {
 }
 
 div.logo {
-  background-color: rgb(100, 100, 100, 0.5);
   position: fixed;
-  margin: 5px;
-  padding: 5px;
-  border-radius: 0 0 15px 0;
-  box-shadow: var(--bs);
-  transition-duration: 1s;
+  display: flex;
+  padding: 10px;
 }
 
 div.habbit-img {
   position: relative;
+  margin-right: 5px;
+  border-radius: 0 0 10px 0;
+  box-shadow: var(--bs);
 }
 
 img.habbit-a,
 img.habbit-b {
-  width: 50px;
+  width: 40px;
   cursor: pointer;
 }
 
@@ -843,6 +842,26 @@ img.habbit-b {
   opacity: 0;
   top: 0;
   left: 0;
+}
+
+#habbitbanner {
+  opacity: 0;
+  visibility: hidden;
+  display: inline-block;
+  background-color: var(--clr-light);
+  text-decoration: none;
+  margin: auto;
+  padding: 0 5px;
+  color: var(--clr-dark2);
+  font-weight: bold;
+  font-family: var(--ff-secondary);
+  font-size: 1rem;
+  border: 2px solid var(--clr-dark2);
+  border-radius: 0 6px 6px 0;
+}
+
+#habbitbanner:hover {
+  transform: scale(105%);
 }
 
 /* connectedto */
@@ -1555,13 +1574,12 @@ h4.footer {
 /* frontend tech */
 
 .descbox-wrapper.frontend {
-  background-color: burlywood;
+  background-color: gray;
   background-image: url(../img/codefrontend.png);
   background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-position: top;
-  background-attachment: fixed;
-  padding: 40px;
+  padding: 20px;
   border-width: 0 5px;
   border-style: solid;
   border-color: transparent transparent transparent var(--clr-brown);

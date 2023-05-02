@@ -26,71 +26,67 @@
                     <img src="../img/habbit-a.png" class="habbit-a" alt="a pic of habbit" />
                     <img src="../img/habbit-b.png" class="habbit-b" alt="a pic of habbit" />
                 </div>
-                <a href="../index.html">
-                    <img src="../img/hht-banner.png" class="banner" alt="picture of hht banner" />
-                </a>
             </div>
         </div>
-    </header>
-    <!-- connected -->
-    <div id="connectedwrap">
-        <div class="connectedto">
-            <h5 class="connectedto"> Connected to :AZ on :IP4.</h5>
-            <h5 class="connectedto"> Connected to :AZ on :IP4.</h5>
+        <!-- connected -->
+        <div id="connectedwrap">
+            <h5 id="dynamic-rgb">0 0 0</h5>
+            <div class="connectedto">
+                <h5 class="connectedto"> Connected to :AZ on :IP4.</h5>
+                <h5 class="connectedto"> Connected to :AZ on :IP4.</h5>
+            </div>
         </div>
-    </div>
-
-    <!-- contact -->
-    <section class="contact">
-        <div id="form">
-            <form class="contactform" method="post" action="contact/index.php">
-                <div class="flexrowwrap">
-                    <div class="flexcolumnwrap">
-                        <label for="name">Name</label>
-                        <input id="name" type="text" name="name" placeholder="Your name">
+        <!-- contact -->
+        <section class="contact">
+            <div id="form">
+                <form class="contactform" method="post" action="contact/index.php">
+                    <div class="flexrowwrap">
+                        <div class="flexcolumnwrap">
+                            <label for="name">Name</label>
+                            <input id="name" type="text" name="name" placeholder="Your name">
+                        </div>
+                        <div class="flexcolumnwrap">
+                            <label for="email">Email</label>
+                            <input id="email" type="text" name="email" placeholder="Your email address">
+                        </div>
                     </div>
-                    <div class="flexcolumnwrap">
-                        <label for="email">Email</label>
-                        <input id="email" type="text" name="email" placeholder="Your email address">
-                    </div>
-                </div>
-                <label for="subject">Subject</label>
-                <input id="subject" type="text" name="subject" placeholder="Your subject">
-                <label for="msg">Message</label>
-                <textarea id="message" name="message" placeholder="Your message"></textarea>
-                <select id="team" name="team">
-                    <option>Your team</option>
-                    <option>Team Pokémon</option>
-                    <option>Team Dragonball</option>
-                    <option>Team Avatar</option>
-                </select>
-                <!-- <input type="submit" value="Submit"> -->
-            </form>
-        </div>
-    </section>
-    <!-- contactbar -->
-    <section id="contactbar">
-        <div class="contactbar-flexwrapper">
-            <a href="mailto:han@hanhuang.tech" class="email" title="Email Han Huang">
-                <img src="../img/emailicon.png" alt="email icon" />
-                <h2>han@hanhuang.tech</h2>
-            </a>
-            <a href="https://github.com/hanhuang-tech/" class="github">
-                <img src="../img/githubicon.png" alt="github icon" title="hanhuang.tech on Github" />
-            </a>
-            <a href="https://www.linkedin.com/in/han-huang-6808bb123" class="linkedin">
-                <img src="../img/linkedinicon.png" alt="linkedin icon" title="hanhuang.tech on LinkedIn" />
-            </a>
-            <a href="https://www.youtube.com/channel/UCfbZ-JymS_WUZfyq-QU7UqQ" class="youtube">
-                <img src="../img/youtubeicon.png" alt="youtube icon" title="hanhuang.tech on Youtube" />
-            </a>
-        </div>
-    </section>
-    <!-- footer -->
-    <footer id="footer">
-        <h4 class="footer">hanhuang.tech 2023</h4>
-    </footer>
-    <script src="../js/contact.js"></script>
+                    <label for="subject">Subject</label>
+                    <input id="subject" type="text" name="subject" placeholder="Your subject">
+                    <label for="msg">Message</label>
+                    <textarea id="message" name="message" placeholder="Your message"></textarea>
+                    <select id="team" name="team">
+                        <option>Your team</option>
+                        <option>Team Pokémon</option>
+                        <option>Team Dragonball</option>
+                        <option>Team Avatar</option>
+                    </select>
+                    <!-- <input type="submit" value="Submit"> -->
+                </form>
+            </div>
+        </section>
+        <!-- contactbar -->
+        <section id="contactbar">
+            <div class="contactbar-flexwrapper">
+                <a href="mailto:han@hanhuang.tech" class="largeemail" title="Email Han Huang">
+                    <img src="img/emailicon.png" alt="email icon" />
+                    <h2>han@hanhuang.tech</h2>
+                </a>
+                <a href="https://github.com/hanhuang-tech/" class="largegithub">
+                    <img src="img/githubicon.png" alt="github icon" title="hanhuang.tech on Github" />
+                </a>
+                <a href="https://www.linkedin.com/in/han-huang-6808bb123" class="largelinkedin">
+                    <img src="img/linkedinicon.png" alt="linkedin icon" title="hanhuang.tech on LinkedIn" />
+                </a>
+                <a href="https://www.youtube.com/channel/UCfbZ-JymS_WUZfyq-QU7UqQ" class="largeyoutube">
+                    <img src="img/youtubeicon.png" alt="youtube icon" title="hanhuang.tech on Youtube" />
+                </a>
+            </div>
+        </section>
+        <!-- footer -->
+        <footer id="footer">
+            <h4 class="footer">hanhuang.tech 2023</h4>
+        </footer>
+        <script src="../js/contact.js"></script>
 
 </body>
 

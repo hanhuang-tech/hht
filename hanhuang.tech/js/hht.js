@@ -12,6 +12,8 @@ const logo = document.querySelector("div.logo");
 const habbitImg = document.querySelector("div.habbit-img");
 const habbitA = document.querySelector("img.habbit-a");
 const habbitB = document.querySelector("img.habbit-b");
+const habbitBanner = document.querySelector("#habbitbanner");
+habbitBanner.style.transition = "1s";
 const arrowButton = document.querySelector("#arrow-button");
 const lantern = document.querySelector("#lantern");
 const habbitCry = new Audio("habbit-cry.mp3");
@@ -27,10 +29,6 @@ habbitImg.addEventListener("click", function () {
   habbitB.classList.remove("animate");
   void habbitB.offsetWidth;
   habbitB.classList.add("animate");
-
-  bannerImg.classList.remove("animate");
-  void bannerImg.offsetWidth;
-  bannerImg.classList.add("animate");
 
   arrowButton.classList.remove("animate");
   void arrowButton.offsetWidth;
@@ -62,6 +60,16 @@ function habbitChangeDesktop(e) {
   if (x > w) { habbitB.style.opacity = "1"; }
   else { habbitB.style.opacity = "0"; }
 }
+
+// hover logo
+habbitImg.addEventListener("mouseenter", function () {
+  habbitBanner.style.opacity = "1";
+  habbitBanner.style.visibility = "visible";
+});
+logo.addEventListener("mouseleave", function () {
+  habbitBanner.style.opacity = "0";
+  habbitBanner.style.visibility = "hidden";
+});
 
 // on scroll
 // fixed pos logo if min-width: 64em
@@ -453,8 +461,6 @@ function notEndBGMobile() {
 
 function endBGMobile() {
   logoWrap.style.background = getRGB;
-  logo.style.boxShadow = "var(--bs)";
-  logo.style.backgroundColor = "rgb(200,200,200,0.2)";
   projectTiles.style.background = getRGB;
 }
 

@@ -3,7 +3,6 @@ const logo = document.querySelector("div.logo");
 const habbitImg = document.querySelector("div.habbit-img");
 const habbitA = document.querySelector("img.habbit-a");
 const habbitB = document.querySelector("img.habbit-b");
-const bannerImg = document.querySelector("img.banner");
 const lantern = document.querySelector("#lantern");
 const habbitCry = new Audio("../habbit-cry.mp3");
 const redHabbit = document.querySelector("div.four-flex img.red");
@@ -20,10 +19,6 @@ habbitImg.addEventListener("click", function () {
   habbitB.classList.remove("animate");
   void habbitB.offsetWidth;
   habbitB.classList.add("animate");
-
-  bannerImg.classList.remove("animate");
-  void bannerImg.offsetWidth;
-  bannerImg.classList.add("animate");
 
   lantern.classList.remove("animate");
   void lantern.offsetWidth;

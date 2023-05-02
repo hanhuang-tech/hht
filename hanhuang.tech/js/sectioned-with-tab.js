@@ -3,8 +3,6 @@ const logo = document.querySelector("div.logo");
 const habbitImg = document.querySelector("div.habbit-img");
 const habbitA = document.querySelector("img.habbit-a");
 const habbitB = document.querySelector("img.habbit-b");
-const habbitPartition = document.querySelector("#habbit-partition");
-const bannerImg = document.querySelector("img.banner");
 const arrowButton = document.querySelector("#arrow-button");
 const lantern = document.querySelector("#lantern");
 const habbitCry = new Audio("../../habbit-cry.mp3");
@@ -56,13 +54,11 @@ function habbitChangeDesktop(e) {
 window.onscroll = function () {
     if (window.matchMedia("(min-width: 64em)").matches) {
         scrollRGB();
-        logoRetractDesktop();
         revealNavForTabSection();
         changeTabDesktop();
     }
     else {
         scrollRGB();
-        logoRetractMb();
         revealNavForTabSection();
         changeTabMobile();
     }
@@ -98,7 +94,7 @@ function rgbInverseColor(r, g, b) {
     return str;
 }
 
-const rgbFilter = document.querySelector("#rgbfilter");
+const dynamicRGB = document.querySelector("#dynamic-rgb");
 const hanSection = document.querySelector("#han");
 const navForTabSection = document.querySelector("nav.bar.sectioned-with-tab");
 let lastScroll = 0;
@@ -120,9 +116,9 @@ function scrollRGB() {
         b = sumRestrictRGB(b, rB);
         getRGB = "rgb(" + r + "," + g + "," + b + ")";
         filterRGB = r + " " + g + " " + b;
-        rgbFilter.style.background = getRGB
-        rgbFilter.innerHTML = filterRGB
-        rgbFilter.style.color = rgbInverseColor(r, g, b);
+        dynamicRGB.style.background = getRGB
+        dynamicRGB.innerHTML = filterRGB
+        dynamicRGB.style.color = rgbInverseColor(r, g, b);
 
     } else if (lastScroll - currentScroll > 0) {
         r = diffRestrictRGB(r, rR);
@@ -130,74 +126,11 @@ function scrollRGB() {
         b = diffRestrictRGB(b, rB);
         getRGB = "rgb(" + r + "," + g + "," + b + ")";
         filterRGB = r + " " + g + " " + b;
-        rgbFilter.style.background = getRGB;
-        rgbFilter.innerHTML = filterRGB;
-        rgbFilter.style.color = rgbInverseColor(r, g, b);
+        dynamicRGB.style.background = getRGB;
+        dynamicRGB.innerHTML = filterRGB;
+        dynamicRGB.style.color = rgbInverseColor(r, g, b);
     }
     lastScroll = currentScroll;
-}
-
-// change logo on scroll
-function logoRetractDesktop() {
-    if (Math.abs(document.documentElement.scrollTop) > 1) {
-        logo.style.position = "fixed";
-        logo.style.flexDirection = "column";
-        logo.style.padding = "0";
-        logo.style.margin = "0";
-        logo.style.backgroundColor = "rgba(100, 100, 100, 0.5)";
-        logo.style.borderRadius = "0 0 20px 0";
-        logo.style.boxShadow = "var(--bs)";
-        logo.style.transitionDuration = "1s";
-        habbitPartition.style.position = "absolute";
-        habbitPartition.style.top = "40px";
-        habbitPartition.style.right = "3px";
-    } else {
-        logoWrap.style.backgroundColor = "transparent";
-        logo.style.flexDirection = "row";
-        logo.style.position = "static";
-        logo.style.padding = "5px";
-        logo.style.margin = "5px";
-        logo.style.borderRadius = "0px 0px 30px 0px";
-        logo.style.boxShadow = "var(--bs4)";
-        logo.style.transitionDuration = "1s";
-        habbitPartition.style.position = "static";
-    }
-}
-
-function logoRetractMb() {
-    if (Math.abs(document.documentElement.scrollTop) > 1) {
-        logo.style.position = "fixed";
-        logo.style.flexDirection = "column";
-        logo.style.padding = "0px";
-        logo.style.margin = "0px";
-        logo.style.backgroundColor = "transparent";
-        logo.style.borderRadius = "20px";
-        logo.style.boxShadow = "none";
-        logo.style.transitionDuration = "1s";
-        habbitB.style.maxWidth = "40px";
-        habbitB.style.transitionDuration = "1s";
-        habbitImg.style.maxWidth = "50px";
-        habbitImg.style.paddingRight = "10px";
-        habbitImg.style.background = "rgba(50, 150, 150, 0.5)";
-        habbitImg.style.outline = "3px dashed var(--clr-dark)";
-        habbitImg.style.borderRadius = "0 10px 10px 10px";
-        bannerImg.style.visibility = "hidden";
-        habbitImg.style.transitionDuration = "1s";
-    } else {
-        logo.style.position = "fixed";
-        logo.style.flexDirection = "column";
-        logo.style.padding = "0";
-        logo.style.margin = "0";
-        logo.style.backgroundColor = "rgba(100, 100, 100, 0.5)";
-        logo.style.borderRadius = "0 0 20px 0";
-        logo.style.boxShadow = "var(--bs)";
-        logo.style.transitionDuration = "1s";
-        habbitB.style.maxWidth = "50px";
-        habbitImg.style.paddingRight = "0px";
-        habbitImg.style.backgroundColor = "transparent";
-        habbitImg.style.outline = "none"
-        bannerImg.style.visibility = "visible";
-    }
 }
 
 function revealNavForTabSection() {
@@ -267,21 +200,6 @@ function changeTabDesktop() {
     }
 }
 
-//toggle = switch between nontoggle class and toggle class
-burger.addEventListener("click", function () {
-    burger.classList.toggle("toggle");
-    hiddenBurgerContents.classList.toggle("toggle");
-    arrowButton.classList.toggle("toggle");
-});
-
-function retractBurgerOnScroll() {
-    if (hiddenBurgerContents.classList.contains("toggle")) {
-        burger.classList.toggle("toggle")
-        hiddenBurgerContents.classList.toggle("toggle");
-        arrowButton.classList.toggle("toggle");
-    }
-}
-
 // spoiler button
 const spoilBtn = [
     document.querySelector("#spoil-btn1"),
@@ -346,7 +264,7 @@ spoilBtn[4].addEventListener("click", function () {
         : spoilMov[4].classList.replace(revealText[4], hideText[4])
 })
 
-// codebox
+// codebox NOT CURRENTLY USED, AS BELOW REASON
 
 const codeBox = document.body.querySelector(".codebox");
 const span = "</span>";
@@ -401,8 +319,8 @@ function styleEl(codeBox) {
 
 const codeboxEl = document.getElementsByClassName("codebox");
 
-for (var i = 0; i < codeboxEl.length; i++) {
-    styleEl(codeboxEl[i])
-
-}
+// NOT CURRENTLY USED
+// for (var i = 0; i < codeboxEl.length; i++) {
+//     styleEl(codeboxEl[i])
+// }
 
