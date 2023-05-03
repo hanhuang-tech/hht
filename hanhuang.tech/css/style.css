@@ -964,9 +964,9 @@ div.leftbar {
 #resources {
   border: 1px solid var(--clr-dark2);
   text-align: center;
-  background: linear-gradient(127deg, rgba(0, 0, 0, 0.8), rgba(255, 0, 0, 0) 80%),
-    linear-gradient(127deg, rgba(0, 200, 0, 0.8), rgba(0, 255, 0, 0) 80%),
-    linear-gradient(336deg, rgba(0, 100, 200, 0.8), rgba(0, 0, 255, 0) 80%);
+  background: linear-gradient(127deg, rgba(0, 0, 0, 1), rgba(100, 0, 0, 0) 70%),
+    linear-gradient(127deg, rgba(0, 150, 0, 1), rgba(0, 100, 0, 0) 70%),
+    linear-gradient(336deg, rgba(0, 150, 150, 1), rgba(0, 0, 100, 0) 70%);
   background-attachment: fixed;
 }
 
@@ -986,27 +986,27 @@ div.subjectwrapper1 {
 
   background: var(--clr-light);
   max-width: 200px;
-  padding: 15px;
+  padding: 20px;
   margin: 50px auto;
   border: 3px solid var(--clr-dark2);
-  border-radius: 40px 0px;
+  border-radius: 25px 0px;
   box-shadow: var(--bs);
 }
 
 div.subjectwrapper1 img {
-  max-width: 120px;
-  border-radius: 6px;
+  max-width: 150px;
+  border-radius: 5px;
 }
 
 a.subjectheading1 {
   z-index: 0;
-  background-color: rgb(180, 180, 180);
-  margin: 10px 0 5px;
+  background-color: rgb(75, 75, 75);
+  margin: 10px 0 0;
   text-decoration: none;
-  color: var(--clr-dark);
+  color: var(--clr-light);
   font-size: 0.9rem;
-  padding: 0px 8px;
-  filter: drop-shadow(0px 2px 2px var(--clr-dark2));
+  padding: 0 10px;
+  filter: drop-shadow(0px 4px 4px gray);
 }
 
 @media (min-width: 64em) {
@@ -1017,7 +1017,7 @@ a.subjectheading1 {
 
 div.subjectdropdown1 {
   position: absolute;
-  top: 126px;
+  top: 150px;
   z-index: -1;
   opacity: -1;
 }
@@ -1031,7 +1031,6 @@ a.dropdowntopic {
   background: var(--clr-dark);
   min-width: 200px;
   margin: 1px 0;
-
   border-width: 1px;
   border-style: solid;
   border-color: transparent;
@@ -1048,7 +1047,8 @@ a.dropdowntopic:hover {
 }
 
 p.subjectblurb1 {
-  margin: auto 0;
+  margin: 6px 0 0;
+  line-height: 1rem;
 }
 
 span.awstip {
