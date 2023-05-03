@@ -259,9 +259,8 @@ function delayedMouseOver(n) {
 
 function delayedMouseLeave(n) {
   subjectHeading[n].style.color = "var(--clr-dark)";
-  subjectHeading[n].style.backgroundColor = "rgb(175,175,175)";
+  subjectHeading[n].style.backgroundColor = "rgb(180,180,180)";
   subjectHeading[n].style.padding = "0px 8px";
-  subjectHeading[n].style.borderColor = "var(--clr-dark)";
   subjectHeading[n].style.borderRadius = "0px";
 }
 

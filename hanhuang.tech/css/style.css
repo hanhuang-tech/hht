@@ -817,19 +817,19 @@ div.logowrap {
 div.logo {
   position: fixed;
   display: flex;
-  padding: 10px;
+  padding: 11px;
 }
 
 div.habbit-img {
   position: relative;
-  margin-right: 5px;
+  margin-right: 10px;
   border-radius: 0 0 10px 0;
-  box-shadow: var(--bs);
+  filter: drop-shadow(0 0 2px lightgreen);
 }
 
 img.habbit-a,
 img.habbit-b {
-  width: 40px;
+  width: 42px;
   cursor: pointer;
 }
 
@@ -855,7 +855,7 @@ img.habbit-b {
   color: var(--clr-dark2);
   font-weight: bold;
   font-family: var(--ff-secondary);
-  font-size: 1rem;
+  font-size: 1.1rem;
   border: 2px solid var(--clr-dark2);
   border-radius: 0 6px 6px 0;
 }
@@ -931,10 +931,12 @@ div.leftbar {
 }
 
 /*top partition */
-#titlebar {
+
+/* #resources */
+#resources-titlebar {
   display: flex;
   justify-content: center;
-  padding: 30px 0;
+  padding: 20px 0;
   background-image: url(../img/bridge.jpg);
   background-size: cover;
   background-position: 0 56%;
@@ -942,27 +944,23 @@ div.leftbar {
   opacity: 0.9;
 }
 
-#titlebar h1 {
+#resources-titlebar h1 {
   display: inline-block;
   background: var(--clr-dark2);
-  padding: 3px 10px;
-
+  padding: 0px 10px;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-family: var(--ff-secondary);
-  color: white;
-
-  box-shadow: var(--bs2);
-  border: 1px solid var(--clr-light);
+  color: var(--clr-light);
+  border: 1px solid gray;
 }
 
 @media(min-width:64em) {
-  #titlebar h1 {
+  #resources-titlebar h1 {
     padding: 0px 10px;
   }
 }
 
-/* #resources */
 #resources {
   border: 1px solid var(--clr-dark2);
   text-align: center;
@@ -1002,17 +1000,13 @@ div.subjectwrapper1 img {
 
 a.subjectheading1 {
   z-index: 0;
-  background-color: rgb(175, 175, 175);
+  background-color: rgb(180, 180, 180);
   margin: 10px 0 5px;
   text-decoration: none;
   color: var(--clr-dark);
   font-size: 0.9rem;
-  font-weight: var(--fw-bold);
   padding: 0px 8px;
-  border-width: 2px;
-  border-style: solid;
-  border-color: var(--clr-dark);
-  box-shadow: var(--bs);
+  filter: drop-shadow(0px 2px 2px var(--clr-dark2));
 }
 
 @media (min-width: 64em) {
@@ -1092,7 +1086,7 @@ span.awstip {
 /*mid partition*/
 #proj-section-headings {
   text-align: center;
-  padding: 15px;
+  padding: 20px;
   background-color: var(--clr-accent3);
   box-shadow: var(--bs);
 }
@@ -1105,7 +1099,7 @@ h1.proj-section-title {
   filter: grayscale(1);
   text-transform: uppercase;
   font-family: var(--ff-secondary);
-  border-width: 2px;
+  border-width: 1px;
   border-style: solid;
   border-color: var(--clr-light) var(--clr-dark2) var(--clr-dark2) var(--clr-light);
   box-shadow: var(--bs);
