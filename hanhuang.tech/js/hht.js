@@ -1,7 +1,7 @@
 // document.addEventListener("DOMContentLoaded", revealhht());
 document.addEventListener('DOMContentLoaded', revealhht);
 
-const habbitSplash = document.querySelector("#hhtsplash");
+const habbitSplash = document.querySelector("#habbitsplash");
 function revealhht() {
   habbitSplash.style.opacity = "0";
   habbitSplash.style.visibility = "hidden";
@@ -252,20 +252,20 @@ for (let i = 0; i < subjectHeading.length; i++) {
 function delayedMouseOver(n) {
   subjectHeading[n].style.color = "var(--clr-light)";
   subjectHeading[n].style.backgroundColor = "var(--clr-accent)";
-  subjectHeading[n].style.padding = "0px 8px";
+  subjectHeading[n].style.padding = "1px 8px";
   subjectHeading[n].style.borderColor = "var(--clr-accent)";
-  subjectHeading[n].style.borderRadius = "3px";
+  subjectHeading[n].style.borderRadius = "5px";
 }
 
 function delayedMouseLeave(n) {
   subjectHeading[n].style.color = "var(--clr-light)";
   subjectHeading[n].style.backgroundColor = "rgb(75,75,75)";
-  subjectHeading[n].style.padding = "0px 10px";
+  subjectHeading[n].style.padding = "1px 10px";
   subjectHeading[n].style.borderRadius = "0px";
 }
 
 function downList(n) {
-  subjectHeading[n].style.padding = "0px";
+  subjectHeading[n].style.padding = "1px";
   subjectHeading[n].style.transitionDuration = "0.2s";
   setTimeout(delayedMouseOver, 200, n);
   subjectDropdown[n].style.opacity = "1";
@@ -276,7 +276,7 @@ function downList(n) {
 }
 
 function upList(n) {
-  subjectHeading[n].style.padding = "0px";
+  subjectHeading[n].style.padding = "1px";
   subjectHeading[n].style.transitionDuration = "0.2s";
   setTimeout(delayedMouseLeave, 200, n);
   subjectDropdown[n].style.opacity = "-1";

@@ -139,9 +139,10 @@ html {
 }
 
 /* hanhuang.tech splash */
-#hhtsplash {
+#habbitsplash {
   position: fixed;
   z-index: 10;
+  opacity: 0.9;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -149,29 +150,47 @@ html {
   height: 100%;
   background: var(--clr-light);
   transition: 1s;
-  transition-delay: 2s;
+  transition-delay: 3s;
 }
 
-#hhtsplash div {
+#habbitsplash div {
   display: flex;
-  flex-direction: column;
-  row-gap: 10px;
-}
-
-#hhtsplash img {
-  width: 60%;
-}
-
-#hhtsplash h1 {
-  font-family: var(--ff-secondary);
-  background-color: lightgray;
-  padding: 2px 5px;
-  border: 1px solid gray;
+  column-gap: 15px;
+  padding: 10px;
+  filter: drop-shadow(0px 0px 5px var(--clr-dark2));
 }
 
 @media (min-width: 64em) {
-  #hhtsplash img {
-    left: 50%;
+  #habbitsplash div {
+    filter: drop-shadow(0px 0px 8px var(--clr-dark2));
+    margin-left: 60px;
+    padding: 10px 20px;
+    border: 5px solid var(--clr-light);
+  }
+}
+
+#habbitsplash img {
+  height: 60px;
+  filter: hue-rotate(90deg);
+}
+
+@media (min-width: 64em) {
+  #habbitsplash img {
+    height: 75px;
+  }
+}
+
+#habbitsplash h1 {
+  font-family: var(--ff-secondary);
+  background-color: var(--clr-dark2);
+  color: var(--clr-light);
+  margin: auto 0;
+  padding: 2px 8px;
+}
+
+@media (min-width: 64em) {
+  #habbitsplash h1 {
+    padding: 2px 10px;
   }
 }
 
@@ -817,7 +836,7 @@ div.logowrap {
 div.logo {
   position: fixed;
   display: flex;
-  padding: 11px;
+  padding: 10px;
 }
 
 @media (min-width: 64em) {
@@ -841,7 +860,7 @@ div.habbit-img {
 
 img.habbit-a,
 img.habbit-b {
-  width: 42px;
+  width: 45px;
   cursor: pointer;
 }
 
@@ -971,6 +990,12 @@ div.leftbar {
   opacity: 0.9;
 }
 
+@media(min-width:64em) {
+  #resources-titlebar {
+    padding: 25px 0;
+  }
+}
+
 #resources-titlebar h1 {
   display: inline-block;
   background: var(--clr-dark2);
@@ -984,7 +1009,7 @@ div.leftbar {
 
 @media(min-width:64em) {
   #resources-titlebar h1 {
-    padding: 0px 10px;
+    padding: 0px 12px;
   }
 }
 
@@ -1032,19 +1057,21 @@ a.subjectheading1 {
   text-decoration: none;
   color: var(--clr-light);
   font-size: 0.9rem;
-  padding: 0 10px;
+  padding: 1px 10px;
   filter: drop-shadow(0px 4px 4px gray);
 }
 
 @media (min-width: 64em) {
   a.subjectheading1 {
     font-size: 1rem;
+    line-height: 1.3rem;
+    padding: 1px 12px;
   }
 }
 
 div.subjectdropdown1 {
   position: absolute;
-  top: 150px;
+  top: 154px;
   z-index: -1;
   opacity: -1;
 }
