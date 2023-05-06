@@ -2,9 +2,11 @@
 document.addEventListener('DOMContentLoaded', revealhht);
 
 const habbitSplash = document.querySelector("#habbitsplash");
+const habbitSplashDiv = document.querySelector("#habbitsplash div");
 function revealhht() {
   habbitSplash.style.opacity = "0";
   habbitSplash.style.visibility = "hidden";
+  habbitSplashDiv.style.transform = "scale(0%)";
 }
 
 const logoWrap = document.querySelector("div.logowrap");
