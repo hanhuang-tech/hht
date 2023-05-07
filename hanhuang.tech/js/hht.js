@@ -219,6 +219,20 @@ function subjectHeadingHide() {
   }
 }
 
+// hover hidden-burger-contents resources
+const hiddenBurgerContentsResources = document.querySelector("#hidden-burger-contents .resources");
+const sideBurgerContent = document.querySelector("#side-burger-content");
+
+hiddenBurgerContentsResources.addEventListener("mouseenter", function () {
+  sideBurgerContent.style.opacity = "1";
+  sideBurgerContent.style.visibility = "visible";
+
+  if (hiddenBurgerContentsResources.addEventListener("mouseleave")) {
+    sideBurgerContent.style.opacity = "0";
+    sideBurgerContent.style.visibility = "hidden";
+  };
+});
+
 // resources
 const subjectWrapper = [
   document.querySelector("div.subjectwrapper1")
