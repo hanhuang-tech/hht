@@ -371,7 +371,7 @@ div.ham {
   flex-direction: column;
   row-gap: 5px;
   opacity: 0;
-  top: -25px;
+  top: -20px;
   right: 0px;
   background: rgba(0, 0, 0, 0.75);
   padding: 8px 10px;
@@ -380,7 +380,7 @@ div.ham {
   border-width: 2px;
   border-style: solid;
   border-color: var(--clr-accent);
-  border-radius: 5px;
+  border-radius: 6px;
   box-shadow: var(--bs);
   transition-duration: 1s;
   z-index: 1;
@@ -397,30 +397,30 @@ div.ham {
   min-width: 60px;
 }
 
-#hidden-burger-contents .topicanchor {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
+#hidden-burger-contents .resources,
+#hidden-burger-contents .projects,
+#hidden-burger-contents .aboutme {
   margin: 0 auto;
-  padding: 0px 4px;
-  background-color: var(--clr-dark2);
+  padding: 0px 5px;
+  background-color: var(--clr-accent);
   color: var(--clr-light);
-  border-width: 1px;
-  border-style: solid;
-  border-color: gray var(--clr-dark) var(--clr-dark) gray;
-  transition: 0.5s;
-  filter: grayscale(60%);
+  text-decoration: none;
+  filter: grayscale(100%);
   box-shadow: var(--bs);
+  transition: 0.5s;
 }
 
-#hidden-burger-contents .topicanchor:hover {
-  border-color: var(--clr-dark2) gray gray var(--clr-dark2);
-  background-color: var(--clr-dark);
+#hidden-burger-contents .resources:hover,
+#hidden-burger-contents .projects:hover,
+#hidden-burger-contents .aboutme:hover {
   filter: grayscale(0%);
 }
 
 @media(min-width:64em) {
-  #hidden-burger-contents .topicanchor {
+
+  #hidden-burger-contents .resources,
+  #hidden-burger-contents .projects,
+  #hidden-burger-contents .aboutme {
     padding: 2px 6px;
   }
 }

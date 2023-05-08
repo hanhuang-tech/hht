@@ -221,16 +221,28 @@ function subjectHeadingHide() {
 
 // hover hidden-burger-contents resources
 const hiddenBurgerContentsResources = document.querySelector("#hidden-burger-contents .resources");
+const hiddenBurgerContentsProjects = document.querySelector("#hidden-burger-contents .projects");
+const hiddenBurgerContentsAboutme = document.querySelector("#hidden-burger-contents .aboutme");
 const sideBurgerContent = document.querySelector("#side-burger-content");
 
 hiddenBurgerContentsResources.addEventListener("mouseenter", function () {
   sideBurgerContent.style.opacity = "1";
   sideBurgerContent.style.visibility = "visible";
+});
 
-  if (hiddenBurgerContentsResources.addEventListener("mouseleave")) {
-    sideBurgerContent.style.opacity = "0";
-    sideBurgerContent.style.visibility = "hidden";
-  };
+hiddenBurgerContentsProjects.addEventListener("mouseenter", function () {
+  sideBurgerContent.style.opacity = "0";
+  sideBurgerContent.style.visibility = "hidden";
+});
+
+hiddenBurgerContentsAboutme.addEventListener("mouseenter", function () {
+  sideBurgerContent.style.opacity = "0";
+  sideBurgerContent.style.visibility = "hidden";
+});
+
+hiddenBurgerContents.addEventListener("mouseleave", function () {
+  sideBurgerContent.style.opacity = "0";
+  sideBurgerContent.style.visibility = "hidden";
 });
 
 // resources
