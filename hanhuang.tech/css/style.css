@@ -847,7 +847,6 @@ div.logowrap {
   top: 0;
   left: 0;
   background-color: transparent;
-  border-radius: 0 0 30px 0;
 }
 
 div.logo {
@@ -866,12 +865,16 @@ div.habbit-img {
   position: relative;
   margin-right: 10px;
   filter: drop-shadow(0 0 2px lightgreen);
+  transition: 1s;
+}
+
+div.habbit-img:hover {
+  filter: drop-shadow(0 0 5px lightgreen);
 }
 
 @media (min-width: 64em) {
   div.habbit-img {
     margin-right: 15px;
-    filter: drop-shadow(0 0 4px lightgreen);
   }
 }
 
@@ -909,10 +912,10 @@ img.habbit-b {
   margin: auto;
   padding: 0 5px;
   font-size: 1.1rem;
-  color: var(--clr-dark2);
+  color: var(--clr-dark);
   font-weight: bold;
   font-family: var(--ff-secondary);
-  border: 2px solid var(--clr-dark2);
+  border: 2px solid var(--clr-dark);
   border-radius: 0 6px 6px 0;
 }
 
@@ -925,6 +928,7 @@ img.habbit-b {
 
 #habbitbanner:hover {
   transform: scale(105%);
+  filter: drop-shadow(0px 0px 2px var(--clr-light));
 }
 
 /* connectedto */
@@ -1009,7 +1013,7 @@ div.leftbar {
 
 @media(min-width:64em) {
   #resources-titlebar {
-    padding: 25px 0;
+    padding: 24px 0;
   }
 }
 

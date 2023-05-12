@@ -3,11 +3,13 @@ const logo = document.querySelector("div.logo");
 const habbitImg = document.querySelector("div.habbit-img");
 const habbitA = document.querySelector("img.habbit-a");
 const habbitB = document.querySelector("img.habbit-b");
+const habbitBanner = document.querySelector("#habbitbanner");
+habbitBanner.style.transition = "1s";
 const arrowButton = document.querySelector("#arrow-button");
 const lantern = document.querySelector("#lantern");
 const habbitCry = new Audio("../../habbit-cry.mp3");
 
-// habbit click animate
+// habbit click
 habbitImg.addEventListener("click", function () {
     habbitCry.play();
 
@@ -28,14 +30,14 @@ habbitImg.addEventListener("click", function () {
     lantern.classList.add("animate");
 }, false);
 
-// habbit change a/b on horizontal plane
-// clientX property returns the horizontal coordinate of the current window
+// habbit change
 window.onmousemove = function (e) {
     if (window.matchMedia("(min-width: 64em)").matches) { habbitChangeDesktop(e); }
     else { habbitChangeMobile(e); }
 }
 
 function habbitChangeMobile(e) {
+    // clientX property returns the horizontal coordinate of the current window
     let x = e.clientX;
     let w = Math.floor(document.documentElement.clientWidth / 2);
     if (x > w) { habbitB.style.opacity = "1"; }
@@ -43,11 +45,22 @@ function habbitChangeMobile(e) {
 }
 
 function habbitChangeDesktop(e) {
+    // clientX property returns the horizontal coordinate of the current window
     let x = e.clientX;
     let w = Math.floor(document.documentElement.clientWidth / 2);
     if (x > w) { habbitB.style.opacity = "1"; }
     else { habbitB.style.opacity = "0"; }
 }
+
+// hover logo
+habbitImg.addEventListener("mouseenter", function () {
+    habbitBanner.style.opacity = "1";
+    habbitBanner.style.visibility = "visible";
+});
+logo.addEventListener("mouseleave", function () {
+    habbitBanner.style.opacity = "0";
+    habbitBanner.style.visibility = "hidden";
+});
 
 // on scroll
 // fixed pos logo if min-width: 64em

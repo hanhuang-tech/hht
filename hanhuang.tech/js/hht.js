@@ -16,7 +16,6 @@ const habbitA = document.querySelector("img.habbit-a");
 const habbitB = document.querySelector("img.habbit-b");
 const habbitBanner = document.querySelector("#habbitbanner");
 habbitBanner.style.transition = "1s";
-const arrowButton = document.querySelector("#arrow-button");
 const lantern = document.querySelector("#lantern");
 const habbitCry = new Audio("habbit-cry.mp3");
 
@@ -313,18 +312,6 @@ function upList(n) {
   subjectBlurb[n].style.opacity = "1";
   subjectBlurb[n].style.transitionDuration = "0.75s";
 }
-
-function awsTipReveal() {
-  awsTip.style.visibility = "visible";
-  awsTip.style.opacity = "1";
-  awsTip.style.transitionDuration = "0.75s";
-};
-
-function awsTipHide() {
-  awsTip.style.visibility = "hidden";
-  awsTip.style.opacity = "0";
-  awsTip.style.transitionDuration = "0.75s";
-};
 
 // project
 const projectHeadings = document.querySelector("#proj-section-headings");
