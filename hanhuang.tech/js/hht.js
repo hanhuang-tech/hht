@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', revealhht);
 
 const habbitSplash = document.querySelector("#habbitsplash");
 const habbitSplashDiv = document.querySelector("#habbitsplash div");
+const habbitSplashItalicized = document.querySelector("#habbitsplash i");
 function revealhht() {
   habbitSplash.style.opacity = "0";
   habbitSplash.style.visibility = "hidden";
@@ -281,7 +282,7 @@ function delayedMouseOver(n) {
   subjectHeading[n].style.backgroundColor = "var(--clr-accent)";
   subjectHeading[n].style.padding = "1px 8px";
   subjectHeading[n].style.borderColor = "var(--clr-accent)";
-  subjectHeading[n].style.borderRadius = "5px";
+  subjectHeading[n].style.borderRadius = "4px";
 }
 
 function delayedMouseLeave(n) {

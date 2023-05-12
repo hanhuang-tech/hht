@@ -125,6 +125,16 @@ img {
   display: inline-block;
 }
 
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
 /* browse assist*/
 :focus {
   outline: 2px solid var(--clr-accent2);
@@ -154,9 +164,13 @@ html {
   transition-delay: 3s;
 }
 
+@media (min-width: 64em) {
+  #habbitsplash {
+    row-gap: 12px;
+  }
+}
+
 #habbitsplash div {
-  display: flex;
-  column-gap: 16px;
   filter: drop-shadow(0px 0px 1px var(--clr-light));
   transition: 1s;
   transition-delay: 3s;
@@ -165,19 +179,20 @@ html {
 @media (min-width: 64em) {
   #habbitsplash div {
     filter: drop-shadow(0px 0px 2px var(--clr-light));
-    column-gap: 22px;
-    margin-left: 60px;
+    margin-left: 40px;
   }
 }
 
 #habbitsplash img {
-  height: 50px;
+  max-height: 50px;
   filter: hue-rotate(90deg);
+  margin: 0 15px 8px 0;
 }
 
 @media (min-width: 64em) {
   #habbitsplash img {
-    height: 60px;
+    max-height: 60px;
+    margin: 0 20px 12px 0;
   }
 }
 
@@ -187,14 +202,31 @@ html {
   color: var(--clr-light);
   margin: auto 0;
   font-size: 1.2rem;
-  padding: 1px 8px;
-
+  padding: 0px 8px;
 }
 
 @media (min-width: 64em) {
   #habbitsplash h1 {
     font-size: 1.5rem;
-    padding: 1px 10px;
+    padding: 0px 10px;
+  }
+}
+
+#habbitsplash i {
+  display: flex;
+  justify-content: center;
+  font-family: var(--ff-secondary);
+  color: lightgreen;
+  text-transform: uppercase;
+  font-size: 1rem;
+  transition: 1s;
+  transition-delay: 3s;
+}
+
+@media (min-width: 64em) {
+  #habbitsplash i {
+    font-size: 1.4rem;
+    margin-left: 40px;
   }
 }
 
@@ -928,7 +960,7 @@ img.habbit-b {
 
 #habbitbanner:hover {
   transform: scale(105%);
-  filter: drop-shadow(0px 0px 2px var(--clr-light));
+  filter: drop-shadow(0px 0px 4px var(--clr-light));
 }
 
 /* connectedto */
