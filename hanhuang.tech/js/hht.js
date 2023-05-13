@@ -278,16 +278,13 @@ for (let i = 0; i < subjectHeading.length; i++) {
 }
 
 function delayedMouseOver(n) {
-  subjectHeading[n].style.color = "var(--clr-light)";
   subjectHeading[n].style.backgroundColor = "var(--clr-accent)";
   subjectHeading[n].style.padding = "1px 8px";
-  subjectHeading[n].style.borderColor = "var(--clr-accent)";
-  subjectHeading[n].style.borderRadius = "4px";
+  subjectHeading[n].style.borderRadius = "3px";
 }
 
 function delayedMouseLeave(n) {
-  subjectHeading[n].style.color = "var(--clr-light)";
-  subjectHeading[n].style.backgroundColor = "rgb(75,75,75)";
+  subjectHeading[n].style.backgroundColor = "rgb(50,50,50)";
   subjectHeading[n].style.padding = "1px 10px";
   subjectHeading[n].style.borderRadius = "0px";
 }
