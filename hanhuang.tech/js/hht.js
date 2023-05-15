@@ -280,11 +280,11 @@ for (let i = 0; i < subjectHeading.length; i++) {
 function delayedMouseOver(n) {
   subjectHeading[n].style.backgroundColor = "var(--clr-accent)";
   subjectHeading[n].style.padding = "1px 8px";
-  subjectHeading[n].style.borderRadius = "3px";
+  subjectHeading[n].style.borderRadius = "2px";
 }
 
 function delayedMouseLeave(n) {
-  subjectHeading[n].style.backgroundColor = "rgb(50,50,50)";
+  subjectHeading[n].style.backgroundColor = "var(--clr-dark2)";
   subjectHeading[n].style.padding = "1px 10px";
   subjectHeading[n].style.borderRadius = "0px";
 }
@@ -312,8 +312,8 @@ function upList(n) {
 }
 
 // project
-const projectHeadings = document.querySelector("#proj-section-headings");
-const projectTiles = document.querySelector("#project-tiles");
+const projectHeading = document.querySelector("#proj-heading-wrap");
+const projectTiles = document.querySelector("#project-tiles-wrap");
 const projectBGImg = document.querySelector("#project-bg-img");
 const habbitSpray = document.querySelector("#habbit-spray");
 const habbitBorder = document.querySelector("#habbit-border");
@@ -360,8 +360,8 @@ function projectTilesMoveMobile() {
 
 function projectTilesMoveDesktop() {
   if (window.pageYOffset > 350) {
-    projectHeadings.style.opacity = "1";
-    projectHeadings.style.transition = "1s";
+    projectHeading.style.opacity = "1";
+    projectHeading.style.transition = "1s";
     projectBGImg.style.opacity = "0";
     projectBGImg.style.height = "0px";
     projectBGImg.style.width = "0px";
@@ -373,8 +373,8 @@ function projectTilesMoveDesktop() {
     projectTilesMoveExpand();
   }
   else {
-    projectHeadings.style.opacity = "0";
-    projectHeadings.style.transition = "1s";
+    projectHeading.style.opacity = "0";
+    projectHeading.style.transition = "1s";
     projectBGImg.style.opacity = "1";
     projectBGImg.style.height = "300px";
     projectBGImg.style.width = "300px";
@@ -392,7 +392,7 @@ function projectTilesMoveExpand() {
     projectTilesChild[i].style.zIndex = "1";
     projectTilesChild[i].style.margin = "15px";
     projectTilesChild[i].style.borderColor = "gray var(--clr-dark2) var(--clr-dark2) gray";
-    projectTilesChild[i].style.borderRadius = "10px";
+    projectTilesChild[i].style.borderRadius = "5px";
     projectTilesChild[i].style.transition = "1s";
   }
 }

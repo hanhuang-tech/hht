@@ -54,7 +54,7 @@
           <a href="frontendtech/index.html#csswrapper" class="subtitle">CSS</a>
           <a href="frontendtech/index.html#jswrapper" class="subtitle">JS</a>
         </div>
-        <a href="#projectindex" class="projects">
+        <a href="#proj-heading-wrap" class="projects">
           <h3>Projects</h3>
         </a>
         <a href="#hanindex" class="aboutme">
@@ -114,18 +114,18 @@
   </section>
 
   <!-- mid partition -->
-  <section class="body-partition centerpos" id="projectindex">
+  <section class="body-partition centerpos">
     <div class="leftbar" id="midleftbar"></div>
     <div id="proj-heading-wrap">
       <div class="titlebar">
         <h1>Projects</h1>
       </div>
-      <h2 id="proj-subheading">Maintained projects</h2>
+      <h3 id="proj-subheading">currently maintained</h3>
     </div>
     <div id="project-bg-img"></div>
     <div id="habbit-spray"></div>
     <div id="habbit-border"></div>
-    <div id="project-tiles">
+    <div id="project-tiles-wrap">
       <div class="project">
         <h3 class="project-title">hht</h3>
         <div class="imgwrapper1">
@@ -134,10 +134,11 @@
             <h2 id="viewgithub" class="viewgithub1">view on github</h2>
           </a>
         </div>
-        <h3 class="project-subtitle">Frontend files for server name hanhuang.tech</h3>
-        <p class="project">
-          <a href="https://hanhuang.tech" class="web-link">hanhuang.tech</a>: Resources and portfolio website.<br>
-          <a href="https://clothingsite.hanhuang.tech" class="web-link">clothingsite</a>: Shopping site allow choice
+        <h3 class="project-subtitle">Frontend website files for the server names</h3>
+        <p class="project-desc">
+          <a href="https://hanhuang.tech" class="web-link">hanhuang.tech</a> Resources and portfolio website.<br>
+          <a href="https://clothingsite.hanhuang.tech" class="web-link">clothingsite.hanhuang.tech</a> Shopping site
+          allow choice
           of
           size,
           adding an item, and seeing the item in the cart.
@@ -157,12 +158,11 @@
             <h2 class="viewgithub2">view on github</h2>
           </a>
         </div>
-        <h3 class="project-subtitle">Deployment of hanhuang.tech</h3>
-        <p class="project">
-          Deploys an encrypted site using mounted containers with shell commands and Nginx.<br>
-          Auto-pull of source code from Github with Cron. <br>
-          Auto-renewal of TLS certificates with Cron. <b>Requires:</b><a href="https://github.com/hanhuang-tech/hht"
-            class="web-link">hht</a>
+        <h3 class="project-subtitle">Deploys the hht site using TLS encryption and containerisation</h3>
+        <p class="project-desc">
+          Deploys the encrypted hht site using Docker orchestration of mounted Certbot, Shell scripts and Nginx.
+          Automatic pull of source code from Github and renewal of TLS certificates using Cron. <b>Requires:</b><a
+            href="https://github.com/hanhuang-tech/hht" class="web-link">hht</a>
         </p>
         <div class="project-list-subjects">
           <h4>bash shell script</h4>
@@ -176,14 +176,14 @@
         <h3 class="project-title">dotnet_console</h3>
         <div class="imgwrapper3">
           <a href="https://github.com/hanhuang-tech/dotnet_console">
-            <img src="img/dotnet.jpg" alt="image of dotnet" />
+            <img src="img/dotnet.jpg" alt="image of dotnet splash" />
             <h2 class="viewgithub3">view on github</h2>
           </a>
         </div>
         <div>
           <h3 class="project-subtitle">.NET command line applications</h3>
-          <p class="project">
-            Command-line applications that run on the .NET framework.<br>
+          <p class="project-desc">
+            Command-line applications that run on .NET.<br>
             <a href="https://github.com/hanhuang-tech/dotnet_console#simplecalc" class="web-link">SimpleCalc</a>
             <a href="https://github.com/hanhuang-tech/dotnet_console#tempdiff" class="web-link">TempDiff</a>
             <a href="https://github.com/hanhuang-tech/dotnet_console#convertnum" class="web-link">ConvertNum</a>
@@ -205,8 +205,8 @@
         </div>
         <div>
           <h3 class="project-subtitle">misc projects</h3>
-          <p class="project"> Other projects in production that I currently maintain or projects that are in
-            development. </p>
+          <p class="project-desc"> Apps that have not made it to production due to incomplete or poor scaling designs
+          </p>
           <div class="project-list-subjects">
             <h4>bash shell script</h4>
             <h4>docker</h4>
@@ -218,7 +218,7 @@
       <div class="project" id="critiques">
         <a href="https://hanhuang.tech/critiques">
           <h3 class="project-subtitle">Critiques</h3>
-          <p class="project">Critiques and commentaries on projects</p>
+          <p class="project-desc">Critiques and commentaries on projects</p>
         </a>
       </div>
     </div>

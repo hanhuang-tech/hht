@@ -25,9 +25,7 @@
   --fs-body: 0.75rem;
 
   --bs: 0em 0em 0.75em rgba(0, 0, 0, 0.75);
-  --bs2: 0.1em -0.1em 1em rgba(0, 0, 0, 1);
-  --bs3: 0.5em -0.5em 1em rgba(0, 0, 0, 1);
-  --bs4: 0em 0em 0.4em rgba(200, 200, 200, 1);
+  --bs4: 0em 0em 0.4em rgba(150, 150, 150, 0.75);
 }
 
 @media (min-width: 64em) {
@@ -1051,13 +1049,13 @@ div.leftbar {
 
 .titlebar h1 {
   display: inline-block;
-  background: var(--clr-dark2);
   padding: 0px 10px;
   text-transform: uppercase;
+  background: rgba(75, 75, 75, 0.5);
   letter-spacing: 2px;
   font-family: var(--ff-secondary);
   color: var(--clr-light);
-  border: 1px solid gray;
+  border: 1px solid var(--clr-light);
 }
 
 @media(min-width:64em) {
@@ -1116,7 +1114,7 @@ div.subjectwrapper1 img {
 
 a.subjectheading1 {
   z-index: 0;
-  background-color: rgb(50, 50, 50);
+  background-color: var(--clr-dark2);
   margin: 10px 0 0;
   text-decoration: none;
   font-family: var(--ff-secondary);
@@ -1195,24 +1193,30 @@ p.subjectblurb1 {
   justify-content: center;
   color: lightblue;
   font-family: var(--ff-secondary);
-  text-shadow: 1px 1px var(--clr-accent3);
   background: var(--clr-accent3);
 }
 
 @media (min-width: 64em) {
   #proj-heading-wrap {
+    position: absolute;
+    opacity: 0;
+    top: 20px;
+    left: 20px;
     flex-direction: column;
+    margin-left: 80px;
+    min-width: 200px;
+    box-shadow: var(--bs);
   }
 }
 
-#project-tiles {
+#project-tiles-wrap {
   background-image: linear-gradient(to bottom, var(--clr-accent3), black, var(--clr-accent3));
   background-attachment: fixed;
   padding: 20px 68px;
 }
 
 @media (min-width: 64em) {
-  #project-tiles {
+  #project-tiles-wrap {
     flex: 1;
     background-image: radial-gradient(var(--clr-dark2), black);
     justify-content: center;
@@ -1224,17 +1228,17 @@ p.subjectblurb1 {
 }
 
 div.project {
+  display: grid;
+  grid-template-rows: 2em auto auto auto auto;
+  grid-template-columns: auto;
   z-index: 1;
   text-align: center;
   margin: 20px auto;
   max-width: 500px;
-  padding: 10px 20px;
-  background-color: rgb(80, 80, 80, 0.4);
-  border-width: 2px;
-  border-style: solid;
-  border-color: gray var(--clr-dark2) var(--clr-dark2) gray;
+  padding: 10px;
+  background-color: rgb(100, 100, 100, 0.5);
   border-radius: 10px;
-  box-shadow: var(--bs);
+  box-shadow: var(--bs4);
 }
 
 @media (min-width: 64em) {
@@ -1242,60 +1246,21 @@ div.project {
     z-index: -1;
     margin: 0;
     opacity: 0;
+    grid-template-rows: 2em auto auto auto auto;
     background-size: cover;
-    border-width: 3px;
-    border-color: transparent;
     border-radius: 0;
   }
 }
 
-#critiques {
-  display: block;
-  z-index: 1;
-  text-align: center;
-  margin: 20px auto;
-  padding: 5px 0 0;
-  background-color: rgb(0, 100, 180);
-  box-shadow: var(--bs4);
-}
-
-#critiques:hover {
-  background-color: rgb(0, 80, 150);
-}
-
-#critiques a {
-  text-decoration: none;
-}
-
-@media (min-width: 64em) {
-  #critiques {
-    position: absolute;
-    z-index: -1;
-    top: 20px;
-    right: 30px;
-    margin: 0;
-    opacity: 0;
-    max-width: 150px;
-  }
-
-  #critiques:hover {
-    scale: 105%;
-  }
-}
-
-#project-tiles :nth-child(1) {
-  opacity: 1;
-}
-
 h3.project-title {
   display: inline-block;
+  margin: 0 auto;
   padding: 2px 5px;
   color: var(--clr-light);
-  background-color: var(--clr-accent3);
-  border-width: 1px;
+  background-color: transparent;
+  border-width: 2px;
   border-style: solid;
-  border-color: gray var(--clr-dark) var(--clr-dark) gray;
-  box-shadow: var(--bs);
+  border-color: gray;
 }
 
 div.imgwrapper1,
@@ -1303,13 +1268,14 @@ div.imgwrapper2,
 div.imgwrapper3,
 div.imgwrapper4 {
   position: relative;
-  min-height: 80px;
-  max-width: 200px;
+  display: flex;
+  justify-content: center;
+  min-width: 150px;
+  margin: 5px;
+  padding: 2px;
   background-color: var(--clr-light);
-  margin: 10px auto;
   overflow: hidden;
-  border-radius: 8px;
-  box-shadow: var(--bs);
+  border-radius: 5px;
 }
 
 @media (min-width: 64em) {
@@ -1319,9 +1285,8 @@ div.imgwrapper4 {
   div.imgwrapper3,
   div.imgwrapper4,
   div.imgwrapper5 {
-    min-height: 130px;
-    max-width: 220px;
-    border-radius: 12px;
+    max-width: 300px;
+    border-radius: 8px;
   }
 }
 
@@ -1334,7 +1299,7 @@ h2.viewgithub4 {
   padding: 2px 5px;
   top: 30%;
   left: 0%;
-  color: white;
+  color: var(--clr-light);
   font-weight: var(--fw-reg);
   font-family: var(--ff-secondary);
   background-color: var(--clr-dark2);
@@ -1344,12 +1309,13 @@ h2.viewgithub4 {
 
 h3.project-subtitle {
   color: greenyellow;
+  line-height: 1.25rem;
   font-weight: var(--fw-reg);
 }
 
-p.project {
+p.project-desc {
   color: var(--clr-light);
-  margin: 5px auto;
+  margin: 5px;
 }
 
 a.web-link {
@@ -1374,10 +1340,9 @@ div.project-list-subjects {
   flex-wrap: wrap;
   column-gap: 10px;
   row-gap: 5px;
-  margin-bottom: 5px;
+  margin: 10px 5px;
 }
 
-/* projects */
 div.project-list-subjects h4 {
   display: inline-block;
   margin: auto 0;
@@ -1385,33 +1350,7 @@ div.project-list-subjects h4 {
   color: var(--clr-light);
   font-weight: var(--fw-reg);
   white-space: nowrap;
-  background-color: slategray;
-}
-
-a.justify {
-  cursor: pointer;
-  display: inline-block;
-  background-color: var(--clr-light);
-  text-decoration: none;
-  color: brown;
-  margin: 3px auto;
-  padding: 0px 8px;
-  box-shadow: var(--bs);
-  transition-duration: 1s;
-  border-width: 2px;
-  border-style: solid;
-  border-color: brown;
-}
-
-a.justify h3 {
-  font-weight: var(--fw-bold);
-  text-align: center;
-}
-
-a.justify:hover {
-  background-color: brown;
-  color: var(--clr-light);
-  border-color: var(--clr-light);
+  background-color: var(--clr-accent);
 }
 
 @media (min-width: 64em) {
@@ -1431,7 +1370,7 @@ a.justify:hover {
     background-color: radial-gradient(var(--clr-dark2), black);
     background-blend-mode: multiply;
     background-size: cover;
-    box-shadow: var(--bs3);
+    box-shadow: var(--bs);
     border-radius: 10px;
   }
 
@@ -1464,19 +1403,42 @@ a.justify:hover {
     background-image: url('../img/habbit-a.png');
     background-size: cover;
   }
+}
 
-  /* projects */
-  div.project-list-subjects {
-    margin: 5px 0;
-  }
+/* critiques */
+#critiques {
+  display: block;
+  z-index: 1;
+  text-align: center;
+  padding: 5px;
+  background-color: var(--clr-accent3);
+  box-shadow: var(--bs);
+}
 
-  #proj-section-headings {
-    opacity: 0;
+@media (min-width: 64em) {
+  #critiques {
     position: absolute;
-    top: 15px;
-    left: 105px;
-    border-radius: 20px 0;
+    z-index: -1;
+    top: 20px;
+    right: 30px;
+    margin: 0;
+    opacity: 0;
+    max-width: 150px;
   }
+}
+
+#critiques:hover {
+  filter: drop-shadow(0px 0px 1px var(--clr-light));
+}
+
+@media (min-width: 64em) {
+  #critiques:hover {
+    scale: 105%;
+  }
+}
+
+#critiques a {
+  text-decoration: none;
 }
 
 /*bot partition*/
@@ -1645,22 +1607,22 @@ h4.footer {
   right: -15px;
 
   display: inline-block;
-  background-color: rgb(0, 80, 150);
+  background-color: var(--clr-accent);
 
   font-weight: var(--fw-reg);
   color: var(--clr-light);
-  padding: 0px 5px;
-  margin: 0 0 2px;
-  border-width: 2px 5px;
+  padding: 1px 5px;
+  margin: 5px 0 2px;
+  border-width: 3px;
   border-style: solid;
   border-color: var(--clr-dark2);
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 @media (min-width: 64em) {
   h4.footer {
-    padding: 0px 8px;
-    border-width: 2px 8px;
+    padding: 3px 8px;
+    border-width: 5px;
     border-radius: 5px;
   }
 }
