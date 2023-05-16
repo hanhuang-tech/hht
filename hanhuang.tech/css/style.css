@@ -1188,14 +1188,7 @@ p.subjectblurb1 {
 }
 
 /*mid partition*/
-#proj-subheading {
-  display: flex;
-  justify-content: center;
-  color: lightblue;
-  font-family: var(--ff-secondary);
-  background: var(--clr-accent3);
-}
-
+/* project headings */
 @media (min-width: 64em) {
   #proj-heading-wrap {
     position: absolute;
@@ -1209,60 +1202,73 @@ p.subjectblurb1 {
   }
 }
 
+#proj-subheading {
+  display: flex;
+  justify-content: center;
+  color: lightblue;
+  font-family: var(--ff-secondary);
+  background: var(--clr-accent3);
+}
+
+/* project tiles */
 #project-tiles-wrap {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  padding: 30px 70px;
   background-image: linear-gradient(to bottom, var(--clr-accent3), black, var(--clr-accent3));
   background-attachment: fixed;
-  padding: 20px 68px;
 }
 
 @media (min-width: 64em) {
   #project-tiles-wrap {
     flex: 1;
-    background-image: radial-gradient(var(--clr-dark2), black);
-    justify-content: center;
     display: grid;
     grid-template-rows: auto auto;
     grid-template-columns: auto auto;
+    justify-content: center;
+    row-gap: 0px;
+    background-image: radial-gradient(var(--clr-dark2), black);
     background-attachment: local;
   }
 }
 
 div.project {
-  display: grid;
-  grid-template-rows: 2em auto auto auto auto;
-  grid-template-columns: auto;
+  display: flex;
+  flex-direction: column;
   z-index: 1;
   text-align: center;
   padding: 10px;
   background-color: rgb(100, 100, 100, 0.5);
-  border-radius: 10px;
+  border-radius: 8px;
   box-shadow: var(--bs4);
-}
-
-div.project+div.project {
-  margin-top: 20px;
 }
 
 @media (min-width: 64em) {
   div.project {
     z-index: -1;
     opacity: 0;
-    grid-template-rows: 2em auto auto auto auto;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto;
     max-width: 500px;
     background-size: cover;
     border-radius: 0;
   }
 }
 
+/* project tile contents */
 h3.project-title {
   display: inline-block;
-  margin: 0 auto;
-  padding: 2px 5px;
   color: var(--clr-light);
-  background-color: transparent;
-  border-width: 2px;
-  border-style: solid;
-  border-color: gray;
+  margin: 0 auto;
+  padding: 3px 8px;
+  background: rgb(150, 150, 150, 0.5);
+}
+
+@media (min-width: 64em) {
+  h3.project-title {
+    padding: 5px 10px;
+  }
 }
 
 div.imgwrapper1,
@@ -1270,12 +1276,11 @@ div.imgwrapper2,
 div.imgwrapper3,
 div.imgwrapper4 {
   position: relative;
-  min-width: 150px;
-  margin: 10px 20px;
+  max-width: 175px;
+  margin: 10px auto;
   padding: 2px;
-  background-color: rgba(200, 200, 200, 0.75);
+  background-color: rgba(150, 150, 150, 1);
   overflow: hidden;
-  border-radius: 5px;
 }
 
 @media (min-width: 64em) {
