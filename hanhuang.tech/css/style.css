@@ -1187,7 +1187,7 @@ p.subjectblurb1 {
   }
 }
 
-/*mid partition*/
+/* mid partition */
 /* project headings */
 @media (min-width: 64em) {
   #proj-heading-wrap {
@@ -1224,8 +1224,8 @@ p.subjectblurb1 {
   #project-tiles-wrap {
     flex: 1;
     display: grid;
-    grid-template-rows: auto auto;
-    grid-template-columns: auto auto;
+    grid-template-rows: 500px 500px;
+    grid-template-columns: 500px 500px;
     justify-content: center;
     row-gap: 0px;
     background-image: radial-gradient(var(--clr-dark2), black);
@@ -1248,10 +1248,6 @@ div.project {
   div.project {
     z-index: -1;
     opacity: 0;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto auto auto auto;
-    max-width: 500px;
-    background-size: cover;
     border-radius: 0;
   }
 }
@@ -1262,7 +1258,7 @@ h3.project-title {
   color: var(--clr-light);
   margin: 0 auto;
   padding: 3px 8px;
-  background: rgb(150, 150, 150, 0.5);
+  background: rgb(100, 100, 120, 0.5);
 }
 
 @media (min-width: 64em) {
@@ -1290,9 +1286,9 @@ div.imgwrapper4 {
   div.imgwrapper3,
   div.imgwrapper4,
   div.imgwrapper5 {
-    max-width: 300px;
+    max-width: 220px;
+    padding: 3px;
     margin: 15px auto;
-    border-radius: 8px;
   }
 }
 
@@ -1314,27 +1310,34 @@ h2.viewgithub4 {
 }
 
 h3.project-subtitle {
+  max-width: 200px;
+  margin: 0 auto;
   color: greenyellow;
-  line-height: 1.25rem;
   font-weight: var(--fw-reg);
 }
 
+@media (min-width: 64em) {
+  h3.project-subtitle {
+    max-width: 250px;
+    line-height: 1.25rem;
+  }
+}
+
 p.project-desc {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 10px;
+  row-gap: 2px;
+  max-width: 220px;
+  margin: 5px auto;
   color: var(--clr-light);
-  margin: 5px;
 }
 
 a.web-link {
   text-decoration: none;
-  margin: 0 5px;
   color: skyblue;
   transition: 0.5s;
-}
-
-@media (min-width: 64em) {
-  a.web-link+a.web-link {
-    margin-left: 20px;
-  }
 }
 
 a.web-link:hover {
@@ -1343,25 +1346,23 @@ a.web-link:hover {
 
 div.project-list-subjects {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  column-gap: 10px;
+  column-gap: 5px;
   row-gap: 5px;
-  margin: 10px 5px;
 }
 
 div.project-list-subjects h4 {
-  display: inline-block;
   margin: auto 0;
   padding: 0px 5px;
   color: var(--clr-light);
   font-weight: var(--fw-reg);
-  white-space: nowrap;
-  background-color: var(--clr-accent);
+  background-color: var(--clr-accent2);
 }
 
-@media (min-width: 64em) {
 
-  /* project section rotating animation */
+/* project section rotating animation */
+@media (min-width: 64em) {
   #project-bg-img {
     position: absolute;
     z-index: 0;
