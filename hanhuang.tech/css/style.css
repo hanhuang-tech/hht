@@ -405,14 +405,11 @@ div.ham {
   opacity: 0;
   top: -20px;
   right: 0px;
-  background: rgba(0, 0, 0, 0.75);
+  background: var(--clr-dark);
   padding: 8px;
   font-family: var(--ff-secondary);
   transform: translateX(650px);
-  border-width: 2px;
-  border-style: solid;
-  border-color: var(--clr-accent);
-  box-shadow: 0 0 5px var(--clr-dark2);
+  box-shadow: var(--bs4);
   transition-duration: 1s;
   z-index: 1;
 }
@@ -434,10 +431,9 @@ div.ham {
   margin: 0 auto;
   padding: 0px 5px;
   background-color: var(--clr-accent);
-  color: white;
+  color: var(--clr-light);
   text-decoration: none;
   filter: grayscale(100%);
-  box-shadow: var(--bs);
   transition: 0.5s;
 }
 
@@ -454,6 +450,7 @@ div.ham {
 #hidden-burger-contents .projects:hover,
 #hidden-burger-contents .aboutme:hover {
   filter: grayscale(0%);
+  color: lightgreen;
 }
 
 #hidden-burger-contents img.habbit-a {
@@ -462,16 +459,15 @@ div.ham {
   left: -15px;
   width: 25px;
   box-sizing: border-box;
-  background-color: var(--clr-dark);
-  border: 2px solid var(--clr-accent);
-  box-shadow: 0 0 5px var(--clr-dark2);
+  background-color: var(--clr-accent);
+  box-shadow: var(--bs);
   border-radius: 50%;
 }
 
 @media(min-width:64em) {
   #hidden-burger-contents img.habbit-a {
     bottom: -15px;
-    left: -20px;
+    left: -15px;
     width: 30px;
   }
 }
@@ -519,7 +515,10 @@ div.ham {
   }
 }
 
-#side-burger-content .title:hover,
+#side-burger-content .title:hover {
+  background: rgb(0, 90, 0);
+}
+
 #side-burger-content .subtitle:hover {
   background: var(--clr-dark);
 }
@@ -1234,7 +1233,6 @@ p.subjectblurb1 {
 div.project {
   display: flex;
   flex-direction: column;
-  z-index: 1;
   text-align: center;
   padding: 10px 20px;
   background-color: rgb(100, 100, 100, 0.5);
