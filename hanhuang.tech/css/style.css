@@ -182,14 +182,14 @@ html {
 }
 
 #habbitsplash img {
-  max-height: 50px;
+  max-height: 40px;
   filter: hue-rotate(90deg);
   margin: 0 15px 8px 0;
 }
 
 @media (min-width: 64em) {
   #habbitsplash img {
-    max-height: 60px;
+    max-height: 50px;
     margin: 0 20px 12px 0;
   }
 }
@@ -199,13 +199,13 @@ html {
   background-color: var(--clr-dark2);
   color: var(--clr-light);
   margin: auto 0;
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding: 0px 8px;
 }
 
 @media (min-width: 64em) {
   #habbitsplash h1 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     padding: 0px 10px;
   }
 }
@@ -223,7 +223,7 @@ html {
 
 @media (min-width: 64em) {
   #habbitsplash i {
-    font-size: 1.4rem;
+    font-size: 1.25rem;
     margin-left: 40px;
   }
 }
@@ -412,7 +412,6 @@ div.ham {
   border-width: 2px;
   border-style: solid;
   border-color: var(--clr-accent);
-  border-radius: 6px;
   box-shadow: 0 0 5px var(--clr-dark2);
   transition-duration: 1s;
   z-index: 1;
@@ -422,7 +421,6 @@ div.ham {
   #hidden-burger-contents {
     border-width: 3px;
     padding: 10px;
-    border-radius: 8px;
   }
 }
 
@@ -448,7 +446,7 @@ div.ham {
   #hidden-burger-contents .resources,
   #hidden-burger-contents .projects,
   #hidden-burger-contents .aboutme {
-    padding: 2px 6px;
+    padding: 1px 7px;
   }
 }
 
@@ -494,7 +492,7 @@ div.ham {
 @media(min-width:64em) {
   #side-burger-content {
     top: 12px;
-    right: 102px;
+    right: 104px;
   }
 }
 
@@ -877,18 +875,17 @@ div.logowrap {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: transparent;
 }
 
 div.logo {
   position: fixed;
   display: flex;
-  padding: 10px;
+  padding: 15px;
 }
 
 @media (min-width: 64em) {
   div.logo {
-    padding: 15px;
+    padding: 20px;
   }
 }
 
@@ -896,6 +893,8 @@ div.habbit-img {
   position: relative;
   margin-right: 10px;
   filter: drop-shadow(0 0 2px lightgreen);
+  outline: 1px solid rgba(150, 150, 150, 0.5);
+  outline-offset: 5px;
   transition: 1s;
 }
 
@@ -911,7 +910,7 @@ div.habbit-img:hover {
 
 img.habbit-a,
 img.habbit-b {
-  width: 45px;
+  width: 35px;
   cursor: pointer;
 }
 
@@ -919,7 +918,7 @@ img.habbit-b {
 
   img.habbit-a,
   img.habbit-b {
-    width: 50px;
+    width: 40px;
   }
 }
 
@@ -991,7 +990,7 @@ div.connectedto {
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
-  animation: marquee 5s linear infinite;
+  animation: marquee 10s linear infinite;
 }
 
 h5.connectedto {
@@ -1198,7 +1197,6 @@ p.subjectblurb1 {
     flex-direction: column;
     margin-left: 80px;
     min-width: 200px;
-    box-shadow: var(--bs);
   }
 }
 
@@ -1224,8 +1222,8 @@ p.subjectblurb1 {
   #project-tiles-wrap {
     flex: 1;
     display: grid;
-    grid-template-rows: 500px 500px;
-    grid-template-columns: 500px 500px;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
     justify-content: center;
     row-gap: 0px;
     background-image: radial-gradient(var(--clr-dark2), black);
@@ -1238,7 +1236,7 @@ div.project {
   flex-direction: column;
   z-index: 1;
   text-align: center;
-  padding: 10px;
+  padding: 10px 20px;
   background-color: rgb(100, 100, 100, 0.5);
   border-radius: 8px;
   box-shadow: var(--bs4);
@@ -1249,6 +1247,7 @@ div.project {
     z-index: -1;
     opacity: 0;
     border-radius: 0;
+    padding: 15px 40px;
   }
 }
 
@@ -1258,7 +1257,7 @@ h3.project-title {
   color: var(--clr-light);
   margin: 0 auto;
   padding: 3px 8px;
-  background: rgb(100, 100, 120, 0.5);
+  background: var(--clr-accent3);
 }
 
 @media (min-width: 64em) {
@@ -1288,7 +1287,6 @@ div.imgwrapper4 {
   div.imgwrapper5 {
     max-width: 220px;
     padding: 3px;
-    margin: 15px auto;
   }
 }
 
@@ -1318,24 +1316,27 @@ h3.project-subtitle {
 
 @media (min-width: 64em) {
   h3.project-subtitle {
-    max-width: 250px;
+    max-width: 300px;
     line-height: 1.25rem;
   }
 }
 
-p.project-desc {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  column-gap: 10px;
-  row-gap: 2px;
+div.project-desc {
   max-width: 220px;
   margin: 5px auto;
   color: var(--clr-light);
 }
 
+@media (min-width: 64em) {
+  div.project-desc {
+    max-width: 400px;
+    height: 80px;
+  }
+}
+
 a.web-link {
   text-decoration: none;
+  margin: 0 5px;
   color: skyblue;
   transition: 0.5s;
 }
@@ -1350,11 +1351,11 @@ div.project-list-subjects {
   flex-wrap: wrap;
   column-gap: 5px;
   row-gap: 5px;
+  margin-top: 5px;
 }
 
 div.project-list-subjects h4 {
-  margin: auto 0;
-  padding: 0px 5px;
+  padding: 1px 5px;
   color: var(--clr-light);
   font-weight: var(--fw-reg);
   background-color: var(--clr-accent2);
@@ -1414,9 +1415,10 @@ div.project-list-subjects h4 {
 
 /* critiques */
 #critiques {
-  display: block;
+  display: flex;
+  flex-direction: column;
   z-index: 1;
-  text-align: center;
+  max-height: 100px;
   padding: 5px;
   background-color: var(--clr-accent3);
   box-shadow: var(--bs);

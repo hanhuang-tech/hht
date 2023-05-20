@@ -488,7 +488,7 @@ function notEndBGDesktop() {
   botLeftBar.style.background = "var(--clr-dark)";
   if (Math.abs(document.documentElement.scrollTop) > 350) {
     projectTiles.style.background =
-      "radial-gradient(var(--clr-accent3), var(--clr-dark))"
+      "radial-gradient(black 25%, var(--clr-accent3))"
     projectDivAll.forEach(tile => { tile.style.opacity = "1"; })
   } else {
     projectTiles.style.background = "radial-gradient(var(--clr-dark2), black)";
