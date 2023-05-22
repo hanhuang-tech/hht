@@ -1645,9 +1645,9 @@ h4.footer {
 
 @media (min-width: 64em) {
   .descbox-wrapper.frontend {
-    background-image: linear-gradient(to bottom, black, burlywood);
-    padding: 40px 5px 0px;
     z-index: 0;
+    background-size: stretch;
+    padding: 30px;
   }
 }
 
@@ -1675,10 +1675,8 @@ h4.footer {
 }
 
 div.descbox {
-  display: flex;
-  align-items: center;
   max-width: 260px;
-  padding: 10px;
+  padding: 5px;
   margin: 0 auto;
   background: var(--clr-dark);
   box-shadow: var(--bs);
@@ -1686,9 +1684,7 @@ div.descbox {
 
 @media (min-width: 64em) {
   div.descbox {
-    background: var(--clr-dark2);
-    justify-content: space-around;
-    max-width: 500px;
+    max-width: content;
   }
 }
 
@@ -1699,7 +1695,6 @@ div.descbox {
 @media (min-width: 64em) {
   .descbox-img {
     display: block;
-    padding-right: 0px;
     max-width: 150px;
     box-shadow: var(--bs);
   }
@@ -1713,25 +1708,10 @@ div.descbox h2 {
 }
 
 @media (min-width: 64em) {
-  div.descbox h2 {
-    padding: 15px;
-  }
+  div.descbox h2 {}
 }
 
 /* social icons */
-
-div.socialicons {
-  display: none;
-}
-
-@media (min-width: 64em) {
-  div.socialicons {
-    display: inline-flex;
-    margin-top: 4px;
-    column-gap: 5px;
-  }
-}
-
 a.medgithub,
 a.medyoutube {
   padding: 5px;
