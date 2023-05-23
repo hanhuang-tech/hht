@@ -895,7 +895,7 @@ div.habbit-img {
   filter: drop-shadow(0 0 2px lightgreen);
   outline-width: 1px;
   outline-style: solid;
-  outline-color: rgba(150, 150, 150, 0.5);
+  outline-color: var(--clr-accent3);
   outline-offset: 5px;
   transition: 1s;
 }
@@ -992,7 +992,7 @@ div.connectedto {
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
-  animation: marquee 8s linear infinite;
+  animation: marquee 5s linear infinite;
 }
 
 h5.connectedto {
@@ -1631,84 +1631,40 @@ h4.footer {
 
 /* frontend tech */
 
-.descbox-wrapper.frontend {
-  background-color: gray;
-  background-image: url(../img/codefrontend.png);
-  background-blend-mode: multiply;
-  background-repeat: no-repeat;
-  background-position: top;
-  padding: 20px;
-  border-width: 0 5px;
-  border-style: solid;
-  border-color: transparent transparent transparent var(--clr-brown);
-}
-
-@media (min-width: 64em) {
-  .descbox-wrapper.frontend {
-    z-index: 0;
-    background-size: stretch;
-    padding: 30px;
-  }
-}
-
 /* critiques */
-.descbox-wrapper.critiques {
-  background-color: gray;
-  background-image: url(../img/codefrontend.png);
-  background-blend-mode: multiply;
-  background-repeat: no-repeat;
-  background-position: top;
-  background-attachment: fixed;
-  padding: 40px;
-  border-width: 0 5px;
-  border-style: solid;
-  border-color: transparent transparent transparent var(--clr-dark2);
-  filter: grayscale(100%);
-}
-
-@media (min-width: 64em) {
-  .descbox-wrapper.critiques {
-    background-image: linear-gradient(to bottom, black, white);
-    padding: 40px 5px 0px;
-    z-index: 0;
-  }
-}
-
 div.descbox {
-  max-width: 260px;
-  padding: 5px;
-  margin: 0 auto;
-  background: var(--clr-dark);
-  box-shadow: var(--bs);
+  display: flex;
+  margin: 1px 1px 6px 6px;
+  padding: 10px;
+  column-gap: 10px;
+  background: var(--clr-accent3);
+  box-shadow: -0.4em 0.4em 0em var(--clr-dark);
 }
 
 @media (min-width: 64em) {
   div.descbox {
-    max-width: content;
-  }
-}
-
-.descbox-img {
-  display: none;
-}
-
-@media (min-width: 64em) {
-  .descbox-img {
-    display: block;
-    max-width: 150px;
-    box-shadow: var(--bs);
+    max-width: 500px;
   }
 }
 
 div.descbox h2 {
   text-align: center;
   font-family: var(--ff-secondary);
-  color: var(--clr-light);
-  padding: 5px;
+  color: lightblue;
 }
 
 @media (min-width: 64em) {
   div.descbox h2 {}
+}
+
+div.descbox img {
+  max-width: 100px;
+}
+
+@media (min-width: 64em) {
+  div.descbox img {
+    display: block;
+  }
 }
 
 /* social icons */
@@ -1887,9 +1843,6 @@ div.subject-banner {
   background-blend-mode: multiply;
   background-size: cover;
   background-attachment: fixed;
-  border-width: 10px 0 5px 0;
-  border-style: solid;
-  border-color: var(--clr-dark) transparent var(--clr-dark2) transparent;
 }
 
 div.subject-banner.grey {
