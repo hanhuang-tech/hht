@@ -901,7 +901,7 @@ div.habbit-img {
 }
 
 div.habbit-img:hover {
-  filter: drop-shadow(0 0 5px lightgreen);
+  filter: drop-shadow(0 0 6px lightgreen);
 }
 
 @media (min-width: 64em) {
@@ -982,7 +982,7 @@ img.habbit-b {
 }
 
 #dynamic-rgb {
-  margin: 2px 6px;
+  margin: 0px;
   text-align: center;
   color: var(--clr-light);
   background: black;
