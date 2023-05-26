@@ -1631,40 +1631,36 @@ h4.footer {
 
 /* frontend tech */
 
-/* critiques */
-div.descbox {
-  display: flex;
-  margin: 1px 1px 6px 6px;
-  padding: 10px;
-  column-gap: 10px;
-  background: var(--clr-accent3);
+#descbox-bg {
+  background-color: var(--clr-dark2);
+  border: 1px solid transparent;
+}
+
+
+#descbox {
+  display: inline-block;
+  font-family: var(--ff-secondary);
+  color: var(--clr-light);
+  text-align: center;
+  font-size: 1rem;
+  margin: 10px 10px 15px 15px;
+  padding: 5px;
+  background: rgb(100, 100, 100);
   box-shadow: -0.4em 0.4em 0em var(--clr-dark);
 }
 
 @media (min-width: 64em) {
-  div.descbox {
-    max-width: 500px;
-  }
-}
-
-div.descbox h2 {
-  text-align: center;
-  font-family: var(--ff-secondary);
-  color: lightblue;
-}
-
-@media (min-width: 64em) {
-  div.descbox h2 {}
-}
-
-div.descbox img {
-  max-width: 100px;
-}
-
-@media (min-width: 64em) {
-  div.descbox img {
+  #descbox {
     display: block;
+    max-width: 600px;
+    margin: 10px auto 15px;
   }
+}
+
+#descbox-img {
+  max-width: 200px;
+  margin: 0 auto 10px;
+  box-shadow: var(--bs);
 }
 
 /* social icons */
