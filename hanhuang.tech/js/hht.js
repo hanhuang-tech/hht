@@ -32,10 +32,6 @@ habbitImg.addEventListener("click", function () {
   void habbitB.offsetWidth;
   habbitB.classList.add("animate");
 
-  arrowButton.classList.remove("animate");
-  void arrowButton.offsetWidth;
-  arrowButton.classList.add("animate");
-
   lantern.classList.remove("animate");
   void lantern.offsetWidth;
   lantern.classList.add("animate");
@@ -193,14 +189,18 @@ function logoFixed() {
 // toggle burger
 const burger = document.querySelector("#burger");
 const hiddenBurgerContents = document.querySelector("#hidden-burger-contents");
-habbitB.style.transitionDuration = "0.5s";
-habbitA.style.transitionDuration = "0.5s";
+const burgerHabbit = document.querySelector(".habbit-a.burger");
 
 //toggle = switch between nontoggle class and toggle class
 burger.addEventListener("click", function () {
   burger.classList.toggle("toggle");
   hiddenBurgerContents.classList.toggle("toggle");
-  arrowButton.classList.toggle("toggle");
+  subjectHeadingHide();
+});
+
+burgerHabbit.addEventListener("click", function () {
+  burger.classList.toggle("toggle");
+  hiddenBurgerContents.classList.toggle("toggle");
   subjectHeadingHide();
 });
 
@@ -208,7 +208,6 @@ function retractBurgerOnScroll() {
   if (hiddenBurgerContents.classList.contains("toggle")) {
     burger.classList.toggle("toggle")
     hiddenBurgerContents.classList.toggle("toggle");
-    arrowButton.classList.toggle("toggle");
     subjectHeadingHide();
   }
 }

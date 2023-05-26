@@ -473,6 +473,14 @@ div.ham {
   }
 }
 
+img.habbit-a.burger {
+  transition: 0.75s;
+}
+
+img.habbit-a.burger:hover {
+  filter: invert(100%);
+}
+
 #side-burger-content {
   opacity: 0;
   visibility: hidden;
@@ -483,7 +491,7 @@ div.ham {
   justify-content: space-around;
   background: var(--clr-dark2);
   outline: 2px solid var(--clr-accent);
-  transition: 0.5s;
+  transition: 0.75s;
 }
 
 @media(min-width:64em) {
@@ -1652,13 +1660,13 @@ h4.footer {
 @media (min-width: 64em) {
   #descbox {
     display: block;
-    max-width: 600px;
+    max-width: 400px;
     margin: 10px auto 15px;
   }
 }
 
 #descbox-img {
-  max-width: 200px;
+  max-width: 180px;
   margin: 0 auto 10px;
   box-shadow: var(--bs);
 }
