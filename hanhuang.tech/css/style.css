@@ -407,7 +407,7 @@ div.ham {
   top: -20px;
   right: 0px;
   background: var(--clr-dark);
-  padding: 8px;
+  padding: 5px;
   font-family: var(--ff-secondary);
   transform: translateX(650px);
   box-shadow: var(--bs4);
@@ -417,8 +417,7 @@ div.ham {
 
 @media(min-width:64em) {
   #hidden-burger-contents {
-    border-width: 3px;
-    padding: 10px;
+    padding: 7px;
   }
 }
 
@@ -431,10 +430,9 @@ div.ham {
 #hidden-burger-contents .aboutme {
   margin: 0 auto;
   padding: 0px 5px;
-  background-color: var(--clr-accent);
+  background-color: transparent;
   color: var(--clr-light);
   text-decoration: none;
-  filter: grayscale(100%);
   transition: 0.5s;
 }
 
@@ -450,8 +448,8 @@ div.ham {
 #hidden-burger-contents .resources:hover,
 #hidden-burger-contents .projects:hover,
 #hidden-burger-contents .aboutme:hover {
-  filter: grayscale(0%);
   color: lightgreen;
+  background-color: var(--clr-accent);
 }
 
 #hidden-burger-contents img.habbit-a {
@@ -461,8 +459,8 @@ div.ham {
   width: 25px;
   box-sizing: border-box;
   background-color: var(--clr-accent);
-  box-shadow: var(--bs);
   border-radius: 50%;
+  transition: 0.75s;
 }
 
 @media(min-width:64em) {
@@ -473,11 +471,7 @@ div.ham {
   }
 }
 
-img.habbit-a.burger {
-  transition: 0.75s;
-}
-
-img.habbit-a.burger:hover {
+#hidden-burger-contents img.habbit-a:hover {
   filter: invert(100%);
 }
 
