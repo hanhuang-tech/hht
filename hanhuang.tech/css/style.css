@@ -479,8 +479,8 @@ div.ham {
   opacity: 0;
   visibility: hidden;
   position: absolute;
-  top: 10px;
-  right: 78px;
+  top: 5px;
+  right: 75px;
   display: flex;
   justify-content: space-around;
   background: var(--clr-dark2);
@@ -490,8 +490,8 @@ div.ham {
 
 @media(min-width:64em) {
   #side-burger-content {
-    top: 12px;
-    right: 104px;
+    top: 8px;
+    right: 100px;
   }
 }
 
