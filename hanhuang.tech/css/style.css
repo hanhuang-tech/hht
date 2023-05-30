@@ -72,7 +72,7 @@ h5 {
 }
 
 body {
-  line-height: 1.2rem;
+  line-height: 1.25rem;
   font-size: var(--fs-body);
   font-family: var(--ff-primary);
 }
@@ -99,7 +99,7 @@ body {
   }
 
   body {
-    line-height: 1.2rem;
+    line-height: 1.4rem;
   }
 }
 
@@ -1019,7 +1019,7 @@ div.leftbar {
     display: flex;
   }
 
-  section.body-partition.centerpos {
+  section.body-partition.center-habbit-bg {
     position: relative;
     padding: 0;
   }
@@ -1069,7 +1069,7 @@ div.leftbar {
 }
 
 /* resources body */
-#resources {
+#resources-body {
   border: 1px solid var(--clr-dark2);
   text-align: center;
   background: linear-gradient(127deg, rgba(0, 0, 0, 1), rgba(100, 0, 0, 0) 80%),
@@ -1325,7 +1325,7 @@ div.project-desc {
 @media (min-width: 64em) {
   div.project-desc {
     max-width: 400px;
-    height: 80px;
+    height: 90px;
   }
 }
 
@@ -1374,7 +1374,7 @@ div.project-list-subjects h4 {
     background-blend-mode: multiply;
     background-size: cover;
     box-shadow: var(--bs);
-    border-radius: 10px;
+    border-radius: 20px;
   }
 
   #habbit-border {
@@ -1413,8 +1413,7 @@ div.project-list-subjects h4 {
   display: flex;
   flex-direction: column;
   z-index: 1;
-  max-height: 100px;
-  padding: 5px;
+  max-height: 80px;
   background-color: var(--clr-accent3);
   box-shadow: var(--bs);
 }
@@ -1423,11 +1422,13 @@ div.project-list-subjects h4 {
   #critiques {
     position: absolute;
     z-index: -1;
-    top: 20px;
-    right: 30px;
-    margin: 0;
     opacity: 0;
+    top: 30px;
+    right: 30px;
+    margin: 0px;
+    padding: 5px;
     max-width: 150px;
+    max-height: 105px;
   }
 }
 
@@ -1446,20 +1447,39 @@ div.project-list-subjects h4 {
 }
 
 /*bot partition*/
-#han {
-  padding: 20px;
-  color: var(--clr-dark);
-  border-width: 0 80px;
-  border-style: solid;
-  border-color: rgb(0, 0, 0, 0.2);
+@media (min-width: 64em) {
+  #aboutme-wrap {
+    flex: 1;
+    margin: 0 auto;
+  }
+
+  #aboutme-wrap div.titlebar {
+    max-width: 1000px;
+    margin: 20px auto;
+    border-radius: 10px;
+  }
 }
 
-#han h1 {
+#profile {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  padding: 20px;
+}
+
+@media (min-width: 64em) {
+  #profile {
+    flex: 1;
+    padding: 30px;
+  }
+}
+
+#profile h1 {
   text-align: center;
   font-weight: var(--fw-bold);
 }
 
-#han h4 {
+#profile h4 {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -1467,19 +1487,53 @@ div.project-list-subjects h4 {
   margin: 10px 0;
 }
 
-#han img {
+#profile img {
   max-width: 150px;
-  margin: 20px auto;
+  margin: 0px auto;
   box-shadow: var(--bs);
 }
 
-#han p {
-  text-align: center;
-  margin: auto;
+@media (min-width: 64em) {
+  #profile img {
+    max-width: 200px;
+  }
 }
 
+.flex-badges {
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+  margin-top: 15px;
+}
+
+@media (min-width: 64em) {
+  .flex-badges {
+    margin-top: 20px;
+  }
+}
+
+#profile p {
+  max-width: 300px;
+  margin: 0px auto;
+  padding: 8px;
+  text-align: center;
+  font-size: 0.8rem;
+  border-width: 1px;
+  border-style: solid;
+  border-color: gray;
+}
+
+@media (min-width: 64em) {
+  #profile p {
+    max-width: 400px;
+    padding: 10px 25px;
+    font-size: 0.9rem;
+  }
+}
+
+/* trees */
 div.trees {
-  padding: 50px 0;
+  padding: 40px 0;
   background-image: url(../img/trees.jpg);
   filter: grayscale(20%);
   background-color: lightgreen;
@@ -1490,20 +1544,8 @@ div.trees {
 }
 
 @media (min-width: 64em) {
-  #han {
+  div.trees {
     flex: 1;
-    padding: 50px;
-    border-width: 0px 300px;
-  }
-
-  #han img {
-    max-width: 250px;
-    margin: 30px auto;
-  }
-
-  #han p {
-    max-width: 600px;
-    text-align: center;
   }
 }
 

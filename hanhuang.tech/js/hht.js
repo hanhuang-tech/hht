@@ -118,7 +118,7 @@ function rgbInverseColor(r, g, b) {
 }
 
 const dynamicRGB = document.querySelector("#dynamic-rgb");
-const hanSection = document.querySelector("#han");
+const aboutMe = document.querySelector("#aboutme");
 let lastScroll = 0;
 let r = 0;
 let g = 0;
@@ -142,7 +142,7 @@ function scrollRGB() {
     dynamicRGB.style.background = getRGB
     dynamicRGB.innerHTML = filterRGB
     dynamicRGB.style.color = rgbInverseColor(r, g, b);
-    hanSection.style.outlineColor = getRGB;
+    aboutMe.style.outlineColor = getRGB;
 
   } else if (lastScroll - currentScroll > 0) {
     r = diffRestrictRGB(r, rR);
@@ -153,7 +153,7 @@ function scrollRGB() {
     dynamicRGB.style.background = getRGB;
     dynamicRGB.innerHTML = filterRGB;
     dynamicRGB.style.color = rgbInverseColor(r, g, b);
-    hanSection.style.outlineColor = getRGB;
+    aboutMe.style.outlineColor = getRGB;
   }
   lastScroll = currentScroll;
 }
@@ -452,6 +452,7 @@ function mouseLeaveToggle(n) {
 // scroll to end
 const midLeftBar = document.querySelector("#midleftbar");
 const botLeftBar = document.querySelector("#botleftbar");
+const treesLeftBar = document.querySelector("#treesleftbar");
 const scrollEnd = document.body.clientHeight;
 const scrollheighta = document.querySelector("#scrollheighta");
 const scrollheightb = document.querySelector("#scrollheightb");
@@ -485,6 +486,7 @@ function scrollToEndBGDesktop() {
 function notEndBGDesktop() {
   midLeftBar.style.background = "var(--clr-dark)";
   botLeftBar.style.background = "var(--clr-dark)";
+  treesLeftBar.style.background = "var(--clr-dark)";
   if (Math.abs(document.documentElement.scrollTop) > 350) {
     projectTiles.style.background =
       "radial-gradient(black 25%, var(--clr-accent3))"
@@ -497,6 +499,7 @@ function notEndBGDesktop() {
 function endBGDesktop() {
   midLeftBar.style.background = getRGB;
   botLeftBar.style.background = getRGB;
+  treesLeftBar.style.background = getRGB;
   logoWrap.style.background = getRGB;
   projectTiles.style.background = getRGB;
   projectDivAll.forEach(tile => { tile.style.opacity = "0"; })
