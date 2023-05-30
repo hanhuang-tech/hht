@@ -1438,7 +1438,7 @@ div.project-list-subjects h4 {
 
 @media (min-width: 64em) {
   #critiques:hover {
-    scale: 105%;
+    scale: 102%;
   }
 }
 
@@ -1451,19 +1451,22 @@ div.project-list-subjects h4 {
   #aboutme-wrap {
     flex: 1;
     margin: 0 auto;
+    border-width: 10px;
+    border-style: solid;
+    border-color: var(--clr-dark);
   }
 
   #aboutme-wrap div.titlebar {
-    max-width: 1000px;
-    margin: 20px auto;
-    border-radius: 10px;
+    max-width: 240px;
+    margin: 10px auto;
+    box-shadow: var(--bs);
   }
 }
 
 #profile {
   display: flex;
   flex-direction: column;
-  row-gap: 5px;
+  row-gap: 10px;
   padding: 20px;
 }
 
@@ -1513,39 +1516,35 @@ div.project-list-subjects h4 {
 }
 
 #profile p {
-  max-width: 300px;
+  max-width: 350px;
   margin: 0px auto;
-  padding: 8px;
+  padding: 0 10px 20px;
   text-align: center;
-  font-size: 0.8rem;
-  border-width: 1px;
-  border-style: solid;
-  border-color: gray;
+  font-size: 0.85rem;
 }
 
 @media (min-width: 64em) {
   #profile p {
     max-width: 400px;
-    padding: 10px 25px;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 }
 
 /* trees */
-div.trees {
-  padding: 40px 0;
-  background-image: url(../img/trees.jpg);
-  filter: grayscale(20%);
-  background-color: lightgreen;
-  background-blend-mode: multiply;
-  background-size: cover;
-  background-attachment: scroll;
-  background-position: 0 10%;
-}
-
 @media (min-width: 64em) {
   div.trees {
     flex: 1;
+    padding: 50px 0;
+    background-image: url(../img/trees.jpg);
+    filter: grayscale(20%);
+    background-color: lightgreen;
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: 0 15%;
+    border-width: 10px 0 0;
+    border-style: solid;
+    border-color: var(--clr-dark);
   }
 }
 
