@@ -991,7 +991,8 @@ img.habbit-b {
 }
 
 div.connectedto {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   white-space: nowrap;
   overflow: hidden;
   animation: marquee 5s linear infinite;
@@ -1002,7 +1003,8 @@ h5.connectedto {
   color: var(--clr-light);
   font-family: var(--ff-secondary);
   letter-spacing: 1px;
-  margin: auto 0;
+  line-height: 1.4rem;
+  margin: 0;
 }
 
 /*partitioning*/
