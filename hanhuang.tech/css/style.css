@@ -1468,13 +1468,14 @@ div.project-list-subjects h4 {
 #profile {
   display: flex;
   flex-direction: column;
-  row-gap: 10px;
+  row-gap: 15px;
   padding: 20px;
 }
 
 @media (min-width: 64em) {
   #profile {
     flex: 1;
+    row-gap: 20px;
     padding: 30px;
   }
 }
@@ -1504,32 +1505,27 @@ div.project-list-subjects h4 {
   }
 }
 
-.flex-badges {
-  display: flex;
-  justify-content: center;
-  overflow: auto;
-  margin-top: 15px;
-}
-
-@media (min-width: 64em) {
-  .flex-badges {
-    margin-top: 20px;
-  }
-}
-
 #profile p {
   max-width: 350px;
   margin: 0px auto;
-  padding: 0 10px 20px;
+  padding: 10px;
   text-align: center;
   font-size: 0.85rem;
+  line-height: 1.5rem;
 }
 
 @media (min-width: 64em) {
   #profile p {
-    max-width: 400px;
-    font-size: 0.95rem;
+    max-width: 450px;
+    font-size: 1rem;
+    line-height: 1.75rem;
   }
+}
+
+.flex-badges {
+  display: flex;
+  justify-content: center;
+  overflow: auto;
 }
 
 /* trees */
