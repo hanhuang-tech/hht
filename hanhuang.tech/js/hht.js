@@ -450,13 +450,8 @@ function mouseLeaveToggle(n) {
 }
 
 // scroll to end
-const midLeftBar = document.querySelector("#midleftbar");
-const botLeftBar = document.querySelector("#botleftbar");
-const treesLeftBar = document.querySelector("#treesleftbar");
+const leftbarAll = document.querySelectorAll(".leftbar");
 const scrollEnd = document.body.clientHeight;
-const scrollheighta = document.querySelector("#scrollheighta");
-const scrollheightb = document.querySelector("#scrollheightb");
-const scrollheightc = document.querySelector("#scrollheightc");
 
 // change BG of project when scrolled to end mobile
 function scrollToEndBGMobile() {
@@ -484,9 +479,7 @@ function scrollToEndBGDesktop() {
 }
 
 function notEndBGDesktop() {
-  midLeftBar.style.background = "var(--clr-dark)";
-  botLeftBar.style.background = "var(--clr-dark)";
-  treesLeftBar.style.background = "var(--clr-dark)";
+  leftbarAll.forEach(leftbar => { leftbar.style.background = "var(--clr-dark)"; })
   if (Math.abs(document.documentElement.scrollTop) > 350) {
     projectTiles.style.background =
       "radial-gradient(black 25%, var(--clr-accent3))"
@@ -497,9 +490,7 @@ function notEndBGDesktop() {
 }
 
 function endBGDesktop() {
-  midLeftBar.style.background = getRGB;
-  botLeftBar.style.background = getRGB;
-  treesLeftBar.style.background = getRGB;
+  leftbarAll.forEach(leftbar => { leftbar.style.background = getRGB })
   logoWrap.style.background = getRGB;
   projectTiles.style.background = getRGB;
   projectDivAll.forEach(tile => { tile.style.opacity = "0"; })

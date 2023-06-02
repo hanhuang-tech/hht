@@ -1548,33 +1548,31 @@ div.project-list-subjects h4 {
 
 /* contactbar */
 #contactbar {
-  background: var(--clr-dark2);
-  padding: 10px 0;
-}
-
-div.contactbar-flexwrapper {
   display: flex;
   justify-content: center;
+  background: var(--clr-dark2);
+  padding: 10px 0;
   column-gap: 20px;
 }
 
-div.contactbar-flexwrapper h2 {
+@media (min-width: 64em) {
+  #contactbar {
+    flex: 1;
+    column-gap: 30px;
+  }
+}
+
+#contactbar h2 {
   display: none;
 }
 
 @media (min-width: 64em) {
-  div.contactbar-flexwrapper {
-    display: flex;
-    justify-content: center;
-    column-gap: 30px;
-  }
-
-  div.contactbar-flexwrapper h2 {
+  #contactbar h2 {
     display: block;
   }
 }
 
-div.contactbar-flexwrapper a {
+#contactbar a {
   margin: auto 0;
 }
 
@@ -1619,10 +1617,6 @@ a.largeyoutube img:hover {
 }
 
 @media (min-width: 64em) {
-  div.contactbar-flexwrapper {
-    column-gap: 50px;
-  }
-
   a.largeemail img:hover {
     filter: invert(100%)
   }
@@ -1656,16 +1650,17 @@ h4.footer {
   color: var(--clr-light);
   padding: 1px 5px;
   margin: 5px 0 2px;
-  border-width: 3px;
+  border-width: 2px;
   border-style: solid;
   border-color: var(--clr-dark2);
   border-radius: 3px;
+  filter: drop-shadow(0px 0px 5px var(--clr-dark2));
 }
 
 @media (min-width: 64em) {
   h4.footer {
     padding: 3px 8px;
-    border-width: 5px;
+    border-width: 3px;
     border-radius: 5px;
   }
 }
