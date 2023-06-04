@@ -25,8 +25,8 @@
   --fs-body: 0.75rem;
 
   --bs: 0em 0em 0.75em rgba(0, 0, 0, 0.75);
-  --bsbrown: -0.4em 0.4em 0.2em rgba(100, 50, 0, 0.75);
   --bs4: 0em 0em 0.4em rgba(150, 150, 150, 0.75);
+  --bsbrown: -0.3em 0.3em 0em rgba(100, 50, 0, 0.75);
 }
 
 @media (min-width: 64em) {
@@ -1671,31 +1671,51 @@ h4.footer {
   background-color: var(--clr-dark2);
 }
 
+#descbox-body {
+  display: grid;
+  grid-template-rows: 100px;
+  grid-template-columns: auto 150px;
+  justify-content: center;
+  overflow: hidden;
+}
 
-#descbox-comment {
-  display: inline-block;
-  font-family: var(--ff-secondary);
-  color: var(--clr-light);
-  text-align: center;
-  font-size: 1rem;
+@media (min-width: 64em) {
+  #descbox-body {
+    grid-template-columns: auto auto;
+  }
+}
+
+#descbox p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 350px;
   margin: 15px 15px 20px 20px;
   padding: 5px;
   background: rgb(100, 100, 100);
+  font-family: var(--ff-secondary);
+  color: var(--clr-light);
+  text-align: center;
+  font-size: 0.9rem;
   box-shadow: -0.4em 0.4em 0em var(--clr-dark);
 }
 
 @media (min-width: 64em) {
-  #descbox-comment {
-    display: block;
-    max-width: 400px;
-    margin: 10px auto 15px;
+  #descbox p {
+    max-width: 500px;
+    font-size: 1rem;
   }
 }
 
-#descbox-img {
-  max-width: 180px;
-  margin: 0 auto 10px;
+#descbox img {
+  max-width: 300px;
   box-shadow: var(--bs);
+}
+
+@media (min-width: 64em) {
+  #descbox img {
+    max-width: 350px;
+  }
 }
 
 /* social icons */
@@ -1764,7 +1784,7 @@ a.smallyoutube:hover {
   padding: 0;
   border-radius: 0px 5px 5px 0px;
   box-shadow: var(--bsbrown);
-  opacity: 0.6;
+  opacity: 0.75;
 }
 
 @media (min-width: 64em) {
