@@ -1,289 +1,379 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hht</title>
+    <!--links-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="img/habbit-a.png" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Noto+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>hht</title>
-  <!--links-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
-  <link rel="stylesheet" href="css/style.css" />
-  <!-- favicon -->
-  <link rel="icon" type="image/png" href="img/habbit-a.png" />
-  <!-- fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Noto+Sans:wght@400;700&display=swap"
-    rel="stylesheet" />
-</head>
-
-<body>
-  <header>
-    <!-- logo -->
-    <div class="logowrap">
-      <div class="logo">
-        <div class="habbit-img">
-          <img src="img/habbit-a.png" class="habbit-a" alt="a pic of habbit" />
-          <img src="img/habbit-b.png" class="habbit-b" alt="a pic of habbit" />
-        </div>
-        <a href="https://hanhuang.tech" id="habbitbanner">hanhuang.tech</a>
-      </div>
-    </div>
-    <!-- connected -->
-    <div id="connectedwrap">
-      <h5 id="dynamic-rgb">0 0 0</h5>
-      <div class="connectedto">
-        <h5 class="connectedto"> Connected to :AZ on :IP4.</h5>
-        <h5 class="connectedto"> Connected to :AZ on :IP4.</h5>
-      </div>
-    </div>
-    <!-- nav -->
-    <nav class="bar">
-      <div id="burger">
-        <div class="ham"> </div>
-        <div class="ham"> </div>
-        <div class="ham"> </div>
-      </div>
-      <div id="hidden-burger-contents">
-        <a href="#resources" class="resources">
-          <h3>Resources</h3>
-        </a>
-        <div id="side-burger-content">
-          <a href="frontendtech/index.html" class="title">Frontend tech</a>
-          <a href="frontendtech/index.html#htmlwrapper" class="subtitle">HTML</a>
-          <a href="frontendtech/index.html#csswrapper" class="subtitle">CSS</a>
-          <a href="frontendtech/index.html#jswrapper" class="subtitle">JS</a>
-        </div>
-        <a href="#projects" class="projects">
-          <h3>Projects</h3>
-        </a>
-        <a href="#aboutme" class="aboutme">
-          <h3>About Me</h3>
-        </a>
-        <img src="img/habbit-a.png" class="habbit-a burger" alt="a pic of habbit" />
-      </div>
-    </nav>
-    <!-- lantern -->
-    <a id="lantern" href="mailto:han@hanhuang.tech">
-      <div class="standpart">
-        <div class="dome"></div>
-        <div class="bulb">
-          <span class="bulb">tact</span>
+  <body>
+    <header>
+      <!-- logo -->
+      <div class="logowrap">
+        <div class="logo">
+          <div class="habbit-img">
+            <img
+              src="img/habbit-a.png"
+              class="habbit-a"
+              alt="a pic of habbit"
+            />
+            <img
+              src="img/habbit-b.png"
+              class="habbit-b"
+              alt="a pic of habbit"
+            />
+          </div>
+          <a href="https://hanhuang.tech" id="habbitbanner">hanhuang.tech</a>
         </div>
       </div>
-    </a>
-  </header>
-
-  <!-- habbitsplash -->
-  <section id="habbitsplash">
-    <div class="flex-column">
-      <div class="flex-row">
-        <img src="img/habbit-a.png" alt="a pic of habbit" />
-        <h1>hanhuang.tech</h1>
+      <!-- connected -->
+      <div id="connectedwrap">
+        <h5 id="dynamic-rgb">0 0 0</h5>
+        <div class="connectedto">
+          <h5 class="connectedto">Connected to :AZ on :IP4.</h5>
+          <h5 class="connectedto">Connected to :AZ on :IP4.</h5>
+        </div>
       </div>
-      <i>cloud / frontend</i>
-    </div>
-  </section>
+      <!-- nav -->
+      <nav class="bar">
+        <div id="burger">
+          <div class="ham"></div>
+          <div class="ham"></div>
+          <div class="ham"></div>
+        </div>
+        <div id="hidden-burger-contents">
+          <a href="#resources" class="resources">
+            <h3>Resources</h3>
+          </a>
+          <div id="side-burger-content">
+            <a href="frontendtech/index.html" class="title">Frontend tech</a>
+            <a href="frontendtech/index.html#html" class="subtitle">HTML</a>
+            <a href="frontendtech/index.html#css" class="subtitle">CSS</a>
+            <a href="frontendtech/index.html#js" class="subtitle">JS</a>
+          </div>
+          <a href="#projects" class="projects">
+            <h3>Projects</h3>
+          </a>
+          <a href="#aboutme" class="aboutme">
+            <h3>About Me</h3>
+          </a>
+          <img
+            src="img/habbit-a.png"
+            class="habbit-a burger"
+            alt="a pic of habbit"
+          />
+        </div>
+      </nav>
+      <!-- lantern -->
+      <a id="lantern" href="mailto:han@hanhuang.tech">
+        <div class="standpart">
+          <div class="dome"></div>
+          <div class="bulb">
+            <span class="bulb">tact</span>
+          </div>
+        </div>
+      </a>
+    </header>
 
-  <!-- top partition -->
-  <section class="body-partition" id="resources">
-    <div class="leftbar"></div>
-    <div id="resource-flex-extender">
-      <div class="titlebar">
-        <h1>Resources</h1>
+    <!-- habbitsplash -->
+    <section id="habbitsplash">
+      <div class="flex-column">
+        <div class="flex-row">
+          <img src="img/habbit-a.png" alt="a pic of habbit" />
+          <h1>hanhuang.tech</h1>
+        </div>
+        <i>cloud / frontend</i>
       </div>
-      <div id="resources-body">
-        <div id="res-frame">
-          <div class="subjectgroups">
-            <div class="subjectwrapper1">
-              <img src="img/smallcodefrontend.png" alt="picture of code" />
-              <a class="subjectheading1" href="frontendtech/index.html">
-                <i>frontend tech</i>
-              </a>
-              <p class="subjectblurb1">Various frontend languages and their techniques used to create this site</p>
-              <div class="subjectdropdown1">
-                <a class="dropdowntopic" href="frontendtech/index.html#htmlwrapper">HyperText Markup Language</a>
-                <a class="dropdowntopic" href="frontendtech/index.html#csswrapper">Cascading Style Sheets</a>
-                <a class="dropdowntopic" href="frontendtech/index.html#jswrapper">JavaScript</a>
+    </section>
+
+    <!-- top partition -->
+    <section class="body-partition" id="resources">
+      <div class="leftbar"></div>
+      <div id="resource-flex-extender">
+        <div class="titlebar">
+          <h1>Resources</h1>
+        </div>
+        <div id="resources-body">
+          <div id="res-frame">
+            <div class="subjectgroups">
+              <div class="subjectwrapper1">
+                <img src="img/smallcodefrontend.png" alt="picture of code" />
+                <a class="subjectheading1" href="frontendtech/index.html">
+                  <i>frontend tech</i>
+                </a>
+                <p class="subjectblurb1">
+                  Various frontend languages and their techniques used to create
+                  this site
+                </p>
+                <div class="subjectdropdown1">
+                  <a class="dropdowntopic" href="frontendtech/index.html#html"
+                    >HyperText Markup Language</a
+                  >
+                  <a class="dropdowntopic" href="frontendtech/index.html#css"
+                    >Cascading Style Sheets</a
+                  >
+                  <a class="dropdowntopic" href="frontendtech/index.html#js"
+                    >JavaScript</a
+                  >
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- mid partition -->
-  <section class="body-partition center-habbit-bg" id="projects">
-    <div class="leftbar"></div>
-    <div id="proj-heading-wrap">
-      <div class="titlebar">
-        <h1>Projects</h1>
-      </div>
-    </div>
-    <div id="project-bg-img"></div>
-    <div id="habbit-spray"></div>
-    <div id="habbit-border"></div>
-    <div id="project-tiles-wrap">
-      <div class="project">
-        <h3 class="project-title">hht</h3>
-        <div class="imgwrapper1">
-          <a href="https://github.com/hanhuang-tech/hht">
-            <img src="img/codefrontend.png" alt="a picture of code" />
-            <h2 id="viewgithub" class="viewgithub1">view on github</h2>
-          </a>
-        </div>
-        <h3 class="project-subtitle">Frontend website files for the server names</h3>
-        <div class="project-desc">
-          <a href="https://hanhuang.tech" class="web-link">hanhuang.tech</a> Resources and portfolio website.
-          <a href="https://clothingsite.hanhuang.tech" class="web-link">clothingsite.hanhuang.tech</a> Shopping site
-          allow choice of size, adding an item, and seeing the item in the cart.
-        </div>
-        <div class="project-list-subjects">
-          <h4>html</h4>
-          <h4>css</h4>
-          <h4>javascript</h4>
-          <h4>php</h4>
+    <!-- mid partition -->
+    <section class="body-partition center-habbit-bg" id="projects">
+      <div class="leftbar"></div>
+      <div id="proj-heading-wrap">
+        <div class="titlebar">
+          <h1>Projects</h1>
         </div>
       </div>
-      <div class="project">
-        <h3 class="project-title">hht_deploy</h3>
-        <div class="imgwrapper2">
-          <a href="https://github.com/hanhuang-tech/hht_deploy">
-            <img src="img/deploy.png" alt="linux cli" />
-            <h2 class="viewgithub2">view on github</h2>
-          </a>
-        </div>
-        <h3 class="project-subtitle">Deploys the hht site using TLS encryption and containers</h3>
-        <div class="project-desc">
-          Deploys the encrypted hht site using Docker orchestration of mounted Certbot, Shell scripts and Nginx.
-          Automatic pull of source code from Github and renewal of TLS certificates using Cron. Requires:
-          <a href="https://github.com/hanhuang-tech/hht" class="web-link">hht</a>
-        </div>
-        <div class="project-list-subjects">
-          <h4>bash shell script</h4>
-          <h4>letsencrypt</h4>
-          <h4>docker</h4>
-          <h4>cron</h4>
-          <h4>nginx</h4>
-        </div>
-      </div>
-      <div class="project">
-        <h3 class="project-title">dotnet_console</h3>
-        <div class="imgwrapper3">
-          <a href="https://github.com/hanhuang-tech/dotnet_console">
-            <img src="img/dotnet.jpg" alt="image of dotnet splash" />
-            <h2 class="viewgithub3">view on github</h2>
-          </a>
-        </div>
-        <div>
-          <h3 class="project-subtitle">.NET command line applications</h3>
+      <div id="project-bg-img"></div>
+      <div id="habbit-spray"></div>
+      <div id="habbit-border"></div>
+      <div id="project-tiles-wrap">
+        <div class="project">
+          <h3 class="project-title">hht</h3>
+          <div class="imgwrapper1">
+            <a href="https://github.com/hanhuang-tech/hht">
+              <img src="img/codefrontend.png" alt="a picture of code" />
+              <h2 id="viewgithub" class="viewgithub1">view on github</h2>
+            </a>
+          </div>
+          <h3 class="project-subtitle">
+            Frontend website files for the server names
+          </h3>
           <div class="project-desc">
-            Command-line applications that run on .NET.<br>
-            <a href="https://github.com/hanhuang-tech/dotnet_console#simplecalc" class="web-link">SimpleCalc</a>
-            <a href="https://github.com/hanhuang-tech/dotnet_console#tempdiff" class="web-link">TempDiff</a>
-            <a href="https://github.com/hanhuang-tech/dotnet_console#convertnum" class="web-link">ConvertNum</a>
-            <a href="https://github.com/hanhuang-tech/dotnet_console#charcount" class="web-link">CharCount</a>
+            <a href="https://hanhuang.tech" class="web-link">hanhuang.tech</a>
+            Resources and portfolio website.
+            <a href="https://clothingsite.hanhuang.tech" class="web-link"
+              >clothingsite.hanhuang.tech</a
+            >
+            Shopping site allow choice of size, adding an item, and seeing the
+            item in the cart.
           </div>
           <div class="project-list-subjects">
-            <h4>C#</h4>
-            <h4>.NET</h4>
+            <h4>html</h4>
+            <h4>css</h4>
+            <h4>javascript</h4>
+            <h4>php</h4>
           </div>
         </div>
-      </div>
-      <div class="project">
-        <h3 class="project-title">other projects</h3>
-        <div class="imgwrapper4">
-          <a href="https://github.com/hanhuang-tech/app_develop">
-            <img src="img/gmark.png" alt="image of github mark" />
-            <h2 class="viewgithub4">view on github</h2>
-          </a>
-        </div>
-        <div>
-          <h3 class="project-subtitle">Misc. projects</h3>
-          <div class="project-desc"> Apps that have not made it to production due to incomplete or poor scaling
-            designs
+        <div class="project">
+          <h3 class="project-title">hht_deploy</h3>
+          <div class="imgwrapper2">
+            <a href="https://github.com/hanhuang-tech/hht_deploy">
+              <img src="img/deploy.png" alt="linux cli" />
+              <h2 class="viewgithub2">view on github</h2>
+            </a>
+          </div>
+          <h3 class="project-subtitle">
+            Deploys the hht site using TLS encryption and containers
+          </h3>
+          <div class="project-desc">
+            Deploys the encrypted hht site using Docker orchestration of mounted
+            Certbot, Shell scripts and Nginx. Automatic pull of source code from
+            Github and renewal of TLS certificates using Cron. Requires:
+            <a href="https://github.com/hanhuang-tech/hht" class="web-link"
+              >hht</a
+            >
           </div>
           <div class="project-list-subjects">
             <h4>bash shell script</h4>
+            <h4>letsencrypt</h4>
             <h4>docker</h4>
-            <h4>flask</h4>
-            <h4>python</h4>
+            <h4>cron</h4>
+            <h4>nginx</h4>
+          </div>
+        </div>
+        <div class="project">
+          <h3 class="project-title">dotnet_console</h3>
+          <div class="imgwrapper3">
+            <a href="https://github.com/hanhuang-tech/dotnet_console">
+              <img src="img/dotnet.jpg" alt="image of dotnet splash" />
+              <h2 class="viewgithub3">view on github</h2>
+            </a>
+          </div>
+          <div>
+            <h3 class="project-subtitle">.NET command line applications</h3>
+            <div class="project-desc">
+              Command-line applications that run on .NET.<br />
+              <a
+                href="https://github.com/hanhuang-tech/dotnet_console#simplecalc"
+                class="web-link"
+                >SimpleCalc</a
+              >
+              <a
+                href="https://github.com/hanhuang-tech/dotnet_console#tempdiff"
+                class="web-link"
+                >TempDiff</a
+              >
+              <a
+                href="https://github.com/hanhuang-tech/dotnet_console#convertnum"
+                class="web-link"
+                >ConvertNum</a
+              >
+              <a
+                href="https://github.com/hanhuang-tech/dotnet_console#charcount"
+                class="web-link"
+                >CharCount</a
+              >
+            </div>
+            <div class="project-list-subjects">
+              <h4>C#</h4>
+              <h4>.NET</h4>
+            </div>
+          </div>
+        </div>
+        <div class="project">
+          <h3 class="project-title">other projects</h3>
+          <div class="imgwrapper4">
+            <a href="https://github.com/hanhuang-tech/app_develop">
+              <img src="img/gmark.png" alt="image of github mark" />
+              <h2 class="viewgithub4">view on github</h2>
+            </a>
+          </div>
+          <div>
+            <h3 class="project-subtitle">Misc. projects</h3>
+            <div class="project-desc">
+              Apps that have not made it to production due to incomplete or poor
+              scaling designs
+            </div>
+            <div class="project-list-subjects">
+              <h4>bash shell script</h4>
+              <h4>docker</h4>
+              <h4>flask</h4>
+              <h4>python</h4>
+            </div>
+          </div>
+        </div>
+        <div class="project" id="critiques">
+          <a href="https://hanhuang.tech/critiques">
+            <h3 class="project-subtitle">Critiques</h3>
+            <div class="project-desc">
+              Critiques and commentaries on projects
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- trees -->
+    <section class="body-partition">
+      <div class="leftbar"></div>
+      <div class="trees"></div>
+    </section>
+
+    <!-- bot partition -->
+    <section class="body-partition" id="aboutme">
+      <div class="leftbar"></div>
+      <div id="aboutme-wrap">
+        <div class="titlebar">
+          <h1>About me</h1>
+        </div>
+        <div id="profile">
+          <div>
+            <h1>Han</h1>
+            <h4>A Dev based in Aotearoa - New Zealand</h4>
+          </div>
+          <img src="img/face.jpg" alt="a photo of han huang" />
+          <p>
+            Kia Ora (Hello), thank you for stopping by. I am an empathic learner
+            who is passionate about well-architected and serverless cloud
+            solutions. Feel free to look around. When you are satiated, please
+            peruse over the extended links embedded below.
+          </p>
+          <div class="flex-badges">
+            <div
+              data-iframe-width="150"
+              data-iframe-height="270"
+              data-share-badge-id="f0af89aa-5803-45fb-96f8-d7142f418724"
+              data-share-badge-host="https://www.credly.com"
+            ></div>
+            <script
+              type="text/javascript"
+              async
+              src="//cdn.credly.com/assets/utilities/embed.js"
+            ></script>
+            <div
+              data-iframe-width="150"
+              data-iframe-height="270"
+              data-share-badge-id="990fa507-403e-4de3-acb6-c6321f98d3de"
+              data-share-badge-host="https://www.credly.com"
+            ></div>
+            <script
+              type="text/javascript"
+              async
+              src="//cdn.credly.com/assets/utilities/embed.js"
+            ></script>
           </div>
         </div>
       </div>
-      <div class="project" id="critiques">
-        <a href="https://hanhuang.tech/critiques">
-          <h3 class="project-subtitle">Critiques</h3>
-          <div class="project-desc">Critiques and commentaries on projects</div>
+    </section>
+
+    <!-- contactbar -->
+    <section class="body-partition">
+      <div class="leftbar"></div>
+      <div id="contactbar">
+        <a
+          href="mailto:han@hanhuang.tech"
+          class="email"
+          title="Email Han Huang"
+        >
+          <img src="img/emailicon.png" alt="email icon" />
+          <h2>han@hanhuang.tech</h2>
+        </a>
+        <a href="https://github.com/hanhuang-tech/" class="github">
+          <img
+            src="img/githubicon.png"
+            alt="github icon"
+            title="Han Huang on Github"
+          />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/han-huang-6808bb123"
+          class="linkedin"
+        >
+          <img
+            src="img/linkedinicon.png"
+            alt="linkedin icon"
+            title="Han Huang on LinkedIn"
+          />
+        </a>
+        <a
+          href="https://www.youtube.com/playlist?list=PLipXpUZ1AqJn537TBgPN8Ce8pB1VILvK4"
+          class="youtube"
+        >
+          <img
+            src="img/youtubeicon.png"
+            alt="youtube icon"
+            title="Han Huang on Youtube"
+          />
         </a>
       </div>
-    </div>
-  </section>
-
-  <!-- trees -->
-  <section class="body-partition">
-    <div class="leftbar"></div>
-    <div class="trees"></div>
-  </section>
-
-  <!-- bot partition -->
-  <section class="body-partition" id="aboutme">
-    <div class="leftbar"></div>
-    <div id="aboutme-wrap">
-      <div class="titlebar">
-        <h1>About me</h1>
-      </div>
-      <div id="profile">
-        <div>
-          <h1>Han</h1>
-          <h4>A Dev based in Aotearoa - New Zealand</h4>
-        </div>
-        <img src="img/face.jpg" alt="a photo of han huang" />
-        <p>
-          Kia Ora (Hello), thank you for stopping by. I am an empathic learner who is passionate about
-          well-architected and serverless cloud solutions. Feel free to look around. When you are satiated, please
-          peruse over the extended links embedded below.
-        </p>
-        <div class="flex-badges">
-          <div data-iframe-width="150" data-iframe-height="270"
-            data-share-badge-id="f0af89aa-5803-45fb-96f8-d7142f418724" data-share-badge-host="https://www.credly.com">
-          </div>
-          <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-          <div data-iframe-width="150" data-iframe-height="270"
-            data-share-badge-id="990fa507-403e-4de3-acb6-c6321f98d3de" data-share-badge-host="https://www.credly.com">
-          </div>
-          <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- contactbar -->
-  <section class="body-partition">
-    <div class="leftbar"></div>
-    <div id="contactbar">
-      <a href="mailto:han@hanhuang.tech" class="email" title="Email Han Huang">
-        <img src="img/emailicon.png" alt="email icon" />
-        <h2>han@hanhuang.tech</h2>
-      </a>
-      <a href="https://github.com/hanhuang-tech/" class="github">
-        <img src="img/githubicon.png" alt="github icon" title="Han Huang on Github" />
-      </a>
-      <a href="https://www.linkedin.com/in/han-huang-6808bb123" class="linkedin">
-        <img src="img/linkedinicon.png" alt="linkedin icon" title="Han Huang on LinkedIn" />
-      </a>
-      <a href="https://www.youtube.com/playlist?list=PLipXpUZ1AqJn537TBgPN8Ce8pB1VILvK4" class="youtube">
-        <img src="img/youtubeicon.png" alt="youtube icon" title="Han Huang on Youtube" />
-      </a>
-    </div>
-  </section>
-  <!-- footer -->
-  <footer id="footer">
-    <h4 class="footer">hanhuang.tech 2023</h4>
-  </footer>
-  <script src="js/hht.js"></script>
-
-</body>
-
+    </section>
+    <!-- footer -->
+    <footer id="footer">
+      <h4 class="footer">hanhuang.tech 2023</h4>
+    </footer>
+    <script src="js/hht.js"></script>
+  </body>
 </html>

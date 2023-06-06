@@ -21,7 +21,7 @@
   --fs-h2: 1.3em;
   --fs-h3: 1em;
   --fs-h4: 0.9em;
-  --fs-h5: .8em;
+  --fs-h5: 0.8em;
   --fs-body: 0.75rem;
 
   --bs: 0em 0em 0.75em rgba(0, 0, 0, 0.75);
@@ -35,7 +35,7 @@
     --fs-h2: 1.5em;
     --fs-h3: 1.17em;
     --fs-h4: 1.12em;
-    --fs-h5: .83em;
+    --fs-h5: 0.83em;
     --fs-body: 0.85rem;
   }
 }
@@ -336,10 +336,10 @@ img.banner.animate {
   }
 }
 
-
 @keyframes animateLtn-lt {
   60% {
-    border-color: transparent rgba(100, 100, 100, 0.5) transparent rgba(100, 100, 100, 0.5);
+    border-color: transparent rgba(100, 100, 100, 0.5) transparent
+      rgba(100, 100, 100, 0.5);
   }
 
   80% {
@@ -390,7 +390,7 @@ div.ham {
   padding: 1px;
 }
 
-@media(min-width:64em) {
+@media (min-width: 64em) {
   div.ham {
     display: block;
     min-width: 15px;
@@ -415,7 +415,7 @@ div.ham {
   z-index: 1;
 }
 
-@media(min-width:64em) {
+@media (min-width: 64em) {
   #hidden-burger-contents {
     padding: 7px;
   }
@@ -436,8 +436,7 @@ div.ham {
   transition: 0.5s;
 }
 
-@media(min-width:64em) {
-
+@media (min-width: 64em) {
   #hidden-burger-contents .resources,
   #hidden-burger-contents .projects,
   #hidden-burger-contents .aboutme {
@@ -463,7 +462,7 @@ div.ham {
   transition: 0.75s;
 }
 
-@media(min-width:64em) {
+@media (min-width: 64em) {
   #hidden-burger-contents img.habbit-a {
     bottom: -15px;
     left: -15px;
@@ -488,7 +487,7 @@ div.ham {
   transition: 0.75s;
 }
 
-@media(min-width:64em) {
+@media (min-width: 64em) {
   #side-burger-content {
     top: 8px;
     right: 100px;
@@ -509,8 +508,7 @@ div.ham {
   background: var(--clr-accent);
 }
 
-@media(min-width:64em) {
-
+@media (min-width: 64em) {
   #side-burger-content .title,
   #side-burger-content .subtitle {
     font-size: 0.9rem;
@@ -525,7 +523,6 @@ div.ham {
 #side-burger-content .subtitle:hover {
   background: var(--clr-dark);
 }
-
 
 /*arrow-button*/
 
@@ -699,7 +696,8 @@ div.bulb::before {
 /*lantern light hover*/
 div.bulb:hover::before {
   transition-delay: 1s;
-  border-color: transparent rgba(200, 200, 200, 0.75) transparent rgba(200, 200, 200, 0.75);
+  border-color: transparent rgba(200, 200, 200, 0.75) transparent
+    rgba(200, 200, 200, 0.75);
 
   animation-name: animateLtn-lt;
   animation-delay: 1s;
@@ -723,9 +721,11 @@ section.fourofour {
   align-items: center;
   min-height: 100vh;
   background-size: cover;
-  background-image: linear-gradient(to top,
+  background-image: linear-gradient(
+      to top,
       var(--clr-dark) 50%,
-      rgba(200, 100, 100, 0.6)),
+      rgba(200, 100, 100, 0.6)
+    ),
     url(../../hanhuang.tech/img/sunset.jpg);
   background-repeat: no-repeat;
 }
@@ -746,7 +746,6 @@ div.four-flex img {
   top: -35px;
   left: 75%;
 }
-
 
 @media (min-width: 64em) {
   div.four-flex img {
@@ -837,7 +836,7 @@ section.contact {
   flex-direction: stretch;
 }
 
-input[type=text],
+input[type="text"],
 select,
 textarea {
   padding: 8px;
@@ -849,7 +848,7 @@ textarea {
   resize: vertical;
 }
 
-input[type=text] {
+input[type="text"] {
   display: block;
 }
 
@@ -857,7 +856,7 @@ textarea {
   height: 100px;
 }
 
-input[type=submit] {
+input[type="submit"] {
   cursor: pointer;
   background-color: var(--clr-accent);
   color: var(--clr-light);
@@ -867,7 +866,7 @@ input[type=submit] {
   transition: 0.5s;
 }
 
-input[type=submit]:hover {
+input[type="submit"]:hover {
   background-color: green;
 }
 
@@ -919,7 +918,6 @@ img.habbit-b {
 }
 
 @media (min-width: 64em) {
-
   img.habbit-a,
   img.habbit-b {
     width: 40px;
@@ -1046,7 +1044,7 @@ div.leftbar {
   opacity: 0.9;
 }
 
-@media(min-width:64em) {
+@media (min-width: 64em) {
   .titlebar {
     padding: 24px 0;
   }
@@ -1063,8 +1061,7 @@ div.leftbar {
   border: 1px solid var(--clr-light);
 }
 
-@media(min-width:64em) {
-
+@media (min-width: 64em) {
   .titlebar h1 {
     padding: 0px 12px;
   }
@@ -1212,7 +1209,12 @@ p.subjectblurb1 {
   flex-direction: column;
   row-gap: 30px;
   padding: 30px 70px;
-  background-image: linear-gradient(to bottom, var(--clr-accent3), black, var(--clr-accent3));
+  background-image: linear-gradient(
+    to bottom,
+    var(--clr-accent3),
+    black,
+    var(--clr-accent3)
+  );
   background-attachment: fixed;
 }
 
@@ -1276,7 +1278,6 @@ div.imgwrapper4 {
 }
 
 @media (min-width: 64em) {
-
   div.imgwrapper1,
   div.imgwrapper2,
   div.imgwrapper3,
@@ -1358,7 +1359,6 @@ div.project-list-subjects h4 {
   background-color: var(--clr-accent2);
 }
 
-
 /* project section rotating animation */
 @media (min-width: 64em) {
   #project-bg-img {
@@ -1405,7 +1405,7 @@ div.project-list-subjects h4 {
     margin: auto;
     height: 100px;
     width: 100px;
-    background-image: url('../img/habbit-a.png');
+    background-image: url("../img/habbit-a.png");
     background-size: cover;
   }
 }
@@ -1415,7 +1415,6 @@ div.project-list-subjects h4 {
   display: flex;
   flex-direction: column;
   z-index: 1;
-  max-height: 80px;
   background-color: var(--clr-accent3);
   box-shadow: var(--bs);
 }
@@ -1430,7 +1429,6 @@ div.project-list-subjects h4 {
     margin: 0px;
     padding: 5px;
     max-width: 150px;
-    max-height: 105px;
   }
 }
 
@@ -1446,6 +1444,12 @@ div.project-list-subjects h4 {
 
 #critiques a {
   text-decoration: none;
+}
+
+@media (min-width: 64em) {
+  #critiques .project-desc {
+    height: 65px;
+  }
 }
 
 /*bot partition*/
@@ -1609,7 +1613,7 @@ div.project-list-subjects h4 {
 
 @media (min-width: 64em) {
   #contactbar .email img:hover {
-    filter: invert(100%)
+    filter: invert(100%);
   }
 
   #contactbar .email:hover {
@@ -1730,7 +1734,6 @@ a.smallyoutube {
 }
 
 @media (min-width: 64em) {
-
   a.medgithub,
   a.medyoutube {
     background-color: var(--clr-light);
@@ -1745,7 +1748,6 @@ a.smallyoutube img {
 }
 
 @media (min-width: 64em) {
-
   a.medgithub img,
   a.medyoutube img,
   a.smallgithub img,
@@ -1758,7 +1760,6 @@ a.medgithub:hover,
 a.medyoutube:hover {
   background-color: rgba(200, 200, 200, 1);
 }
-
 
 a.smallgithub:hover,
 a.smallyoutube:hover {
@@ -1822,7 +1823,6 @@ a.smallyoutube:hover {
 }
 
 @media (min-width: 64em) {
-
   .tab-html,
   .tab-css {
     max-height: 40px;
@@ -1833,10 +1833,10 @@ a.smallyoutube:hover {
   }
 }
 
-/* html/css/js wrapper */
-#htmlwrapper,
-#csswrapper,
-#jswrapper {
+/* html/css/js sections */
+#html,
+#css,
+#js {
   flex: 1;
   background-color: var(--clr-light);
   border-width: 0 0 0 4px;
@@ -1845,18 +1845,17 @@ a.smallyoutube:hover {
   padding-bottom: 15px;
 }
 
-@media(min-width: 64em) {
-
-  #htmlwrapper,
-  #csswrapper,
-  #jswrapper {
+@media (min-width: 64em) {
+  #html,
+  #css,
+  #js {
     border-width: 0 0 0 5px;
   }
 }
 
-#htmlwrapper-critiques,
-#csswrapper-critiques,
-#jswrapper-critiques {
+#html-critiques,
+#css-critiques,
+#jsw-critiques {
   flex: 1;
   background-color: var(--clr-light);
   border-width: 0 0 0 4px;
@@ -1865,11 +1864,10 @@ a.smallyoutube:hover {
   padding-bottom: 15px;
 }
 
-@media(min-width: 64em) {
-
-  #htmlwrapper-critiques,
-  #csswrapper-critiques,
-  #jswrapper-critiques {
+@media (min-width: 64em) {
+  #html-critiques,
+  #css-critiques,
+  #js-critiques {
     border-width: 0 0 0 5px;
   }
 }
@@ -1905,38 +1903,31 @@ div.subject-banner.grey {
   border-color: var(--clr-dark) transparent var(--clr-dark2) transparent;
 }
 
-@media(min-width: 64em) {
+@media (min-width: 64em) {
   div.subject-banner.grey {
     background-size: 50%;
   }
 }
 
-.shorttitle-html,
-.shorttitle-css,
-.shorttitle-js {
+.subject-banner h2 {
   color: var(--clr-light);
   padding: 0 5px;
 }
 
-.shorttitle-html {
+.subject-banner .html {
   background-color: var(--clr-html);
 }
 
-.shorttitle-css {
+.subject-banner .css {
   background-color: var(--clr-css);
 }
 
-.shorttitle-js {
+.subject-banner .js {
   background-color: var(--clr-js);
 }
 
-.fulltitle {
-  color: var(--clr-light);
-  padding: 0 5px;
-}
-
-@media(min-width: 64em) {
-  div.subject-banner {
+@media (min-width: 64em) {
+  .subject-banner {
     padding: 20px;
   }
 }
@@ -1967,7 +1958,7 @@ div.body-wrapper h3 {
   margin: 2px 0;
 }
 
-@media(min-width:64em) {
+@media (min-width: 64em) {
   div.side-heading {
     row-gap: 4px;
   }
@@ -2037,7 +2028,7 @@ p.code-description {
   margin: 0 0 15px;
 }
 
-@media(min-width:64em) {
+@media (min-width: 64em) {
   p.code-description {
     margin: 5px 0 20px;
   }
@@ -2057,7 +2048,7 @@ h3.pros {
   border-width: 2px;
 }
 
-@media(min-width:64em) {
+@media (min-width: 64em) {
   h3.pros {
     max-width: 265px;
     border-width: 3px;
@@ -2077,7 +2068,7 @@ h3.cons {
   border-width: 2px;
 }
 
-@media(min-width:64em) {
+@media (min-width: 64em) {
   h3.cons {
     max-width: 280px;
     border-width: 3px;
@@ -2096,8 +2087,6 @@ h3.cons {
 .codegreentext {
   color: darkgreen;
 }
-
-
 
 /* spoilers */
 #spoil-btn1,
@@ -2193,7 +2182,6 @@ h3.cons {
 }
 
 @media (min-width: 64em) {
-
   #spoil-btna,
   #spoil-btnb {
     font-size: 1rem;
