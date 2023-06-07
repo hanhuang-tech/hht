@@ -1853,25 +1853,6 @@ a.smallyoutube:hover {
   }
 }
 
-#html-critiques,
-#css-critiques,
-#jsw-critiques {
-  flex: 1;
-  background-color: var(--clr-light);
-  border-width: 0 0 0 4px;
-  border-style: solid;
-  border-color: var(--clr-dark2);
-  padding-bottom: 15px;
-}
-
-@media (min-width: 64em) {
-  #html-critiques,
-  #css-critiques,
-  #js-critiques {
-    border-width: 0 0 0 5px;
-  }
-}
-
 div.subject-banner {
   display: flex;
   justify-content: center;
