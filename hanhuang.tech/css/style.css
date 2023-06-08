@@ -26,7 +26,6 @@
 
   --bs: 0em 0em 0.75em rgba(0, 0, 0, 0.75);
   --bs4: 0em 0em 0.4em rgba(150, 150, 150, 0.75);
-  --bsbrown: -0.3em 0.3em 0em rgba(100, 50, 0, 0.75);
 }
 
 @media (min-width: 64em) {
@@ -1776,7 +1775,7 @@ a.smallyoutube:hover {
   margin: 0;
   padding: 0;
   border-radius: 0px 5px 5px 0px;
-  box-shadow: var(--bsbrown);
+  box-shadow: -0.3em 0.3em 0em rgba(100, 50, 0, 0.75);
   opacity: 0.75;
 }
 
@@ -1788,6 +1787,10 @@ a.smallyoutube:hover {
     opacity: 1;
     transform: translate(52px);
   }
+}
+
+#tabwrapper.dark {
+  box-shadow: -0.3em 0.3em 0em rgba(0, 0, 0, 0.75);
 }
 
 #tab {
@@ -1851,6 +1854,12 @@ a.smallyoutube:hover {
   #js {
     border-width: 0 0 0 5px;
   }
+}
+
+#html.dark,
+#css.dark,
+#js.dark {
+  border-color: var(--clr-dark);
 }
 
 div.subject-banner {
@@ -2015,45 +2024,32 @@ p.code-description {
   }
 }
 
-/* justifications */
-h3.pros {
-  display: block;
-  padding: 3px 10px;
-  margin: 20px auto;
-  max-width: 205px;
+/* pros cons */
+div.pros,
+div.cons {
+  display: flex;
+  justify-content: center;
+  margin: 25px auto 10px;
+}
+
+div.pros h3,
+div.cons h3 {
+  padding: 1px 5px;
+  box-shadow: var(--bs);
+  border-style: solid;
+  border-width: 2px;
+}
+
+div.pros h3 {
   background-color: lightgreen;
   color: green;
-  box-shadow: var(--bs);
   border-color: green;
-  border-style: solid;
-  border-width: 2px;
 }
 
-@media (min-width: 64em) {
-  h3.pros {
-    max-width: 265px;
-    border-width: 3px;
-  }
-}
-
-h3.cons {
-  display: block;
-  padding: 3px 10px;
-  margin: 20px auto;
-  max-width: 210px;
+div.cons h3 {
   background-color: lightcoral;
   color: darkred;
-  box-shadow: var(--bs);
   border-color: darkred;
-  border-style: solid;
-  border-width: 2px;
-}
-
-@media (min-width: 64em) {
-  h3.cons {
-    max-width: 280px;
-    border-width: 3px;
-  }
 }
 
 /* codebox coloured text */
