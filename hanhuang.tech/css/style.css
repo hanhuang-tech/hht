@@ -1768,51 +1768,40 @@ a.smallyoutube:hover {
 /* tab */
 #tabwrapper {
   position: fixed;
-  left: 0;
+  left: 5px;
   top: 45%;
   transform: translate(-50px);
   background-color: var(--clr-dark2);
   margin: 0;
   padding: 0;
-  border-radius: 0px 5px 5px 0px;
-  box-shadow: -0.3em 0.3em 0em rgba(100, 50, 0, 0.75);
+  box-shadow: -0.3em 0.3em 0em rgba(50, 50, 50, 1);
   opacity: 0.75;
+  border-radius: 5px;
 }
 
 @media (min-width: 64em) {
   #tabwrapper {
-    left: -10px;
+    left: -15px;
     top: 45%;
-    border-radius: 7px 0 0 7px;
+    border-radius: 6px;
+    box-shadow: -0.3em 0.3em 0em rgba(100, 100, 100, 1);
     opacity: 1;
     transform: translate(52px);
   }
 }
 
-#tabwrapper.dark {
-  box-shadow: -0.3em 0.3em 0em rgba(0, 0, 0, 0.75);
-}
-
 #tab {
-  padding: 0;
-  border-style: solid;
-  border-color: transparent;
-  border-radius: 0px 5px 5px 0px;
-}
-
-@media (min-width: 64em) {
-  #tab {
-    border-radius: 5px 0 0 5px;
-  }
+  padding: 4px;
 }
 
 .tab-html,
 .tab-css,
 .tab-js {
-  background-color: lightgray;
+  background-color: var(--clr-light);
   filter: grayscale(100%);
   padding: 4px;
-  border-radius: 2px;
+  box-shadow: var(--bs);
+  border-radius: 3px;
 }
 
 .tab-html,
@@ -1842,9 +1831,6 @@ a.smallyoutube:hover {
 #js {
   flex: 1;
   background-color: var(--clr-light);
-  border-width: 0 0 0 4px;
-  border-style: solid;
-  border-color: var(--clr-brown);
   padding-bottom: 15px;
 }
 
@@ -1854,12 +1840,6 @@ a.smallyoutube:hover {
   #js {
     border-width: 0 0 0 5px;
   }
-}
-
-#html.dark,
-#css.dark,
-#js.dark {
-  border-color: var(--clr-dark);
 }
 
 div.subject-banner {
