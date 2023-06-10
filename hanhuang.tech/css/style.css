@@ -1027,6 +1027,10 @@ div.leftbar {
     visibility: visible;
     background: var(--clr-dark);
     padding: 0 40px;
+    outline-width: 0 5px;
+    outline-style: inset;
+    outline-color: var(--clr-dark2);
+    outline-offset: -5px;
   }
 }
 
@@ -1781,7 +1785,7 @@ a.smallyoutube:hover {
 
 @media (min-width: 64em) {
   #tabwrapper {
-    left: -15px;
+    left: -5px;
     top: 45%;
     border-radius: 6px;
     box-shadow: -0.3em 0.3em 0em rgba(100, 100, 100, 1);
@@ -1853,7 +1857,6 @@ div.subject-banner {
   background-color: var(--clr-brown);
   background-blend-mode: multiply;
   background-size: cover;
-  background-attachment: fixed;
 }
 
 div.subject-banner.grey {
