@@ -1027,10 +1027,10 @@ div.leftbar {
     visibility: visible;
     background: var(--clr-dark);
     padding: 0 40px;
-    outline-width: 0 5px;
-    outline-style: inset;
-    outline-color: var(--clr-dark2);
-    outline-offset: -5px;
+    outline-width: 3px;
+    outline-style: solid;
+    outline-color: rgba(100, 100, 100, 0.2);
+    outline-offset: -10px;
   }
 }
 
@@ -1846,19 +1846,7 @@ a.smallyoutube:hover {
   }
 }
 
-div.subject-banner {
-  display: flex;
-  justify-content: center;
-  column-gap: 25px;
-  padding: 15px;
-  text-transform: uppercase;
-  font-family: var(--ff-secondary);
-  background-image: url(../img/treebyhouse.jpg);
-  background-color: var(--clr-brown);
-  background-blend-mode: multiply;
-  background-size: cover;
-}
-
+div.subject-banner,
 div.subject-banner.grey {
   display: flex;
   justify-content: center;
@@ -1866,14 +1854,22 @@ div.subject-banner.grey {
   padding: 15px;
   text-transform: uppercase;
   font-family: var(--ff-secondary);
-  background-image: url(../img/codefrontend.png);
-  background-color: rgb(80, 80, 80);
   background-blend-mode: multiply;
   background-size: 100%;
   background-attachment: fixed;
-  border-width: 10px 0 5px 0;
+  border-width: 5px 0;
   border-style: solid;
   border-color: var(--clr-dark) transparent var(--clr-dark2) transparent;
+}
+
+div.subject-banner {
+  background-image: url(../img/treebyhouse.jpg);
+  background-color: var(--clr-brown);
+}
+
+div.subject-banner.grey {
+  background-image: url(../img/codefrontend.png);
+  background-color: rgb(60, 60, 80);
 }
 
 @media (min-width: 64em) {
