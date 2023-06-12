@@ -1029,8 +1029,8 @@ div.leftbar {
     padding: 0 40px;
     outline-width: 3px;
     outline-style: solid;
-    outline-color: rgba(100, 100, 100, 0.2);
-    outline-offset: -10px;
+    outline-color: rgba(200, 200, 200, 0.1);
+    outline-offset: -5px;
   }
 }
 
@@ -1713,7 +1713,7 @@ h4.footer {
 
 @media (min-width: 64em) {
   #descbox img {
-    max-width: 350px;
+    max-width: 400px;
   }
 }
 
