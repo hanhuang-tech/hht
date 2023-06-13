@@ -2009,26 +2009,17 @@ div.cons {
   display: flex;
   justify-content: center;
   margin: 25px auto 10px;
+  background-color: var(--clr-dark2);
 }
 
 div.pros h3,
 div.cons h3 {
+  color: var(--clr-light);
   padding: 1px 5px;
   box-shadow: var(--bs);
-  border-style: solid;
   border-width: 2px;
-}
-
-div.pros h3 {
-  background-color: lightgreen;
-  color: green;
-  border-color: green;
-}
-
-div.cons h3 {
-  background-color: lightcoral;
-  color: darkred;
-  border-color: darkred;
+  border-style: solid;
+  border-color: var(--clr-light);
 }
 
 /* codebox coloured text */
