@@ -2009,17 +2009,32 @@ div.cons {
   display: flex;
   justify-content: center;
   margin: 25px auto 10px;
+  max-width: 275px;
   background-color: var(--clr-dark2);
+  outline: 2px solid var(--clr-dark2);
+  outline-offset: 2px;
+}
+
+@media (min-width: 64em) {
+  div.pros,
+  div.cons {
+    max-width: 600px;
+  }
 }
 
 div.pros h3,
 div.cons h3 {
   color: var(--clr-light);
-  padding: 1px 5px;
-  box-shadow: var(--bs);
-  border-width: 2px;
-  border-style: solid;
-  border-color: var(--clr-light);
+  padding: 1px 10px;
+  outline: 2px solid var(--clr-light);
+}
+
+div.pros h3 {
+  background-color: darkgreen;
+}
+
+div.cons h3 {
+  background-color: darkred;
 }
 
 /* codebox coloured text */
