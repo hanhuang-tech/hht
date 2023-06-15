@@ -1959,6 +1959,7 @@ div.codebox .brown {
   border-width: 2px 2px 2px 5px;
   border-style: solid;
   border-color: var(--clr-dark);
+  border-radius: 3px;
 }
 
 div.codebox.green {
@@ -2060,25 +2061,23 @@ div.cons h3 {
   font-family: var(--ff-secondary);
   line-height: 1rem;
   position: relative;
+  margin: 2px;
   padding: 0 5px;
+  color: var(--clr-dark);
+  border-color: var(--clr-dark);
+  border-radius: 3px;
 }
 
 #spoil-btn1 {
-  color: blue;
   background: skyblue;
-  border-color: blue;
 }
 
 #spoil-btn2 {
-  color: var(--clr-brown);
-  background: orange;
-  border-color: var(--clr-brown);
+  background: lightcoral;
 }
 
 #spoil-btn3 {
-  color: red;
-  background: lightcoral;
-  border-color: red;
+  background: lightgreen;
 }
 
 #spoil-btn1:hover,
@@ -2092,11 +2091,11 @@ div.cons h3 {
 }
 
 #spoil-btn2:hover {
-  background: lightgoldenrodyellow;
+  background: lightpink;
 }
 
 #spoil-btn3:hover {
-  background: lightpink;
+  background: rgb(175, 250, 175);
 }
 
 #spoil-btna {
