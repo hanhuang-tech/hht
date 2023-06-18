@@ -1950,7 +1950,7 @@ div.body-wrapper h3 {
 div.codebox,
 div.codebox .green,
 div.codebox .brown {
-  background: rgba(0, 0, 0, 0.2);
+  background: rgb(200, 200, 200);
   font-family: var(--ff-secondary);
   margin: 0;
   padding: 5px 10px;
@@ -1960,6 +1960,14 @@ div.codebox .brown {
   border-style: solid;
   border-color: var(--clr-dark);
   border-radius: 3px;
+}
+
+@media (min-width: 64em) {
+  div.codebox,
+  div.codebox .green,
+  div.codebox .brown {
+    padding: 8px 15px;
+  }
 }
 
 div.codebox.green {
@@ -2013,7 +2021,7 @@ div.cons {
   max-width: 275px;
   background-color: var(--clr-dark2);
   outline: 2px solid var(--clr-dark2);
-  outline-offset: 2px;
+  outline-offset: 1px;
 }
 
 @media (min-width: 64em) {
@@ -2038,23 +2046,12 @@ div.cons h3 {
   background-color: darkred;
 }
 
-/* codebox coloured text */
-.codebluetext {
-  color: darkblue;
-}
-
-.codebrowntext {
-  color: var(--clr-brown);
-}
-
-.codegreentext {
-  color: darkgreen;
-}
-
 /* spoilers */
 #spoil-btn1,
 #spoil-btn2,
-#spoil-btn3 {
+#spoil-btn3,
+#spoil-btna,
+#spoil-btnb {
   border-width: 2px 2px 2px 5px;
   border-style: solid;
   overflow-wrap: break-word;
@@ -2066,6 +2063,19 @@ div.cons h3 {
   color: var(--clr-dark);
   border-color: var(--clr-dark);
   border-radius: 3px;
+  transition: 0.3s;
+}
+
+@media (min-width: 64em) {
+  #spoil-btn1,
+  #spoil-btn2,
+  #spoil-btn3,
+  #spoil-btna,
+  #spoil-btnb {
+    line-height: 1.2rem;
+    margin: 3px;
+    padding: 2px 7px;
+  }
 }
 
 #spoil-btn1 {
@@ -2100,52 +2110,30 @@ div.cons h3 {
 
 #spoil-btna {
   color: darkgreen;
-  background: var(--clr-light);
-  font-family: var(--ff-secondary);
-
-  position: relative;
-  margin-bottom: 5px;
   border-color: darkgreen;
-  border-style: solid;
-
-  font-size: 0.8rem;
-  border-width: 2px;
-  border-radius: 6px;
 }
 
 #spoil-btna:hover {
   background: darkgreen;
   color: var(--clr-light);
   cursor: pointer;
-  transition: 0.5s;
 }
 
 #spoil-btnb {
   color: var(--clr-brown);
-  background: var(--clr-light);
-  font-family: var(--ff-secondary);
-
-  position: relative;
-  margin-bottom: 5px;
   border-color: var(--clr-brown);
-  border-style: solid;
-
-  font-size: 0.8rem;
-  border-width: 2px;
-  border-radius: 6px;
 }
 
 #spoil-btnb:hover {
   background: var(--clr-brown);
   color: var(--clr-light);
   cursor: pointer;
-  transition: 0.5s;
 }
 
 @media (min-width: 64em) {
   #spoil-btna,
   #spoil-btnb {
-    font-size: 1rem;
+    font-size: 0.85rem;
   }
 }
 
@@ -2154,7 +2142,7 @@ div.cons h3 {
 #spoil-move3,
 #spoil-movea,
 #spoil-moveb {
-  transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .hide-text1,
