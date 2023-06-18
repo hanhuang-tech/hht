@@ -1801,7 +1801,7 @@ a.smallyoutube:hover {
 .tab-html,
 .tab-css,
 .tab-js {
-  background-color: var(--clr-light);
+  background-color: rgba(200, 200, 200, 0.5);
   filter: grayscale(100%);
   padding: 4px;
   box-shadow: var(--bs);
