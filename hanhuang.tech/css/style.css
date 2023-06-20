@@ -892,16 +892,16 @@ div.logo {
 div.habbit-img {
   position: relative;
   margin-right: 10px;
-  filter: drop-shadow(0 0 2px lightgreen);
+  filter: drop-shadow(0 0 1px lightgreen);
   outline-width: 1px;
   outline-style: solid;
-  outline-color: var(--clr-accent3);
-  outline-offset: 5px;
+  outline-color: var(--clr-dark2);
+  outline-offset: 6px;
   transition: 1s;
 }
 
 div.habbit-img:hover {
-  filter: drop-shadow(0 0 6px lightgreen);
+  filter: drop-shadow(0 0 4px lightgreen);
 }
 
 @media (min-width: 64em) {
@@ -1027,10 +1027,6 @@ div.leftbar {
     visibility: visible;
     background: var(--clr-dark);
     padding: 0 40px;
-    outline-width: 3px;
-    outline-style: solid;
-    outline-color: rgba(200, 200, 200, 0.1);
-    outline-offset: -5px;
   }
 }
 
@@ -1642,7 +1638,7 @@ h4.footer {
   right: -15px;
 
   display: inline-block;
-  background-color: var(--clr-accent);
+  background-color: rgb(75, 100, 150);
 
   font-weight: var(--fw-reg);
   color: var(--clr-light);
