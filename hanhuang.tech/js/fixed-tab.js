@@ -218,40 +218,43 @@ function changeTabMobile() {
 }
 
 function changeTabDesktop() {
-  // if (Math.abs(document.documentElement.scrollTop) < 2000) {
-  //   tabhtml.style.filter = "grayscale(0%)";
-  //   tabcss.style.filter = "grayscale(100%)";
-  //   tabjs.style.filter = "grayscale(100%)";
-  //   tabWrap.style.backgroundColor = "var(--clr-html)";
-  // } else if (
-  //   Math.abs(document.documentElement.scrollTop) > 2100 &&
-  //   Math.abs(document.documentElement.scrollTop) < 2200
-  // ) {
-  //   tabhtml.style.filter = "grayscale(100%)";
-  //   tabcss.style.filter = "grayscale(0%)";
-  //   tabjs.style.filter = "grayscale(100%)";
-  //   tabWrap.style.backgroundColor = "var(--clr-css)";
-  // } else if (Math.abs(document.documentElement.scrollTop) > 2200) {
-  //   tabhtml.style.filter = "grayscale(100%)";
-  //   tabcss.style.filter = "grayscale(100%)";
-  //   tabjs.style.filter = "grayscale(0%)";
-  //   tabWrap.style.backgroundColor = "var(--clr-js)";
-  // }
   window.addEventListener("scroll", function () {
-    if (window.scrollY > htmlsection.offsetTop + htmlsection.offsetHeight) {
+    if (
+      window.scrollY > htmlsection.offsetTop &&
+      window.scrollY < csssection.offsetTop
+    ) {
       tabhtml.style.filter = "grayscale(0%)";
       tabcss.style.filter = "grayscale(100%)";
       tabjs.style.filter = "grayscale(100%)";
       tabWrap.style.backgroundColor = "var(--clr-html)";
     } else if (
-      window.scrollY >
-      csssection.offsetTop + csssection.offsetHeight
+      window.scrollY > csssection.offsetTop &&
+      window.scrollY < jssection.offsetTop
     ) {
       tabhtml.style.filter = "grayscale(100%)";
       tabcss.style.filter = "grayscale(0%)";
       tabjs.style.filter = "grayscale(100%)";
       tabWrap.style.backgroundColor = "var(--clr-css)";
-    } else if (window.scrollY > jssection.offsetTop + jssection.offsetHeight) {
+    } else if (window.scrollY > jssection.offsetTop) {
+      tabhtml.style.filter = "grayscale(100%)";
+      tabcss.style.filter = "grayscale(100%)";
+      tabjs.style.filter = "grayscale(0%)";
+      tabWrap.style.backgroundColor = "var(--clr-js)";
+    }
+  });
+
+  window.addEventListener("click", function (section) {
+    if (section == htmlsection) {
+      tabhtml.style.filter = "grayscale(0%)";
+      tabcss.style.filter = "grayscale(100%)";
+      tabjs.style.filter = "grayscale(100%)";
+      tabWrap.style.backgroundColor = "var(--clr-html)";
+    } else if (section == csssection) {
+      tabhtml.style.filter = "grayscale(100%)";
+      tabcss.style.filter = "grayscale(0%)";
+      tabjs.style.filter = "grayscale(100%)";
+      tabWrap.style.backgroundColor = "var(--clr-css)";
+    } else if (section == jssection) {
       tabhtml.style.filter = "grayscale(100%)";
       tabcss.style.filter = "grayscale(100%)";
       tabjs.style.filter = "grayscale(0%)";

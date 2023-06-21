@@ -1371,11 +1371,10 @@ div.project-list-subjects h4 {
     height: 300px;
     width: 300px;
     background-image: url(../img/pohutu.jpg);
-    background-color: radial-gradient(var(--clr-dark2), black);
-    background-blend-mode: multiply;
+    filter: blur(1px) contrast(200%) grayscale(50%);
     background-size: cover;
     box-shadow: var(--bs);
-    border-radius: 20px;
+    border-radius: 30px;
   }
 
   #habbit-border {
@@ -1388,8 +1387,8 @@ div.project-list-subjects h4 {
     margin: auto;
     height: 120px;
     width: 120px;
-    background-color: rgb(0, 0, 0, 0.5);
-    outline-width: 10px;
+    background-color: rgba(0, 50, 100, 0.6);
+    outline-width: 8px;
     outline-style: solid;
     outline-color: var(--clr-dark);
   }
