@@ -78,15 +78,9 @@ logo.addEventListener("mouseleave", function () {
 // on scroll
 // fixed pos logo if min-width: 64em
 window.onscroll = function () {
-  if (window.matchMedia("(min-width: 64em)").matches) {
-    scrollRGB();
-    revealNavForTabSection();
-    changeTabDesktop();
-  } else {
-    scrollRGB();
-    revealNavForTabSection();
-    changeTabMobile();
-  }
+  scrollRGB();
+  revealNavForTabSection();
+  changeTab();
 };
 
 // change color on scroll
@@ -183,84 +177,50 @@ const tab = document.querySelector("#tab");
 const tabhtml = document.querySelector(".tab-html");
 const tabcss = document.querySelector(".tab-css");
 const tabjs = document.querySelector(".tab-js");
-tabWrap.style.transitionDuration = "0.5s";
+tabWrap.style.transitionDuration = "1s";
 tab.style.transitionDuration = "0.5s";
 tabhtml.style.transitionDuration = "0.5s";
 tabcss.style.transitionDuration = "0.5s";
 tabjs.style.transitionDuration = "0.5s";
 
-function changeTabMobile() {
-  if (Math.abs(document.documentElement.scrollTop) < 100) {
-    tabWrap.style.transform = "translate(-50px)";
-  } else if (
-    Math.abs(document.documentElement.scrollTop) > 100 &&
-    Math.abs(document.documentElement.scrollTop) < 3500
+function changeTab() {
+  if (window.matchMedia("(max-width: 64em)").matches) {
+    window.addEventListener("scroll", function () {
+      if (Math.abs(document.documentElement.scrollTop) < 100) {
+        tabWrap.style.transform = "translate(-50px)";
+      } else {
+        tabWrap.style.transform = "translate(0px)";
+      }
+    });
+  } else {
+    if (Math.abs(document.documentElement.scrollTop) < 100) {
+      tabWrap.style.transform = "translate(0)";
+    } else {
+      tabWrap.style.transform = "translate(145px)";
+    }
+  }
+  if (
+    Math.round(window.scrollY) + 10 > htmlsection.offsetTop &&
+    Math.round(window.scrollY) + 10 < csssection.offsetTop
   ) {
-    tabWrap.style.transform = "translate(0px)";
     tabhtml.style.filter = "grayscale(0%)";
     tabcss.style.filter = "grayscale(100%)";
     tabjs.style.filter = "grayscale(100%)";
     tabWrap.style.backgroundColor = "var(--clr-html)";
   } else if (
-    Math.abs(document.documentElement.scrollTop) > 3500 &&
-    Math.abs(document.documentElement.scrollTop) < 3600
+    Math.round(window.scrollY) + 10 > csssection.offsetTop &&
+    Math.round(window.scrollY) + 10 < jssection.offsetTop
   ) {
     tabhtml.style.filter = "grayscale(100%)";
     tabcss.style.filter = "grayscale(0%)";
     tabjs.style.filter = "grayscale(100%)";
     tabWrap.style.backgroundColor = "var(--clr-css)";
-  } else if (Math.abs(document.documentElement.scrollTop) > 3900) {
+  } else if (Math.round(window.scrollY) + 10 > jssection.offsetTop) {
     tabhtml.style.filter = "grayscale(100%)";
     tabcss.style.filter = "grayscale(100%)";
     tabjs.style.filter = "grayscale(0%)";
     tabWrap.style.backgroundColor = "var(--clr-js)";
   }
-}
-
-function changeTabDesktop() {
-  window.addEventListener("scroll", function () {
-    if (
-      window.scrollY > htmlsection.offsetTop &&
-      window.scrollY < csssection.offsetTop
-    ) {
-      tabhtml.style.filter = "grayscale(0%)";
-      tabcss.style.filter = "grayscale(100%)";
-      tabjs.style.filter = "grayscale(100%)";
-      tabWrap.style.backgroundColor = "var(--clr-html)";
-    } else if (
-      window.scrollY > csssection.offsetTop &&
-      window.scrollY < jssection.offsetTop
-    ) {
-      tabhtml.style.filter = "grayscale(100%)";
-      tabcss.style.filter = "grayscale(0%)";
-      tabjs.style.filter = "grayscale(100%)";
-      tabWrap.style.backgroundColor = "var(--clr-css)";
-    } else if (window.scrollY > jssection.offsetTop) {
-      tabhtml.style.filter = "grayscale(100%)";
-      tabcss.style.filter = "grayscale(100%)";
-      tabjs.style.filter = "grayscale(0%)";
-      tabWrap.style.backgroundColor = "var(--clr-js)";
-    }
-  });
-
-  window.addEventListener("click", function (section) {
-    if (section == htmlsection) {
-      tabhtml.style.filter = "grayscale(0%)";
-      tabcss.style.filter = "grayscale(100%)";
-      tabjs.style.filter = "grayscale(100%)";
-      tabWrap.style.backgroundColor = "var(--clr-html)";
-    } else if (section == csssection) {
-      tabhtml.style.filter = "grayscale(100%)";
-      tabcss.style.filter = "grayscale(0%)";
-      tabjs.style.filter = "grayscale(100%)";
-      tabWrap.style.backgroundColor = "var(--clr-css)";
-    } else if (section == jssection) {
-      tabhtml.style.filter = "grayscale(100%)";
-      tabcss.style.filter = "grayscale(100%)";
-      tabjs.style.filter = "grayscale(0%)";
-      tabWrap.style.backgroundColor = "var(--clr-js)";
-    }
-  });
 }
 
 // spoiler button
@@ -326,178 +286,3 @@ spoilBtn[4].addEventListener("click", function () {
     ? spoilMov[4].classList.replace(hideText[4], revealText[4])
     : spoilMov[4].classList.replace(revealText[4], hideText[4]);
 });
-
-// codebox NOT CURRENTLY USED
-const codeBox = document.body.querySelector(".codebox");
-const span = "</span>";
-const spanBlue = "<span class='codeblue'>";
-const spanGreen = "<span class='codegreen'>";
-const spanBrown = "<span class='codebrown'>";
-
-function styleEl(codeBox) {
-  codeBox.innerHTML = codeBox.innerHTML.replaceAll(
-    "&lt;link ",
-    `&lt;${spanBlue}link ${span}`
-  );
-  codeBox.innerHTML = codeBox.innerHTML.replaceAll(
-    "&lt;section class",
-    `&lt;${spanBlue}section${span} ${spanGreen}class${span}`
-  );
-  codeBox.innerHTML = codeBox.innerHTML.replaceAll(
-    "/section",
-    `/${spanBlue}section${span}`
-  );
-  codeBox.innerHTML = codeBox.innerHTML.replaceAll(
-    "&lt;button class",
-    `&lt;${spanBlue}button${span} ${spanGreen}class${span}`
-  );
-  codeBox.innerHTML = codeBox.innerHTML.replaceAll(
-    "/button",
-    `/${spanBlue}button${span}`
-  );
-  codeBox.innerHTML = codeBox.innerHTML.replaceAll(
-    "&lt;meta ",
-    `&lt;${spanBlue}meta ${span}`
-  );
-  codeBox.innerHTML = codeBox.innerHTML.replaceAll(
-    "a ",
-    `${spanBlue}a ${span}`
-  );
-  codeBox.innerHTML = codeBox.innerHTML.replaceAll(
-    "/a",
-    `/${spanBlue}a${span}`
-  );
-  codeBox.innerHTML = codeBox.innerHTML.replaceAll(
-    "&lt;p class",
-    `&lt${spanBlue}p${span} ${spanGreen}class${span}`
-  );
-  codeBox.innerHTML = codeBox.innerHTML.replaceAll(
-    "&lt;p&gt;",
-    `&lt${spanBlue}p${span}&gt;`
-  );
-  codeBox.innerHTML = codeBox.innerHTML.replaceAll(
-    "&lt;/p&gt;",
-    `&lt;/${spanBlue}p${span}&gt;`
-  );
-  codeBox.innerHTML = codeBox.innerHTML.replaceAll(
-    "&lt;nav class",
-    `&lt;${spanBlue}nav${span} ${spanGreen}class${span}`
-  );
-  codeBox.innerHTML = codeBox.innerHTML.replaceAll(
-    "/nav",
-    `/${spanBlue}nav${span}`
-  );
-  codeBox.innerHTML = codeBox.innerHTML.replaceAll(
-    "&lt;ul class",
-    `&lt;${spanBlue}ul${span} ${spanGreen}class${span}`
-  );
-  codeBox.innerHTML = codeBox.innerHTML.replaceAll(
-    "/ul",
-    `/${spanBlue}ul${span}`
-  );
-  codeBox.innerHTML = codeBox.innerHTML.replaceAll(
-    "&lt;li class",
-    `&lt;${spanBlue}li${span} ${spanGreen}class${span}`
-  );
-  codeBox.innerHTML = codeBox.innerHTML.replaceAll(
-    "/li",
-    `/${spanBlue}li${span}`
-  );
-  codeBox.innerHTML = codeBox.innerHTML.replaceAll(
-    "/div",
-    `/${spanBlue}div${span}`
-  );
-  codeBox.innerHTML = codeBox.innerHTML.replaceAll(
-    "&lt;div class",
-    `&lt${spanBlue}div${span} ${spanGreen}class${span}`
-  );
-  codeBox.innerHTML = codeBox.innerHTML.replaceAll(
-    `&lt;h1 class`,
-    `&lt;${spanBlue}h1${span} ${spanGreen}class${span}`
-  );
-  codeBox.innerHTML = codeBox.innerHTML.replaceAll(
-    `&lt;h2 class`,
-    `&lt;${spanBlue}h2${span} ${spanGreen}class${span}`
-  );
-  codeBox.innerHTML = codeBox.innerHTML.replaceAll(
-    `&lt;h3 class`,
-    `&lt;${spanBlue}h3${span} ${spanGreen}class${span}`
-  );
-  codeBox.innerHTML = codeBox.innerHTML.replaceAll(
-    "/h1",
-    `/${spanBlue}h1${span}`
-  );
-  codeBox.innerHTML = codeBox.innerHTML.replaceAll(
-    "/h2",
-    `/${spanBlue}h2${span}`
-  );
-  codeBox.innerHTML = codeBox.innerHTML.replaceAll(
-    "/h3",
-    `/${spanBlue}h3${span}`
-  );
-  codeBox.innerHTML = codeBox.innerHTML.replaceAll(
-    "&lt;img ",
-    `&lt;${spanBlue}img ${span}`
-  );
-
-  codeBox.innerHTML = codeBox.innerHTML.replaceAll(
-    '" class=',
-    `" ${spanGreen}class${span}=`
-  );
-  codeBox.innerHTML = codeBox.innerHTML.replaceAll(
-    "id=",
-    `${spanGreen}id${span}=`
-  );
-  codeBox.innerHTML = codeBox.innerHTML.replaceAll(
-    "alt=",
-    `${spanGreen}alt${span}=`
-  );
-  codeBox.innerHTML = codeBox.innerHTML.replaceAll(
-    "rel=",
-    `${spanGreen}rel${span}=`
-  );
-  codeBox.innerHTML = codeBox.innerHTML.replaceAll(
-    "src",
-    `${spanGreen}src${span}`
-  );
-  codeBox.innerHTML = codeBox.innerHTML.replaceAll(
-    "href",
-    `${spanGreen}href${span}`
-  );
-  codeBox.innerHTML = codeBox.innerHTML.replaceAll(
-    "name",
-    `${spanGreen}name${span}`
-  );
-  codeBox.innerHTML = codeBox.innerHTML.replaceAll(
-    "charset",
-    `${spanGreen}charset${span}`
-  );
-  codeBox.innerHTML = codeBox.innerHTML.replaceAll(
-    "type",
-    `${spanGreen}type${span}`
-  );
-  codeBox.innerHTML = codeBox.innerHTML.replaceAll(
-    "content",
-    `${spanGreen}content${span}`
-  );
-  codeBox.innerHTML = codeBox.innerHTML.replaceAll(
-    "aria-label=",
-    `${spanGreen}aria-label${span}=`
-  );
-
-  codeBox.innerHTML = codeBox.innerHTML.replaceAll(
-    "&lt;",
-    `${spanBrown}&lt;${span}`
-  );
-  codeBox.innerHTML = codeBox.innerHTML.replaceAll(
-    "&gt;",
-    `${spanBrown}&gt;${span}`
-  );
-}
-
-const codeboxEl = document.getElementsByClassName("codebox");
-
-// NOT CURRENTLY USED
-// for (var i = 0; i < codeboxEl.length; i++) {
-//     styleEl(codeboxEl[i])
-// }
