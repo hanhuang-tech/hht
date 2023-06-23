@@ -1876,6 +1876,13 @@ div.subject-banner.grey {
 .subject-banner h2 {
   color: var(--clr-light);
   padding: 0 5px;
+  margin: auto 0;
+}
+
+.subject-banner .html,
+.subject-banner .css,
+.subject-banner .js {
+  border: 2px solid var(--clr-light);
 }
 
 .subject-banner .html {
