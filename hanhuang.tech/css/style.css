@@ -992,12 +992,12 @@ div.connectedto {
   align-items: center;
   white-space: nowrap;
   overflow: hidden;
-  animation: marquee 10s linear infinite;
+  animation: marquee 8s linear infinite;
 }
 
 @media (min-width: 64em) {
   div.connectedto {
-    animation: marquee 5s linear infinite;
+    animation: marquee 12s linear infinite;
   }
 }
 

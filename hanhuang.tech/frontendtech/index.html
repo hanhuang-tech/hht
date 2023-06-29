@@ -103,7 +103,7 @@
                 <h4>&lt;head&gt;</h4>
             </div>
             <div class="body-wrapper">
-                <h3>Setting up optimal viewing for webpages</h3>
+                <h3>Setting up optimal viewing</h3>
                 <div class="codebox">
                     <p class="margin0">&lt;meta charset="UTF-8"&gt;</p>
                 </div>
@@ -124,7 +124,7 @@
                 <p class="code-description">
                     Normalize allows our pages to be displayed correctly across various web browsers and fixes
                     common bugs around &lt;html&gt; elements. </p>
-                <h3>Attaching favicon</h3>
+                <h3>Favicon</h3>
                 <div class="codebox">
                     <p class="margin0">&lt;link rel="icon" type="image/png" href="img/habbit-favicon.png"/&gt;
                     </p>
@@ -132,7 +132,7 @@
                 <p class="code-description">
                     Linking a favicon image from the images directory to this webpage will add more personality.
                 </p>
-                <h3>Linking Google Fonts</h3>
+                <h3>Google Fonts</h3>
                 <div class="codebox">
                     <p class="margin0"> &lt;link
                         href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Noto+Sans:wght@400;700&display=swap"
@@ -152,7 +152,7 @@
                 <h4>&lt;header&gt;</h4>
             </div>
             <div class="body-wrapper">
-                <h3>Assembling the logo section</h3>
+                <h3>Logo</h3>
                 <div class="codebox">
                     <p class="margin0">&lt;div class="logowrap"&gt;</p>
                     <p class="margin1">&lt;div class="logo"&gt;</p>
@@ -174,22 +174,37 @@
                 </div>
                 <p class="code-description"> This logo has 2 forms habbit-a and habbit-b. habbit-b is hidden until the user's cursor crosses an x-axis, registered in hht.js. The result is alternating habbit images, which look like moving eyes, while in transition.
                 </p>
-                <h3>Setting up the navigation bar</h3>
+                <h3>Navigation bar</h3>
                 <div class="codebox">
-                    <p class="margin0">&lt;nav class="nav nav__bar"&gt;</p>
-                    <p class="margin1">&lt;ul class="nav__list"&gt;</p>
-                    <p class="margin2">&lt;li class="nav__item"&gt;&lt;a
-                        href="home#resources"&gt;&lt;Resources&gt;&lt;/a&gt;&lt;/li&gt;</p>
-                    <p class="margin2">&lt;li class="nav__item"&gt;&lt;a href="home#myprojects"&gt;&lt;My
-                        Projects&gt;&lt;/a&gt;&lt;/li&gt;</p>
-                    <p class="margin2">&lt;li class="nav__item"&gt;&lt;a href="home#aboutme"&gt;&lt;About
-                        me&gt;&lt;/a&gt;&lt;/li&gt;</p>
-                    <p class="margin2">&lt;li class="nav__item"&gt;&lt;a href="home#findme"&gt;&lt;Find
-                        me&gt;&lt;/a&gt;&lt;/li&gt;</p>
-                    <p class="margin2">&lt;li class="nav__arrow"&gt;&lt;a href="home"&gt;&lt;p
-                        class="arrow"&gt;&lt;/p&gt;&lt;/a&gt;&lt;/li&gt;</p>
-                    <p class="margin1">&lt;/ul&gt;</p>
-                    <p class="margin0">&lt;/nav&gt;</p>
+                    <p class="margin0">&lt;nav class="bar"&gt;</p>
+                        <p class="margin1">&lt;div id="burger"&gt;</p>
+                          <p class="margin2">&lt;div class="ham"&gt;&lt;/div&gt;</p>
+                          <p class="margin2">&lt;div class="ham"&gt;&lt;/div&gt;</p>
+                          <p class="margin2">&lt;div class="ham"&gt;&lt;/div&gt;</p>
+                        <p class="margin1">&lt;/div&gt;</p>
+                        <p class="margin1">&lt;div id="hidden-burger-contents"&gt;</p>
+                          <p class="margin2">&lt;a href="#resources" class="resources"&gt;</p>
+                            <p class="margin3">&lt;h3>Resources&lt;/h3&gt;</p>
+                          <p class="margin2">&lt;/a&gt;</p>
+                          <p class="margin2">&lt;div id="side-burger-content"&gt;</p>
+                            <p class="margin3">&lt;a href="frontendtech/index.html" class="title"&gt;Frontend tech&lt;/a&gt;</p>
+                            <p class="margin3">&lt;a href="frontendtech/index.html#html" class="subtitle"&gt;HTML&lt;/a&gt;</p>
+                            <p class="margin3">&lt;a href="frontendtech/index.html#css" class="subtitle"&gt;CSS&lt;/a&gt;</p>
+                            <p class="margin3">&lt;a href="frontendtech/index.html#js" class="subtitle"&gt;JS&lt;/a&gt;</p>
+                          <p class="margin2">&lt;/div&gt;</p>
+                          <p class="margin2">&lt;a href="#projects" class="projects"&gt;</p>
+                            <p class="margin3">&lt;h3&gt;Projects&lt;/h3&gt;</p>
+                          <p class="margin2">&lt;/a>
+                          <p class="margin2">&lt;a href="#aboutme" class="aboutme"&gt;</p>
+                            <p class="margin3">&lt;h3>About Me&lt;/h3&gt;</p>
+                          <p class="margin2">&lt;/a&gt;</p>
+                          <p class="margin2">&lt;img
+                            src="img/habbit-a.png"
+                            class="habbit-a burger"
+                            alt="a pic of habbit"
+                          /&gt;</p>
+                          <p class="margin1">&lt;/div&gt;</p>
+                      <p class="margin0">&lt;/nav&gt;</p>
                 </div>
                 <p class="code-description">
                     The navigation bar at the top right of each page lists notable topics covered throughout the
