@@ -992,12 +992,12 @@ div.connectedto {
   align-items: center;
   white-space: nowrap;
   overflow: hidden;
-  animation: marquee 8s linear infinite;
+  animation: marquee 5s linear infinite;
 }
 
 @media (min-width: 64em) {
   div.connectedto {
-    animation: marquee 12s linear infinite;
+    animation: marquee 8s linear infinite;
   }
 }
 
@@ -1956,18 +1956,26 @@ div.body-wrapper h3 {
 
 /* codebox */
 div.codebox,
+div.codebox-html,
+div.codebox-css,
+div.codebox-js,
 div.codebox .green,
 div.codebox .brown {
+  position: relative;
   background: rgb(200, 200, 200);
   font-family: var(--ff-secondary);
   margin: 0;
   padding: 5px 10px;
   line-height: 1rem;
-  overflow-wrap: break-word;
   border-width: 2px 2px 2px 5px;
   border-style: solid;
   border-color: var(--clr-dark);
   border-radius: 3px;
+}
+
+div.codebox-html {
+  background: rgba(255, 165, 0, 0.2);
+  border-color: var(--clr-html);
 }
 
 @media (min-width: 64em) {
@@ -1986,28 +1994,62 @@ div.codebox.brown {
   border-color: var(--clr-brown);
 }
 
+div.code-html,
+div.code-css,
+div.code-js {
+  position: absolute;
+  z-index: 1;
+  right: 5px;
+  color: var(--clr-light);
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+div.code-html {
+  z-index: 0;
+  background-color: rgba(255, 165, 0, 1);
+}
+
+@media (min-width: 64em) {
+  div.code-html,
+  div.code-css,
+  div.code-js {
+    padding: 1px 4px;
+  }
+}
+
+p.margin0,
+p.margin1,
+p.margin2,
+p.margin3,
+p.margin4,
+p.margin5 {
+  position: relative;
+  overflow-x: auto;
+}
+
 p.margin0 {
   margin: 0;
 }
 
 p.margin1 {
-  margin: 0 0 0 40px;
+  margin: 0 0 0 20px;
 }
 
 p.margin2 {
-  margin: 0 0 0 80px;
+  margin: 0 0 0 40px;
 }
 
 p.margin3 {
-  margin: 0 0 0 120px;
+  margin: 0 0 0 60px;
 }
 
 p.margin4 {
-  margin: 0 0 0 160px;
+  margin: 0 0 0 80px;
 }
 
 p.margin5 {
-  margin: 0 0 0 200px;
+  margin: 0 0 0 100px;
 }
 
 p.code-description {
