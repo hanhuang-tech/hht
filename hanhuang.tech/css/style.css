@@ -1956,26 +1956,18 @@ div.body-wrapper h3 {
 
 /* codebox */
 div.codebox,
-div.codebox-html,
-div.codebox-css,
-div.codebox-js,
 div.codebox .green,
 div.codebox .brown {
   position: relative;
-  background: rgb(200, 200, 200);
+  background: var(--clr-dark);
   font-family: var(--ff-secondary);
   margin: 0;
   padding: 5px 10px;
   line-height: 1rem;
   border-width: 2px 2px 2px 5px;
   border-style: solid;
-  border-color: var(--clr-dark);
+  border-color: gray;
   border-radius: 3px;
-}
-
-div.codebox-html {
-  background: rgba(255, 165, 0, 0.2);
-  border-color: var(--clr-html);
 }
 
 @media (min-width: 64em) {
@@ -2000,14 +1992,20 @@ div.code-js {
   position: absolute;
   z-index: 1;
   right: 5px;
-  color: var(--clr-light);
+  color: var(--clr-dark);
   padding: 0 2px;
   border-radius: 2px;
 }
 
 div.code-html {
-  z-index: 0;
-  background-color: rgba(255, 165, 0, 1);
+  background-color: var(--clr-html);
+  opacity: 0.5;
+}
+div.code-css {
+  background-color: var(--clr-css);
+}
+div.code-js {
+  background-color: var(--clr-js);
 }
 
 @media (min-width: 64em) {
@@ -2025,6 +2023,8 @@ p.margin3,
 p.margin4,
 p.margin5 {
   position: relative;
+  z-index: 2;
+  color: lightgray;
   overflow-x: auto;
 }
 
