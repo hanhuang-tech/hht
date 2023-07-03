@@ -1669,7 +1669,7 @@ h4.footer {
   background-color: var(--clr-dark2);
   border-width: 5px 0 0;
   border-style: solid;
-  border-color: var(--clr-light);
+  border-color: gray;
 }
 
 #descbox-body {
