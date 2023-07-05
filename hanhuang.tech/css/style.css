@@ -1667,9 +1667,6 @@ h4.footer {
 /* frontend tech */
 #descbox {
   background-color: var(--clr-dark2);
-  border-width: 5px 0 0;
-  border-style: solid;
-  border-color: gray;
 }
 
 #descbox-body {
@@ -1846,7 +1843,7 @@ a.smallyoutube:hover {
 #js {
   flex: 1;
   background-color: var(--clr-light);
-  padding: 10px 0;
+  padding-bottom: 15px;
 }
 
 @media (min-width: 64em) {
@@ -1926,7 +1923,7 @@ div.side-heading {
   flex-direction: column;
   font-family: var(--ff-secondary);
   row-gap: 2px;
-  padding: 10px 0 0 10px;
+  margin: 10px 0 0 10px;
 }
 
 div.side-heading h4 {
@@ -1943,7 +1940,7 @@ div.body-wrapper {
 }
 
 div.body-wrapper h3 {
-  margin: 2px 0;
+  margin: 10px 0 5px;
 }
 
 @media (min-width: 64em) {
@@ -2064,7 +2061,7 @@ p.margin5 {
 }
 
 p.code-description {
-  margin: 5px 0;
+  margin: 5px 0 10px;
 }
 
 @media (min-width: 64em) {
