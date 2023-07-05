@@ -1964,15 +1964,14 @@ div.body-wrapper h3 {
 
 /* codebox */
 div.codebox,
-div.codebox .green,
-div.codebox .brown {
+div.code-btn-j {
   position: relative;
   background: var(--clr-dark);
   font-family: var(--ff-secondary);
   margin: 0;
   padding: 5px 10px;
   line-height: 1rem;
-  border-width: 2px 2px 2px 5px;
+  border-width: 2px 2px 2px 6px;
   border-style: solid;
   border-color: gray;
   border-radius: 3px;
@@ -1980,18 +1979,13 @@ div.codebox .brown {
 
 @media (min-width: 64em) {
   div.codebox,
-  div.codebox .green,
-  div.codebox .brown {
+  div.code-btn-j {
     padding: 8px 15px;
   }
 }
 
-div.codebox.green {
-  border-color: var(--clr-accent);
-}
-
-div.codebox.brown {
-  border-color: var(--clr-brown);
+div.code-btn-j {
+  border-color: var(--clr-js);
 }
 
 div.code-html,
@@ -2060,12 +2054,12 @@ p.margin5 {
   margin: 0 0 0 100px;
 }
 
-p.code-description {
+p.code-desc {
   margin: 5px 0 10px;
 }
 
 @media (min-width: 64em) {
-  p.code-description {
+  p.code-desc {
     margin: 5px 0 20px;
   }
 }
