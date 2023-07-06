@@ -1728,16 +1728,6 @@ a.medyoutube {
   transition: 1s;
 }
 
-a.smallgithub,
-a.smallyoutube {
-  padding: 4px;
-  margin: auto;
-  filter: invert(10%);
-  border-radius: 5px;
-  background-color: transparent;
-  transition: 1s;
-}
-
 @media (min-width: 64em) {
   a.medgithub,
   a.medyoutube {
@@ -1746,17 +1736,13 @@ a.smallyoutube {
 }
 
 a.medgithub img,
-a.medyoutube img,
-a.smallgithub img,
-a.smallyoutube img {
+a.medyoutube img {
   max-width: 20px;
 }
 
 @media (min-width: 64em) {
   a.medgithub img,
-  a.medyoutube img,
-  a.smallgithub img,
-  a.smallyoutube img {
+  a.medyoutube img {
     max-width: 22px;
   }
 }
@@ -1764,11 +1750,6 @@ a.smallyoutube img {
 a.medgithub:hover,
 a.medyoutube:hover {
   background-color: rgba(200, 200, 200, 1);
-}
-
-a.smallgithub:hover,
-a.smallyoutube:hover {
-  background-color: rgba(140, 140, 140, 1);
 }
 
 /* tab */
@@ -1800,9 +1781,7 @@ a.smallyoutube:hover {
   padding: 4px;
 }
 
-.tab-html,
-.tab-css,
-.tab-js {
+.tab-content {
   background-color: rgba(200, 200, 200, 0.6);
   filter: grayscale(100%);
   padding: 4px;
@@ -1810,9 +1789,7 @@ a.smallyoutube:hover {
   border-radius: 3px;
 }
 
-.tab-html:hover,
-.tab-css:hover,
-.tab-js:hover {
+.tab-content:hover {
   background-color: rgba(200, 200, 200, 0.8);
 }
 

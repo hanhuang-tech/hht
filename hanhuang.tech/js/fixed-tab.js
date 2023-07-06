@@ -79,7 +79,7 @@ logo.addEventListener("mouseleave", function () {
 // fixed pos logo if min-width: 64em
 window.onscroll = function () {
   scrollRGB();
-  revealNavForTabSection();
+  revealNavArrowBtn();
   changeTab();
 };
 
@@ -124,7 +124,7 @@ function rgbInverseColor(r, g, b) {
 
 const dynamicRGB = document.querySelector("#dynamic-rgb");
 const hanSection = document.querySelector("#han");
-const navForTabSection = document.querySelector("nav.bar.sectioned-with-tab");
+const navArrowBtn = document.querySelector("nav.bar.sectioned-with-tab");
 let lastScroll = 0;
 let r = 0;
 let g = 0;
@@ -160,11 +160,11 @@ function scrollRGB() {
   lastScroll = currentScroll;
 }
 
-function revealNavForTabSection() {
+function revealNavArrowBtn() {
   if (Math.abs(document.documentElement.scrollTop) > 500) {
-    navForTabSection.style.transform = "translateX(0px)";
+    navArrowBtn.style.transform = "translateX(0px)";
   } else {
-    navForTabSection.style.transform = "translateX(50px)";
+    navArrowBtn.style.transform = "translateX(50px)";
   }
 }
 
@@ -199,28 +199,28 @@ function changeTab() {
       tabWrap.style.transform = "translate(145px)";
     }
   }
-  if (
-    Math.round(window.scrollY) + 10 > htmlsection.offsetTop &&
-    Math.round(window.scrollY) + 10 < csssection.offsetTop
-  ) {
-    tabhtml.style.filter = "grayscale(0%)";
-    tabcss.style.filter = "grayscale(100%)";
-    tabjs.style.filter = "grayscale(100%)";
-    tabWrap.style.backgroundColor = "var(--clr-html)";
-  } else if (
-    Math.round(window.scrollY) + 10 > csssection.offsetTop &&
-    Math.round(window.scrollY) + 10 < jssection.offsetTop
-  ) {
-    tabhtml.style.filter = "grayscale(100%)";
-    tabcss.style.filter = "grayscale(0%)";
-    tabjs.style.filter = "grayscale(100%)";
-    tabWrap.style.backgroundColor = "var(--clr-css)";
-  } else if (Math.round(window.scrollY) + 10 > jssection.offsetTop) {
-    tabhtml.style.filter = "grayscale(100%)";
-    tabcss.style.filter = "grayscale(100%)";
-    tabjs.style.filter = "grayscale(0%)";
-    tabWrap.style.backgroundColor = "var(--clr-js)";
-  }
+  // if (
+  //   Math.round(window.scrollY) + 10 > htmlsection.offsetTop &&
+  //   Math.round(window.scrollY) + 10 < csssection.offsetTop
+  // ) {
+  //   tabhtml.style.filter = "grayscale(0%)";
+  //   tabcss.style.filter = "grayscale(100%)";
+  //   tabjs.style.filter = "grayscale(100%)";
+  //   tabWrap.style.backgroundColor = "var(--clr-html)";
+  // } else if (
+  //   Math.round(window.scrollY) + 10 > csssection.offsetTop &&
+  //   Math.round(window.scrollY) + 10 < jssection.offsetTop
+  // ) {
+  //   tabhtml.style.filter = "grayscale(100%)";
+  //   tabcss.style.filter = "grayscale(0%)";
+  //   tabjs.style.filter = "grayscale(100%)";
+  //   tabWrap.style.backgroundColor = "var(--clr-css)";
+  // } else if (Math.round(window.scrollY) + 10 > jssection.offsetTop) {
+  //   tabhtml.style.filter = "grayscale(100%)";
+  //   tabcss.style.filter = "grayscale(100%)";
+  //   tabjs.style.filter = "grayscale(0%)";
+  //   tabWrap.style.backgroundColor = "var(--clr-js)";
+  // }
 }
 
 // spoiler button
