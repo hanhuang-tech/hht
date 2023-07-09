@@ -1,585 +1,790 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>frontend tech</title>
     <!--links-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"
+    />
     <link rel="stylesheet" href="../css/style.css" />
     <!-- favicon -->
     <link rel="icon" href="../img/habbit-a.png" />
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Noto+Sans:wght@400;700&display=swap"
-        rel="stylesheet" />
-</head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Noto+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <header>
-        <!-- logo -->
-        <div class="logowrap">
-            <div class="logo">
-                <div class="habbit-img">
-                    <img src="../img/habbit-a.png" class="habbit-a" alt="a pic of habbit" />
-                    <img src="../img/habbit-b.png" class="habbit-b" alt="a pic of habbit" />
-                </div>
-                <a href="https://hanhuang.tech" id="habbitbanner">hanhuang.tech</a>
-            </div>
+      <!-- logo -->
+      <div class="logowrap">
+        <div class="logo">
+          <div class="habbit-img">
+            <img
+              src="../img/habbit-a.png"
+              class="habbit-a"
+              alt="a pic of habbit"
+            />
+            <img
+              src="../img/habbit-b.png"
+              class="habbit-b"
+              alt="a pic of habbit"
+            />
+          </div>
+          <a href="https://hanhuang.tech" id="habbitbanner">hanhuang.tech</a>
         </div>
-        <!-- connected -->
-        <div id="connectedwrap">
-            <h5 id="dynamic-rgb">0 0 0</h5>
-            <div class="connectedto">
-                <h5 class="connectedto"> Connected to :AZ on :IP4. </h5>
-                <h5 class="connectedto"> Connected to :AZ on :IP4. </h5>
-            </div>
+      </div>
+      <!-- connected -->
+      <div id="connectedwrap">
+        <h5 id="dynamic-rgb">0 0 0</h5>
+        <div class="connectedto">
+          <h5 class="connectedto">Connected to :AZ on :IP4.</h5>
+          <h5 class="connectedto">Connected to :AZ on :IP4.</h5>
         </div>
-        <!-- nav -->
-        <nav class="bar sectioned-with-tab">
-            <a href=" #">
-                <div id="arrow-button">
-                    <span class="arrow"></span>
-                </div>
-            </a>
-        </nav>
-        <!-- lantern -->
-        <a id="lantern" href="mailto:han@hanhuang.tech">
-            <div class="standpart">
-                <div class="dome"></div>
-                <div class="bulb">
-                    <span class="bulb">tact</span>
-                </div>
-            </div>
+      </div>
+      <!-- nav -->
+      <nav class="bar sectioned-with-tab">
+        <a href=" #">
+          <div id="arrow-button">
+            <span class="arrow"></span>
+          </div>
         </a>
+      </nav>
+      <!-- lantern -->
+      <a id="lantern" href="mailto:han@hanhuang.tech">
+        <div class="standpart">
+          <div class="dome"></div>
+          <div class="bulb">
+            <span class="bulb">tact</span>
+          </div>
+        </div>
+      </a>
     </header>
 
     <!-- frontend description -->
     <section class="body-partition">
-        <div class="leftbar"></div>
-        <div id="resource-flex-extender">
-            <div class="titlebar">
-                <h1>frontend tech</h1>
-            </div>
-            <div id="descbox">
-                <div id="descbox-body">
-                    <p>Various frontend techniques that were used to create this site
-                    </p>
-                    <img src="../img/codefrontend.png" alt="some code" />
-                </div>
-            </div>
+      <div class="leftbar"></div>
+      <div id="resource-flex-extender">
+        <div class="titlebar">
+          <h1>frontend tech</h1>
         </div>
+        <div id="descbox">
+          <div id="descbox-body">
+            <p>
+              Various frontend techniques that were used to create this site
+            </p>
+            <img src="../img/codefrontend.png" alt="some code" />
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- tab -->
     <div id="tabwrapper">
-        <div id="tab">
-            <a href="#html">     
-                <img src="../img/html-logo.png" class="tab-html" alt="HTML section" title="HTML section" />
-            </a>
-            <a href="#css">         
-                <img src="../img/css-logo.png" class="tab-css" alt="CSS section" title="CSS section" />
-            </a>
-            <a href="#js"> 
-                <img src="../img/js-logo.png" class="tab-js" alt="JS section" title="JS section" />
-            </a>
-        </div>
+      <div id="tab">
+        <a href="#html" class="tabcontent"> head </a>
+      </div>
     </div>
 
     <!-- Setting up HTML -->
     <section class="body-partition">
-        <div class="leftbar"></div>
-        <div id="html">
-            <div class="subject-banner">
-                <h2 class="html">Head</h2>
-                <h2>Setting up HTML</h2>
-            </div>
-            <div class="side-heading">
-                <h4>&lt;head /&gt;</h4>
-            </div>
-            <div class="body-wrapper">
-                <h3>Optimal viewing</h3>
-                <div class="codebox">
-                    <div class="code-html">html</div>
-                    <p class="margin0">&lt;meta charset="UTF-8"&gt;</p>
-                </div>
-                <p class="code-desc"> By utilising a standardised character set UTF-8, &lt;html&gt; will
-                    accurately encode the characters used on this webpage. </p>
-                <div class="codebox">
-                    <div class="code-html">html</div>
-                    <p class="margin0">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-                </div>
-                <p class="code-desc">
-                    By using valid viewpoint expressions, this webpage will resize elements correctly to accommodate
-                    various sizes of devices as it is displayed. This is an important meta tab to use for responsive
-                    websites.
-                </p>
-                <div class="codebox">
-                    <div class="code-html">html</div>
-                    <p class="margin0">&lt;link rel="stylesheet"
-                        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"&gt;</p>
-                </div>
-                <p class="code-desc">
-                    Normalize allows our pages to be displayed correctly across various web browsers and fixes
-                    common bugs around &lt;html&gt; elements. </p>
-                <h3>Favicon</h3>
-                <div class="codebox">
-                    <div class="code-html">html</div>
-                    <p class="margin0">&lt;link rel="icon" type="image/png" href="img/habbit-favicon.png"/&gt;
-                    </p>
-                </div>
-                <p class="code-desc">
-                    Linking a favicon image from the images directory to this webpage will add more personality.
-                </p>
-                <h3>Google Fonts</h3>
-                <div class="codebox">
-                    <div class="code-html">html</div>
-                    <p class="margin0"> &lt;link
-                        href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Noto+Sans:wght@400;700&display=swap"
-                        rel="stylesheet"&gt;</p>
-                </div>
-                <p class="code-desc">
-                    Linking Inconsolata and Noto Sans fonts from Google fonts is a method to add
-                    characteristics to a
-                    webpage. Careful font usage here, with appropriate font weight, will accentuate
-                    texts used in normal
-                    paragraph reading, and also enhance readability in code.
-                </p>
-            </div>
-            <div class="side-heading">
-                <h4>&lt;/head&gt;</h4>
-                <h4>&lt;body&gt;</h4>
-                <h4>&lt;header&gt;</h4>
-            </div>
-            <div class="body-wrapper">
-                <h3>Logo</h3>
-                <div class="codebox">
-                    <div class="code-html">html</div>
-                        <p class="margin0">&lt;div class="logowrap"&gt;</p>
-                        <p class="margin1">&lt;div class="logo"&gt;</p>
-                        <p class="margin2">&lt;div class="habbit-img"&gt;</p>
-                        <p class="margin3">&lt;img src="img/habbit-a.png" class="habbit-a" alt="a pic of habbit" /&gt;</p>
-                          <p class="margin3">&lt;img src="img/habbit-a.png" class="habbit-b" alt="a pic of habbit" /&gt;</p>
-                        <p class="margin2">&lt;/div&gt;</p>
-                        <p class="margin2">&lt;a href="https://hanhuang.tech" id="habbitbanner"&gt;hanhuang.tech&lt;/a&gt;</p>
-                        <p class="margin1">&lt;/div&gt;</p>
-                        <p class="margin0">&lt;/div&gt;</p>
-                </div>
-                <p class="code-desc"> This logo has 2 forms habbit-a and habbit-b. habbit-b is hidden until the user's cursor crosses an x-axis, registered in hht.js. The result is alternating habbit images, which look like moving eyes, while in transition.
-                </p>
-                <h3>Navigation bar</h3>
-                <div class="codebox">
-                    <div class="code-html">html</div>
-                    <p class="margin0">&lt;nav class="bar"&gt;</p>
-                        <p class="margin1">&lt;div id="burger"&gt;</p>
-                          <p class="margin2">&lt;div class="ham"&gt;&lt;/div&gt;</p>
-                          <p class="margin2">&lt;div class="ham"&gt;&lt;/div&gt;</p>
-                          <p class="margin2">&lt;div class="ham"&gt;&lt;/div&gt;</p>
-                        <p class="margin1">&lt;/div&gt;</p>
-                        <p class="margin1">&lt;div id="hidden-burger-contents"&gt;</p>
-                          <p class="margin2">&lt;a href="#resources" class="resources"&gt;</p>
-                            <p class="margin3">&lt;h3>Resources&lt;/h3&gt;</p>
-                          <p class="margin2">&lt;/a&gt;</p>
-                          <p class="margin2">&lt;div id="side-burger-content"&gt;</p>
-                            <p class="margin3">&lt;a href="frontendtech/index.html" class="title"&gt;Frontend tech&lt;/a&gt;</p>
-                            <p class="margin3">&lt;a href="frontendtech/index.html#html" class="subtitle"&gt;HTML&lt;/a&gt;</p>
-                            <p class="margin3">&lt;a href="frontendtech/index.html#css" class="subtitle"&gt;CSS&lt;/a&gt;</p>
-                            <p class="margin3">&lt;a href="frontendtech/index.html#js" class="subtitle"&gt;JS&lt;/a&gt;</p>
-                          <p class="margin2">&lt;/div&gt;</p>
-                          <p class="margin2">&lt;a href="#projects" class="projects"&gt;</p>
-                            <p class="margin3">&lt;h3&gt;Projects&lt;/h3&gt;</p>
-                          <p class="margin2">&lt;/a>
-                          <p class="margin2">&lt;a href="#aboutme" class="aboutme"&gt;</p>
-                            <p class="margin3">&lt;h3>About Me&lt;/h3&gt;</p>
-                          <p class="margin2">&lt;/a&gt;</p>
-                          <p class="margin2">&lt;img
-                            src="img/habbit-a.png"
-                            class="habbit-a burger"
-                            alt="a pic of habbit"
-                          /&gt;</p>
-                          <p class="margin1">&lt;/div&gt;</p>
-                      <p class="margin0">&lt;/nav&gt;</p>
-                </div>
-                <p class="code-desc">
-                    The Nav bar is a burger button that opens to a menu of the contents of a webpage. Features sliding animation of the burger menu, and hover with an alternative menu as well. Retract burger menu on scroll.
-                </p>
-            </div>
-            <div class="side-heading">
-                <h4>&lt;/header&gt;</h4>
-            </div>
-            <div class="body-wrapper">
-                <h3>Joining together the title page</h3>
-                <div class="codebox">
-                    <p class="margin0">&lt;section class="titlepage__section"&gt;</p>
-                    <p class="margin1">&lt;div class="titlepage__div"&gt;</p>
-                    <p class="margin2">&lt;div class="titlepage__services"&gt;</p>
-                    <p class="margin3">&lt;h3 class="titlepage__title"&gt;hanhuang.tech&lt;/h3&gt;</p>
-                    <p class="margin3">&lt;p class="titlepage__subtitle"&gt;resources and solutions&lt;/p&gt;</p>
-                    <p class="margin2">&lt;/div&gt;</p>
-                    <p class="margin2">&lt;div class="titlepage__background"&gt;</p>
-                    <p class="margin2">&lt;/div&gt;</p>
-                    <p class="margin1">&lt;/div&gt;</p>
-                    <p class="margin0">&lt;/section&gt;</p>
-                </div>
-                <p class="code-desc">
-                    The title page section on the home page &lt;html&gt; is vertically divided and formed by two
-                    side divisions.
-                    <br>
-                    The title and subtitle division element forms the left half of this two part section. The right
-                    is a separate division element and has a cover background image &lt;div
-                    class="titlepage__background"&gt;. The vertical division is created by style &lt;css&gt; and stands
-                    in the center of these two sections.
-                </p>
-                <h3>Constructing the resources section</h3>
-                <div class="codebox">
-                    <p class="margin0">&lt;section class="resources__section resources__background" id="resources"&gt;
-                    </p>
-                    <p class="margin1">&lt;h1 class="resources__title resources__linebar"&gt;Resources&lt;/h1&gt;</p>
-                    <p class="margin1">&lt;div class="resources"&gt;</p>
-                </div>
-                <div id="spoil-btn1">
-                    <span class="margin2">&lt;div class="resource"&gt;&lt;!--tools--&gt;</span>
-                </div>
-                <div id="spoil-move1" class="hide-text1">
-                    <div class="codebox" style="padding: 0px;">
-                        <p class="margin3">&lt;a href="resourcestools.html" class="resource__title"&gt;</p>
-                        <p class="margin4">&lt;h2 class="resource__title resource__btn"&gt;Tools&lt;/h2&gt;</p>
-                        <p class="margin3">&lt;/a&gt;</p>
-                        <p class="margin3">&lt;div class="subject__area"&gt;</p>
-                        <p class="margin4">&lt;a href="resourcestools.html" class="subject__title"&gt;</p>
-                        <p class="margin5">&lt;p&gt;cloud computing&lt;/p&gt;</p>
-                        <p class="margin4">&lt;/a&gt;</p>
-                        <p class="margin4">&lt;a href="https://www.youtube.com/channel/UCfbZ-JymS_WUZfyq-QU7UqQ"&gt;</p>
-                        <p class="margin5">&lt;img src="img/youtubeicon.png" class="resource-youtube"
-                            alt="youtube icon"&gt;</p>
-                        <p class="margin4">&lt;/a&gt;</p>
-                        <p class="margin4">&lt;a href="https://github.com/hanhuang-tech/hanhuang.tech"&gt;</p>
-                        <p class="margin5">&lt;img src="img/githubicon.png" class="resource-github" alt="github
-                            icon"&gt;</p>
-                        <p class="margin4">&lt;/a&gt;</p>
-                        <p class="margin3">&lt;/div&gt;</p>
-                        <p class="margin3">&lt;div class="subject__area"&gt;</p>
-                        <p class="margin4">&lt;a href="resourcestools.html" class="subject__title"&gt;</p>
-                        <p class="margin5">&lt;p&gt;git&lt;/p&gt;</p>
-                        <p class="margin4">&lt;/a&gt;</p>
-                        <p class="margin4">&lt;a href="https://www.youtube.com/channel/UCfbZ-JymS_WUZfyq-QU7UqQ"&gt;</p>
-                        <p class="margin5">&lt;img src="img/youtubeicon.png" class="resource-youtube"
-                            alt="youtube icon"&gt;</p>
-                        <p class="margin4">&lt;/a&gt;</p>
-                        <p class="margin4">&lt;a href="https://github.com/hanhuang-tech/hanhuang.tech"&gt;</p>
-                        <p class="margin5">&lt;img src="img/githubicon.png" class="resource-github" alt="github
-                            icon"&gt;</p>
-                        <p class="margin4">&lt;/a&gt;</p>
-                        <p class="margin3">&lt;/div&gt;</p>
-                        <p class="margin2">&lt;/div&gt;</p>
-                    </div>
-                </div>
-                <div id="spoil-btn2">
-                    <span class="margin2">&lt;div class="resource"&gt;&lt;!--backend--&gt;</span>
-                </div>
-                <div id="spoil-move2" class="hide-text2">
-                    <div class="codebox">
-                        <p class="margin3">&lt;a href="resourcestools.html"&gt;</p>
-                        <p class="margin4">&lt;h2 class="resource__title resource__btn"&gt;Backend&lt;/h2&gt;</p>
-                        <p class="margin3">&lt;/a&gt;</p>
-                        <p class="margin3">&lt;div class="subject__area"&gt;</p>
-                        <p class="margin4">&lt;a href="resourcestools.html" class="subject__title"&gt;</p>
-                        <p class="margin5">&lt;p&gt;express&lt;/p&gt;</p>
-                        <p class="margin4">&lt;/a&gt;</p>
-                        <p class="margin4">&lt;a
-                            href="https://www.youtube.com/channel/UCfbZ-JymS_WUZfyq-QU7UqQ"&gt;</p>
-                        <p class="margin5">&lt;img src="img/youtubeicon.png" class="resource-youtube" alt="youtube
-                            icon"&gt;</p>
-                        <p class="margin4">&lt;/a&gt;</p>
-                        <p class="margin4">&lt;a href="https://github.com/hanhuang-tech/hanhuang.tech"&gt;
-                        </p>
-                        <p class="margin5">&lt;img src="img/githubicon.png" class="resource-github"
-                            alt="github icon"&gt;</p>
-                        <p class="margin4">&lt;/a&gt;</p>
-                        <p class="margin3">&lt;/div&gt;</p>
-                        <p class="margin3">&lt;div class="subject__area"&gt;</p>
-                        <p class="margin4">&lt;a href="resourcestools.html" class="subject__title"&gt;</p>
-                        <p class="margin5">&lt;p&gt;node.js&lt;/p&gt;</p>
-                        <p class="margin4">&lt;/a&gt;</p>
-                        <p class="margin4">&lt;a
-                            href="https://www.youtube.com/channel/UCfbZ-JymS_WUZfyq-QU7UqQ"&gt;</p>
-                        <p class="margin5">&lt;img src="img/youtubeicon.png" class="resource-youtube"
-                            alt="youtube icon"&gt;</p>
-                        <p class="margin4">&lt;/a&gt;</p>
-                        <p class="margin4">&lt;a href="https://github.com/hanhuang-tech/hanhuang.tech"&gt;</p>
-                        <p class="margin5">&lt;img src="img/githubicon.png" class="resource-github"
-                            alt="github icon"&gt;</p>
-                        <p class="margin4">&lt;/a&gt;</p>
-                        <p class="margin3">&lt;/div&gt;</p>
-                        <p class="margin3">&lt;div class="subject__area"&gt;</p>
-                        <p class="margin4">&lt;a href="resourcestools.html" class="subject__title"&gt;</p>
-                        <p class="margin5">&lt;p&gt;docker&lt;/p&gt;</p>
-                        <p class="margin4">&lt;/a&gt;</p>
-                        <p class="margin4">&lt;a href="https://www.youtube.com/channel/UCfbZ-JymS_WUZfyq-QU7UqQ"&gt;</p>
-                        <p class="margin5">&lt;img src="img/youtubeicon.png" class="resource-youtube"
-                            alt="youtube icon"&gt;</p>
-                        <p class="margin4">&lt;a href="https://github.com/hanhuang-tech/hanhuang.tech"&gt;</p>
-                        <p class="margin5">&lt;img src="img/githubicon.png" class="resource-github"
-                            alt="github icon"&gt;</p>
-                        <p class="margin4">&lt;/a&gt;</p>
-                        <p class="margin3">&lt;/div&gt;</p>
-                        <p class="margin2">&lt;/div&gt;</p>
-                    </div>
-                </div>
-                <div id="spoil-btn3"><span class="margin2" style="font-family: var(--ff-secondary);">&lt;div
-                        class="resource"&gt;<span style="color: var(--clr-dark);">&lt;!--frontend--&gt;</span></span>
-                </div>
-                <div id="spoil-move3" class="hide-text3">
-                    <div class="codebox" style="padding: 0px;">
-                        <p class="margin3">&lt;a href="resourcesfrontend.html" class="resource__title"&gt;
-                        </p>
-                        <p class="margin4">&lt;h2 class="resource__title
-                            resource__btn"&gt;Frontend&lt;/h2&gt;
-                        </p>
-                        <p class="margin3">&lt;/a&gt;</p>
-                        <p class="margin3">&lt;div class="subject__area"&gt;</p>
-                        <p class="margin4">&lt;a href="resourcesfrontend.html" class="subject__title"&gt;
-                        </p>
-                        <p class="margin5">&lt;p&gt;html&lt;/p&gt;</p>
-                        <p class="margin4">&lt;/a&gt;</p>
-                        <p class="margin4">&lt;a href="https://github.com/hanhuang-tech/hanhuang.tech"&gt;
-                        </p>
-                        <p class="margin5">&lt;img src="img/githubicon.png" class="resource-github"
-                            alt="github
-                            icon"&gt;</p>
-                        <p class="margin4">&lt;/a&gt;</p>
-                        <p class="margin3">&lt;/div&gt;</p>
-                        <p class="margin3">&lt;div class="subject__area"&gt;</p>
-                        <p class="margin4">&lt;a href="resourcesfrontend.html" class="subject__title"&gt;
-                        </p>
-                        <p class="margin5">&lt;p&gt;css&lt;/p&gt;</p>
-                        <p class="margin4">&lt;/a&gt;</p>
-                        <p class="margin4">&lt;a href="https://github.com/hanhuang-tech/hanhuang.tech"&gt;
-                        </p>
-                        <p class="margin5">&lt;img src="img/githubicon.png" class="resource-github"
-                            alt="github
-                            icon"&gt;</p>
-                        <p class="margin4">&lt;/a&gt;</p>
-                        <p class="margin3">&lt;/div&gt;</p>
-                        <p class="margin3">&lt;div class="subject__area"&gt;</p>
-                        <p class="margin4">&lt;a href="resourcesfrontend.html" class="subject__title"&gt;
-                        </p>
-                        <p class="margin5">&lt;p&gt;javascript&lt;/p&gt;</p>
-                        <p class="margin4">&lt;/a&gt;</p>
-                        <p class="margin4">&lt;a href="https://github.com/hanhuang-tech/hanhuang.tech"&gt;
-                        </p>
-                        <p class="margin5">&lt;img src="img/githubicon.png" class="resource-github"
-                            alt="github
-                            icon"&gt;</p>
-                        <p class="margin4">&lt;/a&gt;</p>
-                        <p class="margin3">&lt;/div&gt;</p>
-                        <p class="margin2">&lt;/div&gt;</p>
-                    </div>
-                </div>
-                <div class="codebox">
-                    <p class="margin1">&lt;/div&gt;</p>
-                    <p class="margin0">&lt;/section&gt;</p>
-                </div>
-                <p class="code-desc">
-                    The resources section is intended to direct the viewer to different content pages throughout the
-                    website. It consists of &lt;html&gt; elements with anchor tabs that link to each of the topics
-                    selected, and is made up of &lt;div&gt; element boxes.
-                    <br>
-                    The resources section is divided into three columns. Each column is divided into three subjects:
-                    tools, frontend, and backend. Each subject is a resource element class covering a range of topics
-                    within that class. An anchor tab is used for each resource element to link to the page of that
-                    topic. All resource elements are accompanied by links to github and other useful resources.
-                </p>
-                <h3>Constructing the my projects section</h3>
-                <div class="codebox">
-                    <p class="margin0">&lt;div class="myprojects"&gt;</p>
-                    <p class="margin1">&lt;div class="myproject"&gt;</p>
-                    <p class="margin2">&lt;div class="imgrestrictor"&gt;</p>
-                    <p class="margin3">&lt;a href="sitebackend.html" class="myproject__link"&gt;</p>
-                    <p class="margin4">&lt;img src="img/moby.png" class="myproject__img" alt="backend image"&gt;</p>
-                    <p class="margin3">&lt;/a&gt;</p>
-                    <p class="margin2">&lt;/div&gt;</p>
-                    <p class="margin2">&lt;div class="myproject__text"&gt;</p>
-                    <p class="margin3">&lt;h3 class="myproject__title"&gt;&lt;/h3&gt;</p>
-                    <p class="margin3">&lt;p class="myproject__body"&gt;&lt;/p&gt;</p>
-                    <p class="margin2">&lt;/div&gt;</p>
-                    <p class="margin1">&lt;/div&gt;</p>
-                    <p class="margin0">&lt;/div&gt;</p>
-                </div>
-            </div>
+      <div class="leftbar"></div>
+      <div id="html">
+        <div class="subject-banner">
+          <h2 class="html">Head</h2>
+          <h2>Setting up HTML</h2>
         </div>
+        <div class="side-heading">
+          <h4>&lt;head /&gt;</h4>
+        </div>
+        <div class="body-wrapper">
+          <h3>Optimal viewing</h3>
+          <div class="codebox">
+            <div class="code-html">html</div>
+            <p class="margin0">&lt;meta charset="UTF-8"&gt;</p>
+          </div>
+          <p class="code-desc">
+            By utilising a standardised character set UTF-8, &lt;html&gt; will
+            accurately encode the characters used on this webpage.
+          </p>
+          <div class="codebox">
+            <div class="code-html">html</div>
+            <p class="margin0">
+              &lt;meta name="viewport" content="width=device-width,
+              initial-scale=1.0"&gt;
+            </p>
+          </div>
+          <p class="code-desc">
+            By using valid viewpoint expressions, this webpage will resize
+            elements correctly to accommodate various sizes of devices as it is
+            displayed. This is an important meta tab to use for responsive
+            websites.
+          </p>
+          <div class="codebox">
+            <div class="code-html">html</div>
+            <p class="margin0">
+              &lt;link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"&gt;
+            </p>
+          </div>
+          <p class="code-desc">
+            Normalize allows our pages to be displayed correctly across various
+            web browsers and fixes common bugs around &lt;html&gt; elements.
+          </p>
+          <h3>Favicon</h3>
+          <div class="codebox">
+            <div class="code-html">html</div>
+            <p class="margin0">
+              &lt;link rel="icon" type="image/png"
+              href="img/habbit-favicon.png"/&gt;
+            </p>
+          </div>
+          <p class="code-desc">
+            Linking a favicon image from the images directory to this webpage
+            will add more personality.
+          </p>
+          <h3>Google Fonts</h3>
+          <div class="codebox">
+            <div class="code-html">html</div>
+            <p class="margin0">
+              &lt;link
+              href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Noto+Sans:wght@400;700&display=swap"
+              rel="stylesheet"&gt;
+            </p>
+          </div>
+          <p class="code-desc">
+            Linking Inconsolata and Noto Sans fonts from Google fonts is a
+            method to add characteristics to a webpage. Careful font usage here,
+            with appropriate font weight, will accentuate texts used in normal
+            paragraph reading, and also enhance readability in code.
+          </p>
+        </div>
+        <div class="side-heading">
+          <h4>&lt;/head&gt;</h4>
+          <h4>&lt;body&gt;</h4>
+          <h4>&lt;header&gt;</h4>
+        </div>
+        <div class="body-wrapper">
+          <h3>Logo</h3>
+          <div class="codebox">
+            <div class="code-html">html</div>
+            <p class="margin0">&lt;div class="logowrap"&gt;</p>
+            <p class="margin1">&lt;div class="logo"&gt;</p>
+            <p class="margin2">&lt;div class="habbit-img"&gt;</p>
+            <p class="margin3">
+              &lt;img src="img/habbit-a.png" class="habbit-a" alt="a pic of
+              habbit" /&gt;
+            </p>
+            <p class="margin3">
+              &lt;img src="img/habbit-a.png" class="habbit-b" alt="a pic of
+              habbit" /&gt;
+            </p>
+            <p class="margin2">&lt;/div&gt;</p>
+            <p class="margin2">
+              &lt;a href="https://hanhuang.tech"
+              id="habbitbanner"&gt;hanhuang.tech&lt;/a&gt;
+            </p>
+            <p class="margin1">&lt;/div&gt;</p>
+            <p class="margin0">&lt;/div&gt;</p>
+          </div>
+          <p class="code-desc">
+            This logo has 2 forms habbit-a and habbit-b. habbit-b is hidden
+            until the user's cursor crosses an x-axis, registered in hht.js. The
+            result is alternating habbit images, which look like moving eyes,
+            while in transition.
+          </p>
+          <h3>Navigation bar</h3>
+          <div class="codebox">
+            <div class="code-html">html</div>
+            <p class="margin0">&lt;nav class="bar"&gt;</p>
+            <p class="margin1">&lt;div id="burger"&gt;</p>
+            <p class="margin2">&lt;div class="ham"&gt;&lt;/div&gt;</p>
+            <p class="margin2">&lt;div class="ham"&gt;&lt;/div&gt;</p>
+            <p class="margin2">&lt;div class="ham"&gt;&lt;/div&gt;</p>
+            <p class="margin1">&lt;/div&gt;</p>
+            <p class="margin1">&lt;div id="hidden-burger-contents"&gt;</p>
+            <p class="margin2">&lt;a href="#resources" class="resources"&gt;</p>
+            <p class="margin3">&lt;h3>Resources&lt;/h3&gt;</p>
+            <p class="margin2">&lt;/a&gt;</p>
+            <p class="margin2">&lt;div id="side-burger-content"&gt;</p>
+            <p class="margin3">
+              &lt;a href="frontendtech/index.html" class="title"&gt;Frontend
+              tech&lt;/a&gt;
+            </p>
+            <p class="margin3">
+              &lt;a href="frontendtech/index.html#html"
+              class="subtitle"&gt;HTML&lt;/a&gt;
+            </p>
+            <p class="margin3">
+              &lt;a href="frontendtech/index.html#css"
+              class="subtitle"&gt;CSS&lt;/a&gt;
+            </p>
+            <p class="margin3">
+              &lt;a href="frontendtech/index.html#js"
+              class="subtitle"&gt;JS&lt;/a&gt;
+            </p>
+            <p class="margin2">&lt;/div&gt;</p>
+            <p class="margin2">&lt;a href="#projects" class="projects"&gt;</p>
+            <p class="margin3">&lt;h3&gt;Projects&lt;/h3&gt;</p>
+            <p class="margin2">&lt;/a></p>
+            <p class="margin2">&lt;a href="#aboutme" class="aboutme"&gt;</p>
+            <p class="margin3">&lt;h3>About Me&lt;/h3&gt;</p>
+            <p class="margin2">&lt;/a&gt;</p>
+            <p class="margin2">
+              &lt;img src="img/habbit-a.png" class="habbit-a burger" alt="a pic
+              of habbit" /&gt;
+            </p>
+            <p class="margin1">&lt;/div&gt;</p>
+            <p class="margin0">&lt;/nav&gt;</p>
+          </div>
+          <p class="code-desc">
+            The Nav bar is a burger button that opens to a menu of the contents
+            of a webpage. Features sliding animation of the burger menu, and
+            hover with an alternative menu as well. Retract burger menu on
+            scroll.
+          </p>
+        </div>
+        <div class="side-heading">
+          <h4>&lt;/header&gt;</h4>
+        </div>
+        <div class="body-wrapper">
+          <h3>Joining together the title page</h3>
+          <div class="codebox">
+            <p class="margin0">&lt;section class="titlepage__section"&gt;</p>
+            <p class="margin1">&lt;div class="titlepage__div"&gt;</p>
+            <p class="margin2">&lt;div class="titlepage__services"&gt;</p>
+            <p class="margin3">
+              &lt;h3 class="titlepage__title"&gt;hanhuang.tech&lt;/h3&gt;
+            </p>
+            <p class="margin3">
+              &lt;p class="titlepage__subtitle"&gt;resources and
+              solutions&lt;/p&gt;
+            </p>
+            <p class="margin2">&lt;/div&gt;</p>
+            <p class="margin2">&lt;div class="titlepage__background"&gt;</p>
+            <p class="margin2">&lt;/div&gt;</p>
+            <p class="margin1">&lt;/div&gt;</p>
+            <p class="margin0">&lt;/section&gt;</p>
+          </div>
+          <p class="code-desc">
+            The title page section on the home page &lt;html&gt; is vertically
+            divided and formed by two side divisions.
+            <br />
+            The title and subtitle division element forms the left half of this
+            two part section. The right is a separate division element and has a
+            cover background image &lt;div class="titlepage__background"&gt;.
+            The vertical division is created by style &lt;css&gt; and stands in
+            the center of these two sections.
+          </p>
+          <h3>Constructing the resources section</h3>
+          <div class="codebox">
+            <p class="margin0">
+              &lt;section class="resources__section resources__background"
+              id="resources"&gt;
+            </p>
+            <p class="margin1">
+              &lt;h1 class="resources__title
+              resources__linebar"&gt;Resources&lt;/h1&gt;
+            </p>
+            <p class="margin1">&lt;div class="resources"&gt;</p>
+          </div>
+          <div id="spoil-btn1">
+            <span class="margin2"
+              >&lt;div class="resource"&gt;&lt;!--tools--&gt;</span
+            >
+          </div>
+          <div id="spoil-move1" class="hide-text1">
+            <div class="codebox" style="padding: 0px">
+              <p class="margin3">
+                &lt;a href="resourcestools.html" class="resource__title"&gt;
+              </p>
+              <p class="margin4">
+                &lt;h2 class="resource__title resource__btn"&gt;Tools&lt;/h2&gt;
+              </p>
+              <p class="margin3">&lt;/a&gt;</p>
+              <p class="margin3">&lt;div class="subject__area"&gt;</p>
+              <p class="margin4">
+                &lt;a href="resourcestools.html" class="subject__title"&gt;
+              </p>
+              <p class="margin5">&lt;p&gt;cloud computing&lt;/p&gt;</p>
+              <p class="margin4">&lt;/a&gt;</p>
+              <p class="margin4">
+                &lt;a
+                href="https://www.youtube.com/channel/UCfbZ-JymS_WUZfyq-QU7UqQ"&gt;
+              </p>
+              <p class="margin5">
+                &lt;img src="img/youtubeicon.png" class="resource-youtube"
+                alt="youtube icon"&gt;
+              </p>
+              <p class="margin4">&lt;/a&gt;</p>
+              <p class="margin4">
+                &lt;a href="https://github.com/hanhuang-tech/hanhuang.tech"&gt;
+              </p>
+              <p class="margin5">
+                &lt;img src="img/githubicon.png" class="resource-github"
+                alt="github icon"&gt;
+              </p>
+              <p class="margin4">&lt;/a&gt;</p>
+              <p class="margin3">&lt;/div&gt;</p>
+              <p class="margin3">&lt;div class="subject__area"&gt;</p>
+              <p class="margin4">
+                &lt;a href="resourcestools.html" class="subject__title"&gt;
+              </p>
+              <p class="margin5">&lt;p&gt;git&lt;/p&gt;</p>
+              <p class="margin4">&lt;/a&gt;</p>
+              <p class="margin4">
+                &lt;a
+                href="https://www.youtube.com/channel/UCfbZ-JymS_WUZfyq-QU7UqQ"&gt;
+              </p>
+              <p class="margin5">
+                &lt;img src="img/youtubeicon.png" class="resource-youtube"
+                alt="youtube icon"&gt;
+              </p>
+              <p class="margin4">&lt;/a&gt;</p>
+              <p class="margin4">
+                &lt;a href="https://github.com/hanhuang-tech/hanhuang.tech"&gt;
+              </p>
+              <p class="margin5">
+                &lt;img src="img/githubicon.png" class="resource-github"
+                alt="github icon"&gt;
+              </p>
+              <p class="margin4">&lt;/a&gt;</p>
+              <p class="margin3">&lt;/div&gt;</p>
+              <p class="margin2">&lt;/div&gt;</p>
+            </div>
+          </div>
+          <div id="spoil-btn2">
+            <span class="margin2"
+              >&lt;div class="resource"&gt;&lt;!--backend--&gt;</span
+            >
+          </div>
+          <div id="spoil-move2" class="hide-text2">
+            <div class="codebox">
+              <p class="margin3">&lt;a href="resourcestools.html"&gt;</p>
+              <p class="margin4">
+                &lt;h2 class="resource__title
+                resource__btn"&gt;Backend&lt;/h2&gt;
+              </p>
+              <p class="margin3">&lt;/a&gt;</p>
+              <p class="margin3">&lt;div class="subject__area"&gt;</p>
+              <p class="margin4">
+                &lt;a href="resourcestools.html" class="subject__title"&gt;
+              </p>
+              <p class="margin5">&lt;p&gt;express&lt;/p&gt;</p>
+              <p class="margin4">&lt;/a&gt;</p>
+              <p class="margin4">
+                &lt;a
+                href="https://www.youtube.com/channel/UCfbZ-JymS_WUZfyq-QU7UqQ"&gt;
+              </p>
+              <p class="margin5">
+                &lt;img src="img/youtubeicon.png" class="resource-youtube"
+                alt="youtube icon"&gt;
+              </p>
+              <p class="margin4">&lt;/a&gt;</p>
+              <p class="margin4">
+                &lt;a href="https://github.com/hanhuang-tech/hanhuang.tech"&gt;
+              </p>
+              <p class="margin5">
+                &lt;img src="img/githubicon.png" class="resource-github"
+                alt="github icon"&gt;
+              </p>
+              <p class="margin4">&lt;/a&gt;</p>
+              <p class="margin3">&lt;/div&gt;</p>
+              <p class="margin3">&lt;div class="subject__area"&gt;</p>
+              <p class="margin4">
+                &lt;a href="resourcestools.html" class="subject__title"&gt;
+              </p>
+              <p class="margin5">&lt;p&gt;node.js&lt;/p&gt;</p>
+              <p class="margin4">&lt;/a&gt;</p>
+              <p class="margin4">
+                &lt;a
+                href="https://www.youtube.com/channel/UCfbZ-JymS_WUZfyq-QU7UqQ"&gt;
+              </p>
+              <p class="margin5">
+                &lt;img src="img/youtubeicon.png" class="resource-youtube"
+                alt="youtube icon"&gt;
+              </p>
+              <p class="margin4">&lt;/a&gt;</p>
+              <p class="margin4">
+                &lt;a href="https://github.com/hanhuang-tech/hanhuang.tech"&gt;
+              </p>
+              <p class="margin5">
+                &lt;img src="img/githubicon.png" class="resource-github"
+                alt="github icon"&gt;
+              </p>
+              <p class="margin4">&lt;/a&gt;</p>
+              <p class="margin3">&lt;/div&gt;</p>
+              <p class="margin3">&lt;div class="subject__area"&gt;</p>
+              <p class="margin4">
+                &lt;a href="resourcestools.html" class="subject__title"&gt;
+              </p>
+              <p class="margin5">&lt;p&gt;docker&lt;/p&gt;</p>
+              <p class="margin4">&lt;/a&gt;</p>
+              <p class="margin4">
+                &lt;a
+                href="https://www.youtube.com/channel/UCfbZ-JymS_WUZfyq-QU7UqQ"&gt;
+              </p>
+              <p class="margin5">
+                &lt;img src="img/youtubeicon.png" class="resource-youtube"
+                alt="youtube icon"&gt;
+              </p>
+              <p class="margin4">
+                &lt;a href="https://github.com/hanhuang-tech/hanhuang.tech"&gt;
+              </p>
+              <p class="margin5">
+                &lt;img src="img/githubicon.png" class="resource-github"
+                alt="github icon"&gt;
+              </p>
+              <p class="margin4">&lt;/a&gt;</p>
+              <p class="margin3">&lt;/div&gt;</p>
+              <p class="margin2">&lt;/div&gt;</p>
+            </div>
+          </div>
+          <div id="spoil-btn3">
+            <span class="margin2" style="font-family: var(--ff-secondary)"
+              >&lt;div class="resource"&gt;<span style="color: var(--clr-dark)"
+                >&lt;!--frontend--&gt;</span
+              ></span
+            >
+          </div>
+          <div id="spoil-move3" class="hide-text3">
+            <div class="codebox" style="padding: 0px">
+              <p class="margin3">
+                &lt;a href="resourcesfrontend.html" class="resource__title"&gt;
+              </p>
+              <p class="margin4">
+                &lt;h2 class="resource__title
+                resource__btn"&gt;Frontend&lt;/h2&gt;
+              </p>
+              <p class="margin3">&lt;/a&gt;</p>
+              <p class="margin3">&lt;div class="subject__area"&gt;</p>
+              <p class="margin4">
+                &lt;a href="resourcesfrontend.html" class="subject__title"&gt;
+              </p>
+              <p class="margin5">&lt;p&gt;html&lt;/p&gt;</p>
+              <p class="margin4">&lt;/a&gt;</p>
+              <p class="margin4">
+                &lt;a href="https://github.com/hanhuang-tech/hanhuang.tech"&gt;
+              </p>
+              <p class="margin5">
+                &lt;img src="img/githubicon.png" class="resource-github"
+                alt="github icon"&gt;
+              </p>
+              <p class="margin4">&lt;/a&gt;</p>
+              <p class="margin3">&lt;/div&gt;</p>
+              <p class="margin3">&lt;div class="subject__area"&gt;</p>
+              <p class="margin4">
+                &lt;a href="resourcesfrontend.html" class="subject__title"&gt;
+              </p>
+              <p class="margin5">&lt;p&gt;css&lt;/p&gt;</p>
+              <p class="margin4">&lt;/a&gt;</p>
+              <p class="margin4">
+                &lt;a href="https://github.com/hanhuang-tech/hanhuang.tech"&gt;
+              </p>
+              <p class="margin5">
+                &lt;img src="img/githubicon.png" class="resource-github"
+                alt="github icon"&gt;
+              </p>
+              <p class="margin4">&lt;/a&gt;</p>
+              <p class="margin3">&lt;/div&gt;</p>
+              <p class="margin3">&lt;div class="subject__area"&gt;</p>
+              <p class="margin4">
+                &lt;a href="resourcesfrontend.html" class="subject__title"&gt;
+              </p>
+              <p class="margin5">&lt;p&gt;javascript&lt;/p&gt;</p>
+              <p class="margin4">&lt;/a&gt;</p>
+              <p class="margin4">
+                &lt;a href="https://github.com/hanhuang-tech/hanhuang.tech"&gt;
+              </p>
+              <p class="margin5">
+                &lt;img src="img/githubicon.png" class="resource-github"
+                alt="github icon"&gt;
+              </p>
+              <p class="margin4">&lt;/a&gt;</p>
+              <p class="margin3">&lt;/div&gt;</p>
+              <p class="margin2">&lt;/div&gt;</p>
+            </div>
+          </div>
+          <div class="codebox">
+            <p class="margin1">&lt;/div&gt;</p>
+            <p class="margin0">&lt;/section&gt;</p>
+          </div>
+          <p class="code-desc">
+            The resources section is intended to direct the viewer to different
+            content pages throughout the website. It consists of &lt;html&gt;
+            elements with anchor tabs that link to each of the topics selected,
+            and is made up of &lt;div&gt; element boxes.
+            <br />
+            The resources section is divided into three columns. Each column is
+            divided into three subjects: tools, frontend, and backend. Each
+            subject is a resource element class covering a range of topics
+            within that class. An anchor tab is used for each resource element
+            to link to the page of that topic. All resource elements are
+            accompanied by links to github and other useful resources.
+          </p>
+          <h3>Constructing the my projects section</h3>
+          <div class="codebox">
+            <p class="margin0">&lt;div class="myprojects"&gt;</p>
+            <p class="margin1">&lt;div class="myproject"&gt;</p>
+            <p class="margin2">&lt;div class="imgrestrictor"&gt;</p>
+            <p class="margin3">
+              &lt;a href="sitebackend.html" class="myproject__link"&gt;
+            </p>
+            <p class="margin4">
+              &lt;img src="img/moby.png" class="myproject__img" alt="backend
+              image"&gt;
+            </p>
+            <p class="margin3">&lt;/a&gt;</p>
+            <p class="margin2">&lt;/div&gt;</p>
+            <p class="margin2">&lt;div class="myproject__text"&gt;</p>
+            <p class="margin3">
+              &lt;h3 class="myproject__title"&gt;&lt;/h3&gt;
+            </p>
+            <p class="margin3">&lt;p class="myproject__body"&gt;&lt;/p&gt;</p>
+            <p class="margin2">&lt;/div&gt;</p>
+            <p class="margin1">&lt;/div&gt;</p>
+            <p class="margin0">&lt;/div&gt;</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- css -->
     <section class="body-partition">
-        <div class="leftbar"></div>
-        <div id="css">
-            <div class="subject-banner">
-                <h2 class="css">CSS</h2>
-                <h2>Cascading Style Sheets</h2>
-            </div>
+      <div class="leftbar"></div>
+      <div id="css">
+        <div class="subject-banner">
+          <h2 class="css">CSS</h2>
+          <h2>Cascading Style Sheets</h2>
         </div>
+      </div>
     </section>
 
     <!-- js -->
     <section class="body-partition">
-        <div class="leftbar"></div>
-        <div id="js">
-            <div class="subject-banner">
-                <h2 class="js">JS</h2>
-                <h2>JavaScript</h2>
-            </div>
-            <div class="side-heading">
-                <h3>&lt;various html&gt;</h3>
-            </div>
-            <div class="body-wrapper">
-                <h3>Dropdown spoiler buttons</h3>
-                <button id="spoil-btna">&lt;script&gt;</button>
-                <div id="spoil-movea" class="hide-texta">
-                    <div class="code-btn-j">
-                        <p class="margin0">const spoilBtn = []</p>
-                        <p class="margin0">const spoilMov = []</p>
-                        <p class="margin0">const hide-text = []</p>
-                        <p class="margin0">const reveal-text = []</p>
-                        <p class="margin0">spoilBtn[].addEventListener("click", function () {</p>
-                        <p class="margin0"><span class="smargin1">spoilMov[].classList.contains(hide-text[])
-                                ?
-                                spoilMov[].classList.replace(hide-text[],</span></p>
-                        <p class="margin0"><span class="margin1">reveal-text[]) :
-                                spoilMov[].classList.replace(reveal-text[], hide-text[])</span></p>
-                        <p class="margin0"><span class="margin1">})</span></p>
-                    </div>
-                </div>
-                <p class="code-desc">
-                    This set of &lt;script&gt; allows block elements to display hidden content that is tabged with a
-                    paragraph. When a block element is clicked, it reveals the hidden content.
-                </p>
-                <div class="codebox">
-                    <p class="margin0">&lt;button id="spoil-btn"&gt;&lt;/button&gt;</p>
-                </div>
-                <ul>
-                    <li>It starts with a spoiler button in the html document.</li>
-                </ul>
-            </div>
-            <div class="side-heading">
-                <h3>&lt;style&gt;</h3>
-            </div>
-            <div class="body-wrapper">
-                <div class="codebox">
-                    <p class="margin0">spoilBtn[].addEventListener("click", function () { ...)</p>
-                </div>
-                <ul>
-                    <li>This spoiler button is declared and called via spoilBtn constant in &lt;script&gt;, where
-                        method
-                        addEventListener() will listen for a click to register.</li>
-                </ul>
-                <button id="spoil-btnb">&lt;script&gt;</button>
-                <div id="spoil-moveb" class="hide-textb">
-                    <div class="code-btn-j">
-                        <p class="margin0">function () {</p>
-                        <p class="margin1">spoilMov[].classList.contains(hide-text[])
-                            ?
-                            spoilMov[].classList.replace(hide-text[],</p>
-                        <p class="margin1">reveal-text[]) :
-                            spoilMov[].classList.replace(reveal-text[], hide-text[])</p>
-                        <p class="margin0">})</p>
-                    </div>
-                </div>
-            </div>
-            <div class="side-heading">
-                <h3>&lt;html&gt;</h3>
-            </div>
-            <div class="body-wrapper">
-                <div class="codebox">
-                    <p class="margin0">&lt;div id="spoil-move" class="hide"&gt;</p>
-                    <p class="margin0"><span class="margin1">hidden content</span></p>
-                    <p class="margin0">&lt;/div&gt;</p>
-                </div>
-                <ul>
-                    <li>When the method addEventListener() registers a click, a function will be processed.</li>
-                    <li>The above function in &lt;script&gt; is called upon by the method addEventListener(), and it
-                        references an html element with the id "spoil-move", with the class "hide".</li>
-                    <li>Contents enclosed by the &lt;div&gt; tab will be intially hidden, and through
-                        &lt;script&gt;,
-                        will be revealed.</li>
-                </ul>
-            </div>
-            <div class="side-heading">
-                <h3>&lt;style&gt;</h3>
-            </div>
-            <div class="body-wrapper">
-                <div class="codebox">
-                    <p class="margin0">? spoilMov[].classList.replace(hide-text[],reveal-text[])</p>
-                    <p class="margin0">: spoilMov[].classList.replace(reveal-text[], hide-text[])</p>
-                </div>
-                <ul>
-                    <li>Next, in the function called by method addEventListener(), spoilMov[] provides two
-                        interactive
-                        states, hide-text[] and reveal-text[].</li>
-                    <li>One state reveals the hidden content and the other hides the revealing content.</li>
-                    <li>spoilMov[] triggers the hidden content previously mentioned and processes interactions
-                        between
-                        classes in &lt;css&gt; creating the proceeding animations.</li>
-                </ul>
-            </div>
-            <div class="side-heading">
-                <h3>&lt;css&gt;</h3>
-            </div>
-            <div class="body-wrapper">
-                <div class="codebox">transition: opacity 0.5 ease-in-out;</div>
-                <ul>
-                    <li>Creating the interactions between the classes in &lt;css&gt;, .spoil-move creates the
-                        transition. This is the interim animation between hide-text[] and reveal-text[].</li>
-                </ul>
-            </div>
-            <div class="side-heading">
-                <h3>&lt;css&gt;</h3>
-            </div>
-            <div class="body-wrapper">
-                <div class="codebox">height: 0; opacity: 0;</div>
-                <ul>
-                    <li>Hiding the content using &lt;css&gt;, .hide-text class makes the content invisible with
-                        "opacity
-                        0" on the website using these attributes.</li>
-                </ul>
-                <h3 class="side-page">&lt;css&gt;</h3>
-                <div class="codebox">height: 100%; opacity: 1;</div>
-                <ul>
-                    <li>The reverse is used to reveal the content using &lt;css&gt;, .reveal-res class reveals the
-                        content with "opacity 1" and "height: 100%" attributes.</li>
-                </ul>
-            </div>
+      <div class="leftbar"></div>
+      <div id="js">
+        <div class="subject-banner">
+          <h2 class="js">JS</h2>
+          <h2>JavaScript</h2>
         </div>
+        <div class="side-heading">
+          <h3>&lt;various html&gt;</h3>
+        </div>
+        <div class="body-wrapper">
+          <h3>Dropdown spoiler buttons</h3>
+          <button id="spoil-btna">&lt;script&gt;</button>
+          <div id="spoil-movea" class="hide-texta">
+            <div class="code-btn-j">
+              <p class="margin0">const spoilBtn = []</p>
+              <p class="margin0">const spoilMov = []</p>
+              <p class="margin0">const hide-text = []</p>
+              <p class="margin0">const reveal-text = []</p>
+              <p class="margin0">
+                spoilBtn[].addEventListener("click", function () {
+              </p>
+              <p class="margin0">
+                <span class="smargin1"
+                  >spoilMov[].classList.contains(hide-text[]) ?
+                  spoilMov[].classList.replace(hide-text[],</span
+                >
+              </p>
+              <p class="margin0">
+                <span class="margin1"
+                  >reveal-text[]) : spoilMov[].classList.replace(reveal-text[],
+                  hide-text[])</span
+                >
+              </p>
+              <p class="margin0"><span class="margin1">})</span></p>
+            </div>
+          </div>
+          <p class="code-desc">
+            This set of &lt;script&gt; allows block elements to display hidden
+            content that is tabged with a paragraph. When a block element is
+            clicked, it reveals the hidden content.
+          </p>
+          <div class="codebox">
+            <p class="margin0">&lt;button id="spoil-btn"&gt;&lt;/button&gt;</p>
+          </div>
+          <ul>
+            <li>It starts with a spoiler button in the html document.</li>
+          </ul>
+        </div>
+        <div class="side-heading">
+          <h3>&lt;style&gt;</h3>
+        </div>
+        <div class="body-wrapper">
+          <div class="codebox">
+            <p class="margin0">
+              spoilBtn[].addEventListener("click", function () { ...)
+            </p>
+          </div>
+          <ul>
+            <li>
+              This spoiler button is declared and called via spoilBtn constant
+              in &lt;script&gt;, where method addEventListener() will listen for
+              a click to register.
+            </li>
+          </ul>
+          <button id="spoil-btnb">&lt;script&gt;</button>
+          <div id="spoil-moveb" class="hide-textb">
+            <div class="code-btn-j">
+              <p class="margin0">function () {</p>
+              <p class="margin1">
+                spoilMov[].classList.contains(hide-text[]) ?
+                spoilMov[].classList.replace(hide-text[],
+              </p>
+              <p class="margin1">
+                reveal-text[]) : spoilMov[].classList.replace(reveal-text[],
+                hide-text[])
+              </p>
+              <p class="margin0">})</p>
+            </div>
+          </div>
+        </div>
+        <div class="side-heading">
+          <h3>&lt;html&gt;</h3>
+        </div>
+        <div class="body-wrapper">
+          <div class="codebox">
+            <p class="margin0">&lt;div id="spoil-move" class="hide"&gt;</p>
+            <p class="margin0"><span class="margin1">hidden content</span></p>
+            <p class="margin0">&lt;/div&gt;</p>
+          </div>
+          <ul>
+            <li>
+              When the method addEventListener() registers a click, a function
+              will be processed.
+            </li>
+            <li>
+              The above function in &lt;script&gt; is called upon by the method
+              addEventListener(), and it references an html element with the id
+              "spoil-move", with the class "hide".
+            </li>
+            <li>
+              Contents enclosed by the &lt;div&gt; tab will be intially hidden,
+              and through &lt;script&gt;, will be revealed.
+            </li>
+          </ul>
+        </div>
+        <div class="side-heading">
+          <h3>&lt;style&gt;</h3>
+        </div>
+        <div class="body-wrapper">
+          <div class="codebox">
+            <p class="margin0">
+              ? spoilMov[].classList.replace(hide-text[],reveal-text[])
+            </p>
+            <p class="margin0">
+              : spoilMov[].classList.replace(reveal-text[], hide-text[])
+            </p>
+          </div>
+          <ul>
+            <li>
+              Next, in the function called by method addEventListener(),
+              spoilMov[] provides two interactive states, hide-text[] and
+              reveal-text[].
+            </li>
+            <li>
+              One state reveals the hidden content and the other hides the
+              revealing content.
+            </li>
+            <li>
+              spoilMov[] triggers the hidden content previously mentioned and
+              processes interactions between classes in &lt;css&gt; creating the
+              proceeding animations.
+            </li>
+          </ul>
+        </div>
+        <div class="side-heading">
+          <h3>&lt;css&gt;</h3>
+        </div>
+        <div class="body-wrapper">
+          <div class="codebox">transition: opacity 0.5 ease-in-out;</div>
+          <ul>
+            <li>
+              Creating the interactions between the classes in &lt;css&gt;,
+              .spoil-move creates the transition. This is the interim animation
+              between hide-text[] and reveal-text[].
+            </li>
+          </ul>
+        </div>
+        <div class="side-heading">
+          <h3>&lt;css&gt;</h3>
+        </div>
+        <div class="body-wrapper">
+          <div class="codebox">height: 0; opacity: 0;</div>
+          <ul>
+            <li>
+              Hiding the content using &lt;css&gt;, .hide-text class makes the
+              content invisible with "opacity 0" on the website using these
+              attributes.
+            </li>
+          </ul>
+          <h3 class="side-page">&lt;css&gt;</h3>
+          <div class="codebox">height: 100%; opacity: 1;</div>
+          <ul>
+            <li>
+              The reverse is used to reveal the content using &lt;css&gt;,
+              .reveal-res class reveals the content with "opacity 1" and
+              "height: 100%" attributes.
+            </li>
+          </ul>
+        </div>
+      </div>
     </section>
     <!-- contactbar -->
     <section class="body-partition">
-        <div class="leftbar"></div>
-        <div id="contactbar">
-            <a href="mailto:han@hanhuang.tech" class="email" title="Email Han Huang">
-                <img src="../img/emailicon.png" alt="email icon" />
-                <h2>han@hanhuang.tech</h2>
-            </a>
-            <a href="https://github.com/hanhuang-tech/" class="github">
-                <img src="../img/githubicon.png" alt="github icon" title="Han Huang on Github" />
-            </a>
-            <a href="https://www.linkedin.com/in/han-huang-6808bb123" class="linkedin">
-                <img src="../img/linkedinicon.png" alt="linkedin icon" title="Han Huang on LinkedIn" />
-            </a>
-            <a href="https://www.youtube.com/playlist?list=PLipXpUZ1AqJn537TBgPN8Ce8pB1VILvK4" class="youtube">
-                <img src="../img/youtubeicon.png" alt="youtube icon" title="Han Huang on Youtube" />
-            </a>
-        </div>
+      <div class="leftbar"></div>
+      <div id="contactbar">
+        <a
+          href="mailto:han@hanhuang.tech"
+          class="email"
+          title="Email Han Huang"
+        >
+          <img src="../img/emailicon.png" alt="email icon" />
+          <h2>han@hanhuang.tech</h2>
+        </a>
+        <a href="https://github.com/hanhuang-tech/" class="github">
+          <img
+            src="../img/githubicon.png"
+            alt="github icon"
+            title="Han Huang on Github"
+          />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/han-huang-6808bb123"
+          class="linkedin"
+        >
+          <img
+            src="../img/linkedinicon.png"
+            alt="linkedin icon"
+            title="Han Huang on LinkedIn"
+          />
+        </a>
+        <a
+          href="https://www.youtube.com/playlist?list=PLipXpUZ1AqJn537TBgPN8Ce8pB1VILvK4"
+          class="youtube"
+        >
+          <img
+            src="../img/youtubeicon.png"
+            alt="youtube icon"
+            title="Han Huang on Youtube"
+          />
+        </a>
+      </div>
     </section>
     <!-- footer -->
     <footer id="footer">
-        <h4 class="footer">hanhuang.tech 2023</h4>
+      <h4 class="footer">hanhuang.tech 2023</h4>
     </footer>
     <script src="../js/fixed-tab.js"></script>
-
-
-</body>
-
+  </body>
 </html>

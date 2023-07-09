@@ -1778,40 +1778,22 @@ a.medyoutube:hover {
 }
 
 #tab {
-  padding: 4px;
+  padding: 8px 5px;
+  background-color: rgba(200, 200, 200, 0.6);
 }
 
-.tab-content {
-  background-color: rgba(200, 200, 200, 0.6);
-  filter: grayscale(100%);
-  padding: 4px;
+a.tabcontent {
+  background-color: var(--clr-dark);
+  padding: 2px 4px;
+  color: var(--clr-light);
+  text-decoration: none;
   box-shadow: var(--bs);
   border-radius: 3px;
+  transition: 1s;
 }
 
-.tab-content:hover {
+a.tabcontent:hover {
   background-color: rgba(200, 200, 200, 0.8);
-}
-
-.tab-html,
-.tab-css {
-  max-height: 35px;
-  margin-bottom: 4px;
-}
-
-.tab-js {
-  max-height: 28px;
-}
-
-@media (min-width: 64em) {
-  .tab-html,
-  .tab-css {
-    max-height: 40px;
-  }
-
-  .tab-js {
-    max-height: 32px;
-  }
 }
 
 /* html/css/js sections */

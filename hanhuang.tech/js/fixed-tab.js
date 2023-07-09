@@ -174,14 +174,8 @@ const csssection = document.querySelector("#css");
 const jssection = document.querySelector("#js");
 const tabWrap = document.querySelector("#tabwrapper");
 const tab = document.querySelector("#tab");
-const tabhtml = document.querySelector(".tab-html");
-const tabcss = document.querySelector(".tab-css");
-const tabjs = document.querySelector(".tab-js");
 tabWrap.style.transitionDuration = "1s";
 tab.style.transitionDuration = "0.5s";
-tabhtml.style.transitionDuration = "0.5s";
-tabcss.style.transitionDuration = "0.5s";
-tabjs.style.transitionDuration = "0.5s";
 
 function changeTab() {
   if (window.matchMedia("(max-width: 64em)").matches) {
@@ -199,28 +193,6 @@ function changeTab() {
       tabWrap.style.transform = "translate(145px)";
     }
   }
-  // if (
-  //   Math.round(window.scrollY) + 10 > htmlsection.offsetTop &&
-  //   Math.round(window.scrollY) + 10 < csssection.offsetTop
-  // ) {
-  //   tabhtml.style.filter = "grayscale(0%)";
-  //   tabcss.style.filter = "grayscale(100%)";
-  //   tabjs.style.filter = "grayscale(100%)";
-  //   tabWrap.style.backgroundColor = "var(--clr-html)";
-  // } else if (
-  //   Math.round(window.scrollY) + 10 > csssection.offsetTop &&
-  //   Math.round(window.scrollY) + 10 < jssection.offsetTop
-  // ) {
-  //   tabhtml.style.filter = "grayscale(100%)";
-  //   tabcss.style.filter = "grayscale(0%)";
-  //   tabjs.style.filter = "grayscale(100%)";
-  //   tabWrap.style.backgroundColor = "var(--clr-css)";
-  // } else if (Math.round(window.scrollY) + 10 > jssection.offsetTop) {
-  //   tabhtml.style.filter = "grayscale(100%)";
-  //   tabcss.style.filter = "grayscale(100%)";
-  //   tabjs.style.filter = "grayscale(0%)";
-  //   tabWrap.style.backgroundColor = "var(--clr-js)";
-  // }
 }
 
 // spoiler button
