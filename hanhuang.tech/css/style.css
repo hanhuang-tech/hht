@@ -1771,7 +1771,6 @@ a.medyoutube:hover {
     left: -100px;
     top: 45%;
     border-radius: 6px;
-    box-shadow: -0.3em 0.3em 0em rgba(100, 100, 100, 1);
     opacity: 1;
     transform: translate(52px);
   }
@@ -1779,13 +1778,18 @@ a.medyoutube:hover {
 
 #tab {
   padding: 8px 5px;
-  background-color: rgba(200, 200, 200, 0.6);
+  background: linear-gradient(
+    315deg,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(255, 255, 255, 0.5) 50%
+  );
+  border-radius: 5px;
 }
 
 a.tabcontent {
-  background-color: var(--clr-dark);
+  background-color: rgb(100, 100, 100);
   padding: 2px 4px;
-  color: var(--clr-light);
+  color: white;
   text-decoration: none;
   box-shadow: var(--bs);
   border-radius: 3px;
@@ -1793,7 +1797,7 @@ a.tabcontent {
 }
 
 a.tabcontent:hover {
-  background-color: rgba(200, 200, 200, 0.8);
+  background-color: var(--clr-dark);
 }
 
 /* html/css/js sections */
