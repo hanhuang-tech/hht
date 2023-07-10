@@ -1757,11 +1757,11 @@ a.medyoutube:hover {
   position: fixed;
   left: 5px;
   top: 45%;
-  transform: translate(-50px);
+  transform: translate(-60px);
   background-color: var(--clr-dark2);
   margin: 0;
   padding: 0;
-  box-shadow: -0.3em 0.3em 0em rgba(50, 50, 50, 1);
+  box-shadow: -0.3em 0.3em 0em rgba(0, 0, 0, 1);
   opacity: 0.75;
   border-radius: 5px;
 }
@@ -1777,21 +1777,23 @@ a.medyoutube:hover {
 }
 
 #tab {
-  padding: 8px 5px;
+  padding: 5px;
   background: linear-gradient(
     315deg,
-    rgba(0, 0, 0, 0.5) 50%,
-    rgba(255, 255, 255, 0.5) 50%
+    rgba(50, 50, 100, 0.5) 50%,
+    rgba(150, 150, 200, 0.5) 50%
   );
   border-radius: 5px;
 }
 
 a.tabcontent {
-  background-color: rgb(100, 100, 100);
-  padding: 2px 4px;
+  background-color: var(--clr-accent3);
+  padding: 0px 3px;
   color: white;
   text-decoration: none;
-  box-shadow: var(--bs);
+  border-width: 1px;
+  border-style: solid;
+  border-color: lightgray;
   border-radius: 3px;
   transition: 1s;
 }
@@ -1889,7 +1891,7 @@ div.side-heading {
   margin: 10px 0 0 10px;
 }
 
-div.side-heading h4 {
+div.side-heading h3 {
   display: inline-block;
   background-color: var(--clr-dark2);
   font-weight: var(--fw-reg);

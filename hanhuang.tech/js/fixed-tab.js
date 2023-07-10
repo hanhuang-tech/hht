@@ -181,7 +181,7 @@ function changeTab() {
   if (window.matchMedia("(max-width: 64em)").matches) {
     window.addEventListener("scroll", function () {
       if (Math.abs(document.documentElement.scrollTop) < 100) {
-        tabWrap.style.transform = "translate(-50px)";
+        tabWrap.style.transform = "translate(-60px)";
       } else {
         tabWrap.style.transform = "translate(0px)";
       }
