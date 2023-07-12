@@ -1825,8 +1825,8 @@ div.subject-banner.grey {
   justify-content: center;
   column-gap: 25px;
   padding: 15px;
-  text-transform: uppercase;
-  font-family: var(--ff-secondary);
+  background-image: url(../img/treebyhouse.jpg);
+  background-color: var(--clr-brown);
   background-blend-mode: multiply;
   background-size: 100%;
   background-attachment: fixed;
@@ -1835,26 +1835,13 @@ div.subject-banner.grey {
   border-color: var(--clr-dark) transparent var(--clr-dark) transparent;
 }
 
-div.subject-banner {
-  background-image: url(../img/treebyhouse.jpg);
-  background-color: var(--clr-brown);
-}
-
-div.subject-banner.grey {
-  background-image: url(../img/codefrontend.png);
-  background-color: rgb(60, 60, 80);
-}
-
-@media (min-width: 64em) {
-  div.subject-banner.grey {
-    background-size: 50%;
-  }
-}
-
 .subject-banner h2 {
   color: var(--clr-light);
-  padding: 0 5px;
-  margin: auto 0;
+  font-family: var(--ff-secondary);
+  padding: 0px 5px;
+  background-color: var(--clr-dark2);
+  border: 1px solid var(--clr-light);
+  border-radius: 1vw;
 }
 
 .subject-banner .html,
@@ -1901,11 +1888,11 @@ div.side-heading h3 {
 }
 
 div.body-wrapper {
-  padding: 0 60px;
+  padding: 20px 60px;
 }
 
 div.body-wrapper h3 {
-  margin: 10px 0 5px;
+  margin: 5px 0;
 }
 
 @media (min-width: 64em) {
