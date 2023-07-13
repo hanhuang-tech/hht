@@ -1757,7 +1757,7 @@ a.medyoutube:hover {
   position: fixed;
   left: 5px;
   top: 45%;
-  transform: translate(-60px);
+  transform: translate(-70px);
   background-color: var(--clr-dark2);
   margin: 0;
   padding: 0;
@@ -1768,16 +1768,17 @@ a.medyoutube:hover {
 
 @media (min-width: 64em) {
   #tabwrapper {
-    left: -100px;
     top: 45%;
     border-radius: 6px;
     opacity: 1;
-    transform: translate(52px);
   }
 }
 
 #tab {
-  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 3px;
+  padding: 3px;
   background: linear-gradient(
     315deg,
     rgba(50, 50, 100, 0.5) 50%,
@@ -1788,7 +1789,8 @@ a.medyoutube:hover {
 
 a.tabcontent {
   background-color: var(--clr-accent3);
-  padding: 0px 3px;
+  padding: 0px 2px;
+  line-height: 1rem;
   color: white;
   text-decoration: none;
   border-width: 1px;
@@ -1802,25 +1804,22 @@ a.tabcontent:hover {
   background-color: var(--clr-dark);
 }
 
-/* html/css/js sections */
-#html,
-#css,
-#js {
-  flex: 1;
+/* tab sections */
+#head,
+#header {
   background-color: var(--clr-light);
   padding-bottom: 15px;
 }
 
 @media (min-width: 64em) {
-  #html,
-  #css,
-  #js {
+  #head,
+  #header {
+    flex: 1;
     border-width: 0 0 0 5px;
   }
 }
 
-div.subject-banner,
-div.subject-banner.grey {
+div.subject-banner {
   display: flex;
   justify-content: center;
   column-gap: 25px;
@@ -1838,29 +1837,10 @@ div.subject-banner.grey {
 .subject-banner h2 {
   color: var(--clr-light);
   font-family: var(--ff-secondary);
-  padding: 0px 5px;
+  line-height: 1.25rem;
+  padding: 0px 6px;
   background-color: var(--clr-dark2);
   border: 1px solid var(--clr-light);
-  border-radius: 1vw;
-}
-
-.subject-banner .html,
-.subject-banner .css,
-.subject-banner .js {
-  border: 2px solid gray;
-  color: var(--clr-dark);
-}
-
-.subject-banner .html {
-  background-color: var(--clr-html);
-}
-
-.subject-banner .css {
-  background-color: var(--clr-css);
-}
-
-.subject-banner .js {
-  background-color: var(--clr-js);
 }
 
 @media (min-width: 64em) {

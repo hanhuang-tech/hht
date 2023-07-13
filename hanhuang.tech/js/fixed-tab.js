@@ -181,16 +181,16 @@ function changeTab() {
   if (window.matchMedia("(max-width: 64em)").matches) {
     window.addEventListener("scroll", function () {
       if (Math.abs(document.documentElement.scrollTop) < 100) {
-        tabWrap.style.transform = "translate(-60px)";
+        tabWrap.style.transform = "translate(-70px)";
       } else {
         tabWrap.style.transform = "translate(0px)";
       }
     });
   } else {
     if (Math.abs(document.documentElement.scrollTop) < 100) {
-      tabWrap.style.transform = "translate(0)";
+      tabWrap.style.transform = "translate(-70px)";
     } else {
-      tabWrap.style.transform = "translate(145px)";
+      tabWrap.style.transform = "translate(25px)";
     }
   }
 }
