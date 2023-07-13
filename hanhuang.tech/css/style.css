@@ -1719,48 +1719,14 @@ h4.footer {
   }
 }
 
-/* social icons */
-a.medgithub,
-a.medyoutube {
-  padding: 5px;
-  filter: invert(100%);
-  border-radius: 5px;
-  transition: 1s;
-}
-
-@media (min-width: 64em) {
-  a.medgithub,
-  a.medyoutube {
-    background-color: var(--clr-light);
-  }
-}
-
-a.medgithub img,
-a.medyoutube img {
-  max-width: 20px;
-}
-
-@media (min-width: 64em) {
-  a.medgithub img,
-  a.medyoutube img {
-    max-width: 22px;
-  }
-}
-
-a.medgithub:hover,
-a.medyoutube:hover {
-  background-color: rgba(200, 200, 200, 1);
-}
-
 /* tab */
 #tabwrapper {
+  z-index: 1;
   position: fixed;
   left: 5px;
   top: 45%;
   transform: translate(-70px);
   background-color: var(--clr-dark2);
-  margin: 0;
-  padding: 0;
   box-shadow: -0.3em 0.3em 0em rgba(0, 0, 0, 1);
   opacity: 0.75;
   border-radius: 5px;
@@ -1785,6 +1751,7 @@ a.medyoutube:hover {
     rgba(150, 150, 200, 0.5) 50%
   );
   border-radius: 5px;
+  box-shadow: var(--bs);
 }
 
 a.tabcontent {
@@ -1823,7 +1790,7 @@ div.subject-banner {
   display: flex;
   justify-content: center;
   column-gap: 25px;
-  padding: 15px;
+  padding: 10px;
   background-image: url(../img/treebyhouse.jpg);
   background-color: var(--clr-brown);
   background-blend-mode: multiply;
@@ -1835,12 +1802,13 @@ div.subject-banner {
 }
 
 .subject-banner h2 {
-  color: var(--clr-light);
+  color: var(--clr-brown);
   font-family: var(--ff-secondary);
-  line-height: 1.25rem;
-  padding: 0px 6px;
-  background-color: var(--clr-dark2);
-  border: 1px solid var(--clr-light);
+  line-height: 1.1rem;
+  padding: 0px 5px;
+  background-color: var(--clr-light);
+  border: 2px solid var(--clr-brown);
+  text-shadow: 1px 1px gray;
 }
 
 @media (min-width: 64em) {
