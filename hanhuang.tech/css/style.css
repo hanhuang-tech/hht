@@ -1769,6 +1769,7 @@ a.tabcontent {
 
 a.tabcontent:hover {
   background-color: var(--clr-dark);
+  border-color: gray;
 }
 
 /* tab sections */
