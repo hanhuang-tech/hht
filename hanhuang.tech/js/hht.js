@@ -1,13 +1,13 @@
 // document.addEventListener("DOMContentLoaded", revealhht());
-document.addEventListener('DOMContentLoaded', revealhht);
+document.addEventListener("DOMContentLoaded", revealhht);
 
-const habbitSplash = document.querySelector("#habbitsplash");
-const habbitSplashDiv = document.querySelector("#habbitsplash div");
-const habbitSplashItalicized = document.querySelector("#habbitsplash i");
+const splash = document.querySelector("#splash");
+const splashDiv = document.querySelector("#splash div");
+const splashItalicized = document.querySelector("#splash i");
 function revealhht() {
-  habbitSplash.style.opacity = "0";
-  habbitSplash.style.visibility = "hidden";
-  habbitSplashDiv.style.transform = "scale(0%)";
+  splash.style.opacity = "0";
+  splash.style.visibility = "hidden";
+  splashDiv.style.transform = "scale(0%)";
 }
 
 const logoWrap = document.querySelector("div.logowrap");
@@ -21,42 +21,55 @@ const lantern = document.querySelector("#lantern");
 const habbitCry = new Audio("habbit-cry.mp3");
 
 // habbit click
-habbitImg.addEventListener("click", function () {
-  habbitCry.play();
+habbitImg.addEventListener(
+  "click",
+  function () {
+    habbitCry.play();
 
-  habbitA.classList.remove("animate");
-  void habbitA.offsetWidth;
-  habbitA.classList.add("animate");
+    habbitA.classList.remove("animate");
+    void habbitA.offsetWidth;
+    habbitA.classList.add("animate");
 
-  habbitB.classList.remove("animate");
-  void habbitB.offsetWidth;
-  habbitB.classList.add("animate");
+    habbitB.classList.remove("animate");
+    void habbitB.offsetWidth;
+    habbitB.classList.add("animate");
 
-  lantern.classList.remove("animate");
-  void lantern.offsetWidth;
-  lantern.classList.add("animate");
-}, false);
+    lantern.classList.remove("animate");
+    void lantern.offsetWidth;
+    lantern.classList.add("animate");
+  },
+  false
+);
 
 // habbit change
 window.onmousemove = function (e) {
-  if (window.matchMedia("(min-width: 64em)").matches) { habbitChangeDesktop(e); }
-  else { habbitChangeMobile(e); }
-}
+  if (window.matchMedia("(min-width: 64em)").matches) {
+    habbitChangeDesktop(e);
+  } else {
+    habbitChangeMobile(e);
+  }
+};
 
 function habbitChangeMobile(e) {
   // clientX property returns the horizontal coordinate of the current window
   let x = e.clientX;
   let w = Math.floor(document.documentElement.clientWidth / 2);
-  if (x > w) { habbitB.style.opacity = "1"; }
-  else { habbitB.style.opacity = "0"; }
+  if (x > w) {
+    habbitB.style.opacity = "1";
+  } else {
+    habbitB.style.opacity = "0";
+  }
 }
 
 function habbitChangeDesktop(e) {
   // clientX property returns the horizontal coordinate of the current window
   let x = e.clientX;
   let w = Math.floor(document.documentElement.clientWidth / 2);
-  if (x > w) { habbitB.style.opacity = "1"; }
-  else { habbitB.style.opacity = "0"; }
+  if (x > w) {
+    habbitB.style.opacity = "1";
+  } else {
+    habbitB.style.opacity = "0";
+  }
 }
 
 // hover logo
@@ -78,14 +91,13 @@ window.onscroll = function () {
     projectHabbitAnimate();
     projectTilesMoveDesktop();
     scrollToEndBGDesktop();
-  }
-  else {
+  } else {
     scrollRGB();
     retractBurgerOnScroll();
     projectTilesMoveMobile();
     scrollToEndBGMobile();
   }
-}
+};
 
 // change rgb color on scroll
 function getRandomInt() {
@@ -100,20 +112,29 @@ function getRandomInt() {
 }
 
 function sumRestrictRGB(rgb, randomRGB) {
-  if (rgb >= 255) { rgb = 255; randomRGB = -randomRGB; }
+  if (rgb >= 255) {
+    rgb = 255;
+    randomRGB = -randomRGB;
+  }
   return rgb + randomRGB;
 }
 
 function diffRestrictRGB(rgb, randomRGB) {
-  if (rgb <= 0) { rgb = 0; randomRGB = -randomRGB; }
+  if (rgb <= 0) {
+    rgb = 0;
+    randomRGB = -randomRGB;
+  }
   return rgb - randomRGB;
 }
 
 function rgbInverseColor(r, g, b) {
   let total = r + g + b;
   let str = "";
-  if (total < 400) { str = "var(--clr-light)"; }
-  else { str = "var(--clr-dark)"; }
+  if (total < 400) {
+    str = "var(--clr-light)";
+  } else {
+    str = "var(--clr-dark)";
+  }
   return str;
 }
 
@@ -139,11 +160,10 @@ function scrollRGB() {
     b = sumRestrictRGB(b, rB);
     getRGB = "rgb(" + r + "," + g + "," + b + ")";
     filterRGB = r + " " + g + " " + b;
-    dynamicRGB.style.background = getRGB
-    dynamicRGB.innerHTML = filterRGB
+    dynamicRGB.style.background = getRGB;
+    dynamicRGB.innerHTML = filterRGB;
     dynamicRGB.style.color = rgbInverseColor(r, g, b);
     aboutMe.style.outlineColor = getRGB;
-
   } else if (lastScroll - currentScroll > 0) {
     r = diffRestrictRGB(r, rR);
     g = diffRestrictRGB(g, rG);
@@ -206,7 +226,7 @@ burgerHabbit.addEventListener("click", function () {
 
 function retractBurgerOnScroll() {
   if (hiddenBurgerContents.classList.contains("toggle")) {
-    burger.classList.toggle("toggle")
+    burger.classList.toggle("toggle");
     hiddenBurgerContents.classList.toggle("toggle");
     subjectHeadingHide();
   }
@@ -219,9 +239,15 @@ function subjectHeadingHide() {
 }
 
 // hover hidden-burger-contents resources
-const hiddenBurgerContentsResources = document.querySelector("#hidden-burger-contents .resources");
-const hiddenBurgerContentsProjects = document.querySelector("#hidden-burger-contents .projects");
-const hiddenBurgerContentsAboutme = document.querySelector("#hidden-burger-contents .aboutme");
+const hiddenBurgerContentsResources = document.querySelector(
+  "#hidden-burger-contents .resources"
+);
+const hiddenBurgerContentsProjects = document.querySelector(
+  "#hidden-burger-contents .projects"
+);
+const hiddenBurgerContentsAboutme = document.querySelector(
+  "#hidden-burger-contents .aboutme"
+);
 const sideBurgerContent = document.querySelector("#side-burger-content");
 
 hiddenBurgerContentsResources.addEventListener("mouseenter", function () {
@@ -245,33 +271,23 @@ hiddenBurgerContents.addEventListener("mouseleave", function () {
 });
 
 // resources
-const subjectWrapper = [
-  document.querySelector("div.subjectwrapper1")
-]
+const subjectWrapper = [document.querySelector("div.subjectwrapper1")];
 
-const subjectWrapperImg = [
-  document.querySelector("div.subjectwrapper1 img")
-]
-const subjectHeading = [
-  document.querySelector("a.subjectheading1")
-]
-const subjectDropdown = [
-  document.querySelector("div.subjectdropdown1")
-]
-const subjectBlurb = [
-  document.querySelector("p.subjectblurb1")
-]
+const subjectWrapperImg = [document.querySelector("div.subjectwrapper1 img")];
+const subjectHeading = [document.querySelector("a.subjectheading1")];
+const subjectDropdown = [document.querySelector("div.subjectdropdown1")];
+const subjectBlurb = [document.querySelector("p.subjectblurb1")];
 const awsTip = document.querySelector(".awstip");
 
 for (let i = 0; i < subjectHeading.length; i++) {
   subjectHeading[i].addEventListener("mouseenter", function () {
     downList(i);
-    subjectWrapperImg[i].style.filter = "grayscale(1) blur(2px)"
+    subjectWrapperImg[i].style.filter = "grayscale(1) blur(2px)";
     subjectWrapperImg[i].style.transitionDuration = "1s";
   });
   subjectWrapper[i].addEventListener("mouseleave", function () {
     upList(i);
-    subjectWrapperImg[i].style.filter = "grayscale(0) blur(0px)"
+    subjectWrapperImg[i].style.filter = "grayscale(0) blur(0px)";
     subjectWrapperImg[i].style.transitionDuration = "1s";
   });
 }
@@ -348,8 +364,7 @@ function projectTilesMoveMobile() {
       projectTilesChild[i].style.opacity = "0";
       projectTilesChild[i].style.transition = "0.5s";
     }
-  }
-  else {
+  } else {
     for (let i = 0; i < projectTilesChild.length; i++) {
       projectTilesChild[i].style.opacity = "1";
       projectTilesChild[i].style.transition = "0.5s";
@@ -370,8 +385,7 @@ function projectTilesMoveDesktop() {
     habbitBorder.style.opacity = "0";
     habbitBorder.style.transition = "1s";
     projectTilesMoveExpand();
-  }
-  else {
+  } else {
     projectHeading.style.opacity = "0";
     projectHeading.style.transition = "1s";
     projectBGImg.style.opacity = "1";
@@ -390,7 +404,8 @@ function projectTilesMoveExpand() {
   for (let i = 0; i < projectTilesChild.length; i++) {
     projectTilesChild[i].style.zIndex = "1";
     projectTilesChild[i].style.margin = "15px";
-    projectTilesChild[i].style.borderColor = "gray var(--clr-dark2) var(--clr-dark2) gray";
+    projectTilesChild[i].style.borderColor =
+      "gray var(--clr-dark2) var(--clr-dark2) gray";
     projectTilesChild[i].style.borderRadius = "5px";
     projectTilesChild[i].style.transition = "1s";
   }
@@ -398,7 +413,7 @@ function projectTilesMoveExpand() {
 
 function projectTilesMoveRetract() {
   for (let i = 0; i < projectTilesChild.length; i++) {
-    projectTilesChild[i].style.opacity = "0"
+    projectTilesChild[i].style.opacity = "0";
     projectTilesChild[i].style.zIndex = "-1";
     projectTilesChild[i].style.margin = "0px";
     projectTilesChild[i].style.borderColor = "transparent";
@@ -412,24 +427,28 @@ const imgWrapper = [
   document.querySelector("div.imgwrapper1"),
   document.querySelector("div.imgwrapper2"),
   document.querySelector("div.imgwrapper3"),
-  document.querySelector("div.imgwrapper4")
-]
+  document.querySelector("div.imgwrapper4"),
+];
 const progressImg = [
   document.querySelector("div.imgwrapper1 img"),
   document.querySelector("div.imgwrapper2 img"),
   document.querySelector("div.imgwrapper3 img"),
-  document.querySelector("div.imgwrapper4 img")
+  document.querySelector("div.imgwrapper4 img"),
 ];
 const viewOnGithub = [
   document.querySelector("h2.viewgithub1"),
   document.querySelector("h2.viewgithub2"),
   document.querySelector("h2.viewgithub3"),
-  document.querySelector("h2.viewgithub4")
+  document.querySelector("h2.viewgithub4"),
 ];
 
 for (let i = 0; i < imgWrapper.length; i++) {
-  imgWrapper[i].addEventListener("mouseenter", function () { mouseEnterToggle(i); });
-  imgWrapper[i].addEventListener("mouseleave", function () { mouseLeaveToggle(i); });
+  imgWrapper[i].addEventListener("mouseenter", function () {
+    mouseEnterToggle(i);
+  });
+  imgWrapper[i].addEventListener("mouseleave", function () {
+    mouseLeaveToggle(i);
+  });
 }
 
 function mouseEnterToggle(n) {
@@ -442,7 +461,7 @@ function mouseEnterToggle(n) {
 }
 
 function mouseLeaveToggle(n) {
-  progressImg[n].style.transform = "scale(1)"
+  progressImg[n].style.transform = "scale(1)";
   progressImg[n].style.opacity = "1";
   progressImg[n].style.zIndex = "1";
   viewOnGithub[n].style.opacity = "0";
@@ -455,9 +474,14 @@ const scrollEnd = document.body.clientHeight;
 
 // change BG of project when scrolled to end mobile
 function scrollToEndBGMobile() {
-  if (Math.abs(document.documentElement.scrollTop) + window.innerHeight > scrollEnd) {
+  if (
+    Math.abs(document.documentElement.scrollTop) + window.innerHeight >
+    scrollEnd
+  ) {
     setTimeout(endBGMobile, 200);
-  } else { setTimeout(notEndBGMobile, 200); }
+  } else {
+    setTimeout(notEndBGMobile, 200);
+  }
 }
 
 function notEndBGMobile() {
@@ -473,39 +497,72 @@ function endBGMobile() {
 
 // change BG of project when scrolled to end desktop
 function scrollToEndBGDesktop() {
-  if (Math.abs(document.documentElement.scrollTop) + window.innerHeight > scrollEnd) {
+  if (
+    Math.abs(document.documentElement.scrollTop) + window.innerHeight >
+    scrollEnd
+  ) {
     setTimeout(endBGDesktop, 200);
-  } else { setTimeout(notEndBGDesktop, 200); }
+  } else {
+    setTimeout(notEndBGDesktop, 200);
+  }
 }
 
 function notEndBGDesktop() {
-  leftbarAll.forEach(leftbar => { leftbar.style.background = "var(--clr-dark)"; })
+  leftbarAll.forEach((leftbar) => {
+    leftbar.style.background = "var(--clr-dark)";
+  });
   if (Math.abs(document.documentElement.scrollTop) > 350) {
     projectTiles.style.background =
-      "radial-gradient(black 25%, var(--clr-accent3))"
-    projectDivAll.forEach(tile => { tile.style.opacity = "1"; })
+      "radial-gradient(black 25%, var(--clr-accent3))";
+    projectDivAll.forEach((tile) => {
+      tile.style.opacity = "1";
+    });
   } else {
     projectTiles.style.background = "radial-gradient(var(--clr-dark2), black)";
   }
 }
 
 function endBGDesktop() {
-  leftbarAll.forEach(leftbar => { leftbar.style.background = getRGB })
+  leftbarAll.forEach((leftbar) => {
+    leftbar.style.background = getRGB;
+  });
   logoWrap.style.background = getRGB;
   projectTiles.style.background = getRGB;
-  projectDivAll.forEach(tile => { tile.style.opacity = "0"; })
+  projectDivAll.forEach((tile) => {
+    tile.style.opacity = "0";
+  });
 }
 
 //tests
 function test() {
   console.log(
-    "rgb:" + r + "," + g + "," + b +
-    " rR:" + rR + "/" + sumRestrictRGB(r, rR) + "/" + diffRestrictRGB(b, rB) +
-    " rG:" + rG + "/" + sumRestrictRGB(g, rG) + "/" + diffRestrictRGB(b, rB) +
-    " rB:" + rB + "/" + sumRestrictRGB(b, rB) + "/" + diffRestrictRGB(b, rB)
-  )
-  console.log(subjectHeading.length)
-  console.log(projectTilesChild.length)
-  console.log(subjectsNoOfChild.length)
+    "rgb:" +
+      r +
+      "," +
+      g +
+      "," +
+      b +
+      " rR:" +
+      rR +
+      "/" +
+      sumRestrictRGB(r, rR) +
+      "/" +
+      diffRestrictRGB(b, rB) +
+      " rG:" +
+      rG +
+      "/" +
+      sumRestrictRGB(g, rG) +
+      "/" +
+      diffRestrictRGB(b, rB) +
+      " rB:" +
+      rB +
+      "/" +
+      sumRestrictRGB(b, rB) +
+      "/" +
+      diffRestrictRGB(b, rB)
+  );
+  console.log(subjectHeading.length);
+  console.log(projectTilesChild.length);
+  console.log(subjectsNoOfChild.length);
 }
 //test()

@@ -147,7 +147,7 @@ html {
 }
 
 /* hanhuang.tech splash */
-#habbitsplash {
+#splash {
   position: fixed;
   z-index: 10;
   opacity: 1;
@@ -163,38 +163,38 @@ html {
 }
 
 @media (min-width: 64em) {
-  #habbitsplash {
+  #splash {
     row-gap: 12px;
   }
 }
 
-#habbitsplash div {
+#splash div {
   filter: drop-shadow(0px 0px 1px var(--clr-light));
   transition: 1s;
   transition-delay: 3s;
 }
 
 @media (min-width: 64em) {
-  #habbitsplash div {
+  #splash div {
     filter: drop-shadow(0px 0px 2px var(--clr-light));
     margin-left: 40px;
   }
 }
 
-#habbitsplash img {
+#splash img {
   max-height: 40px;
   filter: hue-rotate(90deg);
   margin: 0 15px 8px 0;
 }
 
 @media (min-width: 64em) {
-  #habbitsplash img {
+  #splash img {
     max-height: 50px;
     margin: 0 20px 12px 0;
   }
 }
 
-#habbitsplash h1 {
+#splash h1 {
   font-family: var(--ff-secondary);
   background-color: var(--clr-dark2);
   color: var(--clr-light);
@@ -204,13 +204,13 @@ html {
 }
 
 @media (min-width: 64em) {
-  #habbitsplash h1 {
+  #splash h1 {
     font-size: 1.2rem;
     padding: 0px 10px;
   }
 }
 
-#habbitsplash i {
+#splash i {
   display: flex;
   justify-content: center;
   font-family: var(--ff-secondary);
@@ -222,7 +222,7 @@ html {
 }
 
 @media (min-width: 64em) {
-  #habbitsplash i {
+  #splash i {
     font-size: 1.25rem;
     margin-left: 40px;
   }
