@@ -1773,15 +1773,17 @@ a.tabcontent:hover {
 }
 
 /* tab sections */
-#head,
-#header {
+#head-tech,
+#header-tech,
+#splash-tech {
   background-color: var(--clr-light);
   padding-bottom: 15px;
 }
 
 @media (min-width: 64em) {
-  #head,
-  #header {
+  #head-tech,
+  #header-tech,
+  #splash-tech {
     flex: 1;
     border-width: 0 0 0 5px;
   }
