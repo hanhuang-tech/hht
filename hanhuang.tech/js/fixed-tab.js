@@ -80,7 +80,8 @@ logo.addEventListener("mouseleave", function () {
 window.onscroll = function () {
   scrollRGB();
   revealNavArrowBtn();
-  changeTab();
+  revealTab();
+  changeNavTab();
 };
 
 // change color on scroll
@@ -169,15 +170,20 @@ function revealNavArrowBtn() {
 }
 
 // tab
-const htmlsection = document.querySelector("#html");
-const csssection = document.querySelector("#css");
-const jssection = document.querySelector("#js");
 const tabWrap = document.querySelector("#tabwrapper");
+const sectionHead = document.querySelector("#head__tech");
+const sectionHeader = document.querySelector("#header__tech");
+const sectionNav = document.querySelector("#nav__tech");
+const sectionFooter = document.querySelector("#footer__tech");
+const headTab = document.querySelector("#head__tab");
+const headerTab = document.querySelector("#header__tab");
+const navTab = document.querySelector("#nav__tab");
+const footerTab = document.querySelector("#footer__tab");
 const tab = document.querySelector("#tab");
 tabWrap.style.transitionDuration = "1s";
 tab.style.transitionDuration = "0.5s";
 
-function changeTab() {
+function revealTab() {
   if (window.matchMedia("(max-width: 64em)").matches) {
     window.addEventListener("scroll", function () {
       if (Math.abs(document.documentElement.scrollTop) < 100) {
@@ -193,6 +199,32 @@ function changeTab() {
       tabWrap.style.transform = "translate(25px)";
     }
   }
+}
+
+function changeNavTab() {
+  if (
+    Math.round(window.scrollY) + 10 > sectionHead.offsetTop &&
+    Math.round(window.scrollY) + 10 < sectionHeader.offsetTop
+  ) {
+    headTab.style.borderColor = "var(--clr-light)";
+    headerTab.style.borderColor = "transparent";
+  } else if (
+    Math.round(window.scrollY) + 10 > sectionHeader.offsetTop &&
+    Math.round(window.scrollY) + 10 < sectionNav.offsetTop
+  ) {
+    headerTab.style.borderColor = "var(--clr-light)";
+    headTab.style.borderColor = "transparent";
+    navTab.style.borderColor = "transparent";
+  } else if (
+    Math.round(window.scrollY) + 10 > sectionNav.offsetTop &&
+    Math.round(window.scrollY) + 10 < sectionFooter.offsetTop
+  ) {
+    navTab.style.borderColor = "var(--clr-light)";
+    headerTab.style.borderColor = "transparent";
+    footerTab.style.borderColor = "transparent";
+  } else if (Math.round(window.scrollY) + 10 > sectionFooter.offsetTop)
+    footerTab.style.borderColor = "var(--clr-light)";
+  navTab.style.borderColor = "transparent";
 }
 
 // spoiler button
