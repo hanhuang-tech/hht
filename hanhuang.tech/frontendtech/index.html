@@ -89,17 +89,17 @@
     <!-- tab -->
     <div id="tabwrapper">
       <div id="tab">
-        <a href="#head__tech" id="head__tab">head</a>
-        <a href="#header__tech" id="header__tab">header</a>
-        <a href="#nav__tech" id="nav__tab">nav</a>
-        <a href="#footer__tech" id="footer__tab">footer</a>
+        <a href="#head__section" id="head__tab">head</a>
+        <a href="#header__section" id="header__tab">header</a>
+        <a href="#nav__section" id="nav__tab">nav</a>
+        <a href="#footer__section" id="footer__tab">footer</a>
       </div>
     </div>
 
     <!-- head / -->
     <section class="body-partition">
       <div class="leftbar"></div>
-      <div id="head__tech">
+      <div id="head__section">
         <div class="subject-banner">
           <h2>head /</h2>
         </div>
@@ -125,6 +125,14 @@
             elements correctly to accommodate various sizes of devices as it is
             displayed. This is an important meta tab to use for responsive
             websites.
+          </p>
+          <div class="codebox">
+            <div class="code-html">html</div>
+            <p class="margin0">&lt; title&gt;hht&lt;/title&gt;</p>
+          </div>
+          <p class="code-desc">
+            Adding a &lt;title&gt; to the top of a webpage adds description of
+            its contents.
           </p>
           <div class="codebox">
             <div class="code-html">html</div>
@@ -171,7 +179,7 @@
     <!-- header / -->
     <section class="body-partition">
       <div class="leftbar"></div>
-      <div id="header__tech">
+      <div id="header__section">
         <div class="subject-banner">
           <h2>header /</h2>
         </div>
@@ -250,7 +258,7 @@
     <!-- nav / -->
     <section class="body-partition">
       <div class="leftbar"></div>
-      <div id="nav__tech">
+      <div id="nav__section">
         <div class="subject-banner">
           <h2>nav /</h2>
         </div>
@@ -311,13 +319,14 @@
             <p class="margin0">&lt;div id="tabwrapper"&gt;</p>
             <p class="margin1">&lt;div id="tab"&gt;</p>
             <p class="margin2">
-              &lt;a href="#head__tech" class="tabcontent"&gt;head&lt;/a&gt;
+              &lt;a href="#head__section" class="tabcontent"&gt;head&lt;/a&gt;
             </p>
             <p class="margin1">
-              &lt;a href="#header__tech" class="tabcontent"&gt;header&lt;/a&gt;
+              &lt;a href="#header__section"
+              class="tabcontent"&gt;header&lt;/a&gt;
             </p>
             <p class="margin1">
-              &lt;a href="#nav__tech" class="tabcontent"&gt;nav&lt;/a&gt;
+              &lt;a href="#nav__section" class="tabcontent"&gt;nav&lt;/a&gt;
             </p>
             <p class="margin0">&lt;/div&gt;</p>
           </div>
@@ -330,10 +339,31 @@
       </div>
     </section>
 
-    <!-- contactbar -->
+    <!-- footer / -->
     <section class="body-partition">
       <div class="leftbar"></div>
-      <div id="contactbar">
+      <div id="footer__section">
+        <div class="subject-banner">
+          <h2>footer /</h2>
+        </div>
+        <div class="body-wrapper">
+          <h3>l</h3>
+          <div class="codebox">
+            <div class="code-html">html</div>
+            <p class="margin0">&lt;meta charset="UTF-8"&gt;</p>
+          </div>
+          <p class="code-desc">
+            By utilising a standardised character set UTF-8, &lt;html&gt; will
+            accurately encode the characters used on this webpage.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="body-partition">
+      <div class="leftbar"></div>
+      <div id="footer">
         <a
           href="mailto:han@hanhuang.tech"
           class="email"
@@ -370,10 +400,9 @@
           />
         </a>
       </div>
-    </section>
-    <!-- footer -->
-    <footer id="footer">
-      <h4 class="footer">hanhuang.tech 2023</h4>
+      <div id="author">
+        <h4>hanhuang.tech 2023</h4>
+      </div>
     </footer>
     <script src="../js/fixed-tab.js"></script>
   </body>
