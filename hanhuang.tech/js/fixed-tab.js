@@ -9,6 +9,11 @@ const arrowButton = document.querySelector("#arrow-button");
 const lantern = document.querySelector("#lantern");
 const habbitCry = new Audio("../../habbit-cry.mp3");
 
+const test = () => {
+  console.log("window.scrollY=" + Math.round(window.scrollY));
+  console.log("footerSection.offsetTop= " + footerScrolledToEnd);
+};
+
 // habbit click
 habbitImg.addEventListener(
   "click",
@@ -82,6 +87,7 @@ window.onscroll = function () {
   revealNavArrowBtn();
   revealTab();
   changeNavTab();
+  test();
 };
 
 // change color on scroll
@@ -182,6 +188,7 @@ const footerTab = document.querySelector("#footer__tab");
 const tab = document.querySelector("#tab");
 tabWrap.style.transitionDuration = "1s";
 tab.style.transitionDuration = "0.5s";
+const footerScrolledToEnd = footerSection.offsetTop - 200;
 
 function revealTab() {
   if (window.matchMedia("(max-width: 64em)").matches) {
@@ -217,12 +224,12 @@ function changeNavTab() {
     navTab.style.borderColor = "transparent";
   } else if (
     Math.round(window.scrollY) + 10 > navSection.offsetTop &&
-    Math.round(window.scrollY) + 10 < footerSection.offsetTop
+    Math.round(window.scrollY) + 10 < footerScrolledToEnd
   ) {
     navTab.style.borderColor = "var(--clr-light)";
     headerTab.style.borderColor = "transparent";
     footerTab.style.borderColor = "transparent";
-  } else if (Math.round(window.scrollY) + 10 > footerSection.offsetTop) {
+  } else if (Math.round(window.scrollY) > footerScrolledToEnd) {
     footerTab.style.borderColor = "var(--clr-light)";
     navTab.style.borderColor = "transparent";
   }
