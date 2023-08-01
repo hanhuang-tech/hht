@@ -1722,6 +1722,7 @@ div.project-list-subjects h4 {
 #tabwrapper {
   z-index: 1;
   position: fixed;
+  width: 55px;
   left: 5px;
   top: 45%;
   transform: translate(-70px);
@@ -1756,11 +1757,15 @@ div.project-list-subjects h4 {
 #head__tab,
 #header__tab,
 #nav__tab,
+#body-partition__tab,
 #footer__tab {
+  display: flex;
+  justify-content: center;
   background-color: var(--clr-dark);
   padding: 0px 3px;
   margin: 0 auto;
   line-height: 1rem;
+  text-align: center;
   color: white;
   text-decoration: none;
   border-width: 1px;
@@ -1773,6 +1778,7 @@ div.project-list-subjects h4 {
 #head__tab:hover,
 #header__tab:hover,
 #nav__tab:hover,
+#body-partition__tab:hover,
 #footer__tab:hover {
   background-color: black;
   color: var(--clr-light);
@@ -1782,6 +1788,7 @@ div.project-list-subjects h4 {
 #head__section,
 #header__section,
 #nav__section,
+#body-partition__section,
 #footer__section {
   background-color: var(--clr-light);
   padding-bottom: 15px;
@@ -1791,6 +1798,7 @@ div.project-list-subjects h4 {
   #head__section,
   #header__section,
   #nav__section,
+  #body-partition__section,
   #footer__section {
     flex: 1;
     border-width: 0 0 0 5px;

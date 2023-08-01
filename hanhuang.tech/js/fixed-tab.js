@@ -180,10 +180,12 @@ const tabWrap = document.querySelector("#tabwrapper");
 const headSection = document.querySelector("#head__section");
 const headerSection = document.querySelector("#header__section");
 const navSection = document.querySelector("#nav__section");
+const bodyPartSection = document.querySelector("#body-partition__section");
 const footerSection = document.querySelector("#footer__section");
 const headTab = document.querySelector("#head__tab");
 const headerTab = document.querySelector("#header__tab");
 const navTab = document.querySelector("#nav__tab");
+const bodyPartTab = document.querySelector("#body-partition__tab");
 const footerTab = document.querySelector("#footer__tab");
 const tab = document.querySelector("#tab");
 tabWrap.style.transitionDuration = "1s";
@@ -219,19 +221,26 @@ function changeNavTab() {
     Math.round(window.scrollY) + 10 > headerSection.offsetTop &&
     Math.round(window.scrollY) + 10 < navSection.offsetTop
   ) {
-    headerTab.style.borderColor = "var(--clr-light)";
     headTab.style.borderColor = "transparent";
+    headerTab.style.borderColor = "var(--clr-light)";
     navTab.style.borderColor = "transparent";
   } else if (
     Math.round(window.scrollY) + 10 > navSection.offsetTop &&
+    Math.round(window.scrollY) + 10 < bodyPartSection.offsetTop
+  ) {
+    headerTab.style.borderColor = "transparent";
+    navTab.style.borderColor = "var(--clr-light)";
+    bodyPartTab.style.borderColor = "transparent";
+  } else if (
+    Math.round(window.scrollY) + 10 > bodyPartSection.offsetTop &&
     Math.round(window.scrollY) + 10 < footerScrolledToEnd
   ) {
-    navTab.style.borderColor = "var(--clr-light)";
-    headerTab.style.borderColor = "transparent";
+    navTab.style.borderColor = "transparent";
+    bodyPartTab.style.borderColor = "var(--clr-light)";
     footerTab.style.borderColor = "transparent";
   } else if (Math.round(window.scrollY) > footerScrolledToEnd) {
+    bodyPartTab.style.borderColor = "transparent";
     footerTab.style.borderColor = "var(--clr-light)";
-    navTab.style.borderColor = "transparent";
   }
 }
 
