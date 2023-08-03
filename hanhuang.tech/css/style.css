@@ -1734,8 +1734,9 @@ div.project-list-subjects h4 {
 
 @media (min-width: 64em) {
   #tabwrapper {
-    top: 45%;
-    border-radius: 6px;
+    width: 65px;
+    left: -5px;
+    box-shadow: -0.4em 0.4em 0em var(--clr-accent3);
     opacity: 1;
   }
 }
@@ -1750,8 +1751,14 @@ div.project-list-subjects h4 {
     rgba(50, 50, 100, 1) 50%,
     rgba(150, 150, 200, 1) 50%
   );
-  border-radius: 0.6vw;
+  border-radius: inherit;
   box-shadow: var(--bs);
+}
+
+@media (min-width: 64em) {
+  #tab {
+    border-radius: 0.25vw;
+  }
 }
 
 #head__tab,
@@ -1773,6 +1780,16 @@ div.project-list-subjects h4 {
   border-color: transparent;
   border-radius: 0.5vw;
   transition: 0.5s;
+}
+
+@media (min-width: 64em) {
+  #head__tab,
+  #header__tab,
+  #nav__tab,
+  #body-partition__tab,
+  #footer__tab {
+    border-radius: 0.2vw;
+  }
 }
 
 #head__tab:hover,

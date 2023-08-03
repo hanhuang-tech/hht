@@ -190,7 +190,6 @@ const footerTab = document.querySelector("#footer__tab");
 const tab = document.querySelector("#tab");
 tabWrap.style.transitionDuration = "1s";
 tab.style.transitionDuration = "0.5s";
-const footerScrolledToEnd = footerSection.offsetTop - 200;
 
 function revealTab() {
   if (window.matchMedia("(max-width: 64em)").matches) {
@@ -233,12 +232,12 @@ function changeNavTab() {
     bodyPartTab.style.borderColor = "transparent";
   } else if (
     Math.round(window.scrollY) + 10 > bodyPartSection.offsetTop &&
-    Math.round(window.scrollY) + 10 < footerScrolledToEnd
+    Math.round(window.scrollY) + 10 < footerSection.offsetTop
   ) {
     navTab.style.borderColor = "transparent";
     bodyPartTab.style.borderColor = "var(--clr-light)";
     footerTab.style.borderColor = "transparent";
-  } else if (Math.round(window.scrollY) > footerScrolledToEnd) {
+  } else if (Math.round(window.scrollY) > footerSection.offsetTop) {
     bodyPartTab.style.borderColor = "transparent";
     footerTab.style.borderColor = "var(--clr-light)";
   }
