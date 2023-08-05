@@ -1744,8 +1744,8 @@ div.project-list-subjects h4 {
 #tab {
   display: flex;
   flex-direction: column;
-  row-gap: 3px;
-  padding: 3px;
+  row-gap: 2px;
+  padding: 2px;
   background: linear-gradient(
     315deg,
     rgba(50, 50, 100, 1) 50%,
