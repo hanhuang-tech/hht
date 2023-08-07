@@ -1729,7 +1729,7 @@ div.project-list-subjects h4 {
   background-color: var(--clr-dark2);
   box-shadow: -0.3em 0.3em 0em rgba(0, 0, 0, 1);
   opacity: 0.85;
-  border-radius: 5px;
+  border-radius: 0.85vw;
 }
 
 @media (min-width: 64em) {
@@ -1771,14 +1771,14 @@ div.project-list-subjects h4 {
   background-color: var(--clr-dark);
   padding: 0px 3px;
   margin: 0 auto;
-  line-height: 1rem;
+  line-height: 0.85rem;
   text-align: center;
   color: white;
   text-decoration: none;
   border-width: 1px;
   border-style: solid;
   border-color: transparent;
-  border-radius: 0.5vw;
+  border-radius: inherit;
   transition: 0.5s;
 }
 
@@ -1876,7 +1876,7 @@ div.body-wrapper {
 }
 
 div.body-wrapper h3 {
-  margin: 5px 0;
+  margin: 5px 3px;
 }
 
 @media (min-width: 64em) {
@@ -1991,7 +1991,7 @@ p.margin5 {
 }
 
 p.code-desc {
-  margin: 5px 0 10px;
+  margin: 5px 3px 10px;
 }
 
 @media (min-width: 64em) {
