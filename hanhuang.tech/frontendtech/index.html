@@ -249,6 +249,102 @@
           <p class="code-desc">
             This logo has 2 forms habbit-a and habbit-b, within the same class block. Through scripts this block alternates between one and the other. Additionally, there is a banner html child element within this parent block that redirects the user back to the home page, also activatable via scripts. 
           </p>
+
+          <div class="codebox">
+            <div class="code-css">css</div>
+            <p class="margin0">div.logowrap {</p>
+              <p class="margin1">  position: absolute;</p>
+              <p class="margin1">z-index: 1;</p>
+              <p class="margin1"> top: 0;</p>
+              <p class="margin1">left: 0;</p>
+              <p class="margin0">}</p>
+             <br>
+              <p class="margin0">div.logo {</p>
+                <p class="margin1">  position: fixed;</p>
+                <p class="margin1">display: flex;</p>
+                <p class="margin1"> padding: 15px;</p>
+                <p class="margin0">}</p>
+                <br>
+                <p class="margin0">@media (min-width: 64em) {</p>
+                  <p class="margin1">  div.logo {</p>
+                  <p class="margin2">padding: 20px;</p>
+                  <p class="margin1">}</p>
+                  <p class="margin0">}</p>
+              <br>
+                  <p class="margin0">div.habbit-img {</p>
+                    <p class="margin1">position: relative;</p>
+                    <p class="margin1">margin-right: 10px;</p>
+                    <p class="margin1">filter: drop-shadow(0 0 1px lightgreen);</p>
+                    <p class="margin1">outline-width: 1px;</p>
+                    <p class="margin1">outline-style: solid;</p>
+                    <p class="margin1">outline-color: var(--clr-dark2);</p>
+                    <p class="margin1">outline-offset: 6px;</p>
+                    <p class="margin1">transition: 1s;</p>
+                    <p class="margin0">}</p>
+              <br>
+              <p class="margin0">div.habbit-img:hover {</p>
+                <p class="margin1">filter: drop-shadow(0 0 4px lightgreen);</p>
+                <p class="margin0">}</p>
+                <br>
+                <p class="margin0">@media (min-width: 64em) {</p>
+                  <p class="margin1">div.habbit-img {</p>
+                  <p class="margin2">margin-right: 15px;</p>
+                  <p class="margin1">}</p>
+                  <p class="margin0">}</p>
+                  <br>
+                  <p class="margin0">img.habbit-a,</p>
+                  <p class="margin0">img.habbit-b {</p>
+                    <p class="margin1">width: 35px;</p>
+                    <p class="margin1">cursor: pointer;</p>
+                    <p class="margin0">}</p>
+<br>
+                    <p class="margin0">@media (min-width: 64em) {</p>
+                      <p class="margin1">img.habbit-a,</p>
+                      <p class="margin1">img.habbit-b {</p>
+                        <p class="margin2">width: 40px;</p>
+                        <p class="margin1">}</p>
+                        <p class="margin0">}</p>
+<br>
+                        <p class="margin0">img.habbit-a {</p>
+                          <p class="margin1">position: relative;</p>
+                          <p class="margin0">}</p>
+<br>
+                        <p class="margin0">img.habbit-b {</p>
+                          <p class="margin1">position: absolute;</p>
+                          <p class="margin1">opacity: 0;</p>
+                          <p class="margin1">top: 0;</p>
+                          <p class="margin1">left: 0;</p>
+                          <p class="margin0">}</p>
+<br>
+                        <p class="margin0">#habbitbanner {</p>
+                          <p class="margin1">opacity: 0;</p>
+                          <p class="margin1">visibility: hidden;</p>
+                          <p class="margin1">display: inline-block;</p>
+                          <p class="margin1">background-color: var(--clr-light);</p>
+                          <p class="margin1">text-decoration: none;</p>
+                          <p class="margin1">margin: auto;</p>
+                          <p class="margin1">padding: 0 5px;</p>
+                          <p class="margin1">font-size: 1.1rem;</p>
+                          <p class="margin1">color: var(--clr-dark);</p>
+                          <p class="margin1">font-weight: bold;</p>
+                          <p class="margin1">font-family: var(--ff-secondary);</p>
+                          <p class="margin1">border: 2px solid var(--clr-dark);</p>
+                          <p class="margin1">border-radius: 0 6px 6px 0;</p>
+                          <p class="margin0">}</p>
+<br>
+                        <p class="margin0">@media (min-width: 64em) {</p>
+                          <p class="margin1">#habbitbanner {</p>
+                            <p class="margin2">padding: 2px 5px;</p>
+                            <p class="margin2">font-size: 1.2rem;</p>
+                            <p class="margin1">}</p>
+                            <p class="margin0">}</p>
+<br>
+                        <p class="margin0">#habbitbanner:hover {</p>
+                          <p class="margin1">transform: scale(105%);</p>
+                          <p class="margin1">filter: drop-shadow(0px 0px 4px var(--clr-light));</p>
+                          <p class="margin0">}</p>
+                      </div>
+          <p class="code-desc"></p>
           <h3>Connectedto</h3>
           <div class="codebox">
             <div class="code-html">html</div>
