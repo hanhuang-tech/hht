@@ -1738,6 +1738,7 @@ div.project-list-subjects h4 {
     left: -5px;
     box-shadow: -0.4em 0.4em 0em var(--clr-accent3);
     opacity: 1;
+    border-radius: 0.3vw;
   }
 }
 
@@ -1757,7 +1758,8 @@ div.project-list-subjects h4 {
 
 @media (min-width: 64em) {
   #tab {
-    border-radius: 0.25vw;
+    row-gap: 3px;
+    padding: 3px;
   }
 }
 
@@ -1788,7 +1790,8 @@ div.project-list-subjects h4 {
   #nav__tab,
   #body-partition__tab,
   #footer__tab {
-    border-radius: 0.2vw;
+    padding: 0px 5px;
+    line-height: 1rem;
   }
 }
 
@@ -1818,7 +1821,6 @@ div.project-list-subjects h4 {
   #body-partition__section,
   #footer__section {
     flex: 1;
-    border-width: 0 0 0 5px;
   }
 }
 
