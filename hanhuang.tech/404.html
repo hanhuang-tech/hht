@@ -1,91 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Oops!</title>
     <!--links-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <!-- favicon -->
     <link rel="icon" type="image/png" href="img/redhabbit.png" />
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Noto+Sans:wght@400;700&display=swap"
-        rel="stylesheet" />
-</head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Noto+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <header>
-        <!-- logo -->
-        <div class="logowrap">
-            <div class="logo">
-                <div class="habbit-img">
-                    <img src="img/habbit-a.png" class="habbit-a" alt="a pic of habbit" />
-                    <img src="img/habbit-b.png" class="habbit-b" alt="a pic of habbit" />
-                </div>
-            </div>
+      <!-- logo -->
+      <div class="logowrap">
+        <div class="logo">
+          <div class="habbit-img">
+            <img
+              src="/hanhuang.tech/img/habbit-a.png"
+              class="habbit-a"
+              alt="a pic of habbit"
+            />
+            <img
+              src="/hanhuang.tech/img/habbit-b.png"
+              class="habbit-b"
+              alt="a pic of habbit"
+            />
+          </div>
+          <a href="https://hanhuang.tech" id="habbitbanner">hanhuang.tech</a>
         </div>
-        <!-- connected -->
-        <div id="connectedwrap">
-            <div class="connectedto">
-                <h5 class="connectedto"> Connected to :AZ on :IP4.</h5>
-                <h5 class="connectedto"> Connected to :AZ on :IP4.</h5>
-            </div>
+      </div>
+      <!-- connected -->
+      <div id="connectedwrap">
+        <h5 id="dynamic-rgb">0 0 0</h5>
+        <div class="connectedto">
+          <h5 class="connectedto">Connected to :AZ on :IP4.</h5>
+          <h5 class="connectedto">Connected to :AZ on :IP4.</h5>
         </div>
-        <!-- lantern -->
-        <a id="lantern" href="mailto:han@hanhuang.tech">
-            <div class="standpart">
-                <div class="dome"></div>
-                <div class="bulb">
-                    <span class="bulb">tact</span>
-                </div>
-            </div>
+      </div>
+      <!-- nav -->
+      <nav class="bar sectioned-with-tab">
+        <a href=" #">
+          <div id="arrow-button">
+            <span class="arrow"></span>
+          </div>
         </a>
+      </nav>
+      <!-- lantern -->
+      <a id="lantern" href="mailto:han@hanhuang.tech">
+        <div class="standpart">
+          <div class="dome"></div>
+          <div class="bulb">
+            <span class="bulb">tact</span>
+          </div>
+        </div>
+      </a>
     </header>
     <!-- 404 -->
     <section class="fourofour">
-        <div class="four-box">
-            <div class="four-flex">
-                <h1>404</h1>
-                <img src="img/redhabbit.png" class="red" alt="a pic of habbit" />
-                <img src="img/habbit-a.png" class="green" alt="a pic of habbit" />
-            </div>
-            <h2>Oops, Sorry about that! <br>
-                You have found a page that is either under construction or does not exist.
-            </h2>
-            <a href="index.html" class="four-return">
-                <h2>Return me to safety</h2>
-            </a>
+      <div class="four-box">
+        <div class="four-flex">
+          <h1>404</h1>
+          <img src="img/habbit-a.png" id="habbit-a" alt="a pic of habbit" />
+          <img src="img/habbit-red.png" id="habbit-red" alt="a pic of habbit" />
         </div>
-    </section>
-    <!-- contactbar -->
-    <section class="body-partition">
-        <div class="leftbar"></div>
-        <div id="contactbar">
-            <a href="mailto:han@hanhuang.tech" class="email" title="Email Han Huang">
-                <img src="img/emailicon.png" alt="email icon" />
-                <h2>han@hanhuang.tech</h2>
-            </a>
-            <a href="https://github.com/hanhuang-tech/" class="github">
-                <img src="img/githubicon.png" alt="github icon" title="Han Huang on Github" />
-            </a>
-            <a href="https://www.linkedin.com/in/han-huang-6808bb123" class="linkedin">
-                <img src="img/linkedinicon.png" alt="linkedin icon" title="Han Huang on LinkedIn" />
-            </a>
-            <a href="https://www.youtube.com/playlist?list=PLipXpUZ1AqJn537TBgPN8Ce8pB1VILvK4" class="youtube">
-                <img src="img/youtubeicon.png" alt="youtube icon" title="Han Huang on Youtube" />
-            </a>
-        </div>
+        <h2>
+          Oops, Sorry about that! <br />
+          You have found a page that is either under construction or does not
+          exist.
+        </h2>
+        <a href="index.html" class="four-return">
+          <h2>Return me to safety</h2>
+        </a>
+      </div>
     </section>
     <!-- footer -->
-    <footer id="footer">
-        <h4 class="footer">hanhuang.tech 2023</h4>
+    <footer class="body-partition">
+      <div class="leftbar"></div>
+      <div id="footer">
+        <a
+          href="mailto:han@hanhuang.tech"
+          class="email"
+          title="Email Han Huang"
+        >
+          <img src="img/emailicon.png" alt="email icon" />
+          <h2>han@hanhuang.tech</h2>
+        </a>
+        <a href="https://github.com/hanhuang-tech/" class="github">
+          <img
+            src="img/githubicon.png"
+            alt="github icon"
+            title="Han Huang on Github"
+          />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/han-huang-6808bb123"
+          class="linkedin"
+        >
+          <img
+            src="img/linkedinicon.png"
+            alt="linkedin icon"
+            title="Han Huang on LinkedIn"
+          />
+        </a>
+        <a
+          href="https://www.youtube.com/playlist?list=PLipXpUZ1AqJn537TBgPN8Ce8pB1VILvK4"
+          class="youtube"
+        >
+          <img
+            src="img/youtubeicon.png"
+            alt="youtube icon"
+            title="Han Huang on Youtube"
+          />
+        </a>
+      </div>
+      <div id="author">
+        <h4>hanhuang.tech 2023</h4>
+      </div>
     </footer>
     <script src="js/fourofour.js"></script>
-
-</body>
-
+  </body>
 </html>

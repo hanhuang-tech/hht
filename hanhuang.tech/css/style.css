@@ -761,6 +761,7 @@ div.four-flex img {
   position: absolute;
   top: -35px;
   left: 75%;
+  width: 120px;
 }
 
 @media (min-width: 64em) {
