@@ -381,6 +381,62 @@
             corresponding rgb html that changes with scroll. It also indicates
             information about the metadata of the backend the site is hosted on.
           </p>
+          <div class="codebox">
+            <div class="code-css">css</div>
+            <details>
+              <summary># connectedwrap</summary>
+              <p class="margin0">#connectedwrap {</p>
+              <p class="margin1">position: fixed;</p>
+              <p class="margin1">display: inline-block;</p>
+              <p class="margin1">z-index: 1;</p>
+              <p class="margin1">bottom: 0px;</p>
+              <p class="margin1">left: 0px;</p>
+              <p class="margin1">max-width: 65px;</p>
+              <p class="margin1">overflow: hidden;</p>
+              <p class="margin1">background-color: rgb(0, 0, 0, 0.5);</p>
+              <p class="margin0">}</p>
+              <p class="margin0">@media (min-width: 64em) {</p>
+              <p class="margin1">#connectedwrap {</p>
+              <p class="margin2">max-width: 80px;</p>
+              <p class="margin1">}</p>
+              <p class="margin0">}</p>
+            </details>
+            <details>
+              <summary># dynamic-rgb</summary>
+              <p class="margin0">#dynamic-rgb {</p>
+              <p class="margin1">margin: 0px;</p>
+              <p class="margin1">text-align: center;</p>
+              <p class="margin1">color: var(--clr-light);</p>
+              <p class="margin1">background: black;</p>
+              <p class="margin0">}</p>
+            </details>
+            <details>
+              <summary>div.connectedto</summary>
+              <p class="margin0">div.connectedtodiv.connectedto {</p>
+              <p class="margin1">display: inline-flex;</p>
+              <p class="margin1">align-items: center;</p>
+              <p class="margin1">white-space: nowrap;</p>
+              <p class="margin1">overflow: hidden;</p>
+              <p class="margin1">animation: marquee 5s linear infinite;</p>
+              <p class="margin0">}</p>
+              <p class="margin0">@media (min-width: 64em) {</p>
+              <p class="margin1">div.connectedto {</p>
+              <p class="margin2">animation: marquee 8s linear infinite;</p>
+              <p class="margin1">}</p>
+              <p class="margin0">}</p>
+            </details>
+            <details>
+              <summary>h5.connectedto</summary>
+              <p class="margin0">h5.connectedto {</p>
+              <p class="margin1">display: inline-block;</p>
+              <p class="margin1">color: var(--clr-light);</p>
+              <p class="margin1">font-family: var(--ff-secondary);</p>
+              <p class="margin1">letter-spacing: 1px;</p>
+              <p class="margin1">line-height: 1.4rem;</p>
+              <p class="margin1">margin: 0;</p>
+              <p class="margin0">}</p>
+            </details>
+          </div>
         </div>
       </div>
     </section>
