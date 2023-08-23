@@ -487,6 +487,25 @@
             menu, and hover with an alternative menu as well. Retract burger
             menu on scroll.
           </p>
+          <h3>Burger toggle animations</h3>
+          <div class="codebox">
+            <div class="code-css">css</div>
+            <p class="margin0">#burger.toggle {</p>
+            <p class="margin1">visibility: hidden;</p>
+            <p class="margin1">opacity: 0;</p>
+            <p class="margin1">
+              border-color: gray var(--clr-accent3) var(--clr-accent3) gray;
+            </p>
+            <p class="margin0">}</p>
+
+            <p class="margin0">#hidden-burger-contents.toggle {</p>
+            <p class="margin1">z-index: 2;</p>
+            <p class="margin1">opacity: 1;</p>
+            <p class="margin1">transform: translateX(0px);</p>
+            <p class="margin1">transition: 0.5s;</p>
+            <p class="margin0">}</p>
+          </div>
+
           <h3>Tab</h3>
           <div class="codebox">
             <div class="code-html">html</div>
