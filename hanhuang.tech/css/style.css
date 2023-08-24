@@ -1696,7 +1696,7 @@ div.project-list-subjects h4 {
   top: 45%;
   transform: translate(-70px);
   background-color: var(--clr-dark2);
-  box-shadow: -0.3em 0.3em 0em rgba(0, 0, 0, 1);
+  box-shadow: -0.3em 0.3em 0em var(--clr-dark);
   opacity: 0.85;
   border-radius: 0.85vw;
 }
@@ -1718,8 +1718,8 @@ div.project-list-subjects h4 {
   padding: 2px;
   background: linear-gradient(
     315deg,
-    rgba(50, 50, 100, 1) 50%,
-    rgba(150, 150, 200, 1) 50%
+    var(--clr-brown) 50%,
+    rgb(150, 100, 50) 50%
   );
   border-radius: inherit;
   box-shadow: var(--bs);
