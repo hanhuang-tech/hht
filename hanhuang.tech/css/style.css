@@ -1992,7 +1992,7 @@ div.cons {
   display: flex;
   justify-content: center;
   margin: 25px auto 10px;
-  max-width: 275px;
+  max-width: 200px;
   background-color: var(--clr-dark2);
   outline: 2px solid var(--clr-dark2);
   outline-offset: 1px;
