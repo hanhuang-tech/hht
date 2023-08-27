@@ -1711,18 +1711,29 @@ div.project-list-subjects h4 {
   }
 }
 
-#tab {
+#tab,
+#tab-grey {
   display: flex;
   flex-direction: column;
   row-gap: 2px;
   padding: 2px;
+  border-radius: inherit;
+  box-shadow: var(--bs);
+}
+
+#tab {
   background: linear-gradient(
     315deg,
     var(--clr-brown) 50%,
     rgb(150, 100, 50) 50%
   );
-  border-radius: inherit;
-  box-shadow: var(--bs);
+}
+#tab-grey {
+  background: linear-gradient(
+    315deg,
+    var(--clr-dark2) 50%,
+    rgb(150, 150, 150) 50%
+  );
 }
 
 @media (min-width: 64em) {
@@ -1808,19 +1819,28 @@ div.project-list-subjects h4 {
   }
 }
 
-div.subject-banner {
+div.subject-banner,
+div.subject-banner.grey {
   display: flex;
   justify-content: center;
   column-gap: 25px;
   padding: 10px;
-  background-image: url(../img/treebyhouse.jpg);
-  background-color: var(--clr-brown);
   background-blend-mode: multiply;
   background-size: 100%;
   background-attachment: fixed;
   border-width: 7px 0;
   border-style: solid;
   border-color: var(--clr-dark) transparent var(--clr-dark) transparent;
+}
+
+div.subject-banner {
+  background-image: url(../img/treebyhouse.jpg);
+  background-color: var(--clr-brown);
+}
+
+div.subject-banner.grey {
+  background-image: url(../img/tentpath.png);
+  background-color: gray;
 }
 
 .subject-banner h2 {
@@ -1991,10 +2011,9 @@ div.pros,
 div.cons {
   display: flex;
   justify-content: center;
-  margin: 25px auto 10px;
-  max-width: 200px;
+  margin: 0 auto 10px;
   background-color: var(--clr-dark2);
-  outline: 2px solid var(--clr-dark2);
+  outline: 1px solid var(--clr-dark2);
   outline-offset: 1px;
 }
 
