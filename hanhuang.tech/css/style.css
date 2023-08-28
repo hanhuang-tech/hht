@@ -1862,19 +1862,16 @@ div.subject-banner.grey {
 /* side headings */
 div.side-heading {
   display: flex;
-  flex-direction: column;
   font-family: var(--ff-secondary);
-  row-gap: 2px;
-  margin: 10px 0 0 10px;
+  justify-content: right;
 }
 
 div.side-heading h3 {
   display: inline-block;
-  background-color: var(--clr-dark2);
+  background-color: var(--clr-dark);
   font-weight: var(--fw-reg);
   color: var(--clr-light);
   padding: 0px 5px;
-  margin-right: auto;
 }
 
 div.body-wrapper {
@@ -2011,10 +2008,15 @@ div.pros,
 div.cons {
   display: flex;
   justify-content: center;
-  margin: 0 auto 10px;
-  background-color: var(--clr-dark2);
-  outline: 1px solid var(--clr-dark2);
-  outline-offset: 1px;
+  margin-bottom: 10px;
+  border-radius: 2vw;
+}
+
+div.pros {
+  background-color: rgb(0, 100, 0, 0.5);
+}
+div.cons {
+  background-color: rgb(100, 0, 0, 0.5);
 }
 
 @media (min-width: 64em) {
@@ -2028,7 +2030,7 @@ div.pros h3,
 div.cons h3 {
   color: var(--clr-light);
   padding: 1px 10px;
-  outline: 2px solid var(--clr-light);
+  border-radius: 1vw;
 }
 
 div.pros h3 {
