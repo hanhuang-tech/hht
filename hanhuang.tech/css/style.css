@@ -2008,8 +2008,8 @@ div.pros,
 div.cons {
   display: flex;
   justify-content: center;
-  margin-bottom: 10px;
-  border-radius: 2vw;
+  margin: 0 30px 5px;
+  border-radius: 1.5vw;
 }
 
 div.pros {
@@ -2019,17 +2019,10 @@ div.cons {
   background-color: rgb(100, 0, 0, 0.5);
 }
 
-@media (min-width: 64em) {
-  div.pros,
-  div.cons {
-    max-width: 600px;
-  }
-}
-
 div.pros h3,
 div.cons h3 {
   color: var(--clr-light);
-  padding: 1px 10px;
+  padding: 0px 10px;
   border-radius: 1vw;
 }
 
