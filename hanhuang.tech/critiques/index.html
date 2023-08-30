@@ -115,23 +115,23 @@
             <div class="code-html">html</div>
             <p class="margin0">&lt;div id="footer__section" /&gt;</p>
           </div>
-          <p class="code-description">
+          <p class="code-desc">
             A footer under the 'find me' section provides spacing to adjust the
             viewer to the correct eye level to consider the former mentioned
             section. This footer uses added white space to achieve this.
           </p>
-          <h3>Codebox margin</h3>
+          <h3>Codebox</h3>
           <div class="codebox">
             <div class="code-html">html</div>
-            <p class="margin0">&lt;div&gt;</p>
-            <p class="margin1">&lt;span class="sfe-marginp"&gt;</p>
+            <p class="margin0">&lt;div class="codebox"&gt;</p>
+            <p class="margin1">&lt;p class="margin0"&gt;&lt;/p&gt;</p>
             <p class="margin0">&lt;/div&gt;</p>
           </div>
-          <p class="code-description">
+          <p class="code-desc">
             To emulate the gap of 1 tab or 4 normal spaces inside the codebox,
-            an &lt;html&gt; element class of &lt;sfe-marginp&gt; was created to
-            denote a spacing that appears to be like 4 normal keyboard typed
-            spaces.
+            an html element class of &lt;marginN&gt; was created to denote a
+            spacing, where N represents a tab space (representing 4 individual
+            normal spaces).
           </p>
         </div>
       </div>
@@ -157,12 +157,12 @@
             <p class="margin1">margin-left: 40px;</p>
             <p class="margin0">}</p>
           </div>
-          <p class="code-description">
+          <p class="code-desc">
             The &lt;style&gt; denotion of .sfe-marginp contains 40px of
             margin-left that is added to the inline spacing for the chosen line
             of code inside the codebox.
           </p>
-          <p class="code-description">
+          <p class="code-desc">
             To implement this gap within the codebox, the html &lt;span&gt; tag
             is used. This is to conform to the inline spacing rules that other
             elements are sharing in this codebox, as opposed to using a
@@ -177,7 +177,7 @@
         </div>
         <div class="body-wrapper">
           <h3>Improvements on formatting</h3>
-          <p class="code-description">
+          <p class="code-desc">
             Improvements could be made to the nomenclature of html elements to
             streamline site-building. New names of html elements could be
             created as a substitute for the amalgamation of similar categorized
@@ -197,7 +197,7 @@
           <div class="codebox">
             <p class="margin0">@media (max-width: 900px) {}</p>
           </div>
-          <p class="code-description">
+          <p class="code-desc">
             The contents of the webpage could be displayed clearly in an
             internet browser on a desktop computer. In contrast, the majority or
             all of the contents could be displayed just as clearly on a mobile
@@ -212,7 +212,7 @@
             <p class="margin1">--fw-bold: 900;</p>
             <p class="margin0">}</p>
           </div>
-          <p class="code-description">
+          <p class="code-desc">
             Custom properties allow standardised modifications to &lt;html&gt;.
             &lt;html&gt; can be stylised using custom properties so that texts
             inside &lt;body&gt; and pages can be displayed correctly and
@@ -224,7 +224,7 @@
             <p class="margin0">:hover{}</p>
             <p class="margin0">:focus{}</p>
           </div>
-          <p class="code-description">
+          <p class="code-desc">
             Pseudo-classes like the ones above transform how a particular
             &lt;html&gt; element is displayed when it is selected as the centre
             of attention. The highlighting is done by styled classes inside the
@@ -235,7 +235,7 @@
           <div class="codebox">
             <p class="margin0">.logo__div {display: flex;}</p>
           </div>
-          <p class="code-description">
+          <p class="code-desc">
             Flex maintains a relative distance between the site logo and the
             home page logo even as the window resizes. The default function of
             the &lt;css&gt; property display flex is to align elements in a row.
@@ -243,7 +243,7 @@
           <div class="codebox">
             <p class="margin0">.find-me__list {display: flex;}</p>
           </div>
-          <p class="code-description">
+          <p class="code-desc">
             When the viewer resizes their browser window, the above use of the
             flex display property keeps the relative distance between social
             icons. The distance between each social icon is not a user-defined
@@ -262,7 +262,7 @@
             <p class="margin1">grid-column-gap: 40px;</p>
             <p class="margin0">}</p>
           </div>
-          <p class="code-description">
+          <p class="code-desc">
             In the About me section, the grid property grid-template-columns is
             used to divide up the left-field into 1 fractional unit, and the
             right-field into 200px width for the profile picture. Using the grid
@@ -281,13 +281,13 @@
         </div>
         <div class="body-wrapper">
           <h3>Avoiding confusing names in classList</h3>
-          <p class="code-description">
+          <p class="code-desc">
             Too many names used for different classes can confuse site-building.
             Using clear naming conventions in classes will assist html elements
             to indicate their intended action or function.
           </p>
           <h3>Succinct use of classes</h3>
-          <p class="code-description">
+          <p class="code-desc">
             Efficient naming conventions in the classList will assist in
             categorizing and creating a clear structure in &lt;css&gt;. Having a
             succinct classList will also emphasize usefulness in certain groups
@@ -313,7 +313,7 @@
         </div>
         <div class="body-wrapper">
           <h3>Animate site logo</h3>
-          <p class="code-description">
+          <p class="code-desc">
             The following lines of javascript interact with the DOM to animate
             HTML elements
           </p>
@@ -456,7 +456,7 @@
               <p class="margin1">})</p>
             </div>
           </div>
-          <p class="code-description">
+          <p class="code-desc">
             This set of &lt;script&gt; allows block elements to display hidden
             content that is tagged with a paragraph. When a block element is
             clicked, it reveals the hidden content.
@@ -577,7 +577,7 @@
         </div>
         <div class="body-wrapper">
           <h3>Emphasis on effective js</h3>
-          <p class="code-description">
+          <p class="code-desc">
             As more javascript is added to the site in the future, emphasis made
             on formatting and structure will help efficiency in interations with
             the DOM. Concise and clear use of variables and keys will help guide
