@@ -1871,7 +1871,7 @@ div.side-heading h3 {
   background-color: var(--clr-dark);
   font-weight: var(--fw-reg);
   color: var(--clr-light);
-  padding: 0px 5px;
+  padding: 1px 5px;
 }
 
 div.body-wrapper {
@@ -1887,7 +1887,7 @@ div.body-wrapper h3 {
     row-gap: 4px;
   }
 
-  div.side-heading h4 {
+  div.side-heading h3 {
     padding: 2px 7px;
   }
 
@@ -2019,9 +2019,18 @@ div.cons {
   background-color: rgb(100, 0, 0, 0.5);
 }
 
+@media (min-width: 64em) {
+  div.pros,
+  div.cons {
+    margin: 5px 280px 10px;
+    border-radius: 0.5vw;
+  }
+}
+
 div.pros h3,
 div.cons h3 {
   color: var(--clr-light);
+  line-height: 1.15rem;
   padding: 0px 10px;
   border-radius: 1vw;
 }
@@ -2032,6 +2041,15 @@ div.pros h3 {
 
 div.cons h3 {
   background-color: darkred;
+}
+
+@media (min-width: 64em) {
+  div.pros h3,
+  div.cons h3 {
+    line-height: 1.3rem;
+    padding: 0px 15px;
+    border-radius: 0.25vw;
+  }
 }
 
 /* spoilers */
