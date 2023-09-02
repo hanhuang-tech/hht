@@ -1840,15 +1840,15 @@ div.subject-banner {
 
 div.subject-banner.grey {
   background-image: url(../img/tentpath.png);
-  background-color: gray;
+  background-color: darkgrey;
 }
 
 .subject-banner h2 {
-  color: var(--clr-dark);
+  color: var(--clr-light);
   font-family: var(--ff-secondary);
   line-height: 1.1rem;
   padding: 0px 5px;
-  background-color: var(--clr-light);
+  background-color: var(--clr-dark2);
   border: 2px solid var(--clr-dark);
   text-shadow: 1px 1px gray;
 }
@@ -1859,19 +1859,17 @@ div.subject-banner.grey {
   }
 }
 
-/* side headings */
-div.side-heading {
-  display: flex;
-  font-family: var(--ff-secondary);
-  justify-content: right;
-}
-
-div.side-heading h3 {
-  display: inline-block;
-  background-color: var(--clr-dark);
+h4.side-heading {
   font-weight: var(--fw-reg);
   color: var(--clr-light);
-  padding: 1px 5px;
+  font-family: var(--ff-secondary);
+  background-image: linear-gradient(
+    to right,
+    var(--clr-dark),
+    rgb(200, 100, 100)
+  );
+  padding: 0 5px;
+  float: right;
 }
 
 div.body-wrapper {
@@ -1883,14 +1881,6 @@ div.body-wrapper h3 {
 }
 
 @media (min-width: 64em) {
-  div.side-heading {
-    row-gap: 4px;
-  }
-
-  div.side-heading h3 {
-    padding: 2px 7px;
-  }
-
   div.body-wrapper {
     max-width: 1000px;
     margin: 0 auto;
@@ -1910,10 +1900,10 @@ div.code-btn-j {
   margin: 0;
   padding: 5px 10px;
   line-height: 1rem;
-  border-width: 2px 2px 2px 6px;
+  border-width: 0px 0px 0px 6px;
   border-style: solid;
   border-color: gray;
-  border-radius: 3px;
+  border-radius: 2px;
 }
 
 @media (min-width: 64em) {
@@ -2008,7 +1998,7 @@ div.pros,
 div.cons {
   display: flex;
   justify-content: center;
-  margin: 0 30px 5px;
+  margin: 0 30px 10px;
   border-radius: 1.5vw;
 }
 
