@@ -1826,7 +1826,7 @@ div.subject-banner.grey {
   column-gap: 25px;
   padding: 10px;
   background-blend-mode: multiply;
-  background-size: 100%;
+  background-size: cover;
   background-attachment: fixed;
   border-width: 7px 0;
   border-style: solid;
@@ -1840,7 +1840,7 @@ div.subject-banner {
 
 div.subject-banner.grey {
   background-image: url(../img/tentpath.png);
-  background-color: darkgrey;
+  background-color: gray;
 }
 
 .subject-banner h2 {
@@ -1848,9 +1848,8 @@ div.subject-banner.grey {
   font-family: var(--ff-secondary);
   line-height: 1.1rem;
   padding: 0px 5px;
-  background-color: var(--clr-dark2);
-  border: 2px solid var(--clr-dark);
-  text-shadow: 1px 1px gray;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid var(--clr-dark2);
 }
 
 @media (min-width: 64em) {
@@ -1995,14 +1994,9 @@ div.cons {
   display: flex;
   justify-content: center;
   margin: 0 30px 20px;
+  padding: 2px;
+  background-color: var(--clr-dark);
   border-radius: 1vw;
-}
-
-div.pros {
-  background-color: rgb(0, 100, 0, 0.5);
-}
-div.cons {
-  background-color: rgb(100, 0, 0, 0.5);
 }
 
 @media (min-width: 64em) {
@@ -2022,7 +2016,7 @@ div.cons h3 {
 }
 
 div.pros h3 {
-  background-color: darkgreen;
+  background-color: var(--clr-accent);
 }
 
 div.cons h3 {
