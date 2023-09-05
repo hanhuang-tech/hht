@@ -1989,43 +1989,29 @@ p.code-desc {
 }
 
 /* pros cons */
-div.pros,
-div.cons {
+h3.pros,
+h3.cons {
   display: flex;
   justify-content: center;
-  margin: 0 30px 20px;
-  padding: 2px;
-  background-color: var(--clr-dark);
-  border-radius: 1vw;
-}
-
-@media (min-width: 64em) {
-  div.pros,
-  div.cons {
-    margin: 5px 280px 10px;
-    border-radius: 0.5vw;
-  }
-}
-
-div.pros h3,
-div.cons h3 {
+  margin: 0 40px 20px;
   color: var(--clr-light);
   line-height: 1.15rem;
   padding: 0px 10px;
   border-radius: 1vw;
+  filter: drop-shadow(-4px 4px 0px var(--clr-dark2));
 }
 
-div.pros h3 {
-  background-color: var(--clr-accent);
+h3.pros {
+  background-color: green;
 }
 
-div.cons h3 {
+h3.cons {
   background-color: darkred;
 }
 
 @media (min-width: 64em) {
-  div.pros h3,
-  div.cons h3 {
+  h3.pros,
+  h3.cons {
     line-height: 1.3rem;
     padding: 0px 15px;
     border-radius: 0.25vw;
