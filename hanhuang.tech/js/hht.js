@@ -152,7 +152,7 @@ let filterRGB = "";
 
 /* change dynamic rgb upon scrolling */
 function scrollRGB() {
-  let currentScroll = window.pageYOffset;
+  let currentScroll = Math.round(window.scrollY);
 
   if (lastScroll - currentScroll < 0) {
     r = sumRestrictRGB(r, rR);
@@ -238,38 +238,6 @@ function subjectHeadingHide() {
   }
 }
 
-// hover hidden-burger-contents resources
-const hiddenBurgerContentsResources = document.querySelector(
-  "#hidden-burger-contents .resources"
-);
-const hiddenBurgerContentsProjects = document.querySelector(
-  "#hidden-burger-contents .projects"
-);
-const hiddenBurgerContentsAboutme = document.querySelector(
-  "#hidden-burger-contents .aboutme"
-);
-const sideBurgerContent = document.querySelector("#side-burger-content");
-
-hiddenBurgerContentsResources.addEventListener("mouseenter", function () {
-  sideBurgerContent.style.opacity = "1";
-  sideBurgerContent.style.visibility = "visible";
-});
-
-hiddenBurgerContentsProjects.addEventListener("mouseenter", function () {
-  sideBurgerContent.style.opacity = "0";
-  sideBurgerContent.style.visibility = "hidden";
-});
-
-hiddenBurgerContentsAboutme.addEventListener("mouseenter", function () {
-  sideBurgerContent.style.opacity = "0";
-  sideBurgerContent.style.visibility = "hidden";
-});
-
-hiddenBurgerContents.addEventListener("mouseleave", function () {
-  sideBurgerContent.style.opacity = "0";
-  sideBurgerContent.style.visibility = "hidden";
-});
-
 // resources
 const subjectWrapper = [document.querySelector("div.subjectwrapper1")];
 
@@ -340,7 +308,7 @@ const projectTilesChild = projectTiles.children;
 
 // habbit animate and reveal
 function projectHabbitAnimate() {
-  if (window.pageYOffset > 100) {
+  if (Math.round(window.scrollY) > 100) {
     habbitSpray.style.transform = "rotate(360deg)";
     habbitSpray.style.transition = "2s";
     habbitBorder.style.transform = "rotate(360deg)";
@@ -359,7 +327,7 @@ function projectHabbitAnimate() {
 
 // project tiles transitions
 function projectTilesMoveMobile() {
-  if (window.pageYOffset > 1800) {
+  if (Math.round(window.scrollY) > 1800) {
     for (let i = 0; i < projectTilesChild.length; i++) {
       projectTilesChild[i].style.opacity = "0";
       projectTilesChild[i].style.transition = "0.5s";
@@ -373,7 +341,7 @@ function projectTilesMoveMobile() {
 }
 
 function projectTilesMoveDesktop() {
-  if (window.pageYOffset > 350) {
+  if (Math.round(window.scrollY) > 350) {
     projectHeading.style.opacity = "1";
     projectHeading.style.transition = "1s";
     projectBGImg.style.opacity = "0";
@@ -537,29 +505,29 @@ function endBGDesktop() {
 function test() {
   console.log(
     "rgb:" +
-      r +
-      "," +
-      g +
-      "," +
-      b +
-      " rR:" +
-      rR +
-      "/" +
-      sumRestrictRGB(r, rR) +
-      "/" +
-      diffRestrictRGB(b, rB) +
-      " rG:" +
-      rG +
-      "/" +
-      sumRestrictRGB(g, rG) +
-      "/" +
-      diffRestrictRGB(b, rB) +
-      " rB:" +
-      rB +
-      "/" +
-      sumRestrictRGB(b, rB) +
-      "/" +
-      diffRestrictRGB(b, rB)
+    r +
+    "," +
+    g +
+    "," +
+    b +
+    " rR:" +
+    rR +
+    "/" +
+    sumRestrictRGB(r, rR) +
+    "/" +
+    diffRestrictRGB(b, rB) +
+    " rG:" +
+    rG +
+    "/" +
+    sumRestrictRGB(g, rG) +
+    "/" +
+    diffRestrictRGB(b, rB) +
+    " rB:" +
+    rB +
+    "/" +
+    sumRestrictRGB(b, rB) +
+    "/" +
+    diffRestrictRGB(b, rB)
   );
   console.log(subjectHeading.length);
   console.log(projectTilesChild.length);

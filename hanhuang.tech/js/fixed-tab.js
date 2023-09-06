@@ -87,7 +87,8 @@ window.onscroll = function () {
   revealNavArrowBtn();
   revealTab();
   changeNavTab();
-  test();
+  changeNavTabCritiques();
+  //test();
 };
 
 // change color on scroll
@@ -182,11 +183,17 @@ const headerSection = document.querySelector("#header__section");
 const navSection = document.querySelector("#nav__section");
 const bodyPartSection = document.querySelector("#body-partition__section");
 const footerSection = document.querySelector("#footer__section");
+const htmlSection = document.querySelector("#html__section");
+const cssSection = document.querySelector("#css__section");
+const jsSection = document.querySelector("#js__section");
 const headTab = document.querySelector("#head__tab");
 const headerTab = document.querySelector("#header__tab");
 const navTab = document.querySelector("#nav__tab");
 const bodyPartTab = document.querySelector("#body-partition__tab");
 const footerTab = document.querySelector("#footer__tab");
+const htmlTab = document.querySelector("#html__tab");
+const cssTab = document.querySelector("#css__tab");
+const jsTab = document.querySelector("#js__tab");
 const tab = document.querySelector("#tab");
 tabWrap.style.transitionDuration = "1s";
 tab.style.transitionDuration = "0.5s";
@@ -210,36 +217,59 @@ function revealTab() {
 }
 
 function changeNavTab() {
-  if (
-    Math.round(window.scrollY) + 10 > headSection.offsetTop &&
-    Math.round(window.scrollY) + 10 < headerSection.offsetTop
-  ) {
-    headTab.style.borderColor = "var(--clr-light)";
-    headerTab.style.borderColor = "transparent";
-  } else if (
-    Math.round(window.scrollY) + 10 > headerSection.offsetTop &&
-    Math.round(window.scrollY) + 10 < navSection.offsetTop
-  ) {
-    headTab.style.borderColor = "transparent";
-    headerTab.style.borderColor = "var(--clr-light)";
-    navTab.style.borderColor = "transparent";
-  } else if (
-    Math.round(window.scrollY) + 10 > navSection.offsetTop &&
-    Math.round(window.scrollY) + 10 < bodyPartSection.offsetTop
-  ) {
-    headerTab.style.borderColor = "transparent";
-    navTab.style.borderColor = "var(--clr-light)";
-    bodyPartTab.style.borderColor = "transparent";
-  } else if (
-    Math.round(window.scrollY) + 10 > bodyPartSection.offsetTop &&
-    Math.round(window.scrollY) + 10 < footerSection.offsetTop
-  ) {
-    navTab.style.borderColor = "transparent";
-    bodyPartTab.style.borderColor = "var(--clr-light)";
-    footerTab.style.borderColor = "transparent";
-  } else if (Math.round(window.scrollY) > footerSection.offsetTop) {
-    bodyPartTab.style.borderColor = "transparent";
-    footerTab.style.borderColor = "var(--clr-light)";
+  if (headSection) {
+    if (
+      Math.round(window.scrollY) + 10 > headSection.offsetTop &&
+      Math.round(window.scrollY) + 10 < headerSection.offsetTop
+    ) {
+      headTab.style.borderColor = "var(--clr-light)";
+      headerTab.style.borderColor = "transparent";
+    } else if (
+      Math.round(window.scrollY) + 10 > headerSection.offsetTop &&
+      Math.round(window.scrollY) + 10 < navSection.offsetTop
+    ) {
+      headTab.style.borderColor = "transparent";
+      headerTab.style.borderColor = "var(--clr-light)";
+      navTab.style.borderColor = "transparent";
+    } else if (
+      Math.round(window.scrollY) + 10 > navSection.offsetTop &&
+      Math.round(window.scrollY) + 10 < bodyPartSection.offsetTop
+    ) {
+      headerTab.style.borderColor = "transparent";
+      navTab.style.borderColor = "var(--clr-light)";
+      bodyPartTab.style.borderColor = "transparent";
+    } else if (
+      Math.round(window.scrollY) + 10 > bodyPartSection.offsetTop &&
+      Math.round(window.scrollY) + 10 < footerSection.offsetTop
+    ) {
+      navTab.style.borderColor = "transparent";
+      bodyPartTab.style.borderColor = "var(--clr-light)";
+      footerTab.style.borderColor = "transparent";
+    } else if (Math.round(window.scrollY) > footerSection.offsetTop) {
+      bodyPartTab.style.borderColor = "transparent";
+      footerTab.style.borderColor = "var(--clr-light)";
+    }
+  }
+}
+
+function changeNavTabCritiques() {
+  if (htmlSection) {
+    if (
+      Math.round(window.scrollY) + 10 > htmlSection.offsetTop &&
+      Math.round(window.scrollY) + 10 < cssSection.offsetTop
+    ) {
+      cssTab.style.borderColor = "transparent";
+      htmlTab.style.borderColor = "var(--clr-light)";
+    } else if (
+      Math.round(window.scrollY) + 10 > cssSection.offsetTop &&
+      Math.round(window.scrollY) + 10 < jsSection.offsetTop
+    ) {
+      htmlTab.style.borderColor = "transparent";
+      cssTab.style.borderColor = "var(--clr-light)";
+    } else if (Math.round(window.scrollY) > jsSection.offsetTop) {
+      cssTab.style.borderColor = "transparent";
+      jsTab.style.borderColor = "var(--clr-light)";
+    }
   }
 }
 
