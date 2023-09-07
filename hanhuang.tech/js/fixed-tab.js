@@ -266,6 +266,7 @@ function changeNavTabCritiques() {
     ) {
       htmlTab.style.borderColor = "transparent";
       cssTab.style.borderColor = "var(--clr-light)";
+      jsTab.style.borderColor = "transparent";
     } else if (Math.round(window.scrollY) > jsSection.offsetTop) {
       cssTab.style.borderColor = "transparent";
       jsTab.style.borderColor = "var(--clr-light)";

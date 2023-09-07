@@ -1987,9 +1987,8 @@ p.code-desc {
 /* pros cons */
 h3.pros,
 h3.cons {
-  display: flex;
-  justify-content: center;
-  margin: 0 40px 20px;
+  display: inline-flex;
+  margin: 0 0 20px;
   color: var(--clr-light);
   line-height: 1.15rem;
   padding: 0px 10px;
