@@ -21,7 +21,7 @@
   --fs-h2: 1.3em;
   --fs-h3: 1em;
   --fs-h4: 0.9em;
-  --fs-h5: 0.8em;
+  --fs-h5: 0.6em;
   --fs-body: 0.75rem;
 
   --bs: 0em 0em 0.75em rgba(0, 0, 0, 0.75);
@@ -33,8 +33,8 @@
     --fs-h1: 2em;
     --fs-h2: 1.5em;
     --fs-h3: 1.17em;
-    --fs-h4: 1.12em;
-    --fs-h5: 0.83em;
+    --fs-h4: 1em;
+    --fs-h5: 0.75em;
     --fs-body: 0.85rem;
   }
 }
@@ -218,12 +218,14 @@ html {
   margin: auto 0;
   font-size: 1rem;
   padding: 0px 8px;
+  border-radius: 0.5vw;
 }
 
 @media (min-width: 64em) {
   #splash h1 {
     font-size: 1.2rem;
     padding: 0px 10px;
+    border-radius: 0.3vw;
   }
 }
 
@@ -846,12 +848,12 @@ div.logowrap {
 div.logo {
   position: fixed;
   display: flex;
-  padding: 15px;
+  padding: 10px;
 }
 
 @media (min-width: 64em) {
   div.logo {
-    padding: 20px;
+    padding: 15px;
   }
 }
 
@@ -862,7 +864,7 @@ div.habbit-img {
   outline-width: 1px;
   outline-style: solid;
   outline-color: var(--clr-dark2);
-  outline-offset: 6px;
+  outline-offset: 4px;
   transition: 1s;
 }
 
@@ -873,6 +875,7 @@ div.habbit-img:hover {
 @media (min-width: 64em) {
   div.habbit-img {
     margin-right: 15px;
+    outline-offset: 6px;
   }
 }
 
@@ -936,14 +939,14 @@ img.habbit-b {
   z-index: 1;
   bottom: 0px;
   left: 0px;
-  max-width: 65px;
+  max-width: 60px;
   overflow: hidden;
   background-color: rgb(0, 0, 0, 0.5);
 }
 
 @media (min-width: 64em) {
   #connectedwrap {
-    max-width: 80px;
+    max-width: 72px;
   }
 }
 
@@ -954,27 +957,26 @@ img.habbit-b {
   background: black;
 }
 
-div.connectedto {
-  display: inline-flex;
-  align-items: center;
+#connectedto {
+  display: inline-block;
+  line-height: 0.5rem;
   white-space: nowrap;
   overflow: hidden;
   animation: marquee 5s linear infinite;
 }
 
 @media (min-width: 64em) {
-  div.connectedto {
+  #connectedto {
+    display: inline-flex;
     animation: marquee 8s linear infinite;
   }
 }
 
-h5.connectedto {
-  display: inline-block;
+#connectedto h4 {
+  display: inline-flex;
   color: var(--clr-light);
   font-family: var(--ff-secondary);
-  letter-spacing: 1px;
-  line-height: 1.4rem;
-  margin: 0;
+  font-size: 0.7rem;
 }
 
 /*partitioning*/
@@ -999,43 +1001,26 @@ div.leftbar {
   div.leftbar {
     visibility: visible;
     background: var(--clr-dark);
-    padding: 0 40px;
+    padding: 0 36px;
   }
 }
 
 /* titlebar */
-
-.titlebar {
+h1.titlebar {
   display: flex;
   justify-content: center;
-  padding: 20px 0;
-  background-image: url(../img/bridge.jpg);
+  padding: 16px 0;
+  background-image: url(../img/trees.jpg);
   background-size: cover;
-  background-position: 0 56%;
   filter: grayscale(80%);
-  opacity: 0.9;
-}
-
-@media (min-width: 64em) {
-  .titlebar {
-    padding: 24px 0;
-  }
-}
-
-.titlebar h1 {
-  display: inline-block;
-  padding: 0px 10px;
-  text-transform: uppercase;
-  background: rgba(75, 75, 75, 0.5);
-  letter-spacing: 2px;
-  font-family: var(--ff-secondary);
   color: var(--clr-light);
-  border: 1px solid var(--clr-light);
+  letter-spacing: 1px;
+  text-shadow: -1px 1px gray;
 }
 
 @media (min-width: 64em) {
-  .titlebar h1 {
-    padding: 0px 12px;
+  h1.titlebar {
+    padding: 20px 0;
   }
 }
 
@@ -1164,19 +1149,19 @@ p.subjectblurb1 {
 /* mid partition */
 /* project headings */
 @media (min-width: 64em) {
-  #proj-heading-wrap {
+  #projects-heading-wrap {
     position: absolute;
-    opacity: 0;
     top: 20px;
     left: 20px;
     margin-left: 80px;
-    min-width: 200px;
+    width: 165px;
     box-shadow: var(--bs);
+    opacity: 0;
   }
 }
 
 /* project tiles */
-#project-tiles-wrap {
+#project-tiles-group {
   display: flex;
   flex-direction: column;
   row-gap: 30px;
@@ -1189,7 +1174,7 @@ p.subjectblurb1 {
 }
 
 @media (min-width: 64em) {
-  #project-tiles-wrap {
+  #project-tiles-group {
     flex: 1;
     display: grid;
     grid-template-rows: auto auto;
@@ -1205,7 +1190,7 @@ div.project {
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 10px 20px;
+  padding: 5px 10px;
   background-color: rgb(100, 100, 100, 0.5);
   border-radius: 8px;
   box-shadow: var(--bs4);
@@ -1216,7 +1201,7 @@ div.project {
     z-index: -1;
     opacity: 0;
     border-radius: 0;
-    padding: 15px 40px;
+    padding: 10px 20px;
   }
 }
 
@@ -1225,13 +1210,13 @@ h3.project-title {
   display: inline-block;
   color: var(--clr-light);
   margin: 0 auto;
-  padding: 3px 8px;
+  padding: 0px 5px;
   background: var(--clr-accent3);
 }
 
 @media (min-width: 64em) {
   h3.project-title {
-    padding: 5px 10px;
+    padding: 3px 6px;
   }
 }
 
@@ -1422,52 +1407,48 @@ div.project-list-subjects h4 {
 
 /*bot partition*/
 @media (min-width: 64em) {
-  #aboutme-wrap {
+  #aboutme-desktop {
     flex: 1;
     margin: 0 auto;
     border-width: 10px;
     border-style: solid;
     border-color: var(--clr-dark);
   }
-
-  #aboutme-wrap div.titlebar {
-    max-width: 240px;
-    margin: 10px auto;
-    box-shadow: var(--bs);
-  }
 }
 
 #profile {
   display: flex;
   flex-direction: column;
-  row-gap: 15px;
-  padding: 20px;
+  row-gap: 10px;
+  margin: 20px;
 }
 
 @media (min-width: 64em) {
   #profile {
     flex: 1;
-    row-gap: 20px;
-    padding: 30px;
+    row-gap: 12px;
+    margin: 30px;
   }
 }
 
 #profile h1 {
   text-align: center;
   font-weight: var(--fw-bold);
+  margin-bottom: 10px;
 }
 
-#profile h4 {
+#profile h4,
+#profile h5 {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: var(--fw-reg);
-  margin: 10px 0;
+  margin: 0px;
 }
 
 #profile img {
   max-width: 150px;
-  margin: 0px auto;
+  margin: 10px auto;
   box-shadow: var(--bs);
 }
 
@@ -1480,7 +1461,7 @@ div.project-list-subjects h4 {
 #profile p {
   max-width: 350px;
   margin: 0px auto;
-  padding: 10px;
+  padding: 0 10px;
   text-align: center;
   font-size: 0.85rem;
   line-height: 1.5rem;
@@ -1523,7 +1504,7 @@ div.project-list-subjects h4 {
   display: flex;
   justify-content: center;
   background: var(--clr-dark2);
-  padding: 8px 0;
+  padding: 5px;
   column-gap: 20px;
 }
 
@@ -1594,7 +1575,7 @@ div.project-list-subjects h4 {
   position: relative;
   z-index: 0;
   background-color: var(--clr-accent3);
-  padding: 11.5px 0;
+  padding: 11px 0;
   border-width: 0 70px 0 0;
   border-style: solid;
   border-color: var(--clr-accent3);
@@ -1604,13 +1585,11 @@ div.project-list-subjects h4 {
   position: absolute;
   bottom: 0px;
   right: -15px;
-
   display: inline-block;
   background-color: rgb(75, 100, 150);
-
   font-weight: var(--fw-reg);
   color: var(--clr-light);
-  padding: 1px 5px;
+  padding: 2px 5px;
   margin: 5px 0 2px;
   border-width: 2px;
   border-style: solid;
@@ -1621,7 +1600,7 @@ div.project-list-subjects h4 {
 
 @media (min-width: 64em) {
   #author h4 {
-    padding: 3px 8px;
+    padding: 5px;
     border-width: 3px;
     border-radius: 5px;
   }
@@ -1849,6 +1828,10 @@ div.subject-banner.grey {
 @media (min-width: 64em) {
   .subject-banner {
     padding: 20px;
+  }
+
+  .subject-banner h2 {
+    line-height: 1.5rem;
   }
 }
 

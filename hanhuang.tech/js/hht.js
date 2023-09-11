@@ -295,8 +295,8 @@ function upList(n) {
 }
 
 // project
-const projectHeading = document.querySelector("#proj-heading-wrap");
-const projectTiles = document.querySelector("#project-tiles-wrap");
+const projectHeading = document.querySelector("#projects-heading-wrap");
+const projectTiles = document.querySelector("#project-tiles-group");
 const projectBGImg = document.querySelector("#project-bg-img");
 const habbitSpray = document.querySelector("#habbit-spray");
 const habbitBorder = document.querySelector("#habbit-border");
