@@ -211,19 +211,16 @@ html {
   }
 }
 
-#splash h1 {
-  font-family: var(--ff-secondary);
+#splash h2 {
   background-color: var(--clr-dark2);
   color: var(--clr-light);
   margin: auto 0;
-  font-size: 1rem;
   padding: 0px 8px;
   border-radius: 0.5vw;
 }
 
 @media (min-width: 64em) {
-  #splash h1 {
-    font-size: 1.2rem;
+  #splash h2 {
     padding: 0px 10px;
     border-radius: 0.3vw;
   }
@@ -304,13 +301,6 @@ img.banner.animate {
   }
 }
 
-@keyframes bannershrink {
-  50% {
-    border-radius: 10px;
-    filter: blur(1px);
-  }
-}
-
 @keyframes marquee {
   0% {
     transform: translate(0, 0);
@@ -321,19 +311,17 @@ img.banner.animate {
   }
 }
 
-@keyframes arrowrotation {
+@keyframes authorFlip {
   from {
-    transform: rotate(0deg);
+    transform: scaleY(1);
   }
 
   50% {
-    background-color: skyblue;
-    filter: blur(1px);
-    border-radius: 50%;
+    transform: scaleY(0);
   }
 
   to {
-    transform: rotate(720deg);
+    transform: scaleY(1);
   }
 }
 
@@ -954,6 +942,7 @@ img.habbit-b {
   margin: 0px;
   text-align: center;
   color: var(--clr-light);
+  font-size: 0.7rem;
   background: black;
 }
 
@@ -1594,15 +1583,19 @@ div.project-list-subjects h4 {
   border-width: 2px;
   border-style: solid;
   border-color: var(--clr-dark2);
-  border-radius: 3px;
+  border-radius: 1vw;
   filter: drop-shadow(0px 0px 5px var(--clr-dark2));
+}
+
+#author:hover h4 {
+  animation: authorFlip;
+  animation-duration: 0.5s;
 }
 
 @media (min-width: 64em) {
   #author h4 {
-    padding: 5px;
     border-width: 3px;
-    border-radius: 5px;
+    border-radius: 0.3vw;
   }
 }
 

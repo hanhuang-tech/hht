@@ -308,32 +308,8 @@ const revealText = [
   "reveal-textb",
 ];
 
-spoilBtn[0].addEventListener("click", function () {
-  spoilMov[0].classList.contains(hideText[0])
-    ? spoilMov[0].classList.replace(hideText[0], revealText[0])
-    : spoilMov[0].classList.replace(revealText[0], hideText[0]);
-});
-
-spoilBtn[1].addEventListener("click", function () {
-  spoilMov[1].classList.contains(hideText[1])
-    ? spoilMov[1].classList.replace(hideText[1], revealText[1])
-    : spoilMov[1].classList.replace(revealText[1], hideText[1]);
-});
-
-spoilBtn[2].addEventListener("click", function () {
-  spoilMov[2].classList.contains(hideText[2])
-    ? spoilMov[2].classList.replace(hideText[2], revealText[2])
-    : spoilMov[2].classList.replace(revealText[2], hideText[2]);
-});
-
-spoilBtn[3].addEventListener("click", function () {
-  spoilMov[3].classList.contains(hideText[3])
-    ? spoilMov[3].classList.replace(hideText[3], revealText[3])
-    : spoilMov[3].classList.replace(revealText[3], hideText[3]);
-});
-
-spoilBtn[4].addEventListener("click", function () {
-  spoilMov[4].classList.contains(hideText[4])
-    ? spoilMov[4].classList.replace(hideText[4], revealText[4])
-    : spoilMov[4].classList.replace(revealText[4], hideText[4]);
-});
+// spoilBtn[0].addEventListener("click", function () {
+//   spoilMov[0].classList.contains(hideText[0])
+//     ? spoilMov[0].classList.replace(hideText[0], revealText[0])
+//     : spoilMov[0].classList.replace(revealText[0], hideText[0]);
+// });
