@@ -1,4 +1,3 @@
-// document.addEventListener("DOMContentLoaded", revealhht());
 document.addEventListener("DOMContentLoaded", revealhht);
 
 const splash = document.querySelector("#splash");
@@ -239,13 +238,11 @@ function subjectHeadingHide() {
 }
 
 // resources
-const subjectWrapper = [document.querySelector("div.subjectwrapper1")];
-
-const subjectWrapperImg = [document.querySelector("div.subjectwrapper1 img")];
-const subjectHeading = [document.querySelector("a.subjectheading1")];
-const subjectDropdown = [document.querySelector("div.subjectdropdown1")];
-const subjectBlurb = [document.querySelector("p.subjectblurb1")];
-const awsTip = document.querySelector(".awstip");
+const subjectWrapper = [document.querySelector("div.subject-wrap")];
+const subjectWrapperImg = [document.querySelector("div.subject-wrap img")];
+const subjectHeading = [document.querySelector("a.subject-heading")];
+const subjectDropdown = [document.querySelector("div.subject-drop")];
+const subjectDesc = [document.querySelector("p.subject-desc")];
 
 for (let i = 0; i < subjectHeading.length; i++) {
   subjectHeading[i].addEventListener("mouseenter", function () {
@@ -279,8 +276,8 @@ function downList(n) {
   subjectDropdown[n].style.opacity = "1";
   subjectDropdown[n].style.zIndex = "0";
   subjectDropdown[n].style.transitionDuration = "0.75s";
-  subjectBlurb[n].style.opacity = "0.3";
-  subjectBlurb[n].style.transitionDuration = "0.75s";
+  subjectDesc[n].style.opacity = "0.3";
+  subjectDesc[n].style.transitionDuration = "0.75s";
 }
 
 function upList(n) {
@@ -290,8 +287,8 @@ function upList(n) {
   subjectDropdown[n].style.opacity = "-1";
   subjectDropdown[n].style.zIndex = "-1";
   subjectDropdown[n].style.transitionDuration = "0.75s";
-  subjectBlurb[n].style.opacity = "1";
-  subjectBlurb[n].style.transitionDuration = "0.75s";
+  subjectDesc[n].style.opacity = "1";
+  subjectDesc[n].style.transitionDuration = "0.75s";
 }
 
 // project
@@ -302,8 +299,8 @@ const habbitSpray = document.querySelector("#habbit-spray");
 const habbitBorder = document.querySelector("#habbit-border");
 const projectDivAll = document.querySelectorAll("div.project");
 const critiques = document.querySelector("#critiques");
-const subjectGroups = document.querySelector("div.subjectgroups");
-const subjectsNoOfChild = subjectGroups.children;
+const subjectContainer = document.querySelector("div.subject-container");
+const subjectsNoOfChild = subjectContainer.children;
 const projectTilesChild = projectTiles.children;
 
 // habbit animate and reveal
