@@ -10,36 +10,12 @@ function revealhht() {
   splashDiv.style.transform = "scale(0%)";
 }
 
-const logoWrap = document.querySelector("div.logowrap");
-const logo = document.querySelector("div.logo");
-const habbitImg = document.querySelector("div.habbit-img");
-const habbitA = document.querySelector("img.habbit-a");
-const habbitB = document.querySelector("img.habbit-b");
-const habbitBanner = document.querySelector("#habbitbanner");
-habbitBanner.style.transition = "1s";
+const logoWrap = document.querySelector("#logowrap");
+const logo = document.querySelector("#logo");
+const habbitImg = document.querySelector("#habbit-img");
+const habbitA = document.querySelector("#habbit-a");
+const habbitB = document.querySelector("#habbit-b");
 const lantern = document.querySelector("#lantern");
-const habbitCry = new Audio("habbit-cry.mp3");
-
-// habbit click
-habbitImg.addEventListener(
-  "click",
-  function () {
-    habbitCry.play();
-
-    habbitA.classList.remove("animate");
-    void habbitA.offsetWidth;
-    habbitA.classList.add("animate");
-
-    habbitB.classList.remove("animate");
-    void habbitB.offsetWidth;
-    habbitB.classList.add("animate");
-
-    lantern.classList.remove("animate");
-    void lantern.offsetWidth;
-    lantern.classList.add("animate");
-  },
-  false
-);
 
 // habbit change
 window.onmousemove = function (e) {
@@ -71,16 +47,6 @@ function habbitChangeDesktop(e) {
     habbitB.style.opacity = "0";
   }
 }
-
-// hover logo
-habbitImg.addEventListener("mouseenter", function () {
-  habbitBanner.style.opacity = "1";
-  habbitBanner.style.visibility = "visible";
-});
-logo.addEventListener("mouseleave", function () {
-  habbitBanner.style.opacity = "0";
-  habbitBanner.style.visibility = "hidden";
-});
 
 // on scroll
 // fixed pos logo if min-width: 64em
@@ -178,38 +144,10 @@ function scrollRGB() {
   lastScroll = currentScroll;
 }
 
-// change of position on scroll
-// NOT USED
-function logoFixed() {
-  if (Math.abs(document.documentElement.scrollTop) > 1) {
-    logo.style.position = "fixed";
-    logo.style.flexDirection = "column";
-    logo.style.padding = "0";
-    logo.style.margin = "0";
-    logo.style.backgroundColor = "rgba(100, 100, 100, 0.5)";
-    logo.style.borderRadius = "0 0 20px 0";
-    logo.style.boxShadow = "var(--bs)";
-    logo.style.transitionDuration = "1s";
-    habbitPartition.style.position = "absolute";
-    habbitPartition.style.top = "42px";
-    habbitPartition.style.right = "3px";
-  } else {
-    logoWrap.style.backgroundColor = "transparent";
-    logo.style.flexDirection = "row";
-    logo.style.position = "static";
-    logo.style.padding = "5px";
-    logo.style.margin = "5px";
-    logo.style.borderRadius = "0px 0px 30px 0px";
-    logo.style.boxShadow = "var(--bs4)";
-    logo.style.transitionDuration = "1s";
-    habbitPartition.style.position = "static";
-  }
-}
-
 // toggle burger
 const burger = document.querySelector("#burger");
 const hiddenBurgerContents = document.querySelector("#hidden-burger-contents");
-const burgerHabbit = document.querySelector(".habbit-a.burger");
+const burgerHabbit = document.querySelector("#hidden-burger-contents img");
 
 //toggle = switch between nontoggle class and toggle class
 burger.addEventListener("click", function () {
@@ -240,7 +178,6 @@ function subjectHeadingHide() {
 
 // resources
 const subjectWrapper = [document.querySelector("div.subjectwrapper1")];
-
 const subjectWrapperImg = [document.querySelector("div.subjectwrapper1 img")];
 const subjectHeading = [document.querySelector("a.subjectheading1")];
 const subjectDropdown = [document.querySelector("div.subjectdropdown1")];
@@ -505,29 +442,29 @@ function endBGDesktop() {
 function test() {
   console.log(
     "rgb:" +
-    r +
-    "," +
-    g +
-    "," +
-    b +
-    " rR:" +
-    rR +
-    "/" +
-    sumRestrictRGB(r, rR) +
-    "/" +
-    diffRestrictRGB(b, rB) +
-    " rG:" +
-    rG +
-    "/" +
-    sumRestrictRGB(g, rG) +
-    "/" +
-    diffRestrictRGB(b, rB) +
-    " rB:" +
-    rB +
-    "/" +
-    sumRestrictRGB(b, rB) +
-    "/" +
-    diffRestrictRGB(b, rB)
+      r +
+      "," +
+      g +
+      "," +
+      b +
+      " rR:" +
+      rR +
+      "/" +
+      sumRestrictRGB(r, rR) +
+      "/" +
+      diffRestrictRGB(b, rB) +
+      " rG:" +
+      rG +
+      "/" +
+      sumRestrictRGB(g, rG) +
+      "/" +
+      diffRestrictRGB(b, rB) +
+      " rB:" +
+      rB +
+      "/" +
+      sumRestrictRGB(b, rB) +
+      "/" +
+      diffRestrictRGB(b, rB)
   );
   console.log(subjectHeading.length);
   console.log(projectTilesChild.length);

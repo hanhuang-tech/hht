@@ -429,13 +429,7 @@ div.ham {
   }
 }
 
-#hidden-burger-contents.frontend {
-  min-width: 60px;
-}
-
-#hidden-burger-contents .resources,
-#hidden-burger-contents .projects,
-#hidden-burger-contents .aboutme {
+#hidden-burger-contents a {
   margin: 0 auto;
   padding: 0px 5px;
   background-color: transparent;
@@ -445,21 +439,17 @@ div.ham {
 }
 
 @media (min-width: 64em) {
-  #hidden-burger-contents .resources,
-  #hidden-burger-contents .projects,
-  #hidden-burger-contents .aboutme {
+  #hidden-burger-contents a {
     padding: 1px 7px;
   }
 }
 
-#hidden-burger-contents .resources:hover,
-#hidden-burger-contents .projects:hover,
-#hidden-burger-contents .aboutme:hover {
+#hidden-burger-contents a:hover {
   color: lightgreen;
   background-color: var(--clr-accent);
 }
 
-#hidden-burger-contents img.habbit-a {
+#hidden-burger-contents img {
   position: absolute;
   bottom: -10px;
   left: -15px;
@@ -471,14 +461,15 @@ div.ham {
 }
 
 @media (min-width: 64em) {
-  #hidden-burger-contents img.habbit-a {
+  #hidden-burger-contents img {
     bottom: -15px;
     left: -15px;
     width: 30px;
   }
 }
 
-#hidden-burger-contents img.habbit-a:hover {
+#hidden-burger-contents img:hover {
+  cursor: pointer;
   filter: invert(100%);
 }
 
@@ -830,26 +821,26 @@ input[type="submit"]:hover {
 }
 
 /* logo */
-div.logowrap {
+#logowrap {
   position: absolute;
   z-index: 1;
   top: 0;
   left: 0;
 }
 
-div.logo {
+#logo {
   position: fixed;
   display: flex;
   padding: 10px;
 }
 
 @media (min-width: 64em) {
-  div.logo {
+  #logo {
     padding: 15px;
   }
 }
 
-div.habbit-img {
+#habbit-img {
   position: relative;
   margin-right: 10px;
   filter: drop-shadow(0 0 1px lightgreen);
@@ -860,67 +851,39 @@ div.habbit-img {
   transition: 1s;
 }
 
-div.habbit-img:hover {
+#habbit-img:hover {
   filter: drop-shadow(0 0 4px lightgreen);
 }
 
 @media (min-width: 64em) {
-  div.habbit-img {
+  #habbit-img {
     margin-right: 15px;
     outline-offset: 6px;
   }
 }
 
-img.habbit-a,
-img.habbit-b {
+#habbit-a,
+#habbit-b {
   width: 35px;
   cursor: pointer;
 }
 
 @media (min-width: 64em) {
-  img.habbit-a,
-  img.habbit-b {
+  #habbit-a,
+  #habbit-b {
     width: 40px;
   }
 }
 
-img.habbit-a {
+#habbit-a {
   position: relative;
 }
 
-img.habbit-b {
+#habbit-b {
   position: absolute;
   opacity: 0;
   top: 0;
   left: 0;
-}
-
-#habbitbanner {
-  opacity: 0;
-  visibility: hidden;
-  display: inline-block;
-  background-color: var(--clr-light);
-  text-decoration: none;
-  margin: auto;
-  padding: 0 5px;
-  font-size: 1.1rem;
-  color: var(--clr-dark);
-  font-weight: bold;
-  font-family: var(--ff-secondary);
-  border: 2px solid var(--clr-dark);
-  border-radius: 0 6px 6px 0;
-}
-
-@media (min-width: 64em) {
-  #habbitbanner {
-    padding: 2px 5px;
-    font-size: 1.2rem;
-  }
-}
-
-#habbitbanner:hover {
-  transform: scale(105%);
-  filter: drop-shadow(0px 0px 4px var(--clr-light));
 }
 
 /* connectedto */
@@ -1001,7 +964,7 @@ div.leftbar {
 h1.titlebar {
   display: flex;
   justify-content: center;
-  padding: 16px 0;
+  padding: 20px 0;
   background-image: url(../img/trees.jpg);
   background-size: cover;
   filter: grayscale(80%);
@@ -1012,7 +975,7 @@ h1.titlebar {
 
 @media (min-width: 64em) {
   h1.titlebar {
-    padding: 20px 0;
+    padding: 25px 0;
   }
 }
 
