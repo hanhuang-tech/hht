@@ -317,7 +317,7 @@ img.banner.animate {
   }
 
   50% {
-    background: var(--clr-accent);
+    background: slateblue;
     transform: scaleY(0);
   }
 
@@ -995,7 +995,7 @@ h1.titlebar {
   backdrop-filter: sepia(50%);
 }
 
-div.subjectwrapper1 {
+div.subject-wrap {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -1009,24 +1009,24 @@ div.subjectwrapper1 {
 }
 
 @media (min-width: 64em) {
-  div.subjectwrapper1 {
+  div.subject-wrap {
     padding: 22px;
     max-width: 230px;
   }
 }
 
-div.subjectwrapper1 img {
+div.subject-wrap img {
   max-width: 160px;
   border-radius: 5px;
 }
 
 @media (min-width: 64em) {
-  div.subjectwrapper1 img {
+  div.subject-wrap img {
     max-width: 180px;
   }
 }
 
-a.subjectheading1 {
+a.subject-heading {
   z-index: 0;
   background-color: var(--clr-dark2);
   margin: 10px 0 0;
@@ -1040,14 +1040,14 @@ a.subjectheading1 {
 }
 
 @media (min-width: 64em) {
-  a.subjectheading1 {
+  a.subject-heading {
     font-size: 1.1rem;
     line-height: 1.4rem;
     margin: 12px 0 0;
   }
 }
 
-div.subjectdropdown1 {
+div.subject-drop {
   position: absolute;
   top: 160px;
   z-index: -1;
@@ -1055,42 +1055,43 @@ div.subjectdropdown1 {
 }
 
 @media (min-width: 64em) {
-  div.subjectdropdown1 {
+  div.subject-drop {
     top: 180px;
   }
 }
 
-a.dropdowntopic {
+.subject-drop a {
   display: block;
   text-decoration: none;
   font-weight: var(--fw-reg);
   color: var(--clr-light);
-
+  line-height: 1rem;
   background: var(--clr-dark);
-  min-width: 200px;
+  min-width: 120px;
   margin: 1px 0;
   border-width: 1px;
   border-style: solid;
   border-color: transparent;
+  border-radius: 2px;
   box-shadow: var(--bs);
 }
 
-a.dropdowntopic:hover {
+.subject-drop-section:hover {
   display: block;
   border-color: gray white white gray;
   background: var(--clr-dark2);
   margin: 1px -5px 1px 5px;
-  border-radius: 2px;
+  border-radius: 5px;
   transition-duration: 0.5s;
 }
 
-p.subjectblurb1 {
+p.subject-desc {
   margin: 6px 0 0;
   line-height: 1rem;
 }
 
 @media (min-width: 64em) {
-  p.subjectblurb1 {
+  p.subject-desc {
     margin: 8px 0 0;
     line-height: 1.2rem;
   }

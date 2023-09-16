@@ -78,7 +78,7 @@
       <a href="#head__section" id="head__tab">head</a>
       <a href="#header__section" id="header__tab">header</a>
       <a href="#nav__section" id="nav__tab">nav</a>
-      <a href="#body-partition__section" id="body-partition__tab">part</a>
+      <a href="#body-partition__section" id="body-partition__tab">section</a>
       <a href="#footer__section" id="footer__tab">footer</a>
     </div>
   </div>
@@ -526,7 +526,7 @@
     <div class="leftbar"></div>
     <div id="body-partition__section">
       <div class="subject-banner">
-        <h2>body-partition /</h2>
+        <h2>section /</h2>
       </div>
       <div class="body-wrapper">
         <h3>Body partition</h3>
@@ -597,15 +597,61 @@
           <p class="margin0">&lt;div id="author"&gt;</p>
           <p class="margin1">&lt;h4&gt;hanhuang.tech 2023&lt;/h4&gt;</p>
           <p class="margin0">&lt;/div&gt;</p>
-          <p></p>
         </div>
-
         <p class="code-desc">
           The author element in the footer section gives information about
           meta and author information about this website.
         </p>
+        <div class="codebox">
+          <div class="code-css">css</div>
+          <details>
+            <summary># div.logowrap</summary>
+            <p class="margin0">#author {</p>
+            <p class="margin1">position: relative;</p>
+            <p class="margin1">z-index: 0;</p>
+            <p class="margin1">background-color: var(--clr-accent3);</p>
+            <p class="margin1">padding: 11px 0;</p>
+            <p class="margin1">border-width: 0 70px 0 0;</p>
+            <p class="margin1">border-style: solid;</p>
+            <p class="margin1">border-color: var(--clr-accent3);</p>
+            <p class="margin0">}</p>
+          </details>
+          <details>
+            <summary>#author h4</summary>
+            <p class="margin0">#author h4 {</p>
+            <p class="margin1">position: absolute;</p>
+            <p class="margin1">bottom: 0px;</p>
+            <p class="margin1">right: -15px;</p>
+            <p class="margin1">display: inline-block;</p>
+            <p class="margin1">background-color: rgb(75, 100, 150);</p>
+            <p class="margin1">font-weight: var(--fw-reg);</p>
+            <p class="margin1">color: var(--clr-light);</p>
+            <p class="margin1">padding: 2px 5px;</p>
+            <p class="margin1">margin: 5px 0 2px;</p>
+            <p class="margin1">border-width: 2px;</p>
+            <p class="margin1">border-style: solid;</p>
+            <p class="margin1">border-color: var(--clr-dark2);</p>
+            <p class="margin1">border-radius: 1vw;</p>
+            <p class="margin1">filter: drop-shadow(0px 0px 5px var(--clr-dark2));</p>
+            <p class="margin0">}</p>
+          </details>
+          <details>
+            <summary>#author:hover h4</summary>
+            <p class="margin0">#author:hover h4 {</p>
+            <p class="margin1">animation: authorFlip;</p>
+            <p class="margin1">animation-duration: 0.5s;</p>
+            <p class="margin0"> }</p>
+            <p class="margin0"> @media (min-width: 64em) {</p>
+            <p class="margin1">#author h4 {</p>
+            <p class="margin2">border-width: 3px;</p>
+            <p class="margin2">border-radius: 0.3vw;</p>
+            <p class="margin1">}</p>
+            <p class="margin0">}</p>
+          </details>
+        </div>
+        <p class="code-desc">
+        </p>
       </div>
-    </div>
   </section>
 
   <!-- footer -->
