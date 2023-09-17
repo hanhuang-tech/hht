@@ -836,7 +836,7 @@ input[type="submit"]:hover {
 
 @media (min-width: 64em) {
   #logo {
-    padding: 15px;
+    padding: 16px;
   }
 }
 
@@ -852,12 +852,11 @@ input[type="submit"]:hover {
 }
 
 #habbit-img:hover {
-  filter: drop-shadow(0 0 4px lightgreen);
+  filter: drop-shadow(0px 0px 20px darkgreen);
 }
 
 @media (min-width: 64em) {
   #habbit-img {
-    margin-right: 15px;
     outline-offset: 6px;
   }
 }
@@ -1076,7 +1075,7 @@ div.subject-drop {
   box-shadow: var(--bs);
 }
 
-.subject-drop-section:hover {
+.dropdown-topics:hover {
   display: block;
   border-color: gray white white gray;
   background: var(--clr-dark2);
