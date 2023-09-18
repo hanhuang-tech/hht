@@ -140,6 +140,7 @@ function revealNavArrowBtn() {
 
 // tab
 const tabWrap = document.querySelector("#tabwrapper");
+tabWrap.style.transitionDuration = "1s";
 const headSection = document.querySelector("#head__section");
 const headerSection = document.querySelector("#header__section");
 const navSection = document.querySelector("#nav__section");
@@ -156,9 +157,6 @@ const footerTab = document.querySelector("#footer__tab");
 const htmlTab = document.querySelector("#html__tab");
 const cssTab = document.querySelector("#css__tab");
 const jsTab = document.querySelector("#js__tab");
-const tab = document.querySelector("#tab");
-tabWrap.style.transitionDuration = "1s";
-tab.style.transitionDuration = "0.5s";
 
 function revealTab() {
   if (window.matchMedia("(max-width: 64em)").matches) {
