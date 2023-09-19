@@ -94,7 +94,7 @@ function rgbInverseColor(r, g, b) {
 
 const dynamicRGB = document.querySelector("#dynamic-rgb");
 const hanSection = document.querySelector("#han");
-const navArrowBtn = document.querySelector("nav.bar.sectioned-with-tab");
+const navArrow = document.querySelector("#nav-arrow");
 let lastScroll = 0;
 let r = 0;
 let g = 0;
@@ -132,9 +132,9 @@ function scrollRGB() {
 
 function revealNavArrowBtn() {
   if (Math.abs(document.documentElement.scrollTop) > 500) {
-    navArrowBtn.style.transform = "translateX(0px)";
+    navArrow.style.transform = "translateX(0px)";
   } else {
-    navArrowBtn.style.transform = "translateX(50px)";
+    navArrow.style.transform = "translateX(50px)";
   }
 }
 
