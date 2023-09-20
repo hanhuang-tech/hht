@@ -364,13 +364,6 @@ nav.bar {
   z-index: 1;
 }
 
-/* nav-arrow */
-#nav-arrow {
-  top: 40%;
-  transform: translateX(50px);
-  transition: 1s;
-}
-
 #burger {
   display: flex;
   flex-direction: column;
@@ -475,7 +468,12 @@ div.ham {
   filter: invert(100%);
 }
 
-/*arrow-button*/
+/*nav arrow*/
+#nav-arrow {
+  top: 40%;
+  transform: translateX(50px);
+  transition: 1s;
+}
 
 @media (min-width: 64em) {
   #arrow-button {
