@@ -1635,7 +1635,7 @@ div.project-list-subjects h4 {
 @media (min-width: 64em) {
   #tabwrapper {
     width: 65px;
-    left: -5px;
+    left: -10px;
     box-shadow: -0.4em 0.4em 0em var(--clr-accent3);
     opacity: 1;
     border-radius: 0.25vw;
@@ -1814,7 +1814,7 @@ div.body-wrapper {
   }
 
   div.body-wrapper h3 {
-    margin: 5px 0;
+    margin: 10px 0;
   }
 }
 
