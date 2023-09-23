@@ -46,7 +46,7 @@ function habbitChangeDesktop(e) {
 // fixed pos logo if min-width: 64em
 window.onscroll = function () {
   scrollRGB();
-  revealNavArrowBtn();
+  revealNavArrow();
   revealTab();
   changeNavTab();
   changeNavTabCritiques();
@@ -130,7 +130,7 @@ function scrollRGB() {
   lastScroll = currentScroll;
 }
 
-function revealNavArrowBtn() {
+function revealNavArrow() {
   if (Math.abs(document.documentElement.scrollTop) > 500) {
     navArrow.style.transform = "translateX(0px)";
   } else {
