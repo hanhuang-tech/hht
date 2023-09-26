@@ -144,7 +144,7 @@ tabWrap.style.transitionDuration = "1s";
 const headSection = document.querySelector("#head__section");
 const headerSection = document.querySelector("#header__section");
 const navSection = document.querySelector("#nav__section");
-const bodyPartSection = document.querySelector("#body-partition__section");
+const sectionSection = document.querySelector("#section__section");
 const footerSection = document.querySelector("#footer__section");
 const htmlSection = document.querySelector("#html__section");
 const cssSection = document.querySelector("#css__section");
@@ -152,7 +152,7 @@ const jsSection = document.querySelector("#js__section");
 const headTab = document.querySelector("#head__tab");
 const headerTab = document.querySelector("#header__tab");
 const navTab = document.querySelector("#nav__tab");
-const bodyPartTab = document.querySelector("#body-partition__tab");
+const sectionTab = document.querySelector("#section__tab");
 const footerTab = document.querySelector("#footer__tab");
 const htmlTab = document.querySelector("#html__tab");
 const cssTab = document.querySelector("#css__tab");
@@ -193,20 +193,20 @@ function changeNavTab() {
       navTab.style.borderColor = "transparent";
     } else if (
       Math.round(window.scrollY) + 10 > navSection.offsetTop &&
-      Math.round(window.scrollY) + 10 < bodyPartSection.offsetTop
+      Math.round(window.scrollY) + 10 < sectionSection.offsetTop
     ) {
       headerTab.style.borderColor = "transparent";
       navTab.style.borderColor = "var(--clr-light)";
-      bodyPartTab.style.borderColor = "transparent";
+      sectionTab.style.borderColor = "transparent";
     } else if (
-      Math.round(window.scrollY) + 10 > bodyPartSection.offsetTop &&
+      Math.round(window.scrollY) + 10 > sectionSection.offsetTop &&
       Math.round(window.scrollY) + 10 < footerSection.offsetTop
     ) {
       navTab.style.borderColor = "transparent";
-      bodyPartTab.style.borderColor = "var(--clr-light)";
+      sectionTab.style.borderColor = "var(--clr-light)";
       footerTab.style.borderColor = "transparent";
     } else if (Math.round(window.scrollY) > footerSection.offsetTop) {
-      bodyPartTab.style.borderColor = "transparent";
+      sectionTab.style.borderColor = "transparent";
       footerTab.style.borderColor = "var(--clr-light)";
     }
   }
