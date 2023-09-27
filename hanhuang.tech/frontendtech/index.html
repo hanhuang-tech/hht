@@ -678,7 +678,7 @@
         <div class="codebox">
           <div class="code-css">css</div>
           <details>
-            <summary># div.logowrap</summary>
+            <summary>#author</summary>
             <p class="margin0">#author {</p>
             <p class="margin1">position: relative;</p>
             <p class="margin1">z-index: 0;</p>
@@ -723,8 +723,24 @@
             <p class="margin1">}</p>
             <p class="margin0">}</p>
           </details>
+          <details>
+            <summary>@keyframes authorFlip</summary>
+            <p class="margin0">@keyframes authorFlip {</p>
+            <p class="margin1">from {</p>
+            <p class="margin2">transform: scaleY(1);</p>
+            <p class="margin1">}</p>
+            <p class="margin1">50% {</p>
+            <p class="margin2">background: black;</p>
+            <p class="margin2">transform: scaleY(0);</p>
+            <p class="margin1">}</p>
+            <p class="margin1"> to {</p>
+            <p class="margin2">transform: scaleY(1);</p>
+            <p class="margin1">}</p>
+            <p class="margin0">}</p>
+          </details>
         </div>
-        <p class="code-desc"></p>
+        <p class="code-desc">The styling for the author section features an element at the bottom of the page, that has
+          a keyframes flip animation on hover. </p>
       </div>
     </div>
   </section>
