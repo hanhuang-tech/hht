@@ -135,11 +135,6 @@ summary {
   color: var(--clr-light);
 }
 
-.tooltip {
-  position: relative;
-  display: inline-block;
-}
-
 .flex-row {
   display: flex;
   flex-direction: row;
