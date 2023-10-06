@@ -603,7 +603,7 @@
     </div>
   </section>
 
-  <!-- body-partition / -->
+  <!-- section / -->
   <section class="body-partition">
     <div class="leftbar"></div>
     <div id="section__section">
@@ -631,6 +631,15 @@
           This element creates a partition on the side as a divider that runs
           vertically down a page.
         </p>
+        <div class="codebox">
+          <div class="code-css">css</div>
+          <p class="margin0">div.leftbar {</p>
+            <p class="margin1">visibility: visible;</p>
+            <p class="margin1">background: var(--clr-dark);</p>
+            <p class="margin1">padding: 0 36px;</p>
+            <p class="margin0">}</p>
+        </div>
+        <p class="code-desc">The styling for leftbar is only visible when the content is viewed on the desktop. Otherwise, it is responsively hidden when viewed on the mobile.</p>
         <h3>Codebox</h3>
         <div class="codebox">
           <div class="code-html">html</div>
