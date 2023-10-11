@@ -1883,6 +1883,7 @@ p.margin5 {
   z-index: 2;
   color: lightgray;
   overflow-x: auto;
+  text-wrap: nowrap;
 }
 
 p.margin0 {
