@@ -1826,6 +1826,8 @@ div.code-btn-j {
   border-style: solid;
   border-color: gray;
   border-radius: 2px;
+  overflow-x: auto;
+  text-wrap: nowrap;
 }
 
 @media (min-width: 64em) {
@@ -1843,17 +1845,18 @@ div.code-btn-j {
 div.code-html,
 div.code-css,
 div.code-js {
-  position: absolute;
+  position: relative;
   z-index: 1;
-  right: 5px;
+  float: right;
   color: var(--clr-dark);
-  padding: 0 2px;
+  margin: 0 3px;
+  padding: 3px 0;
+  writing-mode: vertical-lr;
   border-radius: 2px;
 }
 
 div.code-html {
   background-color: var(--clr-html);
-  opacity: 0.5;
 }
 
 div.code-css {
@@ -1882,8 +1885,6 @@ p.margin5 {
   position: relative;
   z-index: 2;
   color: lightgray;
-  overflow-x: auto;
-  text-wrap: nowrap;
 }
 
 p.margin0 {
