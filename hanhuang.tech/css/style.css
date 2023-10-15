@@ -1242,13 +1242,15 @@ div.project-desc {
 
 a.web-link {
   text-decoration: none;
-  margin: 0 5px;
+  font-family: var(--ff-secondary);
+  padding: 0 4px;
   color: skyblue;
   transition: 0.5s;
 }
 
 a.web-link:hover {
-  color: lightslategray;
+  color: var(--clr-accent3);
+  background-color: skyblue;
 }
 
 div.project-list-subjects {
