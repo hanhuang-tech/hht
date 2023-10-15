@@ -343,8 +343,7 @@ img.banner.animate {
 
 @keyframes animateLtn-lt {
   60% {
-    border-color: transparent rgba(100, 100, 100, 0.5) transparent
-      rgba(100, 100, 100, 0.5);
+    border-color: transparent rgba(100, 100, 100, 0.5) transparent rgba(100, 100, 100, 0.5);
   }
 
   80% {
@@ -641,8 +640,7 @@ div.bulb::before {
 /*lantern light hover*/
 div.bulb:hover::before {
   transition-delay: 1s;
-  border-color: transparent rgba(200, 200, 200, 0.75) transparent
-    rgba(200, 200, 200, 0.75);
+  border-color: transparent rgba(200, 200, 200, 0.75) transparent rgba(200, 200, 200, 0.75);
 
   animation-name: animateLtn-lt;
   animation-delay: 1s;
@@ -666,11 +664,9 @@ section.fourofour {
   align-items: center;
   min-height: 100vh;
   background-size: cover;
-  background-image: linear-gradient(
-      to top,
+  background-image: linear-gradient(to top,
       var(--clr-dark) 50%,
-      rgba(200, 100, 100, 0.6)
-    ),
+      rgba(200, 100, 100, 0.6)),
     url(../../hanhuang.tech/img/sunset.jpg);
   background-repeat: no-repeat;
 }
@@ -864,6 +860,7 @@ input[type="submit"]:hover {
 }
 
 @media (min-width: 64em) {
+
   #habbit-a,
   #habbit-b {
     width: 40px;
@@ -955,8 +952,8 @@ div.leftbar {
   }
 }
 
-/* titlebar */
-h1.titlebar {
+/* trees */
+div.trees {
   display: flex;
   justify-content: center;
   padding: 20px 0;
@@ -969,7 +966,8 @@ h1.titlebar {
 }
 
 @media (min-width: 64em) {
-  h1.titlebar {
+  div.trees {
+    background-position-y: 15%;
     padding: 25px 0;
   }
 }
@@ -1117,12 +1115,10 @@ p.subject-desc {
   flex-direction: column;
   row-gap: 30px;
   padding: 30px 70px;
-  background-image: linear-gradient(
-    to bottom,
-    var(--clr-accent3),
-    black,
-    var(--clr-accent3)
-  );
+  background-image: linear-gradient(to bottom,
+      var(--clr-accent3),
+      black,
+      var(--clr-accent3));
   background-attachment: fixed;
 }
 
@@ -1186,6 +1182,7 @@ div.imgwrapper4 {
 }
 
 @media (min-width: 64em) {
+
   div.imgwrapper1,
   div.imgwrapper2,
   div.imgwrapper3,
@@ -1435,24 +1432,6 @@ div.project-list-subjects h4 {
   overflow: auto;
 }
 
-/* trees */
-@media (min-width: 64em) {
-  div.trees {
-    flex: 1;
-    padding: 50px 0;
-    background-image: url(../img/trees.jpg);
-    filter: grayscale(20%);
-    background-color: lightgreen;
-    background-blend-mode: multiply;
-    background-size: cover;
-    background-attachment: scroll;
-    background-position: 0 15%;
-    border-width: 10px 0 0;
-    border-style: solid;
-    border-color: var(--clr-dark);
-  }
-}
-
 /* footer */
 #footer {
   display: flex;
@@ -1654,19 +1633,15 @@ div.project-list-subjects h4 {
 }
 
 #tab {
-  background: linear-gradient(
-    315deg,
-    var(--clr-brown) 50%,
-    rgb(150, 100, 50) 50%
-  );
+  background: linear-gradient(315deg,
+      var(--clr-brown) 50%,
+      rgb(150, 100, 50) 50%);
 }
 
 #tab-grey {
-  background: linear-gradient(
-    315deg,
-    var(--clr-dark2) 50%,
-    rgb(150, 150, 150) 50%
-  );
+  background: linear-gradient(315deg,
+      var(--clr-dark2) 50%,
+      rgb(150, 150, 150) 50%);
 }
 
 @media (min-width: 64em) {
@@ -1701,6 +1676,7 @@ div.project-list-subjects h4 {
 }
 
 @media (min-width: 64em) {
+
   #head__tab,
   #header__tab,
   #nav__tab,
@@ -1740,6 +1716,7 @@ div.project-list-subjects h4 {
 }
 
 @media (min-width: 64em) {
+
   #head__section,
   #header__section,
   #nav__section,
@@ -1799,11 +1776,9 @@ h4.side-heading {
   font-weight: var(--fw-reg);
   color: var(--clr-light);
   font-family: var(--ff-secondary);
-  background-image: linear-gradient(
-    to right,
-    var(--clr-dark),
-    rgb(200, 100, 100)
-  );
+  background-image: linear-gradient(to right,
+      var(--clr-dark),
+      rgb(200, 100, 100));
   padding: 0 5px;
   float: right;
 }
@@ -1841,6 +1816,7 @@ div.code-btn-j {
 }
 
 @media (min-width: 64em) {
+
   div.codebox,
   div.code-btn-j {
     padding: 8px 15px;
@@ -1877,6 +1853,7 @@ div.code-js {
 }
 
 @media (min-width: 64em) {
+
   div.code-html,
   div.code-css,
   div.code-js {
@@ -1951,6 +1928,7 @@ h3.cons {
 }
 
 @media (min-width: 64em) {
+
   h3.pros,
   h3.cons {
     line-height: 1.3rem;
@@ -1980,6 +1958,7 @@ h3.cons {
 }
 
 @media (min-width: 64em) {
+
   #spoil-btn1,
   #spoil-btn2,
   #spoil-btn3,
@@ -2044,6 +2023,7 @@ h3.cons {
 }
 
 @media (min-width: 64em) {
+
   #spoil-btna,
   #spoil-btnb {
     font-size: 0.85rem;
