@@ -952,6 +952,25 @@ div.leftbar {
   }
 }
 
+/* titlebar */
+h1.titlebar {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  background-image: url(../img/trees.jpg);
+  background-size: cover;
+  filter: grayscale(80%);
+  color: var(--clr-light);
+  letter-spacing: 1px;
+  text-shadow: -1px 1px gray;
+}
+
+@media (min-width: 64em) {
+  h1.titlebar {
+    padding: 25px 0;
+  }
+}
+
 /* trees */
 div.trees {
   display: flex;
