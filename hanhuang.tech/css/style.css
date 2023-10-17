@@ -956,18 +956,17 @@ div.leftbar {
 h1.titlebar {
   display: flex;
   justify-content: center;
-  padding: 20px 0;
+  padding: 15px 0;
   background-image: url(../img/trees.jpg);
   background-size: cover;
-  filter: grayscale(80%);
+  filter: grayscale(60%);
   color: var(--clr-light);
-  letter-spacing: 1px;
-  text-shadow: -1px 1px gray;
+  text-shadow: 3px 0px grey;
 }
 
 @media (min-width: 64em) {
   h1.titlebar {
-    padding: 25px 0;
+    padding: 18px 0;
   }
 }
 
