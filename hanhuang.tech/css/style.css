@@ -956,7 +956,7 @@ div.leftbar {
 h1.titlebar {
   display: flex;
   justify-content: center;
-  padding: 15px 0;
+  padding: 16px 0;
   background-image: url(../img/trees.jpg);
   background-size: cover;
   filter: grayscale(60%);
@@ -966,7 +966,7 @@ h1.titlebar {
 
 @media (min-width: 64em) {
   h1.titlebar {
-    padding: 18px 0;
+    padding: 20px 0;
   }
 }
 
@@ -1620,23 +1620,23 @@ div.project-list-subjects h4 {
 #tabwrapper {
   z-index: 1;
   position: fixed;
-  width: 55px;
+  width: 50px;
   left: 5px;
   top: 45%;
   transform: translate(-70px);
   background-color: var(--clr-dark2);
   box-shadow: -0.3em 0.3em 0em var(--clr-dark);
   opacity: 0.85;
-  border-radius: 0.85vw;
+  border-radius: 0.85vw 0 0 0.85vw;
 }
 
 @media (min-width: 64em) {
   #tabwrapper {
-    width: 65px;
-    left: -10px;
+    width: 55px;
+    left: -4px;
     box-shadow: -0.4em 0.4em 0em var(--clr-accent3);
     opacity: 1;
-    border-radius: 0.25vw;
+    border-radius: 0.25vw 0 0 0.25vw;
   }
 }
 
@@ -1852,7 +1852,7 @@ div.code-js {
   z-index: 1;
   float: right;
   color: var(--clr-light);
-  margin: 0 3px;
+  margin: 0 0 0 3px;
   padding: 3px 0;
   writing-mode: vertical-lr;
   border-radius: 2px;
