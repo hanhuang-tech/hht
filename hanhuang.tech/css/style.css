@@ -1123,7 +1123,7 @@ p.subject-desc {
     margin-left: 80px;
     width: 165px;
     box-shadow: var(--bs);
-    opacity: 0;
+    opacity: 1;
   }
 }
 
@@ -1627,7 +1627,7 @@ div.project-list-subjects h4 {
   background-color: var(--clr-dark2);
   box-shadow: -0.3em 0.3em 0em var(--clr-dark);
   opacity: 0.85;
-  border-radius: 0.85vw 0 0 0.85vw;
+  border-radius: 1vw 0 0 1vw;
 }
 
 @media (min-width: 64em) {

@@ -230,7 +230,6 @@ function upList(n) {
 }
 
 // project
-const projectHeading = document.querySelector("#projects-heading-wrap");
 const projectTiles = document.querySelector("#project-tiles-group");
 const projectBGImg = document.querySelector("#project-bg-img");
 const habbitSpray = document.querySelector("#habbit-spray");
@@ -277,8 +276,6 @@ function projectTilesMoveMobile() {
 
 function projectTilesMoveDesktop() {
   if (Math.round(window.scrollY) > 350) {
-    projectHeading.style.opacity = "1";
-    projectHeading.style.transition = "1s";
     projectBGImg.style.opacity = "0";
     projectBGImg.style.height = "0px";
     projectBGImg.style.width = "0px";
@@ -289,8 +286,6 @@ function projectTilesMoveDesktop() {
     habbitBorder.style.transition = "1s";
     projectTilesMoveExpand();
   } else {
-    projectHeading.style.opacity = "0";
-    projectHeading.style.transition = "1s";
     projectBGImg.style.opacity = "1";
     projectBGImg.style.height = "300px";
     projectBGImg.style.width = "300px";
@@ -440,29 +435,29 @@ function endBGDesktop() {
 function test() {
   console.log(
     "rgb:" +
-      r +
-      "," +
-      g +
-      "," +
-      b +
-      " rR:" +
-      rR +
-      "/" +
-      sumRestrictRGB(r, rR) +
-      "/" +
-      diffRestrictRGB(b, rB) +
-      " rG:" +
-      rG +
-      "/" +
-      sumRestrictRGB(g, rG) +
-      "/" +
-      diffRestrictRGB(b, rB) +
-      " rB:" +
-      rB +
-      "/" +
-      sumRestrictRGB(b, rB) +
-      "/" +
-      diffRestrictRGB(b, rB)
+    r +
+    "," +
+    g +
+    "," +
+    b +
+    " rR:" +
+    rR +
+    "/" +
+    sumRestrictRGB(r, rR) +
+    "/" +
+    diffRestrictRGB(b, rB) +
+    " rG:" +
+    rG +
+    "/" +
+    sumRestrictRGB(g, rG) +
+    "/" +
+    diffRestrictRGB(b, rB) +
+    " rB:" +
+    rB +
+    "/" +
+    sumRestrictRGB(b, rB) +
+    "/" +
+    diffRestrictRGB(b, rB)
   );
   console.log(subjectHeading.length);
   console.log(projectTilesChild.length);
