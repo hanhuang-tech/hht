@@ -1677,7 +1677,8 @@ div.project-list-subjects h4 {
   }
 }
 
-#tab a {
+#tab a,
+#tab-grey a {
   display: flex;
   justify-content: center;
   background-color: var(--clr-dark);
@@ -1696,23 +1697,18 @@ div.project-list-subjects h4 {
 }
 
 @media (min-width: 64em) {
-  #tab a {
+  #tab a,
+  #tab-grey a {
     font-size: 0.75rem;
     line-height: 0.9rem;
     padding: 0px 5px;
   }
 }
 
-#head__tab:hover,
-#header__tab:hover,
-#nav__tab:hover,
-#section__tab:hover,
-#footer__tab:hover,
-#html__tab:hover,
-#css__tab:hover,
-#js__tab:hover {
+#tab a,
+#tab-grey a:hover {
   background-color: black;
-  color: var(--clr-light);
+  color: white;
 }
 
 /* sections */

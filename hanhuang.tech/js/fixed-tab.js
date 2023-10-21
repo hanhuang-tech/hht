@@ -177,7 +177,7 @@ function revealTab() {
 }
 
 function changeNavTab() {
-  if (headSection) {
+  if (headSection + window.onmousemove) {
     if (
       Math.round(window.scrollY) + 10 > headSection.offsetTop &&
       Math.round(window.scrollY) + 10 < headerSection.offsetTop
@@ -226,23 +226,26 @@ function changeNavTab() {
 }
 
 function changeNavTabCritiques() {
-  if (htmlSection) {
+  if (htmlSection + window.onmousemove) {
     if (
       Math.round(window.scrollY) + 10 > htmlSection.offsetTop &&
       Math.round(window.scrollY) + 10 < cssSection.offsetTop
     ) {
       cssTab.style.borderColor = "transparent";
       htmlTab.style.borderColor = "var(--clr-light)";
+      htmlTab.style.backgroundColor = "var(--clr-dark)";
     } else if (
       Math.round(window.scrollY) + 10 > cssSection.offsetTop &&
       Math.round(window.scrollY) + 10 < jsSection.offsetTop
     ) {
       htmlTab.style.borderColor = "transparent";
       cssTab.style.borderColor = "var(--clr-light)";
+      cssTab.style.backgroundColor = "var(--clr-dark)";
       jsTab.style.borderColor = "transparent";
     } else if (Math.round(window.scrollY) > jsSection.offsetTop) {
       cssTab.style.borderColor = "transparent";
       jsTab.style.borderColor = "var(--clr-light)";
+      jsTab.style.backgroundColor = "var(--clr-dark)";
     }
   }
 }
