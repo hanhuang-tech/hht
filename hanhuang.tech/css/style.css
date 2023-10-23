@@ -1705,7 +1705,7 @@ div.project-list-subjects h4 {
   }
 }
 
-#tab a,
+#tab a:hover,
 #tab-grey a:hover {
   background-color: black;
   color: white;
