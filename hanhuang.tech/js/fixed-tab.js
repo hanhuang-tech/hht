@@ -231,21 +231,19 @@ function changeNavTabCritiques() {
       Math.round(window.scrollY) + 10 > htmlSection.offsetTop &&
       Math.round(window.scrollY) + 10 < cssSection.offsetTop
     ) {
-      cssTab.style.borderColor = "transparent";
-      htmlTab.style.borderColor = "var(--clr-light)";
-      htmlTab.style.backgroundColor = "black";
+      cssTab.classList.remove('selected-tab');
+      htmlTab.classList.add('selected-tab');
     } else if (
       Math.round(window.scrollY) + 10 > cssSection.offsetTop &&
       Math.round(window.scrollY) + 10 < jsSection.offsetTop
     ) {
-      htmlTab.style.borderColor = "transparent";
-      cssTab.style.borderColor = "var(--clr-light)";
-      cssTab.style.backgroundColor = "black";
-      jsTab.style.borderColor = "transparent";
+      htmlTab.classList.remove('selected-tab');
+      cssTab.classList.add('selected-tab');
+      jsTab.classList.remove('selected-tab');
     } else if (Math.round(window.scrollY) > jsSection.offsetTop) {
-      cssTab.style.borderColor = "transparent";
-      jsTab.style.borderColor = "var(--clr-light)";
-      jsTab.style.backgroundColor = "black";
+      // cssTab.style.borderColor = "transparent";
+      // jsTab.style.borderColor = "var(--clr-light)";
+      // jsTab.style.backgroundColor = "black";
     }
   }
 }

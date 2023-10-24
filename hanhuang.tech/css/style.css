@@ -159,8 +159,8 @@ html {
 }
 
 .selected-tab {
-  border-color: var(--clr-light);
   background-color: black;
+  border: 1px solid var(--clr-light);
 }
 
 /* hanhuang.tech splash */
@@ -1631,6 +1631,7 @@ div.project-list-subjects h4 {
   transform: translate(-70px);
   background-color: var(--clr-dark2);
   box-shadow: -0.3em 0.3em 0em var(--clr-dark);
+  border: 1px solid transparent;
   opacity: 0.85;
   border-radius: 1vw 0 0 1vw;
 }
@@ -1678,17 +1679,15 @@ div.project-list-subjects h4 {
 #tab-grey a {
   display: flex;
   justify-content: center;
-  background-color: var(--clr-dark);
   padding: 0px 3px;
   margin: 0 auto;
   font-size: 0.65rem;
   line-height: 0.8rem;
   text-align: center;
+  border: 1px solid var(--clr-light);
   color: white;
   text-decoration: none;
-  border-width: 1px;
-  border-style: solid;
-  border-color: transparent;
+
   border-radius: inherit;
   transition: 0.5s;
 }
