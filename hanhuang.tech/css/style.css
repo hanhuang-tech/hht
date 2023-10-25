@@ -1789,6 +1789,12 @@ h4.side-heading {
   float: right;
 }
 
+@media (min-width: 64em) {
+  h4.side-heading {
+    padding: 2px 7px;
+  }
+}
+
 div.body-wrapper {
   padding: 20px 65px;
 }
@@ -1810,7 +1816,7 @@ div.code-btn-j {
   position: relative;
   background: var(--clr-dark);
   font-family: var(--ff-secondary);
-  margin-top: 5px;
+  margin-top: 3px;
   padding: 5px 10px;
   line-height: 1rem;
   border-width: 0px 0px 0px 6px;
@@ -1840,7 +1846,7 @@ div.code-js {
   z-index: 1;
   float: right;
   color: var(--clr-light);
-  margin: 0 0 0 3px;
+  margin-left: 3px;
   padding: 3px 0;
   writing-mode: vertical-lr;
   border-radius: 2px;
@@ -1863,8 +1869,9 @@ div.code-js {
   div.code-html,
   div.code-css,
   div.code-js {
-    margin: 0 5px;
-    padding: 5px 0px;
+    margin-left: 5px;
+    padding: 6px 0px;
+    border-radius: 4px;
   }
 }
 
@@ -1914,31 +1921,32 @@ p.code-desc {
 }
 
 /* pros cons */
-h3.pros,
-h3.cons {
+h4.pros,
+h4.cons {
   display: inline-flex;
-  margin: 0 0 20px;
+  margin: 15px 0;
   color: var(--clr-light);
-  line-height: 1.15rem;
-  padding: 0px 10px;
+  line-height: 1rem;
+  padding: 0px 5px;
   border-radius: 1vw;
   filter: drop-shadow(-4px 4px 0px var(--clr-dark2));
 }
 
-h3.pros {
+h4.pros {
   background-color: green;
 }
 
-h3.cons {
+h4.cons {
   background-color: darkred;
 }
 
 @media (min-width: 64em) {
 
-  h3.pros,
-  h3.cons {
-    line-height: 1.3rem;
-    padding: 0px 15px;
+  h4.pros,
+  h4.cons {
+    line-height: 1.1rem;
+    margin: 20px 0;
+    padding: 0px 8px;
     border-radius: 0.25vw;
   }
 }
