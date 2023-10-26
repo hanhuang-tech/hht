@@ -1687,7 +1687,6 @@ div.project-list-subjects h4 {
   border: 1px solid var(--clr-light);
   color: white;
   text-decoration: none;
-
   border-radius: inherit;
   transition: 0.5s;
 }
@@ -1704,8 +1703,7 @@ div.project-list-subjects h4 {
 
 #tab a:hover,
 #tab-grey a:hover {
-  background-color: black;
-  color: white;
+  background-color: darkslategray;
 }
 
 /* sections */

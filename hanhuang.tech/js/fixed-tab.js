@@ -182,45 +182,32 @@ function changeNavTab() {
       Math.round(window.scrollY) + 10 > headSection.offsetTop &&
       Math.round(window.scrollY) + 10 < headerSection.offsetTop
     ) {
-      headTab.style.borderColor = "var(--clr-light)";
-      headTab.style.backgroundColor = "black";
-      headerTab.style.borderColor = "transparent";
-      headerTab.style.backgroundColor = "var(--clr-dark)";
+      headTab.classList.add('selected-tab');
+      headerTab.classList.remove('selected-tab');
     } else if (
       Math.round(window.scrollY) + 10 > headerSection.offsetTop &&
       Math.round(window.scrollY) + 10 < navSection.offsetTop
     ) {
-      headTab.style.borderColor = "transparent";
-      headTab.style.backgroundColor = "var(--clr-dark)";
-      headerTab.style.borderColor = "var(--clr-light)";
-      headerTab.style.backgroundColor = "black";
-      navTab.style.borderColor = "transparent";
-      navTab.style.backgroundColor = "var(--clr-dark)";
+      headTab.classList.remove('selected-tab');
+      headerTab.classList.add('selected-tab');
+      navTab.classList.remove('selected-tab');
     } else if (
       Math.round(window.scrollY) + 10 > navSection.offsetTop &&
       Math.round(window.scrollY) + 10 < sectionSection.offsetTop
     ) {
-      headerTab.style.borderColor = "transparent";
-      headerTab.style.backgroundColor = "var(--clr-dark)";
-      navTab.style.borderColor = "var(--clr-light)";
-      navTab.style.backgroundColor = "black";
-      sectionTab.style.borderColor = "transparent";
-      sectionTab.style.backgroundColor = "var(--clr-dark)";
+      headerTab.classList.remove('selected-tab');
+      navTab.classList.add('selected-tab');
+      sectionTab.classList.remove('selected-tab');
     } else if (
       Math.round(window.scrollY) + 10 > sectionSection.offsetTop &&
       Math.round(window.scrollY) + 10 < footerSection.offsetTop
     ) {
-      navTab.style.borderColor = "transparent";
-      navTab.style.backgroundColor = "var(--clr-dark)";
-      sectionTab.style.borderColor = "var(--clr-light)";
-      sectionTab.style.backgroundColor = "black";
-      footerTab.style.borderColor = "transparent";
-      footerTab.style.backgroundColor = "var(--clr-dark)";
+      navTab.classList.remove('selected-tab');
+      sectionTab.classList.add('selected-tab');
+      footerTab.classList.remove('selected-tab');
     } else if (Math.round(window.scrollY) > footerSection.offsetTop) {
-      sectionTab.style.borderColor = "transparent";
-      sectionTab.style.backgroundColor = "var(--clr-dark)";
-      footerTab.style.borderColor = "var(--clr-light)";
-      footerTab.style.backgroundColor = "black";
+      sectionTab.classList.remove('selected-tab');
+      footerTab.classList.add('selected-tab');
     }
   }
 }
