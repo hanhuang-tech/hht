@@ -159,8 +159,7 @@ html {
 }
 
 .selected-tab {
-  background-color: black;
-  border: 1px solid var(--clr-light);
+  background: linear-gradient(125deg, gray, black);
 }
 
 /* hanhuang.tech splash */
@@ -348,8 +347,7 @@ img.banner.animate {
 
 @keyframes animateLtn-lt {
   60% {
-    border-color: transparent rgba(100, 100, 100, 0.5) transparent
-      rgba(100, 100, 100, 0.5);
+    border-color: transparent rgba(100, 100, 100, 0.5) transparent rgba(100, 100, 100, 0.5);
   }
 
   80% {
@@ -646,8 +644,7 @@ div.bulb::before {
 /*lantern light hover*/
 div.bulb:hover::before {
   transition-delay: 1s;
-  border-color: transparent rgba(200, 200, 200, 0.75) transparent
-    rgba(200, 200, 200, 0.75);
+  border-color: transparent rgba(200, 200, 200, 0.75) transparent rgba(200, 200, 200, 0.75);
 
   animation-name: animateLtn-lt;
   animation-delay: 1s;
@@ -671,11 +668,9 @@ section.fourofour {
   align-items: center;
   min-height: 100vh;
   background-size: cover;
-  background-image: linear-gradient(
-      to top,
+  background-image: linear-gradient(to top,
       var(--clr-dark) 50%,
-      rgba(200, 100, 100, 0.6)
-    ),
+      rgba(200, 100, 100, 0.6)),
     url(../../hanhuang.tech/img/sunset.jpg);
   background-repeat: no-repeat;
 }
@@ -869,6 +864,7 @@ input[type="submit"]:hover {
 }
 
 @media (min-width: 64em) {
+
   #habbit-a,
   #habbit-b {
     width: 40px;
@@ -1141,12 +1137,10 @@ p.subject-desc {
   flex-direction: column;
   row-gap: 30px;
   padding: 30px 70px;
-  background-image: linear-gradient(
-    to bottom,
-    var(--clr-accent3),
-    black,
-    var(--clr-accent3)
-  );
+  background-image: linear-gradient(to bottom,
+      var(--clr-accent3),
+      black,
+      var(--clr-accent3));
   background-attachment: fixed;
 }
 
@@ -1210,6 +1204,7 @@ div.imgwrapper4 {
 }
 
 @media (min-width: 64em) {
+
   div.imgwrapper1,
   div.imgwrapper2,
   div.imgwrapper3,
@@ -1642,11 +1637,11 @@ div.project-list-subjects h4 {
 
 @media (min-width: 64em) {
   #tabwrapper {
-    width: 55px;
-    left: -4px;
+    width: 60px;
+    left: -8px;
     box-shadow: -0.4em 0.4em 0em var(--clr-accent3);
     opacity: 1;
-    border-radius: 0.25vw 0 0 0.25vw;
+    border-radius: 0.30vw 0 0 0.30vw;
   }
 }
 
@@ -1661,19 +1656,15 @@ div.project-list-subjects h4 {
 }
 
 #tab {
-  background: linear-gradient(
-    315deg,
-    var(--clr-brown) 50%,
-    rgb(150, 100, 50) 50%
-  );
+  background: linear-gradient(315deg,
+      var(--clr-brown) 50%,
+      rgb(150, 100, 50) 50%);
 }
 
 #tab-grey {
-  background: linear-gradient(
-    315deg,
-    var(--clr-dark2) 50%,
-    rgb(150, 150, 150) 50%
-  );
+  background: linear-gradient(315deg,
+      var(--clr-dark2) 50%,
+      rgb(150, 150, 150) 50%);
 }
 
 @media (min-width: 64em) {
@@ -1692,7 +1683,9 @@ div.project-list-subjects h4 {
   font-size: 0.65rem;
   line-height: 0.8rem;
   text-align: center;
-  border: 1px solid var(--clr-light);
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--clr-light) transparent transparent var(--clr-light);
   color: white;
   text-decoration: none;
   border-radius: inherit;
@@ -1700,6 +1693,7 @@ div.project-list-subjects h4 {
 }
 
 @media (min-width: 64em) {
+
   #tab a,
   #tab-grey a {
     font-size: 0.75rem;
@@ -1727,6 +1721,7 @@ div.project-list-subjects h4 {
 }
 
 @media (min-width: 64em) {
+
   #head__section,
   #header__section,
   #nav__section,
@@ -1786,11 +1781,9 @@ h4.side-heading {
   font-weight: var(--fw-reg);
   color: var(--clr-light);
   font-family: var(--ff-secondary);
-  background-image: linear-gradient(
-    to right,
-    var(--clr-dark),
-    rgb(200, 100, 100)
-  );
+  background-image: linear-gradient(to right,
+      var(--clr-dark),
+      rgb(200, 100, 100));
   padding: 0 5px;
   float: right;
 }
@@ -1836,6 +1829,7 @@ div.code-btn-j {
 }
 
 @media (min-width: 64em) {
+
   div.codebox,
   div.code-btn-j {
     padding: 8px 15px;
@@ -1872,6 +1866,7 @@ div.code-js {
 }
 
 @media (min-width: 64em) {
+
   div.code-html,
   div.code-css,
   div.code-js {
@@ -1936,24 +1931,26 @@ h4.cons {
   line-height: 1rem;
   padding: 0px 5px;
   border-radius: 1vw;
-  filter: drop-shadow(-3px 3px 0px grey);
 }
 
 h4.pros {
   color: green;
+  filter: drop-shadow(-2px -2px 0px green);
 }
 
 h4.cons {
   color: red;
+  filter: drop-shadow(-2px -2px 0px red);
 }
 
 @media (min-width: 64em) {
+
   h4.pros,
   h4.cons {
     line-height: 1.1rem;
     margin: 20px 0;
-    padding: 0px 8px;
-    border-radius: 0.25vw;
+    padding: 0px 6px;
+    border-radius: 0.3vw;
   }
 }
 
@@ -1978,6 +1975,7 @@ h4.cons {
 }
 
 @media (min-width: 64em) {
+
   #spoil-btn1,
   #spoil-btn2,
   #spoil-btn3,
@@ -2042,6 +2040,7 @@ h4.cons {
 }
 
 @media (min-width: 64em) {
+
   #spoil-btna,
   #spoil-btnb {
     font-size: 0.85rem;
