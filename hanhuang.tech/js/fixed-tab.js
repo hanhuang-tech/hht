@@ -182,32 +182,32 @@ function changeNavTab() {
       Math.round(window.scrollY) + 10 > headSection.offsetTop &&
       Math.round(window.scrollY) + 10 < headerSection.offsetTop
     ) {
-      headTab.classList.add('selected-tab');
-      headerTab.classList.remove('selected-tab');
+      headTab.classList.add("selected-tab");
+      headerTab.classList.remove("selected-tab");
     } else if (
       Math.round(window.scrollY) + 10 > headerSection.offsetTop &&
       Math.round(window.scrollY) + 10 < navSection.offsetTop
     ) {
-      headTab.classList.remove('selected-tab');
-      headerTab.classList.add('selected-tab');
-      navTab.classList.remove('selected-tab');
+      headTab.classList.remove("selected-tab");
+      headerTab.classList.add("selected-tab");
+      navTab.classList.remove("selected-tab");
     } else if (
       Math.round(window.scrollY) + 10 > navSection.offsetTop &&
       Math.round(window.scrollY) + 10 < sectionSection.offsetTop
     ) {
-      headerTab.classList.remove('selected-tab');
-      navTab.classList.add('selected-tab');
-      sectionTab.classList.remove('selected-tab');
+      headerTab.classList.remove("selected-tab");
+      navTab.classList.add("selected-tab");
+      sectionTab.classList.remove("selected-tab");
     } else if (
       Math.round(window.scrollY) + 10 > sectionSection.offsetTop &&
       Math.round(window.scrollY) + 10 < footerSection.offsetTop
     ) {
-      navTab.classList.remove('selected-tab');
-      sectionTab.classList.add('selected-tab');
-      footerTab.classList.remove('selected-tab');
+      navTab.classList.remove("selected-tab");
+      sectionTab.classList.add("selected-tab");
+      footerTab.classList.remove("selected-tab");
     } else if (Math.round(window.scrollY) > footerSection.offsetTop) {
-      sectionTab.classList.remove('selected-tab');
-      footerTab.classList.add('selected-tab');
+      sectionTab.classList.remove("selected-tab");
+      footerTab.classList.add("selected-tab");
     }
   }
 }
@@ -218,18 +218,18 @@ function changeNavTabCritiques() {
       Math.round(window.scrollY) + 10 > htmlSection.offsetTop &&
       Math.round(window.scrollY) + 10 < cssSection.offsetTop
     ) {
-      cssTab.classList.remove('selected-tab');
-      htmlTab.classList.add('selected-tab');
+      cssTab.classList.remove("selected-tab");
+      htmlTab.classList.add("selected-tab");
     } else if (
       Math.round(window.scrollY) + 10 > cssSection.offsetTop &&
       Math.round(window.scrollY) + 10 < jsSection.offsetTop
     ) {
-      htmlTab.classList.remove('selected-tab');
-      cssTab.classList.add('selected-tab');
-      jsTab.classList.remove('selected-tab');
+      htmlTab.classList.remove("selected-tab");
+      cssTab.classList.add("selected-tab");
+      jsTab.classList.remove("selected-tab");
     } else if (Math.round(window.scrollY) > jsSection.offsetTop) {
-      cssTab.classList.remove('selected-tab');
-      jsTab.classList.add('selected-tab');
+      cssTab.classList.remove("selected-tab");
+      jsTab.classList.add("selected-tab");
     }
   }
 }
